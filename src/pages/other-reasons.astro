@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import data from "../data/other-reasons.json";
+
+const iconMap = {
+  location: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z",
+  users: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+  building: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
+  support: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  star: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  shield: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+};
+---
+
+<Layout title="More Advantages" description="Additional reasons why Subic Bay Gateway Park is the right choice for your business in the Freeport Zone.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{data.badge}</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{data.title}</h1>
+      <p class="text-lg text-white/70">{data.subtitle}</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Why Us", href: "/other-reasons" }, { label: "More Advantages" }]} />
+
+  <section class="bg-surface py-24">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {data.advantages.map((adv, i) => (
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay={i * 100}>
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={iconMap[adv.icon] || iconMap.location} />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">{adv.title}</h3>
+            <p class="text-sm leading-relaxed text-gray-500">{adv.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

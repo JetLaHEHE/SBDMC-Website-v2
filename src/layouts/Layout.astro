@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+import "aos/dist/aos.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BackToTop from "../components/BackToTop.astro";
+
+const { title, description, ogImage } = Astro.props;
+const siteName = "SBDMC - Subic Bay Gateway Park";
+const pageTitle = title ? `${title} | SBDMC` : siteName;
+const pageDesc = description || "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.";
+const canonical = Astro.url.pathname;
+const defaultOgImage = ogImage || "/images/logo.png";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#040A5E" />
+
+    <link rel="canonical" href={`https://sbdmc-v2.netlify.app${canonical}`} />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:image" content={`https://sbdmc-v2.netlify.app${defaultOgImage}`} />
+    <meta property="og:url" content={`https://sbdmc-v2.netlify.app${canonical}`} />
+    <meta property="og:site_name" content={siteName} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDesc} />
+    <meta name="twitter:image" content={`https://sbdmc-v2.netlify.app${defaultOgImage}`} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Subic Bay Gateway Park (SBDMC)",
+      "url": "https://sbdmc-v2.netlify.app",
+      "logo": "https://sbdmc-v2.netlify.app/images/logo.png",
+      "description": "A premier business and industrial park in the Subic Bay Freeport Zone, Philippines.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Subic Bay Freeport Zone",
+        "addressCountry": "PH"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <Header currentPath={canonical} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <BackToTop />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 600,
+          once: true,
+          offset: 80,
+          easing: "ease-out-cubic",
+        });
+      });
+      if (window.netlifyIdentity) {
+        netlifyIdentity.on("init", function (user) {
+          if (!user) {
+            netlifyIdentity.on("login", function () {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

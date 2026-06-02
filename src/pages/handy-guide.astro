@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+---
+
+<Layout title="Handy Guide" description="Essential contacts and emergency information for locators and visitors at Subic Bay Gateway Park.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Reference</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Handy Guide</h1>
+      <p class="text-lg text-white/70">Quick reference for locators and visitors</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Handy Guide" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 border-l-4 border-accent-500 bg-red-50 p-7" data-aos="fade-up">
+        <div class="mb-4 inline-block bg-accent-500 px-4 py-1.5 text-xs font-bold text-white uppercase tracking-wider">Emergency</div>
+        <h2 class="mb-4 text-2xl font-bold text-primary-500">Emergency Contacts</h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="border bg-white p-4">
+            <div class="text-lg font-bold text-accent-500">911</div>
+            <div class="text-sm text-gray-500">Emergency Hotline</div>
+          </div>
+          <div class="border bg-white p-4">
+            <div class="text-lg font-bold text-primary-500">(047) 252-3456</div>
+            <div class="text-sm text-gray-500">SBDMC Office</div>
+          </div>
+          <div class="border bg-white p-4">
+            <div class="text-lg font-bold text-primary-500">(047) 252-4000</div>
+            <div class="text-sm text-gray-500">SBMA Main</div>
+          </div>
+          <div class="border bg-white p-4">
+            <div class="text-lg font-bold text-accent-500">117</div>
+            <div class="text-sm text-gray-500">Police</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-10 grid gap-6 md:grid-cols-2" data-aos="fade-up">
+        <div class="card border-l-4 border-primary-500">
+          <h3 class="mb-4 text-lg font-bold text-primary-500">Important Numbers</h3>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+              <span class="text-sm text-gray-600">Police</span>
+              <span class="font-bold text-primary-500">117</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+              <span class="text-sm text-gray-600">Fire</span>
+              <span class="font-bold text-primary-500">160</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+              <span class="text-sm text-gray-600">Medical</span>
+              <span class="font-bold text-primary-500">143</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-600">SBDMC Office</span>
+              <span class="font-bold text-primary-500">(047) 252-3456</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-l-4 border-primary-500">
+          <h3 class="mb-4 text-lg font-bold text-primary-500">Office Hours</h3>
+          <p class="mb-3 text-sm text-gray-600">SBDMC, Inc. office is open:</p>
+          <div class="flex items-center justify-between bg-surface p-3">
+            <span class="text-sm font-medium text-primary-500">Monday - Friday</span>
+            <span class="text-sm text-gray-600">8:00 AM - 5:00 PM</span>
+          </div>
+          <p class="mt-2 text-xs text-gray-400">Closed on weekends and public holidays.</p>
+        </div>
+      </div>
+
+      <div class="card border-l-4 border-primary-500 mb-10" data-aos="fade-up">
+        <h3 class="mb-4 text-lg font-bold text-primary-500">Park Rules</h3>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <div class="flex items-start gap-3 bg-surface p-4">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-sm text-gray-600">All vehicles must register at the entrance</span>
+          </div>
+          <div class="flex items-start gap-3 bg-surface p-4">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-sm text-gray-600">Speed limit: 30 km/h within the park</span>
+          </div>
+          <div class="flex items-start gap-3 bg-surface p-4">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-sm text-gray-600">Proper waste disposal is required</span>
+          </div>
+          <div class="flex items-start gap-3 bg-surface p-4">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-sm text-gray-600">No hazardous materials without prior approval</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-primary-500 p-7 text-white" data-aos="fade-up">
+        <h3 class="mb-3 text-lg font-bold">Useful Links</h3>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://sbdmcinc.freshdesk.com/support/home" target="_blank" rel="noopener noreferrer" class="border border-white/40 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-white/20">SBDMC Helpdesk</a>
+          <a href="https://eipp.unionbankph.com/EIPPHUB" target="_blank" rel="noopener noreferrer" class="border border-white/40 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-white/20">E-Billing Portal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

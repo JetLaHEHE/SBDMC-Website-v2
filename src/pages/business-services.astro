@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import data from "../data/business-services.json";
+
+const iconMap = {
+  clipboard: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+  zap: "M13 10V3L4 14h7v7l9-11h-7z",
+  shield: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+  tool: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z",
+  billing: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+  helpdesk: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+};
+---
+
+<Layout title="Business Services" description="Comprehensive business support services available at Subic Bay Gateway Park for locators and investors.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{data.badge}</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{data.title}</h1>
+      <p class="text-lg text-white/70">{data.subtitle}</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Products & Services", href: "/business-services" }, { label: "Business Services" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {data.services.map((svc, i) => (
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay={i * 50}>
+            <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={iconMap[svc.icon] || iconMap.clipboard} />
+              </svg>
+            </div>
+            <h3 class="mb-2 font-bold text-primary-500">{svc.title}</h3>
+            <p class="text-sm text-gray-500">{svc.description}</p>
+            {svc.link ? (
+              <a href={svc.link.url} target="_blank" rel="noopener noreferrer" class="mt-3 inline-block text-sm font-semibold text-primary-500 hover:text-primary-600">{svc.link.text} &rarr;</a>
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

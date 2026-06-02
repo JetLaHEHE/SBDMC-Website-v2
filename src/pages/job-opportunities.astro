@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import jobs from "../data/jobs.json";
+---
+
+<Layout title="Job Opportunities" description="Find career opportunities with locator companies at Subic Bay Gateway Park in the Subic Bay Freeport Zone.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Careers</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Job Opportunities</h1>
+      <p class="text-lg text-white/70">Career opportunities within SBDMC and SBGP locators</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Products & Services", href: "/job-opportunities" }, { label: "Job Opportunities" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <p class="mb-12 text-center text-lg text-gray-600" data-aos="fade-up">{jobs.intro}</p>
+
+      {jobs.listings.map((job) => (
+        <div class="card border-l-4 border-primary-500 mb-6" data-aos="fade-up">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex items-start gap-4">
+              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-primary-500 text-white">
+                <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              </div>
+              <div>
+                <div class={`mb-1 inline-block px-3 py-0.5 text-xs font-semibold ${job.status === "open" ? "bg-accent-500 text-white" : "bg-gray-200 text-gray-500"}`}>{job.status === "open" ? "Open" : "Closed"}</div>
+                <h3 class="text-xl font-bold text-primary-500">{job.title}</h3>
+                <p class="text-sm text-gray-500">{job.company} &middot; {job.type} &middot; {job.location}</p>
+                <p class="mt-2 text-sm text-gray-600">{job.description}</p>
+              </div>
+            </div>
+            {job.status === "open" && (
+              <a href="/contact" class="btn-primary shrink-0 text-center text-sm">Apply Now</a>
+            )}
+          </div>
+        </div>
+      ))}
+
+      <div class="mt-12 bg-primary-500 p-8 text-center text-white" data-aos="fade-up">
+        <h3 class="mb-3 text-2xl font-bold">{jobs.ctaTitle}</h3>
+        <p class="mb-6 text-white/80">{jobs.ctaText}</p>
+        <a href={`mailto:${jobs.ctaEmail}`} class="btn-white">Email Your Resume</a>
+      </div>
+    </div>
+  </section>
+</Layout>

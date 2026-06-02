@@ -1,0 +1,25 @@
+{
+  "categories": [
+    {
+      "category": "General",
+      "items": [
+        { "q": "What is Subic Bay Gateway Park?", "a": "Subic Bay Gateway Park (SBGP) is a 45-hectare industrial park located within the Subic Bay Freeport Zone, developed and operated by SBDMC, Inc. It is designed for light manufacturing, logistics, warehousing, and BPO operations." },
+        { "q": "What types of businesses can locate in SBGP?", "a": "SBGP welcomes a wide range of industries including light manufacturing, logistics and warehousing, business process outsourcing (BPO), commercial establishments, and service-oriented businesses." }
+      ]
+    },
+    {
+      "category": "Incentives",
+      "items": [
+        { "q": "What are the tax incentives available?", "a": "Locators can enjoy income tax holidays (up to 6 years), reduced tax rates (5% on gross income after holiday), duty-free importation of capital equipment and raw materials, and exemption from local government taxes. Foreign investors can enjoy up to 100% ownership." },
+        { "q": "Can foreign companies locate in SBGP?", "a": "Yes, foreign companies can locate in SBGP and may enjoy up to 100% foreign ownership under the Subic Bay Freeport Zone incentives." }
+      ]
+    },
+    {
+      "category": "Leasing",
+      "items": [
+        { "q": "How do I apply for a lease?", "a": "You may contact our team through the Contact Us page or visit our office at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone. You can also call us at (047) 252-3456." },
+        { "q": "What infrastructure is available in the park?", "a": "The park offers reliable power supply, adequate water system, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage systems, and waste management services." }
+      ]
+    }
+  ]
+}

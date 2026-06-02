@@ -1,0 +1,39 @@
+{
+  "badge": "Services",
+  "title": "Business Services",
+  "subtitle": "Comprehensive support for your business operations",
+  "services": [
+    {
+      "icon": "clipboard",
+      "title": "Registration Assistance",
+      "description": "Help with business registration, permits, and licensing requirements with SBMA and other agencies."
+    },
+    {
+      "icon": "zap",
+      "title": "Utility Connection",
+      "description": "Assistance with connection to power, water, and telecommunications services within the park."
+    },
+    {
+      "icon": "shield",
+      "title": "Security Services",
+      "description": "24/7 security monitoring, access control, and patrol services for the safety of your business."
+    },
+    {
+      "icon": "tool",
+      "title": "Maintenance Support",
+      "description": "Regular maintenance of common areas, roads, and park facilities for a pleasant working environment."
+    },
+    {
+      "icon": "billing",
+      "title": "E-Billing",
+      "description": "Convenient online billing and payment system for your monthly statements.",
+      "link": { "text": "Access Portal", "url": "https://eipp.unionbankph.com/EIPPHUB" }
+    },
+    {
+      "icon": "helpdesk",
+      "title": "Helpdesk Support",
+      "description": "Dedicated helpdesk for locator concerns, inquiries, and support requests.",
+      "link": { "text": "Visit Helpdesk", "url": "https://sbdmcinc.freshdesk.com/support/home" }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "News & Updates",
+  "subtitle": "Stay informed with the latest from around the world",
+  "items": [
+    {
+      "title": "Philippine News",
+      "description": "Latest news from the Philippines",
+      "url": "https://www.inquirer.net/",
+      "category": "Philippines",
+      "color": "primary"
+    },
+    {
+      "title": "Taiwan News",
+      "description": "Stay updated with Taiwan headlines",
+      "url": "https://udn.com/news/index",
+      "category": "Taiwan",
+      "color": "accent"
+    },
+    {
+      "title": "World News",
+      "description": "Global news and current events",
+      "url": "https://edition.cnn.com/",
+      "category": "World",
+      "color": "primary"
+    },
+    {
+      "title": "News Articles",
+      "description": "SBDMC news and announcements",
+      "url": "https://sbdmc.wordpress.com/",
+      "category": "SBDMC",
+      "color": "accent"
+    }
+  ]
+}

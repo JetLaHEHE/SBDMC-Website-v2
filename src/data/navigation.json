@@ -1,0 +1,36 @@
+[
+  { "label": "Home", "href": "/" },
+  {
+    "label": "About Us",
+    "href": "#",
+    "children": [
+      { "label": "About SBDMC", "href": "/about-sbdmc" },
+      { "label": "About SBGP", "href": "/description" },
+      { "label": "About SBMA", "href": "/about-sbma" },
+      { "label": "Locators", "href": "/locators" }
+    ]
+  },
+  {
+    "label": "Why Us",
+    "href": "#",
+    "children": [
+      { "label": "Business Incentives", "href": "/business-incentives" },
+      { "label": "More Advantages", "href": "/other-reasons" },
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Government Links", "href": "/government-links" }
+    ]
+  },
+  { "label": "For Lease", "href": "/for-lease" },
+  {
+    "label": "Products & Services",
+    "href": "#",
+    "children": [
+      { "label": "Rental Information", "href": "/rental-information" },
+      { "label": "Business Services", "href": "/business-services" },
+      { "label": "Job Opportunities", "href": "/job-opportunities" }
+    ]
+  },
+  { "label": "Gallery", "href": "/gallery" },
+  { "label": "Downloads", "href": "/forms" },
+  { "label": "Contact Us", "href": "/contact" }
+]

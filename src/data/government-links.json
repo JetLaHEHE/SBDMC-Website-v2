@@ -1,0 +1,63 @@
+{
+  "badge": "Government Links",
+  "title": "Government Links",
+  "subtitle": "Access key government agencies and resources relevant to the Subic Bay Freeport Zone",
+  "links": [
+    {
+      "name": "Subic Bay Metropolitan Authority",
+      "acronym": "SBMA",
+      "description": "The governing body of the Subic Bay Freeport Zone. Responsible for the development, regulation, and management of the freeport.",
+      "url": "https://www.sbma.com/",
+      "category": "Regulatory"
+    },
+    {
+      "name": "Department of Trade and Industry",
+      "acronym": "DTI",
+      "description": "The executive department of the Philippine government tasked to expand, promote, and develop the country's trade and industry.",
+      "url": "https://www.dti.gov.ph/",
+      "category": "Trade & Industry"
+    },
+    {
+      "name": "Philippine Economic Zone Authority",
+      "acronym": "PEZA",
+      "description": "Promotes and manages economic zones across the Philippines, offering fiscal and non-fiscal incentives to investors.",
+      "url": "https://www.peza.gov.ph/",
+      "category": "Investment"
+    },
+    {
+      "name": "Bureau of Customs",
+      "acronym": "BOC",
+      "description": "The Philippine government agency responsible for customs operations, trade facilitation, and collection of import duties.",
+      "url": "https://customs.gov.ph/",
+      "category": "Trade & Industry"
+    },
+    {
+      "name": "Bureau of Immigration",
+      "acronym": "BI",
+      "description": "The government agency that regulates and controls the entry, stay, and departure of foreign nationals in the Philippines.",
+      "url": "https://immigration.gov.ph/",
+      "category": "Regulatory"
+    },
+    {
+      "name": "Securities and Exchange Commission",
+      "acronym": "SEC",
+      "description": "The national government agency responsible for registering and regulating corporations and capital market participants.",
+      "url": "https://www.sec.gov.ph/",
+      "category": "Regulatory"
+    },
+    {
+      "name": "Department of Finance",
+      "acronym": "DOF",
+      "description": "The Philippine government's principal economic and financial management institution.",
+      "url": "https://www.dof.gov.ph/",
+      "category": "Investment"
+    },
+    {
+      "name": "Department of Labor and Employment",
+      "acronym": "DOLE",
+      "description": "The government agency responsible for employment policies, labor standards, and worker welfare in the Philippines.",
+      "url": "https://www.dole.gov.ph/",
+      "category": "Regulatory"
+    }
+  ]
+}

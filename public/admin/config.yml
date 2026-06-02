@@ -1,0 +1,302 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "chore(cms): create {{slug}}"
+    update: "chore(cms): update {{slug}}"
+    delete: "chore(cms): delete {{slug}}"
+    uploadMedia: "chore(cms): upload {{path}}"
+    deleteMedia: "chore(cms): delete {{path}}"
+
+media_folder: "public/images"
+public_folder: "/images"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "hero"
+    label: "Home Hero"
+    files:
+      - label: "Home Hero"
+        name: "hero"
+        file: "src/data/hero.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Headline Highlight", name: "headlineHighlight", widget: "string", hint: "The gradient-colored word in the headline" }
+          - { label: "Badge Text", name: "badge", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Primary CTA"
+            name: "ctaPrimary"
+            widget: "object"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+          - label: "Secondary CTA"
+            name: "ctaSecondary"
+            widget: "object"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - { label: "Services Section Title", name: "servicesTitle", widget: "string" }
+          - { label: "Services Section Subtitle", name: "servicesSubtitle", widget: "string" }
+          - { label: "Features Section Title", name: "featuresTitle", widget: "string" }
+          - { label: "Features Section Subtitle", name: "featuresSubtitle", widget: "string" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
+          - { label: "CTA Button Text", name: "ctaButton", widget: "string" }
+
+  - name: "news"
+    label: "News Links"
+    files:
+      - label: "News Links"
+        name: "news"
+        file: "src/data/news.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Section Title", name: "title", widget: "string" }
+          - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+          - label: "Links"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Category Label", name: "category", widget: "string" }
+              - { label: "Color", name: "color", widget: "select", options: ["primary", "accent"] }
+
+  - name: "faq"
+    label: "FAQ"
+    files:
+      - label: "FAQ"
+        name: "faq"
+        file: "src/data/faq.json"
+        format: "json"
+        create: false
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "Category Name", name: "category", widget: "string" }
+              - label: "Questions"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Answer", name: "a", widget: "text" }
+
+  - name: "jobs"
+    label: "Job Listings"
+    files:
+      - label: "Job Listings"
+        name: "jobs"
+        file: "src/data/jobs.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - label: "Job Listings"
+            name: "listings"
+            widget: "list"
+            fields:
+              - { label: "Job Title", name: "title", widget: "string" }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Type (Full-time/Part-time)", name: "type", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["open", "closed"] }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
+          - { label: "CTA Email", name: "ctaEmail", widget: "string" }
+
+  - name: "contact"
+    label: "Contact Info"
+    files:
+      - label: "Contact Info"
+        name: "contact"
+        file: "src/data/contact.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Office Hours", name: "hours", widget: "string" }
+          - { label: "Helpdesk URL", name: "helpdeskUrl", widget: "string" }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string" }
+
+  - name: "about_sbdmc"
+    label: "About SBDMC"
+    files:
+      - label: "About SBDMC Page"
+        name: "about_sbdmc"
+        file: "src/data/about-sbdmc.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Badge", name: "badge", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Intro Paragraph", name: "intro", widget: "text" }
+          - { label: "History Quote", name: "historyQuote", widget: "text" }
+          - label: "Mission"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Vision"
+            name: "vision"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Certification"
+            name: "certification"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Certification ID", name: "id", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string" }
+
+  - name: "business_incentives"
+    label: "Business Incentives"
+    files:
+      - label: "Business Incentives Page"
+        name: "business_incentives"
+        file: "src/data/business-incentives.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Badge", name: "badge", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Section Badge", name: "badge", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Number (optional)", name: "number", widget: "string", required: false }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+  - name: "more_advantages"
+    label: "More Advantages"
+    files:
+      - label: "More Advantages Page"
+        name: "more_advantages"
+        file: "src/data/other-reasons.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Badge", name: "badge", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Advantages"
+            name: "advantages"
+            widget: "list"
+            fields:
+              - { label: "Icon Key (location/users/building/support/star/shield)", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "business_services"
+    label: "Business Services"
+    files:
+      - label: "Business Services Page"
+        name: "business_services"
+        file: "src/data/business-services.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Badge", name: "badge", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Icon Key (clipboard/zap/shield/tool/billing/helpdesk)", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "External Link (optional)"
+                name: "link"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Link Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+  - name: "locators"
+    label: "Locators / Tenants"
+    files:
+      - label: "Locators Page"
+        name: "locators"
+        file: "src/data/locators.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Badge", name: "badge", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Locator Companies"
+            name: "locators"
+            widget: "list"
+            fields:
+              - { label: "Company Name", name: "name", widget: "string" }
+              - { label: "Industry", name: "industry", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Country", name: "country", widget: "string" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+  - name: "government_links"
+    label: "Government Links"
+    files:
+      - label: "Government Links Page"
+        name: "government_links"
+        file: "src/data/government-links.json"
+        format: "json"
+        create: false
+        fields:
+          - { label: "Badge", name: "badge", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Agency Name", name: "name", widget: "string" }
+              - { label: "Acronym", name: "acronym", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }

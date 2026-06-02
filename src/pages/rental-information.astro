@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+---
+
+<Layout title="Rental Information" description="Rates, terms, and conditions for leasing warehouse and office spaces at Subic Bay Gateway Park.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Rental Info</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Rental Information</h1>
+      <p class="text-lg text-white/70">Everything you need to know about leasing at SBGP</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Products & Services", href: "/rental-information" }, { label: "Rental Information" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary-500">Lease Terms</h3>
+          <p class="text-sm text-gray-500">We offer flexible lease terms from 1 to 5 years, with options for renewal. Custom terms available for build-to-suit arrangements.</p>
+        </div>
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary-500">Rental Rates</h3>
+          <p class="text-sm text-gray-500">Rental rates vary depending on the type of space, location within the park, and lease duration. Contact our team for current rates.</p>
+        </div>
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary-500">Inclusions</h3>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li>&bull; Common area maintenance</li>
+            <li>&bull; 24/7 security services</li>
+            <li>&bull; Road and landscaping upkeep</li>
+            <li>&bull; Drainage and flood control</li>
+          </ul>
+        </div>
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary-500">Requirements</h3>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li>&bull; Business registration documents</li>
+            <li>&bull; SEC or DTI registration</li>
+            <li>&bull; Mayor's permit or equivalent</li>
+            <li>&bull; Authorized representative proof</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-primary-500 p-8 text-center text-white" data-aos="fade-up">
+        <h3 class="mb-3 text-2xl font-bold">Ready to Lease?</h3>
+        <p class="mb-6 text-white/80">Contact our leasing team for current availability and rates.</p>
+        <a href="/contact" class="btn-white">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,16 @@
+{
+  "quickLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "About SBDMC", "href": "/about-sbdmc" },
+    { "label": "Locators", "href": "/locators" },
+    { "label": "Business Incentives", "href": "/business-incentives" },
+    { "label": "For Lease", "href": "/for-lease" },
+    { "label": "Contact Us", "href": "/contact" }
+  ],
+  "services": [
+    { "label": "Rental Information", "href": "/rental-information" },
+    { "label": "Business Services", "href": "/business-services" },
+    { "label": "Job Opportunities", "href": "/job-opportunities" },
+    { "label": "Forms & Downloads", "href": "/forms" }
+  ]
+}

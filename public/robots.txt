@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sbdmc-v2.netlify.app/sitemap-index.xml

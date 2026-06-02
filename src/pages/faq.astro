@@ -1,0 +1,140 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import faqData from "../data/faq.json";
+const faqCategories = faqData.categories;
+---
+
+<Layout title="FAQ" description="Frequently asked questions about Subic Bay Gateway Park, leasing, business setup, and the Subic Bay Freeport Zone.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">FAQ</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Frequently Asked Questions</h1>
+      <p class="text-lg text-white/70">Find answers to common questions about SBDMC and SBGP</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Why Us", href: "/faq" }, { label: "FAQ" }]} />
+
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Subic Bay Gateway Park?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subic Bay Gateway Park (SBGP) is a 45-hectare industrial park located within the Subic Bay Freeport Zone, developed and operated by SBDMC, Inc. It is designed for light manufacturing, logistics, warehousing, and BPO operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of businesses can locate in SBGP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SBGP welcomes a wide range of industries including light manufacturing, logistics and warehousing, business process outsourcing (BPO), commercial establishments, and service-oriented businesses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the tax incentives available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Locators can enjoy income tax holidays (up to 6 years), reduced tax rates (5% on gross income after holiday), duty-free importation of capital equipment and raw materials, and exemption from local government taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can foreign companies locate in SBGP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, foreign companies can locate in SBGP and may enjoy up to 100% foreign ownership under the Subic Bay Freeport Zone incentives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I apply for a lease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You may contact our team through the Contact Us page or visit our office at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What infrastructure is available in the park?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The park offers reliable power supply, adequate water system, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage systems, and waste management services."
+      }
+    }
+  ]
+}
+</script>
+
+  <section class="py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 flex flex-wrap gap-2" data-aos="fade-up">
+        {faqCategories.map((cat, ci) => (
+          <button class="faq-tab rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500" data-category={ci}>
+            {cat.category}
+          </button>
+        ))}
+      </div>
+
+      {faqCategories.map((cat, ci) => (
+        <div class={`faq-group ${ci === 0 ? "" : "hidden"}`} data-category={ci}>
+          <div class="space-y-4">
+            {cat.items.map((item, ii) => (
+              <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay={ii * 50}>
+                <button class="faq-toggle flex w-full items-center justify-between text-left">
+                  <span class="pr-4 font-semibold text-primary-500">{item.q}</span>
+                  <svg class="faq-icon h-5 w-5 shrink-0 text-primary-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                </button>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                  <div class="border-t border-gray-100 pt-4">
+                    <p class="leading-relaxed text-gray-600">{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.querySelectorAll(".faq-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector(".faq-icon");
+      const isOpen = !answer.classList.contains("max-h-0");
+      document.querySelectorAll(".faq-answer").forEach((el) => {
+        el.classList.add("max-h-0");
+        el.previousElementSibling.querySelector(".faq-icon")?.classList.remove("rotate-45");
+      });
+      if (!isOpen) {
+        answer.classList.remove("max-h-0");
+        answer.classList.add("max-h-96");
+        icon.classList.add("rotate-45");
+      }
+    });
+  });
+
+  document.querySelectorAll(".faq-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".faq-tab").forEach((t) => {
+        t.classList.remove("border-primary-500", "text-primary-500", "bg-primary-50");
+        t.classList.add("border-gray-300", "text-gray-600");
+      });
+      tab.classList.add("border-primary-500", "text-primary-500", "bg-primary-50");
+      tab.classList.remove("border-gray-300", "text-gray-600");
+      const ci = tab.dataset.category;
+      document.querySelectorAll(".faq-group").forEach((g) => g.classList.add("hidden"));
+      document.querySelector(`.faq-group[data-category="${ci}"]`)?.classList.remove("hidden");
+    });
+  });
+</script>

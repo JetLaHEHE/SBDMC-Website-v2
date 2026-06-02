@@ -1,0 +1,37 @@
+{
+  "badge": "Why Choose Us",
+  "title": "More Advantages",
+  "subtitle": "Additional benefits of choosing SBDMC for your business",
+  "advantages": [
+    {
+      "icon": "location",
+      "title": "Strategic Location",
+      "description": "Located in the heart of Asia's most dynamic region, with easy access to major markets and transportation hubs."
+    },
+    {
+      "icon": "users",
+      "title": "Skilled Workforce",
+      "description": "Access to a large pool of skilled, educated, and cost-competitive workers from Central Luzon."
+    },
+    {
+      "icon": "building",
+      "title": "World-Class Facilities",
+      "description": "Modern infrastructure including reliable power, water, fiber optic telecom, and 24/7 security systems."
+    },
+    {
+      "icon": "support",
+      "title": "Growth Potential",
+      "description": "No need for relocation when your company grows — there's no better deal elsewhere in Asia but right here in Subic."
+    },
+    {
+      "icon": "star",
+      "title": "Company Image & Customer Confidence",
+      "description": "Join leading companies like Wistron, Taian, Taiwan Hitachi, TECO, and Tong Lung — all first-rate companies listed in the Taiwan Stock Exchange."
+    },
+    {
+      "icon": "shield",
+      "title": "Security & Safety",
+      "description": "24/7 security monitoring, emergency response systems, and comprehensive safety protocols ensure your business operates securely."
+    }
+  ]
+}

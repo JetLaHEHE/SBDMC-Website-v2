@@ -1,0 +1,24 @@
+{
+  "intro": "SBDMC, Inc. and its locator companies offer a variety of career opportunities. We encourage qualified individuals to apply and become part of the growing Subic Bay Gateway Park community.",
+  "listings": [
+    {
+      "title": "IT Staff",
+      "company": "SBDMC, Inc.",
+      "type": "Full-time",
+      "location": "On-site",
+      "status": "closed",
+      "description": "We are looking for qualified IT professionals to join our team and help manage the park's technology infrastructure."
+    },
+    {
+      "title": "Engineer",
+      "company": "SBDMC",
+      "type": "Full Time",
+      "location": "SBDMC",
+      "status": "open",
+      "description": "Work work"
+    }
+  ],
+  "ctaTitle": "Submit Your Resume",
+  "ctaText": "Send your resume and application to our HR department. We'll keep you on file for future opportunities.",
+  "ctaEmail": "inquiry@sbdmc.com"
+}

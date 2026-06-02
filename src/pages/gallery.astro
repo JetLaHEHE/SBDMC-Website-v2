@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+
+const galleryImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/gallery/*.{jpg,jpeg,png}', { eager: true });
+const images = Object.values(galleryImages).map(m => m.default);
+---
+
+<Layout title="Gallery" description="View photos and images of Subic Bay Gateway Park facilities, infrastructure, and locator spaces.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Gallery</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Photo Gallery</h1>
+      <p class="text-lg text-white/70">Explore Subic Bay Gateway Park through our photos</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Gallery" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center" data-aos="fade-up">
+        <p class="mb-6 text-gray-600">Visit our Flickr album for the full collection of photos.</p>
+        <a href="https://www.flickr.com/photos/138132292@N06/albums" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10zM8.5 14.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm7 0a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+          View on Flickr
+        </a>
+      </div>
+
+      <div id="gallery-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {images.map((img, i) => (
+          <button data-index={i} class="gallery-thumb w-full overflow-hidden bg-gray-200 transition-all hover:shadow-lg hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg" data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
+            <img src={img.src} alt="Subic Bay Gateway Park" class="h-64 w-full object-cover" loading="lazy" />
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90">
+    <button id="lightbox-close" class="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label="Close">&times;</button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label="Previous">&#8249;</button>
+    <button id="lightbox-next" class="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label="Next">&#8250;</button>
+    <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] rounded-lg object-contain" src="" alt="" />
+  </div>
+</Layout>
+
+<script>
+  const thumbs = document.querySelectorAll(".gallery-thumb");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("lightbox-close");
+  const prevBtn = document.getElementById("lightbox-prev");
+  const nextBtn = document.getElementById("lightbox-next");
+  let currentIndex = 0;
+
+  const srcs = Array.from(thumbs).map((t) => t.querySelector("img").src);
+  const alts = Array.from(thumbs).map((t) => t.querySelector("img").alt);
+
+  function open(index) {
+    currentIndex = index;
+    lightboxImg.src = srcs[currentIndex];
+    lightboxImg.alt = alts[currentIndex];
+    lightbox.classList.remove("hidden");
+    lightbox.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+
+  function close() {
+    lightbox.classList.add("hidden");
+    lightbox.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+
+  function prev() {
+    currentIndex = (currentIndex - 1 + srcs.length) % srcs.length;
+    lightboxImg.src = srcs[currentIndex];
+    lightboxImg.alt = alts[currentIndex];
+  }
+
+  function next() {
+    currentIndex = (currentIndex + 1) % srcs.length;
+    lightboxImg.src = srcs[currentIndex];
+    lightboxImg.alt = alts[currentIndex];
+  }
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => open(parseInt(thumb.dataset.index)));
+  });
+
+  closeBtn.addEventListener("click", close);
+  prevBtn.addEventListener("click", prev);
+  nextBtn.addEventListener("click", next);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.classList.contains("hidden")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") prev();
+    if (e.key === "ArrowRight") next();
+  });
+</script>

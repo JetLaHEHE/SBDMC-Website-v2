@@ -1,0 +1,134 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+---
+
+<Layout title="For Lease" description="View available warehouse and office spaces for lease at Subic Bay Gateway Park in the Freeport Zone.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Leasing</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">For Lease</h1>
+      <p class="text-lg text-white/70">Available spaces in Subic Bay Gateway Park</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "For Lease" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <p class="mb-10 text-center text-lg text-gray-600" data-aos="fade-up">Subic Bay Gateway Park offers a variety of lease options to suit different business needs. Whether you need warehouse space, manufacturing facilities, or office space, we have options available.</p>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="card overflow-hidden border-l-4 border-primary-500" data-aos="fade-up">
+          <div class="bg-primary-500 p-6">
+            <div class="inline-block border border-white/30 px-3 py-1 text-xs font-semibold text-white">Available</div>
+            <div class="mt-4 text-white">
+              <div class="text-3xl font-bold">500-5,000</div>
+              <div class="text-sm text-white/70">sqm</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="mb-2 text-xl font-bold text-primary-500">Warehouse Space</h3>
+            <p class="mb-4 text-sm text-gray-500">Modern warehouse facilities with loading docks, high ceilings, and ample storage capacity.</p>
+            <ul class="mb-6 space-y-2 text-sm text-gray-500">
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Sizes from 500 sqm to 5,000 sqm</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> 24/7 security and monitoring</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Easy truck access and loading bays</li>
+            </ul>
+            <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card overflow-hidden border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-primary-500 p-6">
+            <div class="inline-block border border-white/30 px-3 py-1 text-xs font-semibold text-white">Available</div>
+            <div class="mt-4 text-white">
+              <div class="text-3xl font-bold">Custom</div>
+              <div class="text-sm text-white/70">sizes available</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="mb-2 text-xl font-bold text-primary-500">Manufacturing Facilities</h3>
+            <p class="mb-4 text-sm text-gray-500">Ready-built manufacturing units with essential infrastructure connections.</p>
+            <ul class="mb-6 space-y-2 text-sm text-gray-500">
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Customizable layouts to fit your needs</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> High power capacity available</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Loading/unloading areas included</li>
+            </ul>
+            <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card overflow-hidden border-l-4 border-primary-500" data-aos="fade-up">
+          <div class="bg-primary-500 p-6">
+            <div class="inline-block border border-white/30 px-3 py-1 text-xs font-semibold text-white">Available</div>
+            <div class="mt-4 text-white">
+              <div class="text-3xl font-bold">Flex</div>
+              <div class="text-sm text-white/70">lease terms</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="mb-2 text-xl font-bold text-primary-500">Office Spaces</h3>
+            <p class="mb-4 text-sm text-gray-500">Fully serviced office spaces for BPO, administrative, and commercial use.</p>
+            <ul class="mb-6 space-y-2 text-sm text-gray-500">
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Fiber optic internet ready</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Ample parking available</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Flexible lease terms</li>
+            </ul>
+            <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card overflow-hidden border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-primary-500 p-6">
+            <div class="inline-block border border-white/30 px-3 py-1 text-xs font-semibold text-white">Available</div>
+            <div class="mt-4 text-white">
+              <div class="text-3xl font-bold">Land</div>
+              <div class="text-sm text-white/70">lease options</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="mb-2 text-xl font-bold text-primary-500">Land Leases</h3>
+            <p class="mb-4 text-sm text-gray-500">Lease land within the park for build-to-suit facilities.</p>
+            <ul class="mb-6 space-y-2 text-sm text-gray-500">
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Long-term lease options available</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Prime locations within the park</li>
+              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Infrastructure ready for development</li>
+            </ul>
+            <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary-500 py-20">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-xl" data-aos="fade-up">
+        <h2 class="mb-4 text-3xl font-bold text-white">How to Lease</h2>
+        <p class="mb-2 text-white/60">Simple process to get started</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-center">
+          <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center border border-white/30 text-2xl font-bold text-white">1</div>
+          <div class="font-semibold text-white">Inquire</div>
+          <div class="text-sm text-white/50">Contact our team</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center border border-white/30 text-2xl font-bold text-white">2</div>
+          <div class="font-semibold text-white">Visit</div>
+          <div class="text-sm text-white/50">Tour the park</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center border border-white/30 text-2xl font-bold text-white">3</div>
+          <div class="font-semibold text-white">Apply</div>
+          <div class="text-sm text-white/50">Submit requirements</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center border border-white/30 text-2xl font-bold text-white">4</div>
+          <div class="font-semibold text-white">Move In</div>
+          <div class="text-sm text-white/50">Start operations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

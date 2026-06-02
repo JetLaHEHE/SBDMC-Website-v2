@@ -1,0 +1,203 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+---
+
+<Layout title="Forms & Downloads" description="Download forms, brochures, handy guides, and other documents from SBDMC for the Subic Bay Gateway Park.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Downloads</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Forms & Downloads</h1>
+      <p class="text-lg text-white/70">Download forms, brochures, and handy guides</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Products & Services", href: "/forms" }, { label: "Forms & Downloads" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+      <div class="mb-16">
+        <h2 class="mb-8 text-2xl font-bold text-primary-500" data-aos="fade-up">General Downloads</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">Infrastructure Brochure</h3>
+            <p class="mb-4 text-sm text-gray-500">Detailed information about SBGP facilities and infrastructure.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/INFRASTRUCTURE+%281%29.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">Handy Guide</h3>
+            <p class="mb-4 text-sm text-gray-500">Quick reference guide for locators and visitors.</p>
+            <a href="/handy-guide" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+              View Guide
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">Customer Survey Form</h3>
+            <p class="mb-4 text-sm text-gray-500">Help us improve our services by filling out our online survey.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScZ0UKsbyfwdQZTMy4mC6AhYkpCKx2NqbjHSpLeHP6kxAOXfQ/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              Fill Out Form &rarr;
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">Customer Survey Form (PDF)</h3>
+            <p class="mb-4 text-sm text-gray-500">Download a printable version of the customer survey form.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/Customer+Survey+Form+%281%29.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="mb-8 text-2xl font-bold text-primary-500" data-aos="fade-up">FSBFZ Forms</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SBF Application Checklist</h3>
+            <p class="mb-4 text-sm text-gray-500">Checklist for SBF Application — updated 16 June 2015.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/NEW+Checklist+for+SBF+Applicaton.16+June+2015.doc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download .doc
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">Renewal Form CR/CRTE</h3>
+            <p class="mb-4 text-sm text-gray-500">Renewal form for Certificate of Registration — 16 June 2015.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/Renewal+Form+CR.CRTE.16+June+2015.doc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download .doc
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SBF Application for Registration</h3>
+            <p class="mb-4 text-sm text-gray-500">Application form for SBF registration — January 2013.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/SBF+Applicatiion+for+Registration.01.18.2013..doc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download .doc
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="mb-8 text-2xl font-bold text-primary-500" data-aos="fade-up">SBDMC Documents</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SBGP Deed of Restrictions 2018</h3>
+            <p class="mb-4 text-sm text-gray-500">Deed of restrictions governing Subic Bay Gateway Park.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/SBGP+Deed+of+Restrictions+2018.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">RFID Application Form</h3>
+            <p class="mb-4 text-sm text-gray-500">Application form for RFID access passes — September 2022.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/RFID_FORM_20220903.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SOP: Illegal Parking</h3>
+            <p class="mb-4 text-sm text-gray-500">Standard operating procedure for illegal parking in SBGP.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/SOP+for+Illegal+Parking.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SOP: RFID Issuance</h3>
+            <p class="mb-4 text-sm text-gray-500">Standard operating procedure for RFID issuance.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/SOP+for+RFID.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SOP: Consent to Sublease</h3>
+            <p class="mb-4 text-sm text-gray-500">Guidelines for issuance of consent to sublease and monitoring of sub-lessees.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/SOP+and+Guidelines+for+Issuance+of+Consent+to+Sublease+and+Monitoring+of+Locator+Sub-lessees.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SOP: Monitoring of Sublessees</h3>
+            <p class="mb-4 text-sm text-gray-500">Procedure for monitoring sublessees without SBDMC consent.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/SOP+for+Monitoring+of+Sublessees+without+SBDMC+Consent.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+
+          <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">SOP: Customer Service Assistance</h3>
+            <p class="mb-4 text-sm text-gray-500">Procedure for customer service assistance requests.</p>
+            <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/Customer+Assistance+Procedure.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

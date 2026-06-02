@@ -1,0 +1,21 @@
+{
+  "headline": "Where Business",
+  "headlineHighlight": "Thrives",
+  "badge": "Premier Industrial Park in Subic Bay Freeport Zone",
+  "subtitle": "Subic Bay Gateway Park — a world-class industrial park offering strategic location, modern infrastructure, and unparalleled business incentives in the Philippines.",
+  "ctaPrimary": { "text": "Explore SBDMC", "link": "/about-sbdmc" },
+  "ctaSecondary": { "text": "Get in Touch", "link": "/contact" },
+  "stats": [
+    { "value": "45+", "label": "Hectares of Prime Land" },
+    { "value": "50+", "label": "Locator Companies" },
+    { "value": "ISO", "label": "Certified Quality" },
+    { "value": "24/7", "label": "Security & Support" }
+  ],
+  "servicesTitle": "Everything Your Business Needs",
+  "servicesSubtitle": "Comprehensive facilities and services at your fingertips",
+  "featuresTitle": "What Sets Us Apart",
+  "featuresSubtitle": "Three reasons why SBGP is the right choice for your business",
+  "ctaTitle": "Ready to Start Your Journey?",
+  "ctaSubtitle": "Contact us today to learn how your business can thrive at Subic Bay Gateway Park.",
+  "ctaButton": "Contact Us Today"
+}
