@@ -111,15 +111,16 @@ const faqCategories = faqData.categories;
     btn.addEventListener("click", () => {
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector(".faq-icon");
-      const isOpen = !answer.classList.contains("max-h-0");
+      const isOpen = answer.classList.contains("max-h-96");
       document.querySelectorAll(".faq-answer").forEach((el) => {
+        el.classList.remove("max-h-96");
         el.classList.add("max-h-0");
         el.previousElementSibling.querySelector(".faq-icon")?.classList.remove("rotate-45");
       });
       if (!isOpen) {
         answer.classList.remove("max-h-0");
         answer.classList.add("max-h-96");
-        icon.classList.add("rotate-45");
+        icon?.classList.add("rotate-45");
       }
     });
   });

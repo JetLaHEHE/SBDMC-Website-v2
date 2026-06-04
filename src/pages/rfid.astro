@@ -6,13 +6,13 @@ import Breadcrumb from "../components/Breadcrumb.astro";
 <Layout title="RFID" description="RFID access pass guidelines, application process, and downloadable forms for vehicles entering Subic Bay Gateway Park.">
   <section class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
-      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">RFID</div>
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">RFID Access</div>
       <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">RFID Guidelines</h1>
       <p class="text-lg text-white/70">RFID access and guidelines for vehicles entering Subic Bay Gateway Park</p>
     </div>
   </section>
 
-  <Breadcrumb pages={[{ label: "Products & Services", href: "/rfid" }, { label: "RFID" }]} />
+  <Breadcrumb pages={[{ label: "Products & Services", href: "/rfid" }, { label: "RFID Access" }]} />
 
   <section class="py-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -162,15 +162,16 @@ import Breadcrumb from "../components/Breadcrumb.astro";
     btn.addEventListener("click", () => {
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector(".faq-icon");
-      const isOpen = !answer.classList.contains("max-h-0");
+      const isOpen = answer.classList.contains("max-h-96");
       document.querySelectorAll(".faq-answer").forEach((el) => {
+        el.classList.remove("max-h-96");
         el.classList.add("max-h-0");
         el.previousElementSibling.querySelector(".faq-icon")?.classList.remove("rotate-45");
       });
       if (!isOpen) {
         answer.classList.remove("max-h-0");
         answer.classList.add("max-h-96");
-        icon.classList.add("rotate-45");
+        icon?.classList.add("rotate-45");
       }
     });
   });

@@ -8,6 +8,7 @@
     { "label": "Contact Us", "href": "/contact" }
   ],
   "services": [
+    { "label": "RFID Access", "href": "/rfid" },
     { "label": "Rental Information", "href": "/rental-information" },
     { "label": "Business Services", "href": "/business-services" },
     { "label": "Job Opportunities", "href": "/job-opportunities" },
