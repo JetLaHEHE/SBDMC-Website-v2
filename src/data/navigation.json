@@ -4,7 +4,7 @@
     "label": "About Us",
     "href": "#",
     "children": [
-      { "label": "About SBDMC", "href": "/about-sbdmc" },
+      { "label": "About SBDMC, Inc.", "href": "/about-sbdmc" },
       { "label": "About SBGP", "href": "/description" },
       { "label": "About SBMA", "href": "/about-sbma" },
       { "label": "Locators", "href": "/locators" }

@@ -1,7 +1,7 @@
 {
   "quickLinks": [
     { "label": "Home", "href": "/" },
-    { "label": "About SBDMC", "href": "/about-sbdmc" },
+    { "label": "About SBDMC, Inc.", "href": "/about-sbdmc" },
     { "label": "Locators", "href": "/locators" },
     { "label": "Business Incentives", "href": "/business-incentives" },
     { "label": "For Lease", "href": "/for-lease" },

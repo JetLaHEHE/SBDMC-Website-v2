@@ -9,7 +9,7 @@
   <rect x="0" y="0" width="8" height="630" fill="#CC0000"/>
   <circle cx="1060" cy="160" r="140" fill="none" stroke="#CC0000" stroke-width="2" opacity="0.15"/>
   <circle cx="1120" cy="100" r="80" fill="none" stroke="#CC0000" stroke-width="1.5" opacity="0.1"/>
-  <text x="80" y="270" font-family="'Inter','system-ui',sans-serif" font-size="72" font-weight="800" fill="white">SBDMC</text>
+  <text x="80" y="270" font-family="'Inter','system-ui',sans-serif" font-size="72" font-weight="800" fill="white">SBDMC, Inc.</text>
   <text x="80" y="340" font-family="'Inter','system-ui',sans-serif" font-size="30" font-weight="500" fill="#7A9EFF">Subic Bay Gateway Park</text>
   <text x="80" y="400" font-family="'Inter','system-ui',sans-serif" font-size="20" fill="#ADC0FF">A premier business and industrial park in the</text>
   <text x="80" y="435" font-family="'Inter','system-ui',sans-serif" font-size="20" fill="#ADC0FF">Subic Bay Freeport Zone, Philippines.</text>

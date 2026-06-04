@@ -136,9 +136,9 @@ collections:
           - { label: "Facebook URL", name: "facebookUrl", widget: "string" }
 
   - name: "about_sbdmc"
-    label: "About SBDMC"
+    label: "About SBDMC, Inc."
     files:
-      - label: "About SBDMC Page"
+      - label: "About SBDMC, Inc. Page"
         name: "about_sbdmc"
         file: "src/data/about-sbdmc.json"
         format: "json"

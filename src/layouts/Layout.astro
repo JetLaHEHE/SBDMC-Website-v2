@@ -8,8 +8,8 @@ import CookieConsent from "../components/CookieConsent.astro";
 import Search from "../components/Search.astro";
 
 const { title, description, ogImage } = Astro.props;
-const siteName = "SBDMC - Subic Bay Gateway Park";
-const pageTitle = title ? `${title} | SBDMC` : siteName;
+const siteName = "SBDMC, Inc. - Subic Bay Gateway Park";
+const pageTitle = title ? `${title} | SBDMC, Inc.` : siteName;
 const pageDesc = description || "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.";
 const canonical = Astro.url.pathname;
 const defaultOgImage = ogImage || "/images/og-default.svg";
@@ -77,7 +77,7 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Subic Bay Gateway Park (SBDMC)",
+      "name": "Subic Bay Gateway Park (SBDMC, Inc.)",
       "url": "https://sbdmc.netlify.app",
       "logo": "https://sbdmc.netlify.app/images/logo.png",
       "description": "A premier business and industrial park in the Subic Bay Freeport Zone, Philippines.",
