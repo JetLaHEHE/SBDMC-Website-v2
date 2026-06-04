@@ -1,0 +1,109 @@
+# Facebook Feed Feature — Design Spec
+
+## Overview
+
+Add an automatic, client-side Facebook Page Plugin feed to the SBDMC, Inc. website showing recent posts from https://www.facebook.com/sbdmc/. The feed appears on the homepage as a "Latest from SBDMC" section, respects cookie consent, and loads lazily for performance.
+
+## Motivation
+
+The site is currently fully static with no dynamic content. A Facebook feed adds a living pulse — showing investors, locators, and visitors that SBDMC is actively operating. It communicates credibility and recency with zero ongoing maintenance.
+
+## Approach
+
+**Chosen: Facebook Page Plugin (embedded widget)**
+
+Runners-up considered and rejected:
+- **Build-time Graph API fetch** — requires Facebook App + access token that expires; won't update until the next build; a build failure on API rate limit or permission change breaks CI.
+- **Third-party widget (EmbedSocial, etc.)** — monthly fee, external dependency, heavier than Facebook's own plugin.
+
+The Page Plugin is the simplest fit for a static Astro site: no API keys, no server dependency, auto-updates live.
+
+## Architecture
+
+### Component Tree
+
+```
+index.astro
+  └── FacebookFeed.astro          ← new component, added after advantages section
+      ├── Section container       ← bg-surface, py-16
+      ├── Badge + Heading         ← "Updates" badge, "Latest from SBDMC" h2
+      ├── Subtitle                ← "Follow us on Facebook for real-time updates"
+      ├── Feed card               ← white rounded card containing the embed
+      │   └── #fb-root            ← Facebook SDK mount point
+      │   └── .fb-page            ← Facebook Page Plugin div
+      ├── Consent gate fallback   ← shown if cookies not accepted
+      └── Facebook link           ← "Visit our Facebook page →"
+```
+
+### Data Flow
+
+1. On mount, FacebookFeed.astro checks `localStorage.getItem('cookie-consent')`.
+2. If `null` (no decision yet): show nothing, or a minimal placeholder urging consent.
+3. If `"declined"`: render a placeholder card ("Accept cookies to view our Facebook feed") with a link to cookie settings.
+4. If `"accepted"`: inject Facebook SDK (`https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0`) via dynamic script tag.
+4. SDK auto-parses the `.fb-page` div and renders the Page Plugin.
+5. If consent granted later (via `window.dispatchEvent(new CustomEvent('cookie-consent-accepted'))` from the existing CookieConsent component), the component re-initializes and loads the SDK.
+
+### Page Plugin Settings
+
+```html
+<div class="fb-page"
+  data-href="https://www.facebook.com/sbdmc/"
+  data-tabs="timeline"
+  data-hide-cover="true"
+  data-show-facepile="false"
+  data-width="500"
+  data-height="700"
+  data-lazy="true">
+</div>
+```
+
+- data-lazy="true" — Facebook SDK delays loading until the element is near the viewport.
+- data-hide-cover="true" — removes the cover photo header for a cleaner fit.
+- data-show-facepile="false" — avoids the "X people like this" line.
+
+### Performance
+
+- Facebook SDK loads **only when** (a) cookie consent is given and (b) the section scrolls into view.
+- The SDK is async and non-render-blocking.
+- The section uses a CSS content-visibility strategy to reserve layout space without rendering before it's needed.
+
+### Privacy / Cookie Consent
+
+- The component respects the existing cookie consent system (`src/components/CookieConsent.astro`).
+- Facebook SDK sets third-party tracking cookies. The feed must not load until the user has accepted.
+- Consent state persisted in `localStorage`.
+
+### Responsive Behavior
+
+- On desktop: centered card, max 600px wide, 700px tall scrollable feed.
+- On tablet: full-width card with padding.
+- On mobile: full-width, 500px tall.
+
+### Styling
+
+- Section background: `bg-surface` (matches the site's alternating section pattern).
+- Card: `bg-white rounded-xl shadow-sm card p-6`.
+- Badge: consistent with existing section badges (`inline-block bg-accent-500 text-white px-4 py-1 rounded-full text-sm font-semibold`).
+- Override Facebook's fixed width via CSS: `.fb-page, .fb-page > span, .fb-page iframe { max-width: 100% !important; width: 100% !important; }`.
+
+## Files Changed
+
+| File | Change |
+|---|---|
+| `src/components/FacebookFeed.astro` | **New** — the Facebook feed component |
+| `src/pages/index.astro` | Add `<FacebookFeed />` after the advantages section |
+| `src/styles/global.css` | Add Facebook responsive override rules |
+
+## Open Questions / Future
+
+- If the Facebook page becomes very active, consider adding a dedicated `/news` page with a larger feed.
+- If cookie consent acceptance rate is low, consider showing a static preview with a "View on Facebook" link instead of the full consent gate.
+
+## Implementation Order
+
+1. Create `FacebookFeed.astro` component with core embed + lazy loading
+2. Add responsive CSS overrides to `global.css`
+3. Insert component in `index.astro` at the correct position
+4. Verify embed renders correctly
+5. Test cookie consent gating
