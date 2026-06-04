@@ -7,7 +7,7 @@ import BackToTop from "../components/BackToTop.astro";
 import CookieConsent from "../components/CookieConsent.astro";
 import Search from "../components/Search.astro";
 
-const { title, description, ogImage, ignorePagefind } = Astro.props;
+const { title, description, ogImage } = Astro.props;
 const siteName = "SBDMC - Subic Bay Gateway Park";
 const pageTitle = title ? `${title} | SBDMC` : siteName;
 const pageDesc = description || "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.";
@@ -89,7 +89,7 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
     }
     </script>
   </head>
-  <body data-pagefind-ignore={ignorePagefind || undefined}>
+  <body>
     <Header currentPath={canonical} />
     <main data-pagefind-body>
       <slot />
