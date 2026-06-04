@@ -91,7 +91,7 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
   </head>
   <body data-pagefind-ignore={ignorePagefind || undefined}>
     <Header currentPath={canonical} />
-    <main>
+    <main data-pagefind-body>
       <slot />
     </main>
     <Footer />
