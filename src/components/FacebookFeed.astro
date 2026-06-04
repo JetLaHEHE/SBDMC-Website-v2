@@ -1,0 +1,89 @@
+<section class="bg-surface py-24" aria-label="Facebook feed">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+    <div class="mb-12 text-center">
+      <div class="mb-4 inline-flex items-center gap-2 bg-accent-500 px-4 py-1.5 text-sm font-semibold text-white">
+        Updates
+      </div>
+      <h2 class="section-title text-center">Latest from SBDMC</h2>
+      <p class="section-subtitle text-center">Follow us on Facebook for real-time updates</p>
+    </div>
+
+    <div class="card">
+      <div id="fb-placeholder" class="py-8 text-center">
+        <p class="text-gray-600" id="fb-placeholder-message">Accept cookies to view our Facebook feed.</p>
+        <p class="mt-1 text-sm text-gray-400">Please visit our Facebook page directly.</p>
+      </div>
+
+      <div id="fb-root"></div>
+
+      <div id="fb-feed-wrapper" style="display:none">
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/sbdmc/"
+          data-tabs="timeline"
+          data-width=""
+          data-height="600"
+          data-small-header="true"
+          data-adapt-container-width="true"
+          data-hide-cover="true"
+          data-show-facepile="false"
+        ></div>
+      </div>
+    </div>
+
+    <a
+      href="https://www.facebook.com/sbdmc/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit our Facebook page (opens in new tab)"
+      class="btn-primary mx-auto mt-8 w-fit"
+    >
+      Visit our Facebook page &rarr;
+    </a>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const placeholder = document.getElementById("fb-placeholder");
+    const placeholderMessage = document.getElementById("fb-placeholder-message");
+    const feedWrapper = document.getElementById("fb-feed-wrapper");
+
+    if (!placeholder || !placeholderMessage || !feedWrapper) return;
+
+    let sdkLoaded = false;
+
+    function loadFacebookSDK() {
+      if (sdkLoaded) return;
+      sdkLoaded = true;
+
+      window.fbAsyncInit = function () {
+        FB.init({ xfbml: true, version: "v18.0" });
+      };
+      const script = document.createElement("script");
+      script.src = "https://connect.facebook.net/en_US/sdk.js";
+      script.onerror = function () {
+        sdkLoaded = false;
+        feedWrapper.style.display = "none";
+        placeholder.style.display = "block";
+        placeholderMessage.textContent = "Facebook feed could not be loaded.";
+      };
+      document.body.appendChild(script);
+      feedWrapper.style.display = "block";
+      placeholder.style.display = "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const consent = localStorage.getItem("cookie-consent");
+      if (consent === "accepted") {
+        loadFacebookSDK();
+      } else if (consent === "declined") {
+        placeholderMessage.textContent = "Cookies declined. Facebook feed unavailable.";
+      }
+    });
+
+    window.addEventListener("cookie-consent-accepted", function () {
+      loadFacebookSDK();
+    });
+  })();
+</script>

@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import hero from "../data/hero.json";
 import news from "../data/news.json";
 import sbdmcBg from "../assets/sbdmc.jpg";
+import FacebookFeed from "../components/FacebookFeed.astro";
 const stats = hero.stats;
 const newsItems = news.items;
 ---
@@ -126,6 +127,8 @@ const newsItems = news.items;
       </div>
     </div>
   </section>
+
+  <FacebookFeed />
 
   <section class="bg-surface py-24">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

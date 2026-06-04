@@ -149,3 +149,10 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+.fb-page,
+.fb-page > span,
+.fb-page > span > iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+}
