@@ -38,6 +38,14 @@
     if (e.key === "Escape") closeSearch();
   });
 
+  modal.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (link && link.href && !link.href.startsWith("javascript")) {
+      closeSearch();
+      window.location.href = link.href;
+    }
+  });
+
   window.addEventListener("DOMContentLoaded", () => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
