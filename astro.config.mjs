@@ -6,6 +6,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "https://sbdmc-v2.netlify.app",
+  site: "https://sbdmc.netlify.app",
   integrations: [sitemap()],
 });

@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+---
+
+<Layout title="RFID" description="RFID access pass guidelines, application process, and downloadable forms for vehicles entering Subic Bay Gateway Park.">
+  <section class="bg-primary-500 py-24">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">RFID</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">RFID Guidelines</h1>
+      <p class="text-lg text-white/70">RFID access and guidelines for vehicles entering Subic Bay Gateway Park</p>
+    </div>
+  </section>
+
+  <Breadcrumb pages={[{ label: "Products & Services", href: "/rfid" }, { label: "RFID" }]} />
+
+  <section class="py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-8 text-2xl font-bold text-primary-500" data-aos="fade-up">RFID Information</h2>
+      <div class="space-y-4">
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+          <button class="faq-toggle flex w-full items-center justify-between text-left">
+            <span class="pr-4 font-semibold text-primary-500">Where to install the RFID?</span>
+            <svg class="faq-icon h-5 w-5 shrink-0 text-primary-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+            <div class="border-t border-gray-100 pt-4">
+              <p class="leading-relaxed text-gray-600">RFID must be installed by the authorized SBDMC personnel on the non-metal part of the vehicle (headlight, fairings, visor).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="50">
+          <button class="faq-toggle flex w-full items-center justify-between text-left">
+            <span class="pr-4 font-semibold text-primary-500">How long is the validity of the RFID?</span>
+            <svg class="faq-icon h-5 w-5 shrink-0 text-primary-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+            <div class="border-t border-gray-100 pt-4">
+              <p class="leading-relaxed text-gray-600">SBGP RFID is valid only for <strong>one (1) year</strong> from the date of issuance/registration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-toggle flex w-full items-center justify-between text-left">
+            <span class="pr-4 font-semibold text-primary-500">How do I keep my RFID in great condition?</span>
+            <svg class="faq-icon h-5 w-5 shrink-0 text-primary-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+            <div class="border-t border-gray-100 pt-4">
+              <ul class="list-disc space-y-2 pl-5 text-gray-600">
+                <li>Do not put excessive force on the black chip at the middle part of the RFID.</li>
+                <li>Do not peel it off and transfer in other location or vehicle.</li>
+                <li>Do not spray directly with pressure washer during car wash.</li>
+                <li>Do not wipe abrasive substance on the sticker.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="150">
+          <button class="faq-toggle flex w-full items-center justify-between text-left">
+            <span class="pr-4 font-semibold text-primary-500">Is there a replacement fee for the RFID?</span>
+            <svg class="faq-icon h-5 w-5 shrink-0 text-primary-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+            <div class="border-t border-gray-100 pt-4">
+              <p class="leading-relaxed text-gray-600">The warranty will be void if the RFID is unmounted, lost, transferred, or damaged due to mishandling or removal. There is a replacement fee of <strong>PhP 300.00</strong> for lost or damaged RFID.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-8 text-2xl font-bold text-primary-500" data-aos="fade-up">RFID Usage Guidelines</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="card border-l-4 border-yellow-500" data-aos="fade-up">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-yellow-500 text-white">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          </div>
+          <h3 class="mb-2 font-bold text-yellow-600">Avoid Tailgating</h3>
+          <p class="text-sm text-gray-500">Maintain distance. Keep <strong>one (1) car length</strong> between your vehicle and the next one.</p>
+        </div>
+
+        <div class="card border-l-4 border-blue-500" data-aos="fade-up" data-aos-delay="50">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-500 text-white">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="mb-2 font-bold text-blue-600">Wait Your Turn</h3>
+          <p class="text-sm text-gray-500">Barrier closes after each vehicle. Wait until the vehicle ahead has fully passed the barrier gate and the boom arm has lowered down before you proceed.</p>
+        </div>
+
+        <div class="card border-l-4 border-red-500" data-aos="fade-up">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-red-500 text-white">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+          </div>
+          <h3 class="mb-2 font-bold text-red-600">RFID Blocking</h3>
+          <p class="text-sm text-gray-500">SBDMC has the right to block/confiscate RFID access of vehicles of companies/SBGP Locators found to have violations under their lease agreements with SBDMC, and other users who violated proper usage of RFID sticker or any SBGP rules and regulations.</p>
+        </div>
+
+        <div class="card border-l-4 border-purple-500" data-aos="fade-up" data-aos-delay="50">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-purple-500 text-white">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="mb-2 font-bold text-purple-600">Non-Transferable</h3>
+          <p class="text-sm text-gray-500">RFID are <strong>non-transferrable and non-refundable</strong>. Do not peel it off and transfer in other location or vehicle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="rounded-xl border-2 border-red-300 bg-red-50 p-6 text-center">
+        <div class="mb-3 flex justify-center">
+          <svg class="h-10 w-10 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+        </div>
+        <h3 class="mb-2 text-xl font-bold text-red-700">Damages to Boom Arm</h3>
+        <p class="text-lg font-semibold text-red-600">Will incur a PHP 15,000.00 penalty</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-8 text-2xl font-bold text-primary-500" data-aos="fade-up">RFID Downloads</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary-500">RFID Application Form</h3>
+          <p class="mb-4 text-sm text-gray-500">Application form for RFID access passes — September 2022.</p>
+          <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/RFID_FORM_20220903.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Download PDF
+          </a>
+        </div>
+
+        <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary-500">SOP: RFID Issuance</h3>
+          <p class="mb-4 text-sm text-gray-500">Standard operating procedure for RFID issuance.</p>
+          <a href="https://irp.cdn-website.com/33a8ffc6/files/uploaded/SOP+for+RFID.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.querySelectorAll(".faq-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector(".faq-icon");
+      const isOpen = !answer.classList.contains("max-h-0");
+      document.querySelectorAll(".faq-answer").forEach((el) => {
+        el.classList.add("max-h-0");
+        el.previousElementSibling.querySelector(".faq-icon")?.classList.remove("rotate-45");
+      });
+      if (!isOpen) {
+        answer.classList.remove("max-h-0");
+        answer.classList.add("max-h-96");
+        icon.classList.add("rotate-45");
+      }
+    });
+  });
+</script>
