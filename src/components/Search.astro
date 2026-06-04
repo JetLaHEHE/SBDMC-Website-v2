@@ -41,11 +41,11 @@
   window.addEventListener("DOMContentLoaded", () => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "https://cdn.jsdelivr.net/npm/pagefind@1.1.1/pagefind/pagefind-ui.css";
+    link.href = "/pagefind/pagefind-ui.css";
     document.head.appendChild(link);
 
     const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/pagefind@1.1.1/pagefind/pagefind-ui.js";
+    script.src = "/pagefind/pagefind-ui.js";
     script.onload = () => {
       new PagefindUI({ element: "#pagefind-search", showSubResults: false, resetStyles: false, showImages: false });
     };
