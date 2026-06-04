@@ -4,13 +4,15 @@ import "aos/dist/aos.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
+import CookieConsent from "../components/CookieConsent.astro";
+import Search from "../components/Search.astro";
 
 const { title, description, ogImage } = Astro.props;
 const siteName = "SBDMC - Subic Bay Gateway Park";
 const pageTitle = title ? `${title} | SBDMC` : siteName;
 const pageDesc = description || "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.";
 const canonical = Astro.url.pathname;
-const defaultOgImage = ogImage || "/images/logo.png";
+const defaultOgImage = ogImage || "/images/og-default.svg";
 ---
 
 <!doctype html>
@@ -33,11 +35,39 @@ const defaultOgImage = ogImage || "/images/logo.png";
     <meta property="og:image" content={`https://sbdmc.netlify.app${defaultOgImage}`} />
     <meta property="og:url" content={`https://sbdmc.netlify.app${canonical}`} />
     <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="en_PH" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDesc} />
     <meta name="twitter:image" content={`https://sbdmc.netlify.app${defaultOgImage}`} />
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+    </script>
+    <script is:inline>
+      window.addEventListener("cookie-consent-accepted", () => {
+        gtag("consent", "update", {
+          ad_storage: "granted",
+          ad_user_data: "granted",
+          ad_personalization: "granted",
+          analytics_storage: "granted",
+        });
+      });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" is:inline></script>
+    <script is:inline>
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,6 +95,8 @@ const defaultOgImage = ogImage || "/images/logo.png";
       <slot />
     </main>
     <Footer />
+    <CookieConsent />
+    <Search />
     <BackToTop />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>

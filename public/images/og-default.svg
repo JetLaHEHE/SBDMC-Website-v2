@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040A5E"/>
+      <stop offset="100%" stop-color="#010326"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="8" height="630" fill="#CC0000"/>
+  <circle cx="1060" cy="160" r="140" fill="none" stroke="#CC0000" stroke-width="2" opacity="0.15"/>
+  <circle cx="1120" cy="100" r="80" fill="none" stroke="#CC0000" stroke-width="1.5" opacity="0.1"/>
+  <text x="80" y="270" font-family="'Inter','system-ui',sans-serif" font-size="72" font-weight="800" fill="white">SBDMC</text>
+  <text x="80" y="340" font-family="'Inter','system-ui',sans-serif" font-size="30" font-weight="500" fill="#7A9EFF">Subic Bay Gateway Park</text>
+  <text x="80" y="400" font-family="'Inter','system-ui',sans-serif" font-size="20" fill="#ADC0FF">A premier business and industrial park in the</text>
+  <text x="80" y="435" font-family="'Inter','system-ui',sans-serif" font-size="20" fill="#ADC0FF">Subic Bay Freeport Zone, Philippines.</text>
+  <text x="80" y="530" font-family="'Inter','system-ui',sans-serif" font-size="14" fill="#7A9EFF">sbdmc.netlify.app</text>
+</svg>

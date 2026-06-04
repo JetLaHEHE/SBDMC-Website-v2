@@ -1,0 +1,54 @@
+<div id="search-modal" class="fixed inset-0 z-[100] hidden items-start justify-center bg-black/50 pt-24 backdrop-blur-sm">
+  <div class="w-full max-w-2xl rounded-xl bg-white p-6 shadow-2xl">
+    <div class="mb-4 flex items-center justify-between">
+      <h3 class="text-lg font-bold text-primary-500">Search</h3>
+      <button id="search-close" class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 transition-all hover:bg-gray-100 hover:text-gray-600">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <div id="pagefind-search"></div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("search-modal");
+  const closeBtn = document.getElementById("search-close");
+
+  window.openSearch = () => {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      const input = document.querySelector("#pagefind-search input");
+      input?.focus();
+    }, 100);
+  };
+
+  const closeSearch = () => {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+  };
+
+  closeBtn.addEventListener("click", closeSearch);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeSearch();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeSearch();
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://cdn.jsdelivr.net/npm/pagefind@1.1.1/pagefind/pagefind-ui.css";
+    document.head.appendChild(link);
+
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/pagefind@1.1.1/pagefind/pagefind-ui.js";
+    script.onload = () => {
+      new PagefindUI({ element: "#pagefind-search", showSubResults: false, resetStyles: false, showImages: false });
+    };
+    document.body.appendChild(script);
+  });
+</script>

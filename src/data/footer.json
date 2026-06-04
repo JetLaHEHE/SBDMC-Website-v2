@@ -13,5 +13,9 @@
     { "label": "Business Services", "href": "/business-services" },
     { "label": "Job Opportunities", "href": "/job-opportunities" },
     { "label": "Forms & Downloads", "href": "/forms" }
+  ],
+  "legal": [
+    { "label": "Privacy Policy", "href": "/privacy" },
+    { "label": "Terms of Service", "href": "/terms" }
   ]
 }
