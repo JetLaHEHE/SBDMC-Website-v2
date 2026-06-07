@@ -25,9 +25,9 @@
     "label": "Products & Services",
     "href": "#",
     "children": [
-      { "label": "RFID Access", "href": "/rfid" },
       { "label": "Rental Information", "href": "/rental-information" },
-      { "label": "Business Services", "href": "/business-services" }
+      { "label": "Business Services", "href": "/business-services" },
+      { "label": "RFID Access", "href": "/rfid" }
     ]
   },
   {
