@@ -27,8 +27,15 @@
     "children": [
       { "label": "RFID Access", "href": "/rfid" },
       { "label": "Rental Information", "href": "/rental-information" },
-      { "label": "Business Services", "href": "/business-services" },
-      { "label": "Job Opportunities", "href": "/job-opportunities" }
+      { "label": "Business Services", "href": "/business-services" }
+    ]
+  },
+  {
+    "label": "Careers",
+    "href": "#",
+    "children": [
+      { "label": "Job Opportunities", "href": "/job-opportunities" },
+      { "label": "Submit Resume", "href": "/job-opportunities" }
     ]
   },
   { "label": "Gallery", "href": "/gallery" },
