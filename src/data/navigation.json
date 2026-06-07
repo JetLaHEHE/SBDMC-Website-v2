@@ -34,8 +34,7 @@
     "label": "Careers",
     "href": "#",
     "children": [
-      { "label": "Job Opportunities", "href": "/job-opportunities" },
-      { "label": "Submit Resume", "href": "/job-opportunities" }
+      { "label": "Job Opportunities", "href": "/job-opportunities" }
     ]
   },
   { "label": "Gallery", "href": "/gallery" },
