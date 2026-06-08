@@ -1,0 +1,50 @@
+{
+  "siteName": "SBDMC, Inc. - Subic Bay Gateway Park",
+  "about": "Subic Bay Gateway Park (SBGP) is a 45-hectare industrial park in the Subic Bay Freeport Zone, Philippines. Developed and operated by SBDMC, Inc. Designed for light manufacturing, logistics, warehousing, and BPO operations.",
+  "contact": {
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "phone": "(047) 252-3456",
+    "email": "inquiry@sbdmc.com",
+    "hours": "Monday - Friday: 9:00 AM - 4:00 PM",
+    "helpdesk": "https://sbdmcinc.freshdesk.com/support/home"
+  },
+  "faqs": [
+    { "q": "What types of businesses can locate in SBGP?", "a": "Light manufacturing, logistics and warehousing, BPO, commercial establishments, and service-oriented businesses." },
+    { "q": "What are the tax incentives available?", "a": "Income tax holidays (up to 6 years), reduced 5% tax on gross income after holiday, duty-free importation, exemption from local government taxes, up to 100% foreign ownership." },
+    { "q": "Can foreign companies locate in SBGP?", "a": "Yes, foreign companies may enjoy up to 100% foreign ownership under Subic Bay Freeport Zone incentives." },
+    { "q": "How do I apply for a lease?", "a": "Contact through the website contact page or visit the office at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park. Call (047) 252-3456." },
+    { "q": "What infrastructure is available?", "a": "Reliable power, adequate water, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage, and waste management." }
+  ],
+  "incentives": [
+    "Income tax holiday (up to 6 years)",
+    "5% tax on gross income after holiday",
+    "Duty-free importation of capital equipment and raw materials",
+    "Exemption from local government taxes",
+    "Up to 100% foreign ownership allowed",
+    "Streamlined registration processes"
+  ],
+  "services": [
+    "Rental Information - available spaces for lease within the park",
+    "Business Services - comprehensive support for business operations",
+    "RFID Access - guidelines, requirements, and forms for access passes"
+  ],
+  "pages": {
+    "aboutSbdmc": "/about-sbdmc",
+    "aboutSbma": "/about-sbma",
+    "description": "/description",
+    "locators": "/locators",
+    "businessIncentives": "/business-incentives",
+    "otherReasons": "/other-reasons",
+    "faq": "/faq",
+    "governmentLinks": "/government-links",
+    "forLease": "/for-lease",
+    "rentalInformation": "/rental-information",
+    "businessServices": "/business-services",
+    "rfid": "/rfid",
+    "jobOpportunities": "/job-opportunities",
+    "gallery": "/gallery",
+    "forms": "/forms",
+    "contact": "/contact"
+  },
+  "lastUpdated": "2026-06-08"
+}
