@@ -103,6 +103,21 @@
     return "<p>" + html + "</p>";
   }
 
+  const SUGGESTED_QUESTIONS = [
+    "What are your rates?",
+    "How do I register?",
+    "What are the gate hours?",
+    "What leasing incentives are available?",
+    "Map and directions",
+  ];
+
+  function renderSuggestedQuestions() {
+    const chipsHtml = SUGGESTED_QUESTIONS.map((q, i) =>
+      `<button class="suggested-chip bg-blue-50 text-primary-600 border border-blue-200 rounded-full px-3 py-1.5 text-xs cursor-pointer hover:bg-blue-100 transition-colors" data-index="${i}">${escapeHtml(q)}</button>`
+    ).join("");
+    return `<div id="suggested-questions" class="flex flex-wrap gap-2 ml-9 mb-2">${chipsHtml}</div>`;
+  }
+
   function renderTimestamp(time) {
     return `<div class="text-[10px] text-gray-400 mt-0.5">${escapeHtml(time)}</div>`;
   }
@@ -145,7 +160,7 @@
       const initialMsg = { role: "bot", text: "Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?", time: greetingTime, feedback: null };
       messages.push(initialMsg);
       msgCounter = 0;
-      messagesEl.innerHTML = buildBotBubble(initialMsg.text, initialMsg.time, null);
+      messagesEl.innerHTML = buildBotBubble(initialMsg.text, initialMsg.time, null) + renderSuggestedQuestions();
       msgCounter = 1;
     }
     messagesEl.scrollTop = messagesEl.scrollHeight;
@@ -245,6 +260,15 @@
   sendBtn.addEventListener("click", () => sendMessage());
   input.addEventListener("keydown", function (e) {
     if (e.key === "Enter" && !sendBtn.disabled) sendMessage();
+  });
+
+  messagesEl.addEventListener("click", function (e) {
+    const chip = e.target.closest(".suggested-chip");
+    if (chip) {
+      const index = parseInt(chip.dataset.index);
+      const question = SUGGESTED_QUESTIONS[index];
+      if (question) sendMessage(question);
+    }
   });
 
   function handleClickOutside(e) {
