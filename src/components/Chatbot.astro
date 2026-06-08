@@ -133,7 +133,7 @@
   }
 
   function buildUserBubble(text, time) {
-    return `<div class="flex items-start justify-end gap-2"><div class="text-right min-w-0"><div class="max-w-[80%] rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div>${renderTimestamp(time)}</div></div>`;
+    return `<div class="flex justify-end"><div class="text-right min-w-0 max-w-[80%]"><div class="rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div>${renderTimestamp(time)}</div></div>`;
   }
 
   function renderMessages() {
