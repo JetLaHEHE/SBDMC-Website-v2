@@ -98,7 +98,7 @@
 
       let data;
       try {
-        data = res.ok ? await res.json() : null;
+        data = await res.json();
       } catch {
         data = null;
       }
