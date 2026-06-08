@@ -78,6 +78,31 @@
     return div.innerHTML;
   }
 
+  function renderMarkdown(text) {
+    let html = escapeHtml(text);
+    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
+    html = html.replace(/`(.+?)`/g, "<code>$1</code>");
+    html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    const lines = html.split("\n");
+    let result = [];
+    let inList = false;
+    for (const line of lines) {
+      if (line.match(/^[-*]\s/)) {
+        if (!inList) { result.push("<ul>"); inList = true; }
+        result.push("<li>" + line.replace(/^[-*]\s/, "") + "</li>");
+      } else {
+        if (inList) { result.push("</ul>"); inList = false; }
+        result.push(line);
+      }
+    }
+    if (inList) result.push("</ul>");
+    html = result.join("\n");
+    html = html.replace(/\n\n/g, "</p><p>");
+    html = html.replace(/\n/g, "<br>");
+    return "<p>" + html + "</p>";
+  }
+
   function renderTimestamp(time) {
     return `<div class="text-[10px] text-gray-400 mt-0.5">${escapeHtml(time)}</div>`;
   }
@@ -86,7 +111,7 @@
     let html = `<div class="flex items-start gap-2">`;
     html += `<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div>`;
     html += `<div>`;
-    html += `<div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${escapeHtml(text)}</div>`;
+    html += `<div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${renderMarkdown(text)}</div>`;
     html += renderTimestamp(time);
     html += `<div class="flex gap-1 mt-1 text-base" data-msg-index="${msgCounter}">`;
     const upActive = feedbackState === "up" ? "" : "opacity-40";
