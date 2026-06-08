@@ -3,11 +3,21 @@ import knowledge from "../../src/data/chat-knowledge.json" with { type: "json" }
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const SITE_URL = process.env.URL || "https://sbdmc.netlify.app";
 
-const SYSTEM_PROMPT = `You are the SBDMC assistant for Subic Bay Gateway Park.
+function buildSystemPrompt(pageUrl) {
+  let contextNote = "";
+  if (pageUrl && knowledge.pages) {
+    const match = Object.entries(knowledge.pages).find(([key]) => pageUrl.includes(key) || key.includes(pageUrl.replace(/\/$/, "")));
+    if (match) {
+      const [key, label] = match;
+      contextNote = `\nThe user is currently on the "${label}" page of the SBDMC website.`;
+    }
+  }
+  return `You are the SBDMC assistant for Subic Bay Gateway Park.
 Answer questions ONLY using the knowledge provided below. If you don't know the answer, say "I'm not sure — please contact our team at inquiry@sbdmc.com or visit sbdmcinc.freshdesk.com/support/home."
 
 Knowledge base:
-${JSON.stringify(knowledge, null, 2)}`;
+${JSON.stringify(knowledge, null, 2)}${contextNote}`;
+}
 
 export async function handler(event) {
   const headers = {
@@ -28,10 +38,12 @@ export async function handler(event) {
   }
 
   try {
-    const { message } = JSON.parse(event.body);
+    const { message, pageUrl } = JSON.parse(event.body);
     if (!message || typeof message !== "string" || message.trim().length === 0) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Message is required" }) };
     }
+
+    const SYSTEM_PROMPT = buildSystemPrompt(pageUrl);
 
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
@@ -42,7 +54,7 @@ export async function handler(event) {
         "X-Title": "SBDMC Chatbot",
       },
       body: JSON.stringify({
-        model: "mistralai/mistral-7b-instruct:free",
+        model: "google/gemma-4-31b-it:free",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: message },
