@@ -14,13 +14,10 @@ export function getLangFromParams(params: { lang?: string }): LangCode {
 }
 
 export function getStaticPaths(): { params: { lang?: string } }[] {
-  return [
-    { params: { lang: undefined } },
-    { params: { lang: "zh" } },
-    { params: { lang: "tl" } },
-    { params: { lang: "ja" } },
-    { params: { lang: "ko" } },
-  ];
+  const nonDefault = LANGUAGES.filter((l) => l.code !== "en").map((l) => ({
+    params: { lang: l.code },
+  }));
+  return [{ params: { lang: undefined } }, ...nonDefault];
 }
 
 export function t<T extends Record<string, any>>(
@@ -30,17 +27,19 @@ export function t<T extends Record<string, any>>(
   return translations[lang] ?? translations["en"];
 }
 
+const nonDefaultCodes = LANGUAGES.filter((l) => l.code !== "en").map((l) => l.code).join("|");
+
 export function getHreflangs(
   currentPath: string,
   baseUrl: string,
 ): { lang: string; href: string }[] {
-  const path = currentPath.replace(/^\/(zh|tl|ja|ko)\/?/, "/");
+  const re = new RegExp(`^/(${nonDefaultCodes})\\/?`);
+  const path = currentPath.replace(re, "/");
   return [
-    { lang: "en", href: `${baseUrl}${path}` },
-    { lang: "zh", href: `${baseUrl}/zh${path}` },
-    { lang: "tl", href: `${baseUrl}/tl${path}` },
-    { lang: "ja", href: `${baseUrl}/ja${path}` },
-    { lang: "ko", href: `${baseUrl}/ko${path}` },
+    ...LANGUAGES.map((l) => ({
+      lang: l.code,
+      href: `${baseUrl}${getLangPrefix(l.code)}${path}`,
+    })),
     { lang: "x-default", href: `${baseUrl}${path}` },
   ];
 }
