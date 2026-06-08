@@ -1,0 +1,129 @@
+<div id="chatbot">
+  <button id="chatbot-toggle" class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all hover:bg-primary-600 hover:scale-105 active:scale-95" aria-label="Open chat">
+    <svg id="chatbot-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+    <svg id="chatbot-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+  </button>
+
+  <div id="chatbot-panel" class="fixed bottom-24 right-6 z-50 hidden w-[360px] max-w-[calc(100vw-2rem)] rounded-xl border border-gray-200 bg-white shadow-2xl flex-col overflow-hidden" style="max-height: 520px;">
+    <div class="flex items-center gap-3 bg-primary-500 px-4 py-3 text-white">
+      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-sm font-bold">S</div>
+      <div>
+        <div class="text-sm font-semibold">SBDMC Assistant</div>
+        <div class="text-xs text-white/70">How can I help you?</div>
+      </div>
+    </div>
+
+    <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4" style="min-height: 300px;">
+      <div class="flex items-start gap-2">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div>
+        <div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">
+          Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 px-4 py-3">
+      <div class="flex items-center gap-2">
+        <input
+          id="chatbot-input"
+          type="text"
+          placeholder="Type your question..."
+          class="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+        />
+        <button id="chatbot-send" class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500 text-white transition-all hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed" aria-label="Send message">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+(function () {
+  const toggle = document.getElementById("chatbot-toggle");
+  const panel = document.getElementById("chatbot-panel");
+  const icon = document.getElementById("chatbot-icon");
+  const closeIcon = document.getElementById("chatbot-close-icon");
+  const messages = document.getElementById("chatbot-messages");
+  const input = document.getElementById("chatbot-input");
+  const sendBtn = document.getElementById("chatbot-send");
+
+  if (!toggle || !panel) return;
+
+  let isOpen = false;
+
+  function togglePanel() {
+    isOpen = !isOpen;
+    panel.classList.toggle("hidden", !isOpen);
+    panel.classList.toggle("flex", isOpen);
+    icon.classList.toggle("hidden", isOpen);
+    closeIcon.classList.toggle("hidden", !isOpen);
+    if (isOpen) {
+      setTimeout(() => input?.focus(), 100);
+    }
+  }
+
+  toggle.addEventListener("click", togglePanel);
+
+  async function sendMessage() {
+    const text = input?.value.trim();
+    if (!text) return;
+
+    input.value = "";
+    sendBtn.disabled = true;
+
+    messages.insertAdjacentHTML("beforeend", `<div class="flex items-start justify-end gap-2"><div class="max-w-[80%] rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div></div>`);
+    messages.scrollTop = messages.scrollHeight;
+
+    const loadingId = "chatbot-loading";
+    messages.insertAdjacentHTML("beforeend", `<div id="${loadingId}" class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-500"><span class="inline-flex gap-1"><span class="animate-bounce" style="animation-delay:0ms">.</span><span class="animate-bounce" style="animation-delay:150ms">.</span><span class="animate-bounce" style="animation-delay:300ms">.</span></span></div></div>`);
+    messages.scrollTop = messages.scrollHeight;
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
+      });
+
+      const data = await res.json();
+
+      document.getElementById(loadingId)?.remove();
+
+      if (data.reply) {
+        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${escapeHtml(data.reply)}</div></div>`);
+      } else {
+        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">${escapeHtml(data.error || "Something went wrong. Please try again.")}</div></div>`);
+      }
+    } catch {
+      document.getElementById(loadingId)?.remove();
+      messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">Network error. Please check your connection and try again.</div></div>`);
+    }
+
+    messages.scrollTop = messages.scrollHeight;
+    sendBtn.disabled = false;
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  sendBtn?.addEventListener("click", sendMessage);
+  input?.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") sendMessage();
+  });
+
+  function handleClickOutside(e) {
+    if (isOpen && !panel.contains(e.target) && !toggle.contains(e.target)) {
+      togglePanel();
+    }
+  }
+  document.addEventListener("click", handleClickOutside);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && isOpen) togglePanel();
+  });
+})();
+</script>
