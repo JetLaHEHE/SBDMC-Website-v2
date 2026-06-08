@@ -1,16 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getStaticPaths, getLangFromParams, t, type LangCode } from "../i18n";
+export { getStaticPaths };
+import notFoundTranslations from "../data/translations/not-found.json";
+
+const lang = getLangFromParams(Astro.params) as LangCode;
+const nf = t(notFoundTranslations, lang);
 ---
 
-<Layout title="Page Not Found">
-  <section aria-label="Page not found" data-pagefind-ignore class="flex min-h-[80vh] items-center justify-center bg-surface">
+<Layout title={nf.title}>
+  <section aria-label={nf.title} data-pagefind-ignore class="flex min-h-[80vh] items-center justify-center bg-surface">
     <div class="mx-auto max-w-lg px-4 text-center">
-      <div class="mb-6 text-8xl font-black text-primary-500">404</div>
-      <h1 class="mb-4 text-3xl font-bold text-primary-500">Page Not Found</h1>
-      <p class="mb-8 text-gray-500">The page you're looking for doesn't exist or has been moved.</p>
-      <a href="/" class="btn-primary">Back to Home</a>
+      <div class="mb-6 text-8xl font-black text-primary-500">{nf.code}</div>
+      <h1 class="mb-4 text-3xl font-bold text-primary-500">{nf.title}</h1>
+      <p class="mb-8 text-gray-500">{nf.message}</p>
+      <a href="/" class="btn-primary">{nf.backHome}</a>
       <div class="mt-10">
-        <p class="mb-4 text-sm font-medium text-gray-400">Suggested Pages</p>
+        <p class="mb-4 text-sm font-medium text-gray-400">{nf.suggestedHeading}</p>
         <div class="flex flex-wrap justify-center gap-3">
           <a href="/rfid" class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">RFID Access</a>
           <a href="/business-services" class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">Business Services</a>
