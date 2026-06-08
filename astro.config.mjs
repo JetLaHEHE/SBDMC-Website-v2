@@ -7,5 +7,26 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: "https://sbdmc.netlify.app",
-  integrations: [sitemap()],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "zh", "tl", "ja", "ko"],
+    routing: {
+      prefixDefaultLocale: false,
+      redirectToDefaultLocale: false,
+    },
+  },
+  integrations: [
+    sitemap({
+      i18n: {
+        locales: {
+          en: "en-PH",
+          zh: "zh-TW",
+          tl: "tl-PH",
+          ja: "ja-JP",
+          ko: "ko-KR",
+        },
+        defaultLocale: "en",
+      },
+    }),
+  ],
 });
