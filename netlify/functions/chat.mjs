@@ -6,9 +6,9 @@ const SITE_URL = process.env.URL || "https://sbdmc.netlify.app";
 function buildSystemPrompt(pageUrl) {
   let contextNote = "";
   if (pageUrl && knowledge.pages) {
-    const match = Object.entries(knowledge.pages).find(([key]) => pageUrl.includes(key) || key.includes(pageUrl.replace(/\/$/, "")));
+    const match = Object.entries(knowledge.pages).find(([, path]) => path && pageUrl.includes(path));
     if (match) {
-      const [key, label] = match;
+      const [label] = match;
       contextNote = `\nThe user is currently on the "${label}" page of the SBDMC website.`;
     }
   }
