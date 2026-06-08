@@ -209,6 +209,13 @@
     sendBtn.disabled = false;
   }
 
+  clearBtn.addEventListener("click", function () {
+    messages = [];
+    try { localStorage.removeItem(STORAGE_KEY); } catch {}
+    msgCounter = 0;
+    renderMessages();
+  });
+
   sendBtn.addEventListener("click", () => sendMessage());
   input.addEventListener("keydown", function (e) {
     if (e.key === "Enter" && !sendBtn.disabled) sendMessage();
