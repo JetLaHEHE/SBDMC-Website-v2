@@ -1,3 +1,6 @@
+---
+---
+
 <div id="chatbot">
   <button id="chatbot-toggle" class="fixed bottom-6 right-20 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all hover:bg-primary-600 hover:scale-105 active:scale-95" aria-label="Open chat" aria-expanded="false">
     <svg id="chatbot-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
@@ -11,16 +14,10 @@
         <div class="text-sm font-semibold">SBDMC Assistant</div>
         <div class="text-xs text-white/70">How can I help you?</div>
       </div>
+      <button id="chatbot-clear" class="ml-auto flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20 hidden" aria-label="Clear chat" title="Clear chat">🗑️</button>
     </div>
 
-    <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4" style="min-height: 300px;" aria-live="polite" aria-relevant="additions">
-      <div class="flex items-start gap-2">
-        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div>
-        <div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">
-          Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?
-        </div>
-      </div>
-    </div>
+    <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4" style="min-height: 300px;" aria-live="polite" aria-relevant="additions"></div>
 
     <div class="border-t border-gray-200 px-4 py-3">
       <div class="flex items-center gap-2">
@@ -44,14 +41,90 @@
   const panel = document.getElementById("chatbot-panel");
   const icon = document.getElementById("chatbot-icon");
   const closeIcon = document.getElementById("chatbot-close-icon");
-  const messages = document.getElementById("chatbot-messages");
+  const messagesEl = document.getElementById("chatbot-messages");
   const input = document.getElementById("chatbot-input");
   const sendBtn = document.getElementById("chatbot-send");
+  const clearBtn = document.getElementById("chatbot-clear");
 
-  if (!toggle || !panel || !messages || !input || !sendBtn || !icon || !closeIcon) return;
+  if (!toggle || !panel || !messagesEl || !input || !sendBtn || !icon || !closeIcon || !clearBtn) return;
 
   let isOpen = false;
   let msgCounter = 0;
+  let messages = [];
+  const STORAGE_KEY = "sbdmc-chat-history";
+
+  function getTimestamp() {
+    return new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true });
+  }
+
+  function saveToStorage() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(messages)); } catch {}
+  }
+
+  function loadFromStorage() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch {}
+    return null;
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function renderTimestamp(time) {
+    return `<div class="text-[10px] text-gray-400 mt-0.5">${escapeHtml(time)}</div>`;
+  }
+
+  function buildBotBubble(text, time, feedbackState) {
+    let html = `<div class="flex items-start gap-2">`;
+    html += `<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div>`;
+    html += `<div>`;
+    html += `<div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${escapeHtml(text)}</div>`;
+    html += renderTimestamp(time);
+    html += `<div class="flex gap-1 mt-1 text-base" data-msg-index="${msgCounter}">`;
+    const upActive = feedbackState === "up" ? "" : "opacity-40";
+    const downActive = feedbackState === "down" ? "" : "opacity-40";
+    html += `<button class="feedback-btn feedback-up ${upActive} hover:opacity-100 transition-opacity" data-msg-index="${msgCounter}" aria-label="Thumbs up">👍</button>`;
+    html += `<button class="feedback-btn feedback-down ${downActive} hover:opacity-100 transition-opacity" data-msg-index="${msgCounter}" aria-label="Thumbs down">👎</button>`;
+    html += `</div>`;
+    html += `</div></div>`;
+    return html;
+  }
+
+  function buildUserBubble(text, time) {
+    return `<div class="flex items-start justify-end gap-2"><div class="text-right"><div class="max-w-[80%] rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div>${renderTimestamp(time)}</div></div>`;
+  }
+
+  function renderMessages() {
+    messagesEl.innerHTML = "";
+    msgCounter = 0;
+    let hasHistory = false;
+    for (const msg of messages) {
+      if (msg.role === "user") {
+        messagesEl.insertAdjacentHTML("beforeend", buildUserBubble(msg.text, msg.time));
+      } else {
+        messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(msg.text, msg.time, msg.feedback || null));
+        msgCounter++;
+      }
+      hasHistory = true;
+    }
+    if (!hasHistory) {
+      const greetingTime = getTimestamp();
+      const initialMsg = { role: "bot", text: "Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?", time: greetingTime, feedback: null };
+      messages.push(initialMsg);
+      msgCounter = 1;
+      messagesEl.innerHTML = buildBotBubble(initialMsg.text, initialMsg.time, null);
+    }
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    clearBtn.classList.toggle("hidden", messages.length <= 1);
+  }
 
   function togglePanel() {
     isOpen = !isOpen;
@@ -72,26 +145,29 @@
 
   toggle.addEventListener("click", togglePanel);
 
-  async function sendMessage() {
+  async function sendMessage(overrideText) {
     if (sendBtn.disabled) return;
-    const text = input?.value.trim();
+    const text = (overrideText || input?.value || "").trim();
     if (!text) return;
 
     input.value = "";
     sendBtn.disabled = true;
 
-    messages.insertAdjacentHTML("beforeend", `<div class="flex items-start justify-end gap-2"><div class="max-w-[80%] rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div></div>`);
-    messages.scrollTop = messages.scrollHeight;
+    const userTime = getTimestamp();
+    messages.push({ role: "user", text, time: userTime });
+    saveToStorage();
+    messagesEl.insertAdjacentHTML("beforeend", buildUserBubble(text, userTime));
+    messagesEl.scrollTop = messagesEl.scrollHeight;
 
     const loadingId = "chatbot-loading-" + (++msgCounter);
-    messages.insertAdjacentHTML("beforeend", `<div id="${loadingId}" class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-500"><span class="inline-flex gap-1"><span class="animate-bounce" style="animation-delay:0ms">.</span><span class="animate-bounce" style="animation-delay:150ms">.</span><span class="animate-bounce" style="animation-delay:300ms">.</span></span></div></div>`);
-    messages.scrollTop = messages.scrollHeight;
+    messagesEl.insertAdjacentHTML("beforeend", `<div id="${loadingId}" class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-500"><span class="inline-flex gap-1"><span class="animate-bounce" style="animation-delay:0ms">.</span><span class="animate-bounce" style="animation-delay:150ms">.</span><span class="animate-bounce" style="animation-delay:300ms">.</span></span></div></div>`);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
 
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ message: text, pageUrl: window.location.pathname }),
       });
 
       document.getElementById(loadingId)?.remove();
@@ -103,29 +179,37 @@
         data = null;
       }
 
+      const botTime = getTimestamp();
+      let replyText;
       if (data && data.reply) {
-        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${escapeHtml(data.reply)}</div></div>`);
+        replyText = data.reply;
       } else if (data && data.error) {
-        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">${escapeHtml(data.error)}</div></div>`);
+        replyText = data.error;
       } else {
-        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">I'm a bit busy, please try again later.</div></div>`);
+        replyText = "I'm a bit busy, please try again later.";
       }
+
+      messages.push({ role: "bot", text: replyText, time: botTime, feedback: null });
+      saveToStorage();
+      messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(replyText, botTime, null));
+      msgCounter++;
+      clearBtn.classList.remove("hidden");
     } catch {
       document.getElementById(loadingId)?.remove();
-      messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">Network error. Please check your connection and try again.</div></div>`);
+      const errTime = getTimestamp();
+      const errText = "Network error. Please check your connection and try again.";
+      messages.push({ role: "bot", text: errText, time: errTime, feedback: null });
+      saveToStorage();
+      messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(errText, errTime, null));
+      msgCounter++;
+      clearBtn.classList.remove("hidden");
     }
 
-    messages.scrollTop = messages.scrollHeight;
+    messagesEl.scrollTop = messagesEl.scrollHeight;
     sendBtn.disabled = false;
   }
 
-  function escapeHtml(str) {
-    const div = document.createElement("div");
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  sendBtn.addEventListener("click", sendMessage);
+  sendBtn.addEventListener("click", () => sendMessage());
   input.addEventListener("keydown", function (e) {
     if (e.key === "Enter" && !sendBtn.disabled) sendMessage();
   });
@@ -140,5 +224,11 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && isOpen) togglePanel();
   });
+
+  const saved = loadFromStorage();
+  if (saved) {
+    messages = saved;
+  }
+  renderMessages();
 })();
 </script>
