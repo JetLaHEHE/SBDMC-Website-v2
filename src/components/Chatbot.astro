@@ -1,4 +1,5 @@
 ---
+import translations from "../data/chat-translations.json";
 ---
 
 <div id="chatbot">
@@ -14,10 +15,26 @@
         <div class="text-sm font-semibold">SBDMC Assistant</div>
         <div class="text-xs text-white/70">How can I help you?</div>
       </div>
-      <button id="chatbot-clear" class="ml-auto flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20 hidden" aria-label="Clear chat" title="Clear chat">🗑️</button>
+    <div class="ml-auto flex items-center gap-1">
+      <div class="relative">
+        <button id="chatbot-lang-toggle" class="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Switch language" title="Language">🌐</button>
+        <div id="chatbot-lang-dropdown" class="hidden absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50 min-w-[130px]"></div>
+      </div>
+      <button id="chatbot-clear" class="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20 hidden" aria-label="Clear chat" title="Clear chat">🗑️</button>
+    </div>
     </div>
 
     <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4" style="min-height: 300px;" aria-live="polite" aria-relevant="additions"></div>
+
+    <div id="chatbot-contact-form" class="hidden flex-1 flex-col overflow-y-auto px-4 py-4" style="min-height: 300px;">
+      <button id="chatbot-contact-back" class="self-start text-sm text-primary-500 hover:text-primary-600 mb-3">← Back to chat</button>
+      <div id="chatbot-contact-title" class="text-base font-semibold text-gray-800 mb-4">Contact Our Team</div>
+      <input id="chatbot-contact-name" type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="Your Name" />
+      <input id="chatbot-contact-email" type="email" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="Your Email" />
+      <textarea id="chatbot-contact-message" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 resize-none" placeholder="How can we help you?" rows="4"></textarea>
+      <button id="chatbot-contact-submit" class="w-full rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed">Send Message</button>
+      <div id="chatbot-contact-status" class="hidden text-sm mt-3 text-center"></div>
+    </div>
 
     <div class="border-t border-gray-200 px-4 py-3">
       <div class="flex items-center gap-2">
@@ -37,6 +54,34 @@
 
 <script is:inline>
 (function () {
+  const TRANSLATIONS = JSON.parse(`{JSON.stringify(translations)}`);
+  const SUPPORTED_LANGUAGES = ["en", "tl", "zh", "ko", "ja"];
+  const LANG_NAMES = { en: "English", tl: "Tagalog", zh: "中文", ko: "한국어", ja: "日本語" };
+  const LANG_STORAGE_KEY = "sbdmc-chat-lang";
+
+  function detectLanguage() {
+    try {
+      const saved = localStorage.getItem(LANG_STORAGE_KEY);
+      if (saved && SUPPORTED_LANGUAGES.includes(saved)) return saved;
+    } catch {}
+    const prefix = (navigator.language || "en").slice(0, 2).toLowerCase();
+    return SUPPORTED_LANGUAGES.includes(prefix) ? prefix : "en";
+  }
+
+  function t(key) {
+    const lang = TRANSLATIONS[langCode] || TRANSLATIONS.en;
+    const val = lang[key];
+    if (Array.isArray(val)) return val;
+    return val || key;
+  }
+
+  function renderLangDropdown() {
+    const html = SUPPORTED_LANGUAGES.map(code =>
+      `<button class="lang-option block w-full text-left px-3 py-1.5 text-sm ${code === langCode ? "bg-blue-50 text-primary-600 font-medium" : "text-gray-700 hover:bg-gray-50"}" data-lang="${code}">${LANG_NAMES[code]}</button>`
+    ).join("");
+    langDropdown.innerHTML = html;
+  }
+
   const toggle = document.getElementById("chatbot-toggle");
   const panel = document.getElementById("chatbot-panel");
   const icon = document.getElementById("chatbot-icon");
@@ -45,12 +90,26 @@
   const input = document.getElementById("chatbot-input");
   const sendBtn = document.getElementById("chatbot-send");
   const clearBtn = document.getElementById("chatbot-clear");
+  const langToggle = document.getElementById("chatbot-lang-toggle");
+  const langDropdown = document.getElementById("chatbot-lang-dropdown");
+  const contactForm = document.getElementById("chatbot-contact-form");
+  const contactBack = document.getElementById("chatbot-contact-back");
+  const contactName = document.getElementById("chatbot-contact-name");
+  const contactEmail = document.getElementById("chatbot-contact-email");
+  const contactMessage = document.getElementById("chatbot-contact-message");
+  const contactSubmit = document.getElementById("chatbot-contact-submit");
+  const contactStatus = document.getElementById("chatbot-contact-status");
+  const contactTitle = document.getElementById("chatbot-contact-title");
+  const subtitle = document.querySelector("#chatbot-panel .text-xs");
 
-  if (!toggle || !panel || !messagesEl || !input || !sendBtn || !icon || !closeIcon || !clearBtn) return;
+  if (!toggle || !panel || !messagesEl || !input || !sendBtn || !icon || !closeIcon || !clearBtn || !langToggle || !langDropdown || !contactForm || !contactBack || !contactName || !contactEmail || !contactMessage || !contactSubmit || !contactStatus || !contactTitle || !subtitle) return;
 
   let isOpen = false;
   let msgCounter = 0;
   let messages = [];
+  let langCode = detectLanguage();
+  let showContact = false;
+  let contactSubmitting = false;
   const STORAGE_KEY = "sbdmc-chat-history";
 
   function getTimestamp() {
@@ -103,16 +162,9 @@
     return "<p>" + html + "</p>";
   }
 
-  const SUGGESTED_QUESTIONS = [
-    "What are your rates?",
-    "How do I register?",
-    "What are the gate hours?",
-    "What leasing incentives are available?",
-    "Map and directions",
-  ];
-
   function renderSuggestedQuestions() {
-    const chipsHtml = SUGGESTED_QUESTIONS.map((q, i) =>
+    const questions = t("suggested");
+    const chipsHtml = questions.map((q, i) =>
       `<button class="suggested-chip bg-blue-50 text-primary-600 border border-blue-200 rounded-full px-3 py-1.5 text-xs cursor-pointer hover:bg-blue-100 transition-colors" data-index="${i}">${escapeHtml(q)}</button>`
     ).join("");
     return `<div id="suggested-questions" class="flex flex-wrap gap-2 ml-9 mb-2">${chipsHtml}</div>`;
@@ -151,14 +203,63 @@
     }
     if (!hasHistory) {
       const greetingTime = getTimestamp();
-      const initialMsg = { role: "bot", text: "Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?", time: greetingTime };
+      const initialMsg = { role: "bot", text: t("greeting"), time: greetingTime };
       messages.push(initialMsg);
       msgCounter = 0;
       messagesEl.innerHTML = buildBotBubble(initialMsg.text, initialMsg.time) + renderSuggestedQuestions();
       msgCounter = 1;
+    } else {
+      messagesEl.insertAdjacentHTML("beforeend", buildContactLink());
     }
     messagesEl.scrollTop = messagesEl.scrollHeight;
     clearBtn.classList.toggle("hidden", messages.length <= 1);
+  }
+
+  function buildContactLink() {
+    return `<div class="text-center mt-2"><button id="contact-trigger" class="text-xs text-primary-500 hover:text-primary-600 underline">${escapeHtml(t("contactLink"))}</button></div>`;
+  }
+
+  function showContactForm() {
+    showContact = true;
+    messagesEl.classList.add("hidden");
+    contactForm.classList.remove("hidden");
+    contactForm.classList.add("flex");
+    contactName.value = "";
+    contactEmail.value = "";
+    contactMessage.value = "";
+    contactStatus.classList.add("hidden");
+    contactSubmit.disabled = false;
+    contactSubmit.textContent = t("submitLabel");
+    contactTitle.textContent = t("contactTitle");
+    contactName.placeholder = t("namePlaceholder");
+    contactEmail.placeholder = t("emailPlaceholder");
+    contactMessage.placeholder = t("messagePlaceholder");
+    contactBack.textContent = "← " + t("contactLink").replace("📧 ", "");
+  }
+
+  function hideContactForm() {
+    showContact = false;
+    messagesEl.classList.remove("hidden");
+    contactForm.classList.add("hidden");
+    contactForm.classList.remove("flex");
+  }
+
+  function setLanguage(code) {
+    if (code === langCode) return;
+    langCode = code;
+    try { localStorage.setItem(LANG_STORAGE_KEY, code); } catch {}
+    input.placeholder = t("placeholder");
+    subtitle.textContent = t("greeting").split(".")[0] + "?";
+    renderLangDropdown();
+    if (showContact) {
+      contactTitle.textContent = t("contactTitle");
+      contactName.placeholder = t("namePlaceholder");
+      contactEmail.placeholder = t("emailPlaceholder");
+      contactMessage.placeholder = t("messagePlaceholder");
+      contactSubmit.textContent = t("submitLabel");
+      contactBack.textContent = "← " + t("contactLink").replace("📧 ", "");
+    }
+    if (!showContact) renderMessages();
   }
 
   function togglePanel() {
@@ -171,7 +272,8 @@
     toggle.setAttribute("aria-label", isOpen ? "Close chat" : "Open chat");
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      setTimeout(() => input?.focus(), 100);
+      if (showContact) contactName?.focus();
+      else setTimeout(() => input?.focus(), 100);
     } else {
       document.body.style.overflow = "";
       toggle.focus();
@@ -202,7 +304,7 @@
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text, pageUrl: window.location.pathname }),
+        body: JSON.stringify({ message: text, pageUrl: window.location.pathname, language: langCode }),
       });
 
       document.getElementById(loadingId)?.remove();
@@ -227,8 +329,14 @@
       messages.push({ role: "bot", text: replyText, time: botTime });
       saveToStorage();
       messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(replyText, botTime));
+      messagesEl.insertAdjacentHTML("beforeend", buildContactLink());
       msgCounter++;
       clearBtn.classList.remove("hidden");
+
+      const lower = replyText.toLowerCase();
+      if (lower.includes("i don't know") || lower.includes("i'm not sure") || lower.includes("not sure") || lower.includes("don't know")) {
+        setTimeout(() => showContactForm(), 500);
+      }
     } catch {
       document.getElementById(loadingId)?.remove();
       const errTime = getTimestamp();
@@ -236,6 +344,7 @@
       messages.push({ role: "bot", text: errText, time: errTime });
       saveToStorage();
       messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(errText, errTime));
+      messagesEl.insertAdjacentHTML("beforeend", buildContactLink());
       msgCounter++;
       clearBtn.classList.remove("hidden");
     }
@@ -248,6 +357,8 @@
     messages = [];
     try { localStorage.removeItem(STORAGE_KEY); } catch {}
     msgCounter = 0;
+    showContact = false;
+    hideContactForm();
     renderMessages();
   });
 
@@ -260,9 +371,82 @@
     const chip = e.target.closest(".suggested-chip");
     if (chip) {
       const index = parseInt(chip.dataset.index);
-      const question = SUGGESTED_QUESTIONS[index];
+      const questions = t("suggested");
+      const question = questions[index];
       if (question) sendMessage(question);
     }
+    if (e.target.id === "contact-trigger") {
+      showContactForm();
+    }
+  });
+
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("hidden");
+  });
+
+  langDropdown.addEventListener("click", function (e) {
+    const opt = e.target.closest(".lang-option");
+    if (!opt) return;
+    setLanguage(opt.dataset.lang);
+    langDropdown.classList.add("hidden");
+  });
+
+  document.addEventListener("click", function () {
+    langDropdown.classList.add("hidden");
+  });
+
+  contactBack.addEventListener("click", hideContactForm);
+
+  contactSubmit.addEventListener("click", async function () {
+    if (contactSubmitting) return;
+    const name = contactName.value.trim();
+    const email = contactEmail.value.trim();
+    const msg = contactMessage.value.trim();
+    if (!name || !email || !msg) {
+      contactStatus.textContent = "Please fill in all fields.";
+      contactStatus.className = "text-sm mt-3 text-center text-red-500";
+      contactStatus.classList.remove("hidden");
+      return;
+    }
+    if (!email.includes("@")) {
+      contactStatus.textContent = "Please enter a valid email.";
+      contactStatus.className = "text-sm mt-3 text-center text-red-500";
+      contactStatus.classList.remove("hidden");
+      return;
+    }
+    contactSubmitting = true;
+    contactSubmit.disabled = true;
+    contactSubmit.textContent = "Sending...";
+    contactStatus.classList.add("hidden");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message: msg, pageUrl: window.location.pathname, language: langCode }),
+      });
+      const data = await res.json();
+      if (data && data.success) {
+        contactStatus.textContent = t("successMsg");
+        contactStatus.className = "text-sm mt-3 text-center text-green-600";
+        contactStatus.classList.remove("hidden");
+        contactName.value = "";
+        contactEmail.value = "";
+        contactMessage.value = "";
+        setTimeout(hideContactForm, 3000);
+      } else {
+        contactStatus.textContent = t("errorMsg");
+        contactStatus.className = "text-sm mt-3 text-center text-red-500";
+        contactStatus.classList.remove("hidden");
+      }
+    } catch {
+      contactStatus.textContent = t("errorMsg");
+      contactStatus.className = "text-sm mt-3 text-center text-red-500";
+      contactStatus.classList.remove("hidden");
+    }
+    contactSubmitting = false;
+    contactSubmit.disabled = false;
+    contactSubmit.textContent = t("submitLabel");
   });
 
   function handleClickOutside(e) {
@@ -275,6 +459,10 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && isOpen) togglePanel();
   });
+
+  input.placeholder = t("placeholder");
+  subtitle.textContent = t("greeting").split(".")[0] + "?";
+  renderLangDropdown();
 
   const saved = loadFromStorage();
   if (saved) {

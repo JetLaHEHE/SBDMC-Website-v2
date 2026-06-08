@@ -1,2 +1,3 @@
 {"type":"owner-pid-invalid","pid":-1,"reason":"dead at startup"}
 {"type":"server-started","port":50574,"host":"0.0.0.0","url_host":"localhost","url":"http://localhost:50574","screen_dir":"C:\\Users\\jetag\\Desktop\\code\\websites\\sbdmc-v2\\.superpowers\\brainstorm\\-1780603988.13937\\content","state_dir":"C:\\Users\\jetag\\Desktop\\code\\websites\\sbdmc-v2\\.superpowers\\brainstorm\\-1780603988.13937\\state"}
+{"type":"server-stopped","reason":"idle timeout"}

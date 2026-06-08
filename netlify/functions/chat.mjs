@@ -1,9 +1,19 @@
 import knowledge from "../../src/data/chat-knowledge.json" with { type: "json" };
+import translations from "../../src/data/chat-translations.json" with { type: "json" };
+
+const SUPPORTED_LANGUAGES = ["en", "tl", "zh", "ko", "ja"];
+const LANGUAGE_NAMES = { en: "English", tl: "Tagalog", zh: "Chinese", ko: "Korean", ja: "Japanese" };
+
+function normalizeLanguage(lang) {
+  if (!lang) return "en";
+  const prefix = lang.slice(0, 2).toLowerCase();
+  return SUPPORTED_LANGUAGES.includes(prefix) ? prefix : "en";
+}
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const SITE_URL = process.env.URL || "https://sbdmc.netlify.app";
 
-function buildSystemPrompt(pageUrl) {
+function buildSystemPrompt(pageUrl, language) {
   let contextNote = "";
   if (pageUrl && knowledge.pages) {
     const match = Object.entries(knowledge.pages).find(([, path]) => path && pageUrl.includes(path));
@@ -12,11 +22,14 @@ function buildSystemPrompt(pageUrl) {
       contextNote = `\nThe user is currently on the "${pageKey}" page of the SBDMC website.`;
     }
   }
+  const lang = normalizeLanguage(language);
+  const langName = LANGUAGE_NAMES[lang] || "English";
+  const langInstruction = lang === "en" ? "" : `\nIMPORTANT: The user wrote in ${langName}. You MUST respond in ${langName}. Translate your answer from the English knowledge base into ${langName}.`;
   return `You are the SBDMC assistant for Subic Bay Gateway Park.
 Answer questions ONLY using the knowledge provided below. If you don't know the answer, say "I'm not sure — please contact our team at inquiry@sbdmc.com or visit sbdmcinc.freshdesk.com/support/home."
 
 Knowledge base:
-${JSON.stringify(knowledge, null, 2)}${contextNote}`;
+${JSON.stringify(knowledge, null, 2)}${contextNote}${langInstruction}`;
 }
 
 export async function handler(event) {
@@ -38,12 +51,12 @@ export async function handler(event) {
   }
 
   try {
-    const { message, pageUrl } = JSON.parse(event.body);
+    const { message, pageUrl, language } = JSON.parse(event.body);
     if (!message || typeof message !== "string" || message.trim().length === 0) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Message is required" }) };
     }
 
-    const SYSTEM_PROMPT = buildSystemPrompt(pageUrl);
+    const SYSTEM_PROMPT = buildSystemPrompt(pageUrl, language);
 
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",

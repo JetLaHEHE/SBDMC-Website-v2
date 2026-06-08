@@ -1,0 +1,117 @@
+{
+  "en": {
+    "greeting": "Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?",
+    "placeholder": "Type your question...",
+    "suggested": [
+      "What are your rates?",
+      "How do I register?",
+      "What are the gate hours?",
+      "What leasing incentives are available?",
+      "Map and directions"
+    ],
+    "contactLink": "📧 Contact our team",
+    "contactTitle": "Contact Our Team",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "emailLabel": "Your Email",
+    "emailPlaceholder": "Enter your email",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "submitLabel": "Send Message",
+    "successMsg": "Thank you! Our team will get back to you soon.",
+    "errorMsg": "Something went wrong. Please try again.",
+    "langLabel": "Language"
+  },
+  "tl": {
+    "greeting": "Kumusta! Ako ang katulong ng SBDMC. Masasagot ko ang mga tanong tungkol sa pag-upa, mga insentibo, serbisyo, at iba pa. Paano kita matutulungan ngayon?",
+    "placeholder": "I-type ang iyong tanong...",
+    "suggested": [
+      "Magkano ang mga rate?",
+      "Paano magparehistro?",
+      "Ano ang oras ng gate?",
+      "Anong mga insentibo sa pag-upa ang available?",
+      "Mapa at mga direksyon"
+    ],
+    "contactLink": "📧 Makipag-ugnayan sa aming team",
+    "contactTitle": "Makipag-ugnayan sa Aming Team",
+    "nameLabel": "Iyong Pangalan",
+    "namePlaceholder": "Ilagay ang iyong pangalan",
+    "emailLabel": "Iyong Email",
+    "emailPlaceholder": "Ilagay ang iyong email",
+    "messageLabel": "Mensahe",
+    "messagePlaceholder": "Paano ka namin matutulungan?",
+    "submitLabel": "Ipadala ang Mensahe",
+    "successMsg": "Salamat! Ang aming team ay makikipag-ugnayan sa iyo sa lalong madaling panahon.",
+    "errorMsg": "May naganap na problema. Pakisubukan muli.",
+    "langLabel": "Wika"
+  },
+  "zh": {
+    "greeting": "您好！我是SBDMC的智能助手。我可以回答关于租赁、优惠政策、服务等方面的问题。请问有什么可以帮助您的？",
+    "placeholder": "请输入您的问题...",
+    "suggested": [
+      "你们的费率是多少？",
+      "如何注册？",
+      "大门开放时间是什么？",
+      "有哪些租赁优惠政策？",
+      "地图和路线指引"
+    ],
+    "contactLink": "📧 联系我们团队",
+    "contactTitle": "联系我们团队",
+    "nameLabel": "您的姓名",
+    "namePlaceholder": "请输入您的姓名",
+    "emailLabel": "您的邮箱",
+    "emailPlaceholder": "请输入您的邮箱",
+    "messageLabel": "留言",
+    "messagePlaceholder": "我们能为您提供什么帮助？",
+    "submitLabel": "发送消息",
+    "successMsg": "感谢您！我们的团队将尽快与您联系。",
+    "errorMsg": "出现了问题，请重试。",
+    "langLabel": "语言"
+  },
+  "ko": {
+    "greeting": "안녕하세요! 저는 SBDMC 어시스턴트입니다. 임대, 인센티브, 서비스 등에 관한 질문에 답변해 드릴 수 있습니다. 무엇을 도와드릴까요?",
+    "placeholder": "질문을 입력하세요...",
+    "suggested": [
+      "요금은 어떻게 되나요?",
+      "등록은 어떻게 하나요?",
+      "게이트 운영 시간은 어떻게 되나요?",
+      "임대 인센티브는 무엇이 있나요?",
+      "지도 및 길안내"
+    ],
+    "contactLink": "📧 팀에 문의하기",
+    "contactTitle": "팀에 문의하기",
+    "nameLabel": "이름",
+    "namePlaceholder": "이름을 입력하세요",
+    "emailLabel": "이메일",
+    "emailPlaceholder": "이메일을 입력하세요",
+    "messageLabel": "메시지",
+    "messagePlaceholder": "어떻게 도와드릴까요?",
+    "submitLabel": "메시지 보내기",
+    "successMsg": "감사합니다! 곧 팀원이 연락드릴 것입니다.",
+    "errorMsg": "문제가 발생했습니다. 다시 시도해 주세요.",
+    "langLabel": "언어"
+  },
+  "ja": {
+    "greeting": "こんにちは！SBDMCアシスタントです。賃貸、優遇措置、サービスなどについてのご質問にお答えします。どのようにお手伝いしましょうか？",
+    "placeholder": "質問を入力してください...",
+    "suggested": [
+      "料金はいくらですか？",
+      "登録方法は？",
+      "ゲートの営業時間は？",
+      "賃貸の優遇措置はありますか？",
+      "地図とアクセス"
+    ],
+    "contactLink": "📧 チームに問い合わせ",
+    "contactTitle": "チームに問い合わせ",
+    "nameLabel": "お名前",
+    "namePlaceholder": "お名前を入力",
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "メールアドレスを入力",
+    "messageLabel": "メッセージ",
+    "messagePlaceholder": "どのようなご用件ですか？",
+    "submitLabel": "メッセージを送信",
+    "successMsg": "ありがとうございます！チームよりすぐにご連絡いたします。",
+    "errorMsg": "エラーが発生しました。もう一度お試しください。",
+    "langLabel": "言語"
+  }
+}
