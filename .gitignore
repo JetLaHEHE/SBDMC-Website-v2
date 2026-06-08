@@ -5,3 +5,6 @@ dist/
 
 # Local Netlify folder
 .netlify
+
+# Superpowers workspace artifacts
+.superpowers/

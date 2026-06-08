@@ -18,5 +18,8 @@
     "astro": "^6.4.2",
     "pagefind": "^1.5.2",
     "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^26.1.0"
   }
 }

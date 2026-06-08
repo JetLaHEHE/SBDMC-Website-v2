@@ -122,18 +122,12 @@
     return `<div class="text-[10px] text-gray-400 mt-0.5">${escapeHtml(time)}</div>`;
   }
 
-  function buildBotBubble(text, time, feedbackState) {
+  function buildBotBubble(text, time) {
     let html = `<div class="flex items-start gap-2">`;
     html += `<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div>`;
     html += `<div>`;
     html += `<div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${renderMarkdown(text)}</div>`;
     html += renderTimestamp(time);
-    html += `<div class="flex gap-1 mt-1 text-base" data-msg-index="${msgCounter}">`;
-    const upActive = feedbackState === "up" ? "" : "opacity-40";
-    const downActive = feedbackState === "down" ? "" : "opacity-40";
-    html += `<button class="feedback-btn feedback-up ${upActive} hover:opacity-100 transition-opacity" data-msg-index="${msgCounter}" aria-label="Thumbs up">👍</button>`;
-    html += `<button class="feedback-btn feedback-down ${downActive} hover:opacity-100 transition-opacity" data-msg-index="${msgCounter}" aria-label="Thumbs down">👎</button>`;
-    html += `</div>`;
     html += `</div></div>`;
     return html;
   }
@@ -150,17 +144,17 @@
       if (msg.role === "user") {
         messagesEl.insertAdjacentHTML("beforeend", buildUserBubble(msg.text, msg.time));
       } else {
-        messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(msg.text, msg.time, msg.feedback || null));
+        messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(msg.text, msg.time));
         msgCounter++;
       }
       hasHistory = true;
     }
     if (!hasHistory) {
       const greetingTime = getTimestamp();
-      const initialMsg = { role: "bot", text: "Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?", time: greetingTime, feedback: null };
+      const initialMsg = { role: "bot", text: "Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?", time: greetingTime };
       messages.push(initialMsg);
       msgCounter = 0;
-      messagesEl.innerHTML = buildBotBubble(initialMsg.text, initialMsg.time, null) + renderSuggestedQuestions();
+      messagesEl.innerHTML = buildBotBubble(initialMsg.text, initialMsg.time) + renderSuggestedQuestions();
       msgCounter = 1;
     }
     messagesEl.scrollTop = messagesEl.scrollHeight;
@@ -230,18 +224,18 @@
         replyText = "I'm a bit busy, please try again later.";
       }
 
-      messages.push({ role: "bot", text: replyText, time: botTime, feedback: null });
+      messages.push({ role: "bot", text: replyText, time: botTime });
       saveToStorage();
-      messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(replyText, botTime, null));
+      messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(replyText, botTime));
       msgCounter++;
       clearBtn.classList.remove("hidden");
     } catch {
       document.getElementById(loadingId)?.remove();
       const errTime = getTimestamp();
       const errText = "Network error. Please check your connection and try again.";
-      messages.push({ role: "bot", text: errText, time: errTime, feedback: null });
+      messages.push({ role: "bot", text: errText, time: errTime });
       saveToStorage();
-      messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(errText, errTime, null));
+      messagesEl.insertAdjacentHTML("beforeend", buildBotBubble(errText, errTime));
       msgCounter++;
       clearBtn.classList.remove("hidden");
     }
@@ -268,19 +262,7 @@
       const index = parseInt(chip.dataset.index);
       const question = SUGGESTED_QUESTIONS[index];
       if (question) sendMessage(question);
-      return;
     }
-
-    const fbBtn = e.target.closest(".feedback-btn");
-    if (!fbBtn) return;
-    const index = parseInt(fbBtn.dataset.msgIndex);
-    const botMessages = messages.filter(m => m.role === "bot");
-    const msg = botMessages[index];
-    if (!msg) return;
-    const isUp = fbBtn.classList.contains("feedback-up");
-    msg.feedback = (msg.feedback === (isUp ? "up" : "down")) ? null : (isUp ? "up" : "down");
-    saveToStorage();
-    renderMessages();
   });
 
   function handleClickOutside(e) {
