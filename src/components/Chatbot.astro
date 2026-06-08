@@ -1,10 +1,10 @@
 <div id="chatbot">
-  <button id="chatbot-toggle" class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all hover:bg-primary-600 hover:scale-105 active:scale-95" aria-label="Open chat">
+  <button id="chatbot-toggle" class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all hover:bg-primary-600 hover:scale-105 active:scale-95" aria-label="Open chat" aria-expanded="false">
     <svg id="chatbot-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
     <svg id="chatbot-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
   </button>
 
-  <div id="chatbot-panel" class="fixed bottom-24 right-6 z-50 hidden w-[360px] max-w-[calc(100vw-2rem)] rounded-xl border border-gray-200 bg-white shadow-2xl flex-col overflow-hidden" style="max-height: 520px;">
+  <div id="chatbot-panel" class="fixed bottom-24 right-6 z-50 hidden w-[360px] max-w-[calc(100vw-2rem)] rounded-xl border border-gray-200 bg-white shadow-2xl flex-col overflow-hidden" style="max-height: 520px;" role="dialog" aria-modal="true" aria-label="SBDMC Assistant chat">
     <div class="flex items-center gap-3 bg-primary-500 px-4 py-3 text-white">
       <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-sm font-bold">S</div>
       <div>
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4" style="min-height: 300px;">
+    <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4" style="min-height: 300px;" aria-live="polite" aria-relevant="additions">
       <div class="flex items-start gap-2">
         <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div>
         <div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">
@@ -48,9 +48,10 @@
   const input = document.getElementById("chatbot-input");
   const sendBtn = document.getElementById("chatbot-send");
 
-  if (!toggle || !panel) return;
+  if (!toggle || !panel || !messages || !input || !sendBtn || !icon || !closeIcon) return;
 
   let isOpen = false;
+  let msgCounter = 0;
 
   function togglePanel() {
     isOpen = !isOpen;
@@ -58,14 +59,21 @@
     panel.classList.toggle("flex", isOpen);
     icon.classList.toggle("hidden", isOpen);
     closeIcon.classList.toggle("hidden", !isOpen);
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close chat" : "Open chat");
     if (isOpen) {
+      document.body.style.overflow = "hidden";
       setTimeout(() => input?.focus(), 100);
+    } else {
+      document.body.style.overflow = "";
+      toggle.focus();
     }
   }
 
   toggle.addEventListener("click", togglePanel);
 
   async function sendMessage() {
+    if (sendBtn.disabled) return;
     const text = input?.value.trim();
     if (!text) return;
 
@@ -75,7 +83,7 @@
     messages.insertAdjacentHTML("beforeend", `<div class="flex items-start justify-end gap-2"><div class="max-w-[80%] rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div></div>`);
     messages.scrollTop = messages.scrollHeight;
 
-    const loadingId = "chatbot-loading";
+    const loadingId = "chatbot-loading-" + (++msgCounter);
     messages.insertAdjacentHTML("beforeend", `<div id="${loadingId}" class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-500"><span class="inline-flex gap-1"><span class="animate-bounce" style="animation-delay:0ms">.</span><span class="animate-bounce" style="animation-delay:150ms">.</span><span class="animate-bounce" style="animation-delay:300ms">.</span></span></div></div>`);
     messages.scrollTop = messages.scrollHeight;
 
@@ -86,14 +94,21 @@
         body: JSON.stringify({ message: text }),
       });
 
-      const data = await res.json();
-
       document.getElementById(loadingId)?.remove();
 
-      if (data.reply) {
+      let data;
+      try {
+        data = res.ok ? await res.json() : null;
+      } catch {
+        data = null;
+      }
+
+      if (data && data.reply) {
         messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${escapeHtml(data.reply)}</div></div>`);
+      } else if (data && data.error) {
+        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">${escapeHtml(data.error)}</div></div>`);
       } else {
-        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">${escapeHtml(data.error || "Something went wrong. Please try again.")}</div></div>`);
+        messages.insertAdjacentHTML("beforeend", `<div class="flex items-start gap-2"><div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div><div class="max-w-[80%] rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">I'm a bit busy, please try again later.</div></div>`);
       }
     } catch {
       document.getElementById(loadingId)?.remove();
@@ -110,9 +125,9 @@
     return div.innerHTML;
   }
 
-  sendBtn?.addEventListener("click", sendMessage);
-  input?.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") sendMessage();
+  sendBtn.addEventListener("click", sendMessage);
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !sendBtn.disabled) sendMessage();
   });
 
   function handleClickOutside(e) {
