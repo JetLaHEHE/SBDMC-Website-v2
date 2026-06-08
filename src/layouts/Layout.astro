@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
 import CookieConsent from "../components/CookieConsent.astro";
 import Search from "../components/Search.astro";
+import Chatbot from "../components/Chatbot.astro";
 
 const { title, description, ogImage } = Astro.props;
 const siteName = "SBDMC, Inc. - Subic Bay Gateway Park";
@@ -97,6 +98,7 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
     <Footer />
     <CookieConsent />
     <Search />
+    <Chatbot />
     <BackToTop />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
