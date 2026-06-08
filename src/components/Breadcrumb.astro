@@ -1,15 +1,20 @@
 ---
+import { t, type LangCode } from "../i18n";
+import breadcrumbTranslations from "../data/translations/breadcrumb.json";
+
 export interface Props {
   pages: { label: string; href?: string }[];
+  lang?: LangCode;
 }
-const { pages } = Astro.props;
+const { pages, lang = "en" } = Astro.props;
+const bt = t(breadcrumbTranslations, lang);
 ---
 
 <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-100">
   <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
     <ol class="flex items-center gap-2 text-sm">
       <li>
-        <a href="/" class="text-gray-500 transition-all hover:text-primary-500">Home</a>
+        <a href="/" class="text-gray-500 transition-all hover:text-primary-500">{bt.home}</a>
       </li>
       {pages.map((page, i) => (
         <li class="flex items-center gap-2">

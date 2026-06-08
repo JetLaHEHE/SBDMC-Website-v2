@@ -1,9 +1,17 @@
-<div id="cookie-consent" class="fixed bottom-0 left-0 right-0 z-50 hidden translate-y-0 border-t border-gray-200 bg-white shadow-lg transition-all duration-500" role="dialog" aria-modal="true" aria-label="Cookie consent" aria-describedby="cookie-consent-message">
+---
+import { t, type LangCode } from "../i18n";
+import cookieTranslations from "../data/translations/cookie-consent.json";
+
+const { lang = "en" } = Astro.props as { lang?: LangCode };
+const ct = t(cookieTranslations, lang);
+---
+
+<div id="cookie-consent" class="fixed bottom-0 left-0 right-0 z-50 hidden translate-y-0 border-t border-gray-200 bg-white shadow-lg transition-all duration-500" role="dialog" aria-modal="true" aria-label={ct.dialogLabel} aria-describedby="cookie-consent-message">
   <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-4 sm:flex-row sm:px-6 lg:px-8">
-    <p id="cookie-consent-message" class="text-sm text-gray-600">We use cookies to improve your browsing experience and analyze site traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+    <p id="cookie-consent-message" class="text-sm text-gray-600">{ct.message}</p>
     <div class="flex shrink-0 gap-3">
-      <button id="cookie-decline" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:bg-gray-50">Decline</button>
-      <button id="cookie-accept" class="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-primary-600">Accept All</button>
+      <button id="cookie-decline" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:bg-gray-50">{ct.decline}</button>
+      <button id="cookie-accept" class="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-primary-600">{ct.accept}</button>
     </div>
   </div>
 </div>

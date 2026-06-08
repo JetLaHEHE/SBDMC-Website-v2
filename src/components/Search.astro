@@ -1,8 +1,16 @@
-<div id="search-modal" class="fixed inset-0 z-[100] hidden items-start justify-center bg-black/50 pt-24 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Search the site">
+---
+import { t, type LangCode } from "../i18n";
+import searchTranslations from "../data/translations/search.json";
+
+const { lang = "en" } = Astro.props as { lang?: LangCode };
+const st = t(searchTranslations, lang);
+---
+
+<div id="search-modal" class="fixed inset-0 z-[100] hidden items-start justify-center bg-black/50 pt-24 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label={st.dialogLabel}>
   <div class="w-full max-w-2xl rounded-xl bg-white p-6 shadow-2xl max-h-[80vh] overflow-y-auto">
     <div class="mb-4 flex items-center justify-between">
-      <h3 class="text-lg font-bold text-primary-500">Search</h3>
-      <button id="search-close" class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 transition-all hover:bg-gray-100 hover:text-gray-600" aria-label="Close search">
+      <h3 class="text-lg font-bold text-primary-500">{st.heading}</h3>
+      <button id="search-close" class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 transition-all hover:bg-gray-100 hover:text-gray-600" aria-label={st.close}>
         <svg aria-hidden="true" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
       </button>
     </div>
