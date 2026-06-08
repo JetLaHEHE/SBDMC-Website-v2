@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getStaticPaths, getLangFromParams, t, type LangCode } from "../i18n";
+import { getStaticPaths, getLangFromParams, getLangPrefix, t, type LangCode } from "../i18n";
 export { getStaticPaths };
 import notFoundTranslations from "../data/translations/not-found.json";
 
@@ -18,11 +18,11 @@ const nf = t(notFoundTranslations, lang);
       <div class="mt-10">
         <p class="mb-4 text-sm font-medium text-gray-400">{nf.suggestedHeading}</p>
         <div class="flex flex-wrap justify-center gap-3">
-          <a href="/rfid" class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">RFID Access</a>
-          <a href="/business-services" class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">Business Services</a>
-          <a href="/faq" class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">FAQ</a>
-          <a href="/forms" class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">Downloads</a>
-          <a href="/contact" class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">Contact Us</a>
+          <a href={getLangPrefix(lang) + "/rfid"} class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">RFID Access</a>
+          <a href={getLangPrefix(lang) + "/business-services"} class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">Business Services</a>
+          <a href={getLangPrefix(lang) + "/faq"} class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">FAQ</a>
+          <a href={getLangPrefix(lang) + "/forms"} class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">Downloads</a>
+          <a href={getLangPrefix(lang) + "/contact"} class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">Contact Us</a>
         </div>
       </div>
     </div>

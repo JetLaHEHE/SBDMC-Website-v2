@@ -1,11 +1,12 @@
 ---
-import navItems from "../data/navigation.json";
 import { t, type LangCode } from "../i18n";
 import headerTranslations from "../data/translations/header.json";
+import navTranslations from "../data/translations/navigation.json";
 import LangSwitcher from "./LangSwitcher.astro";
 
 const { currentPath = "/", lang = "en" } = Astro.props as { currentPath?: string; lang?: LangCode };
 const ht = t(headerTranslations, lang);
+const navItems = navTranslations[lang] || navTranslations.en;
 
 function isActive(href: string): boolean {
   if (href === "/") return currentPath === "/";
