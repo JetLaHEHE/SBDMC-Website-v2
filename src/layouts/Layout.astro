@@ -7,17 +7,24 @@ import BackToTop from "../components/BackToTop.astro";
 import CookieConsent from "../components/CookieConsent.astro";
 import Search from "../components/Search.astro";
 import Chatbot from "../components/Chatbot.astro";
+import { getLangFromParams, getHreflangs, t, LANGUAGES, type LangCode } from "../i18n";
+import layoutTranslations from "../data/translations/layout.json";
 
 const { title, description, ogImage } = Astro.props;
-const siteName = "SBDMC, Inc. - Subic Bay Gateway Park";
-const pageTitle = title ? `${title} | SBDMC, Inc.` : siteName;
-const pageDesc = description || "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.";
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langConfig = LANGUAGES.find((l) => l.code === lang)!;
+const lo = t(layoutTranslations, lang);
+
+const siteName = lo.siteName;
+const pageTitle = title ? `${title} | ${siteName}` : siteName;
+const pageDesc = description || lo.defaultDescription;
 const canonical = Astro.url.pathname;
 const defaultOgImage = ogImage || "/images/og-default.svg";
+const baseUrl = "https://sbdmc.netlify.app";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,17 +33,20 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#040A5E" />
 
-    <link rel="canonical" href={`https://sbdmc.netlify.app${canonical}`} />
+    <link rel="canonical" href={`${baseUrl}${canonical}`} />
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    {getHreflangs(Astro.url.pathname, baseUrl).map(({ lang: hl, href }) => (
+      <link rel="alternate" hreflang={hl} href={href} />
+    ))}
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDesc} />
-    <meta property="og:image" content={`https://sbdmc.netlify.app${defaultOgImage}`} />
-    <meta property="og:url" content={`https://sbdmc.netlify.app${canonical}`} />
+    <meta property="og:image" content={`${baseUrl}${defaultOgImage}`} />
+    <meta property="og:url" content={`${baseUrl}${canonical}`} />
     <meta property="og:site_name" content={siteName} />
-    <meta property="og:locale" content="en_PH" />
+    <meta property="og:locale" content={langConfig.locale} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
@@ -78,13 +88,13 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Subic Bay Gateway Park (SBDMC, Inc.)",
-      "url": "https://sbdmc.netlify.app",
-      "logo": "https://sbdmc.netlify.app/images/logo.png",
-      "description": "A premier business and industrial park in the Subic Bay Freeport Zone, Philippines.",
+      "name": {JSON.stringify(lo.schemaName)},
+      "url": {JSON.stringify(baseUrl)},
+      "logo": {JSON.stringify(`${baseUrl}/images/logo.png`)},
+      "description": {JSON.stringify(lo.schemaDescription)},
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Subic Bay Freeport Zone",
+        "addressLocality": {JSON.stringify(lo.addressLocality)},
         "addressCountry": "PH"
       }
     }
@@ -92,17 +102,17 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
   </head>
   <body>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:bg-white focus:text-primary-500 focus:px-4 focus:py-3 focus:rounded-lg focus:shadow-xl focus:text-sm focus:font-semibold focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
-      Skip to main content
+      {lo.skipLink}
     </a>
-    <Header currentPath={canonical} />
+    <Header currentPath={canonical} lang={lang} />
     <main id="main-content" data-pagefind-body>
       <slot />
     </main>
-    <Footer />
-    <CookieConsent />
-    <Search />
-    <Chatbot />
-    <BackToTop />
+    <Footer lang={lang} />
+    <CookieConsent lang={lang} />
+    <Search lang={lang} />
+    <Chatbot lang={lang} />
+    <BackToTop lang={lang} />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
     <script is:inline>
