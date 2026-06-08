@@ -8,8 +8,8 @@ function buildSystemPrompt(pageUrl) {
   if (pageUrl && knowledge.pages) {
     const match = Object.entries(knowledge.pages).find(([, path]) => path && pageUrl.includes(path));
     if (match) {
-      const [label] = match;
-      contextNote = `\nThe user is currently on the "${label}" page of the SBDMC website.`;
+      const [pageKey] = match;
+      contextNote = `\nThe user is currently on the "${pageKey}" page of the SBDMC website.`;
     }
   }
   return `You are the SBDMC assistant for Subic Bay Gateway Park.
