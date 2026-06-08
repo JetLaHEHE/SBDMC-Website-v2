@@ -268,7 +268,19 @@
       const index = parseInt(chip.dataset.index);
       const question = SUGGESTED_QUESTIONS[index];
       if (question) sendMessage(question);
+      return;
     }
+
+    const fbBtn = e.target.closest(".feedback-btn");
+    if (!fbBtn) return;
+    const index = parseInt(fbBtn.dataset.msgIndex);
+    const botMessages = messages.filter(m => m.role === "bot");
+    const msg = botMessages[index];
+    if (!msg) return;
+    const isUp = fbBtn.classList.contains("feedback-up");
+    msg.feedback = (msg.feedback === (isUp ? "up" : "down")) ? null : (isUp ? "up" : "down");
+    saveToStorage();
+    renderMessages();
   });
 
   function handleClickOutside(e) {
