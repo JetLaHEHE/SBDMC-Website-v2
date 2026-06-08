@@ -19,3 +19,23 @@
   from = "/api/contact"
   to = "/.netlify/functions/contact"
   status = 200
+
+[[redirects]]
+  from = "/zh/*"
+  to = "/zh/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/tl/*"
+  to = "/tl/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/ja/*"
+  to = "/ja/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/ko/*"
+  to = "/ko/:splat"
+  status = 200
