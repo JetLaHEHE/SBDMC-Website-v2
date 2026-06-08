@@ -1,0 +1,42 @@
+{
+  "en": {
+    "skipLink": "Skip to main content",
+    "siteName": "SBDMC, Inc. - Subic Bay Gateway Park",
+    "defaultDescription": "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.",
+    "schemaName": "Subic Bay Gateway Park (SBDMC, Inc.)",
+    "schemaDescription": "A premier business and industrial park in the Subic Bay Freeport Zone, Philippines.",
+    "addressLocality": "Subic Bay Freeport Zone"
+  },
+  "zh": {
+    "skipLink": "跳至主要内容",
+    "siteName": "世正開發股份有限公司 - 蘇比克灣門戶工業園區",
+    "defaultDescription": "蘇比克灣門戶工業園區 — 位於菲律賓蘇比克灣自由港區的頂級商業與工業園區。",
+    "schemaName": "蘇比克灣門戶工業園區（世正開發股份有限公司）",
+    "schemaDescription": "位於菲律賓蘇比克灣自由港區的頂級商業與工業園區。",
+    "addressLocality": "蘇比克灣自由港區"
+  },
+  "tl": {
+    "skipLink": "Laktawan sa pangunahing nilalaman",
+    "siteName": "SBDMC, Inc. - Subic Bay Gateway Park",
+    "defaultDescription": "Subic Bay Gateway Park — isang premier business at industrial park sa Subic Bay Freeport Zone, Pilipinas.",
+    "schemaName": "Subic Bay Gateway Park (SBDMC, Inc.)",
+    "schemaDescription": "Isang premier business at industrial park sa Subic Bay Freeport Zone, Pilipinas.",
+    "addressLocality": "Subic Bay Freeport Zone"
+  },
+  "ja": {
+    "skipLink": "メインコンテンツにスキップ",
+    "siteName": "SBDMC株式会社 - スービックベイゲートウェイパーク",
+    "defaultDescription": "スービックベイゲートウェイパーク — フィリピン、スービックベイ自由港区にある一流の商業・工業団地。",
+    "schemaName": "スービックベイゲートウェイパーク（SBDMC株式会社）",
+    "schemaDescription": "フィリピン、スービックベイ自由港区にある一流の商業・工業団地。",
+    "addressLocality": "スービックベイ自由港区"
+  },
+  "ko": {
+    "skipLink": "주요 콘텐츠로 건너뛰기",
+    "siteName": "SBDMC, Inc. - 수빅 베이 게이트웨이 파크",
+    "defaultDescription": "수빅 베이 게이트웨이 파크 — 필리핀 수빅 베이 자유무역지대의 프리미어 비즈니스 및 산업 단지.",
+    "schemaName": "수빅 베이 게이트웨이 파크 (SBDMC, Inc.)",
+    "schemaDescription": "필리핀 수빅 베이 자유무역지대의 프리미어 비즈니스 및 산업 단지.",
+    "addressLocality": "수빅 베이 자유무역지대"
+  }
+}

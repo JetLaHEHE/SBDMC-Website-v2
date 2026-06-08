@@ -1,0 +1,7 @@
+{
+  "en": { "dialogLabel": "Cookie consent", "message": "We use cookies to improve your browsing experience and analyze site traffic. By clicking \"Accept All\", you consent to our use of cookies.", "decline": "Decline", "accept": "Accept All" },
+  "zh": { "dialogLabel": "Cookie 同意", "message": "我們使用 Cookie 來改善您的瀏覽體驗並分析網站流量。點擊「全部接受」，即表示您同意我們使用 Cookie。", "decline": "拒絕", "accept": "全部接受" },
+  "tl": { "dialogLabel": "Pagpayag sa cookie", "message": "Gumagamit kami ng cookies upang mapabuti ang iyong karanasan sa pag-browse at suriin ang trapiko sa site. Sa pamamagitan ng pag-click \"Tanggapin Lahat\", sumasang-ayon ka sa paggamit namin ng cookies.", "decline": "Tumanggi", "accept": "Tanggapin Lahat" },
+  "ja": { "dialogLabel": "Cookie同意", "message": "当サイトでは、ブラウジング体験の向上とサイトトラフィックの分析のためにCookieを使用しています。「すべて同意する」をクリックすると、Cookieの使用に同意したことになります。", "decline": "拒否", "accept": "すべて同意する" },
+  "ko": { "dialogLabel": "쿠키 동의", "message": "당사는 귀하의 브라우징 경험을 개선하고 사이트 트래픽을 분석하기 위해 쿠키를 사용합니다. \"모두 수락\"을 클릭하면 당사의 쿠키 사용에 동의하는 것으로 간주됩니다.", "decline": "거부", "accept": "모두 수락" }
+}

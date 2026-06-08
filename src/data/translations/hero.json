@@ -1,0 +1,107 @@
+{
+  "en": {
+    "headline": "Where Business",
+    "headlineHighlight": "Thrives",
+    "badge": "Premier Industrial Park in Subic Bay Freeport Zone",
+    "subtitle": "Subic Bay Gateway Park — a world-class industrial park offering strategic location, modern infrastructure, and unparalleled business incentives in the Philippines.",
+    "ctaPrimary": { "text": "Explore SBDMC, Inc.", "link": "/about-sbdmc" },
+    "ctaSecondary": { "text": "Get in Touch", "link": "/contact" },
+    "stats": [
+      { "value": "45+", "label": "Hectares of Prime Land" },
+      { "value": "50+", "label": "Locator Companies" },
+      { "value": "ISO", "label": "Certified Quality" },
+      { "value": "24/7", "label": "Security & Support" }
+    ],
+    "servicesTitle": "Everything Your Business Needs",
+    "servicesSubtitle": "Comprehensive facilities and services at your fingertips",
+    "featuresTitle": "What Sets Us Apart",
+    "featuresSubtitle": "Three reasons why SBGP is the right choice for your business",
+    "ctaTitle": "Ready to Start Your Journey?",
+    "ctaSubtitle": "Contact us today to learn how your business can thrive at Subic Bay Gateway Park.",
+    "ctaButton": "Contact Us Today"
+  },
+  "zh": {
+    "headline": "商機所在",
+    "headlineHighlight": "蓬勃發展",
+    "badge": "蘇比克灣自由港區的頂級工業園區",
+    "subtitle": "蘇比克灣門戶工業園區 — 一個世界級的工業園區，提供戰略位置、現代化基礎設施和無與倫比的商業優惠。",
+    "ctaPrimary": { "text": "探索世正開發", "link": "/about-sbdmc" },
+    "ctaSecondary": { "text": "聯絡我們", "link": "/contact" },
+    "stats": [
+      { "value": "45+", "label": "公頃黃金地段" },
+      { "value": "50+", "label": "進駐企業" },
+      { "value": "ISO", "label": "品質認證" },
+      { "value": "24/7", "label": "安全與支援" }
+    ],
+    "servicesTitle": "您業務所需的一切",
+    "servicesSubtitle": "完善的設施與服務，觸手可及",
+    "featuresTitle": "我們的優勢",
+    "featuresSubtitle": "蘇比克灣門戶工業園區是您業務最佳選擇的三個理由",
+    "ctaTitle": "準備好開始您的旅程了嗎？",
+    "ctaSubtitle": "立即聯繫我們，了解您的業務如何在蘇比克灣門戶工業園區蓬勃發展。",
+    "ctaButton": "立即聯繫我們"
+  },
+  "tl": {
+    "headline": "Kung Saan",
+    "headlineHighlight": "Umuunlad",
+    "badge": "Premier Industrial Park sa Subic Bay Freeport Zone",
+    "subtitle": "Subic Bay Gateway Park — isang world-class industrial park na nag-aalok ng strategic location, modernong imprastraktura, at walang kapantay na business incentives sa Pilipinas.",
+    "ctaPrimary": { "text": "Tuklasin ang SBDMC, Inc.", "link": "/about-sbdmc" },
+    "ctaSecondary": { "text": "Makipag-ugnayan", "link": "/contact" },
+    "stats": [
+      { "value": "45+", "label": "Ektarya ng Pangunahing Lupa" },
+      { "value": "50+", "label": "Mga Kumpanyang Lokator" },
+      { "value": "ISO", "label": "Sertipikadong Kalidad" },
+      { "value": "24/7", "label": "Seguridad at Suporta" }
+    ],
+    "servicesTitle": "Lahat ng Kailangan ng Iyong Negosyo",
+    "servicesSubtitle": "Komprehensibong pasilidad at serbisyo sa iyong mga kamay",
+    "featuresTitle": "Ano ang Nagpapaiba sa Amin",
+    "featuresSubtitle": "Tatlong dahilan kung bakit ang SBGP ang tamang pagpipilian para sa iyong negosyo",
+    "ctaTitle": "Handa nang Simulan ang Iyong Paglalakbay?",
+    "ctaSubtitle": "Makipag-ugnayan sa amin ngayon upang malaman kung paano uunlad ang iyong negosyo sa Subic Bay Gateway Park.",
+    "ctaButton": "Makipag-ugnayan Ngayon"
+  },
+  "ja": {
+    "headline": "ビジネスが",
+    "headlineHighlight": "栄える",
+    "badge": "スービックベイ自由港区の一流工業団地",
+    "subtitle": "スービックベイゲートウェイパーク — フィリピンで戦略的な立地、近代的なインフラ、そして比類のないビジネス優遇措置を提供するワールドクラスの工業団地。",
+    "ctaPrimary": { "text": "SBDMC株式会社を見る", "link": "/about-sbdmc" },
+    "ctaSecondary": { "text": "お問い合わせ", "link": "/contact" },
+    "stats": [
+      { "value": "45+", "label": "ヘクタールの優良用地" },
+      { "value": "50+", "label": "入居企業数" },
+      { "value": "ISO", "label": "認定品質" },
+      { "value": "24/7", "label": "セキュリティとサポート" }
+    ],
+    "servicesTitle": "ビジネスに必要なすべて",
+    "servicesSubtitle": "充実した設備とサービスをすぐにご利用いただけます",
+    "featuresTitle": "当園の強み",
+    "featuresSubtitle": "SBGPがお客様のビジネスに最適な選択である3つの理由",
+    "ctaTitle": "さあ、始めましょう",
+    "ctaSubtitle": "スービックベイゲートウェイパークでお客様のビジネスがどのように成長できるか、今すぐお問い合わせください。",
+    "ctaButton": "今すぐお問い合わせ"
+  },
+  "ko": {
+    "headline": "비즈니스가",
+    "headlineHighlight": "번창하다",
+    "badge": "수빅 베이 자유무역지대의 프리미어 산업 단지",
+    "subtitle": "수빅 베이 게이트웨이 파크 — 필리핀에서 전략적 입지, 현대적 인프라, 비교할 수 없는 비즈니스 인센티브를 제공하는 세계적 수준의 산업 단지입니다.",
+    "ctaPrimary": { "text": "SBDMC, Inc. 살펴보기", "link": "/about-sbdmc" },
+    "ctaSecondary": { "text": "문의하기", "link": "/contact" },
+    "stats": [
+      { "value": "45+", "label": "헥타르의 프라임 토지" },
+      { "value": "50+", "label": "입주 기업" },
+      { "value": "ISO", "label": "인증된 품질" },
+      { "value": "24/7", "label": "보안 및 지원" }
+    ],
+    "servicesTitle": "비즈니스에 필요한 모든 것",
+    "servicesSubtitle": "포괄적인 시설과 서비스를 손쉽게 이용하세요",
+    "featuresTitle": "차별화된 강점",
+    "featuresSubtitle": "SBGP가 귀사의 비즈니스에 가장 적합한 선택인 세 가지 이유",
+    "ctaTitle": "여정을 시작할 준비가 되셨나요?",
+    "ctaSubtitle": "지금 문의하시면 귀사의 비즈니스가 수빅 베이 게이트웨이 파크에서 어떻게 번창할 수 있는지 알아보실 수 있습니다.",
+    "ctaButton": "지금 문의하기"
+  }
+}

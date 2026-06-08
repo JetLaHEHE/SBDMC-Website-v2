@@ -1,0 +1,7 @@
+{
+  "en": { "dialogLabel": "Search the site", "heading": "Search", "close": "Close search" },
+  "zh": { "dialogLabel": "搜索網站", "heading": "搜索", "close": "關閉搜索" },
+  "tl": { "dialogLabel": "Maghanap sa site", "heading": "Maghanap", "close": "Isara ang paghahanap" },
+  "ja": { "dialogLabel": "サイト検索", "heading": "検索", "close": "検索を閉じる" },
+  "ko": { "dialogLabel": "사이트 검색", "heading": "검색", "close": "검색 닫기" }
+}

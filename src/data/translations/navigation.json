@@ -1,0 +1,217 @@
+{
+  "en": [
+    { "label": "Home", "href": "/" },
+    {
+      "label": "About Us",
+      "href": "#",
+      "children": [
+        { "label": "About SBDMC, Inc.", "href": "/about-sbdmc" },
+        { "label": "About SBGP", "href": "/description" },
+        { "label": "About SBMA", "href": "/about-sbma" },
+        { "label": "Locators", "href": "/locators" }
+      ]
+    },
+    {
+      "label": "Why Us",
+      "href": "#",
+      "children": [
+        { "label": "Business Incentives", "href": "/business-incentives" },
+        { "label": "More Advantages", "href": "/other-reasons" },
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Government Links", "href": "/government-links" }
+      ]
+    },
+    { "label": "For Lease", "href": "/for-lease" },
+    {
+      "label": "Products & Services",
+      "href": "#",
+      "children": [
+        { "label": "Rental Information", "href": "/rental-information" },
+        { "label": "Business Services", "href": "/business-services" },
+        { "label": "RFID Access", "href": "/rfid" }
+      ]
+    },
+    {
+      "label": "Careers",
+      "href": "#",
+      "children": [
+        { "label": "Job Opportunities", "href": "/job-opportunities" }
+      ]
+    },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Downloads", "href": "/forms" },
+    { "label": "Contact Us", "href": "/contact" }
+  ],
+  "zh": [
+    { "label": "首頁", "href": "/" },
+    {
+      "label": "關於我們",
+      "href": "#",
+      "children": [
+        { "label": "關於世正開發", "href": "/about-sbdmc" },
+        { "label": "關於蘇比克灣門戶工業園區", "href": "/description" },
+        { "label": "關於蘇比克灣管理署", "href": "/about-sbma" },
+        { "label": "進駐廠商", "href": "/locators" }
+      ]
+    },
+    {
+      "label": "為何選擇我們",
+      "href": "#",
+      "children": [
+        { "label": "商業優惠", "href": "/business-incentives" },
+        { "label": "更多優勢", "href": "/other-reasons" },
+        { "label": "常見問題", "href": "/faq" },
+        { "label": "政府連結", "href": "/government-links" }
+      ]
+    },
+    { "label": "出租", "href": "/for-lease" },
+    {
+      "label": "產品與服務",
+      "href": "#",
+      "children": [
+        { "label": "租賃資訊", "href": "/rental-information" },
+        { "label": "商業服務", "href": "/business-services" },
+        { "label": "RFID門禁", "href": "/rfid" }
+      ]
+    },
+    {
+      "label": "人才招募",
+      "href": "#",
+      "children": [
+        { "label": "工作機會", "href": "/job-opportunities" }
+      ]
+    },
+    { "label": "相簿", "href": "/gallery" },
+    { "label": "文件下載", "href": "/forms" },
+    { "label": "聯繫我們", "href": "/contact" }
+  ],
+  "tl": [
+    { "label": "Tahanan", "href": "/" },
+    {
+      "label": "Tungkol Sa Amin",
+      "href": "#",
+      "children": [
+        { "label": "Tungkol sa SBDMC, Inc.", "href": "/about-sbdmc" },
+        { "label": "Tungkol sa SBGP", "href": "/description" },
+        { "label": "Tungkol sa SBMA", "href": "/about-sbma" },
+        { "label": "Mga Lokator", "href": "/locators" }
+      ]
+    },
+    {
+      "label": "Bakit Kami",
+      "href": "#",
+      "children": [
+        { "label": "Business Incentives", "href": "/business-incentives" },
+        { "label": "Karagdagang Bentahe", "href": "/other-reasons" },
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Mga Link ng Pamahalaan", "href": "/government-links" }
+      ]
+    },
+    { "label": "For Lease", "href": "/for-lease" },
+    {
+      "label": "Mga Produkto at Serbisyo",
+      "href": "#",
+      "children": [
+        { "label": "Impormasyon sa Pag-upa", "href": "/rental-information" },
+        { "label": "Serbisyong Pangnegosyo", "href": "/business-services" },
+        { "label": "RFID Access", "href": "/rfid" }
+      ]
+    },
+    {
+      "label": "Mga Karera",
+      "href": "#",
+      "children": [
+        { "label": "Mga Oportunidad sa Trabaho", "href": "/job-opportunities" }
+      ]
+    },
+    { "label": "Galeriya", "href": "/gallery" },
+    { "label": "Mga Download", "href": "/forms" },
+    { "label": "Makipag-ugnayan", "href": "/contact" }
+  ],
+  "ja": [
+    { "label": "ホーム", "href": "/" },
+    {
+      "label": "会社概要",
+      "href": "#",
+      "children": [
+        { "label": "SBDMC株式会社について", "href": "/about-sbdmc" },
+        { "label": "SBGPについて", "href": "/description" },
+        { "label": "SBMAについて", "href": "/about-sbma" },
+        { "label": "入居企業", "href": "/locators" }
+      ]
+    },
+    {
+      "label": "選ばれる理由",
+      "href": "#",
+      "children": [
+        { "label": "ビジネス優遇措置", "href": "/business-incentives" },
+        { "label": "さらなる利点", "href": "/other-reasons" },
+        { "label": "よくある質問", "href": "/faq" },
+        { "label": "政府リンク", "href": "/government-links" }
+      ]
+    },
+    { "label": "賃貸物件", "href": "/for-lease" },
+    {
+      "label": "製品とサービス",
+      "href": "#",
+      "children": [
+        { "label": "賃貸情報", "href": "/rental-information" },
+        { "label": "ビジネスサービス", "href": "/business-services" },
+        { "label": "RFIDアクセス", "href": "/rfid" }
+      ]
+    },
+    {
+      "label": "採用情報",
+      "href": "#",
+      "children": [
+        { "label": "求人情報", "href": "/job-opportunities" }
+      ]
+    },
+    { "label": "ギャラリー", "href": "/gallery" },
+    { "label": "ダウンロード", "href": "/forms" },
+    { "label": "お問い合わせ", "href": "/contact" }
+  ],
+  "ko": [
+    { "label": "홈", "href": "/" },
+    {
+      "label": "회사 소개",
+      "href": "#",
+      "children": [
+        { "label": "SBDMC, Inc. 소개", "href": "/about-sbdmc" },
+        { "label": "SBGP 소개", "href": "/description" },
+        { "label": "SBMA 소개", "href": "/about-sbma" },
+        { "label": "입주 기업", "href": "/locators" }
+      ]
+    },
+    {
+      "label": "왜 우리인가",
+      "href": "#",
+      "children": [
+        { "label": "비즈니스 인센티브", "href": "/business-incentives" },
+        { "label": "추가 장점", "href": "/other-reasons" },
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "정부 링크", "href": "/government-links" }
+      ]
+    },
+    { "label": "임대", "href": "/for-lease" },
+    {
+      "label": "제품 및 서비스",
+      "href": "#",
+      "children": [
+        { "label": "임대 정보", "href": "/rental-information" },
+        { "label": "비즈니스 서비스", "href": "/business-services" },
+        { "label": "RFID 출입", "href": "/rfid" }
+      ]
+    },
+    {
+      "label": "채용",
+      "href": "#",
+      "children": [
+        { "label": "채용 공고", "href": "/job-opportunities" }
+      ]
+    },
+    { "label": "갤러리", "href": "/gallery" },
+    { "label": "자료실", "href": "/forms" },
+    { "label": "문의하기", "href": "/contact" }
+  ]
+}

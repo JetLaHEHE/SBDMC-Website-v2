@@ -1,0 +1,132 @@
+{
+  "en": {
+    "quickLinksTitle": "Quick Links",
+    "quickLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "About SBDMC, Inc.", "href": "/about-sbdmc" },
+      { "label": "Locators", "href": "/locators" },
+      { "label": "Business Incentives", "href": "/business-incentives" },
+      { "label": "For Lease", "href": "/for-lease" },
+      { "label": "Job Opportunities", "href": "/job-opportunities" },
+      { "label": "Contact Us", "href": "/contact" }
+    ],
+    "servicesTitle": "Services",
+    "services": [
+      { "label": "RFID Access", "href": "/rfid" },
+      { "label": "Rental Information", "href": "/rental-information" },
+      { "label": "Business Services", "href": "/business-services" },
+      { "label": "Forms & Downloads", "href": "/forms" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" }
+    ],
+    "footerDescription": "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.",
+    "copyright": "All rights reserved.",
+    "facebookLabel": "Facebook"
+  },
+  "zh": {
+    "quickLinksTitle": "快速連結",
+    "quickLinks": [
+      { "label": "首頁", "href": "/" },
+      { "label": "關於世正開發", "href": "/about-sbdmc" },
+      { "label": "進駐廠商", "href": "/locators" },
+      { "label": "商業優惠", "href": "/business-incentives" },
+      { "label": "出租", "href": "/for-lease" },
+      { "label": "工作機會", "href": "/job-opportunities" },
+      { "label": "聯繫我們", "href": "/contact" }
+    ],
+    "servicesTitle": "服務",
+    "services": [
+      { "label": "RFID門禁", "href": "/rfid" },
+      { "label": "租賃資訊", "href": "/rental-information" },
+      { "label": "商業服務", "href": "/business-services" },
+      { "label": "文件下載", "href": "/forms" }
+    ],
+    "legal": [
+      { "label": "隱私政策", "href": "/privacy" },
+      { "label": "服務條款", "href": "/terms" }
+    ],
+    "footerDescription": "蘇比克灣門戶工業園區 — 位於菲律賓蘇比克灣自由港區的頂級商業與工業園區。",
+    "copyright": "版權所有。",
+    "facebookLabel": "Facebook"
+  },
+  "tl": {
+    "quickLinksTitle": "Mabilis na Link",
+    "quickLinks": [
+      { "label": "Tahanan", "href": "/" },
+      { "label": "Tungkol sa SBDMC, Inc.", "href": "/about-sbdmc" },
+      { "label": "Mga Lokator", "href": "/locators" },
+      { "label": "Business Incentives", "href": "/business-incentives" },
+      { "label": "For Lease", "href": "/for-lease" },
+      { "label": "Mga Oportunidad sa Trabaho", "href": "/job-opportunities" },
+      { "label": "Makipag-ugnayan", "href": "/contact" }
+    ],
+    "servicesTitle": "Serbisyo",
+    "services": [
+      { "label": "RFID Access", "href": "/rfid" },
+      { "label": "Impormasyon sa Pag-upa", "href": "/rental-information" },
+      { "label": "Serbisyong Pangnegosyo", "href": "/business-services" },
+      { "label": "Mga Download", "href": "/forms" }
+    ],
+    "legal": [
+      { "label": "Patakaran sa Pagkapribado", "href": "/privacy" },
+      { "label": "Mga Tuntunin ng Serbisyo", "href": "/terms" }
+    ],
+    "footerDescription": "Subic Bay Gateway Park — isang premier business at industrial park sa Subic Bay Freeport Zone, Pilipinas.",
+    "copyright": "Lahat ng karapatan ay nakalaan.",
+    "facebookLabel": "Facebook"
+  },
+  "ja": {
+    "quickLinksTitle": "クイックリンク",
+    "quickLinks": [
+      { "label": "ホーム", "href": "/" },
+      { "label": "SBDMC株式会社について", "href": "/about-sbdmc" },
+      { "label": "入居企業", "href": "/locators" },
+      { "label": "ビジネス優遇措置", "href": "/business-incentives" },
+      { "label": "賃貸物件", "href": "/for-lease" },
+      { "label": "求人情報", "href": "/job-opportunities" },
+      { "label": "お問い合わせ", "href": "/contact" }
+    ],
+    "servicesTitle": "サービス",
+    "services": [
+      { "label": "RFIDアクセス", "href": "/rfid" },
+      { "label": "賃貸情報", "href": "/rental-information" },
+      { "label": "ビジネスサービス", "href": "/business-services" },
+      { "label": "ダウンロード", "href": "/forms" }
+    ],
+    "legal": [
+      { "label": "プライバシーポリシー", "href": "/privacy" },
+      { "label": "利用規約", "href": "/terms" }
+    ],
+    "footerDescription": "スービックベイゲートウェイパーク — フィリピン、スービックベイ自由港区にある一流の商業・工業団地。",
+    "copyright": "全著作権所有。",
+    "facebookLabel": "Facebook"
+  },
+  "ko": {
+    "quickLinksTitle": "빠른 링크",
+    "quickLinks": [
+      { "label": "홈", "href": "/" },
+      { "label": "SBDMC, Inc. 소개", "href": "/about-sbdmc" },
+      { "label": "입주 기업", "href": "/locators" },
+      { "label": "비즈니스 인센티브", "href": "/business-incentives" },
+      { "label": "임대", "href": "/for-lease" },
+      { "label": "채용 공고", "href": "/job-opportunities" },
+      { "label": "문의하기", "href": "/contact" }
+    ],
+    "servicesTitle": "서비스",
+    "services": [
+      { "label": "RFID 출입", "href": "/rfid" },
+      { "label": "임대 정보", "href": "/rental-information" },
+      { "label": "비즈니스 서비스", "href": "/business-services" },
+      { "label": "자료실", "href": "/forms" }
+    ],
+    "legal": [
+      { "label": "개인정보 처리방침", "href": "/privacy" },
+      { "label": "이용약관", "href": "/terms" }
+    ],
+    "footerDescription": "수빅 베이 게이트웨이 파크 — 필리핀 수빅 베이 자유무역지대의 프리미어 비즈니스 및 산업 단지.",
+    "copyright": "모든 권리 보유.",
+    "facebookLabel": "Facebook"
+  }
+}

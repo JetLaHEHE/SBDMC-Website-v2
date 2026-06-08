@@ -1,0 +1,7 @@
+{
+  "en": { "logoAlt": "SBDMC, Inc.", "brand": "SBDMC, Inc.", "tagline": "Subic Bay Gateway Park", "search": "Search", "toggleMenu": "Toggle menu" },
+  "zh": { "logoAlt": "世正開發股份有限公司", "brand": "世正開發股份有限公司", "tagline": "蘇比克灣門戶工業園區", "search": "搜索", "toggleMenu": "切換選單" },
+  "tl": { "logoAlt": "SBDMC, Inc.", "brand": "SBDMC, Inc.", "tagline": "Subic Bay Gateway Park", "search": "Maghanap", "toggleMenu": "Ilipat ang menu" },
+  "ja": { "logoAlt": "SBDMC株式会社", "brand": "SBDMC株式会社", "tagline": "スービックベイゲートウェイパーク", "search": "検索", "toggleMenu": "メニュー切替" },
+  "ko": { "logoAlt": "SBDMC, Inc.", "brand": "SBDMC, Inc.", "tagline": "수빅 베이 게이트웨이 파크", "search": "검색", "toggleMenu": "메뉴 전환" }
+}

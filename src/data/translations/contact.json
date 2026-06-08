@@ -1,0 +1,32 @@
+{
+  "en": {
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "phone": "(047) 252-3456",
+    "email": "inquiry@sbdmc.com",
+    "hours": "Monday - Friday: 9:00 AM - 4:00 PM"
+  },
+  "zh": {
+    "address": "Argonaut Highway 與 Rizal Highway 交叉口，蘇比克灣門戶工業園區，蘇比克灣自由港區，2222",
+    "phone": "(047) 252-3456",
+    "email": "inquiry@sbdmc.com",
+    "hours": "週一至週五：上午9:00 - 下午4:00"
+  },
+  "tl": {
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "phone": "(047) 252-3456",
+    "email": "inquiry@sbdmc.com",
+    "hours": "Lunes - Biyernes: 9:00 AM - 4:00 PM"
+  },
+  "ja": {
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "phone": "(047) 252-3456",
+    "email": "inquiry@sbdmc.com",
+    "hours": "月曜日〜金曜日：午前9:00〜午後4:00"
+  },
+  "ko": {
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "phone": "(047) 252-3456",
+    "email": "inquiry@sbdmc.com",
+    "hours": "월요일 - 금요일: 오전 9:00 - 오후 4:00"
+  }
+}
