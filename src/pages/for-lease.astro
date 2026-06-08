@@ -4,7 +4,7 @@ import Breadcrumb from "../components/Breadcrumb.astro";
 ---
 
 <Layout title="For Lease" description="View available warehouse and office spaces for lease at Subic Bay Gateway Park in the Freeport Zone.">
-  <section class="bg-primary-500 py-24">
+  <section aria-label="For lease hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Leasing</div>
       <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">For Lease</h1>
@@ -14,7 +14,7 @@ import Breadcrumb from "../components/Breadcrumb.astro";
 
   <Breadcrumb pages={[{ label: "For Lease" }]} />
 
-  <section class="py-24">
+  <section aria-label="Available spaces" class="py-24">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <p class="mb-10 text-center text-lg text-gray-600" data-aos="fade-up">Subic Bay Gateway Park offers a variety of lease options to suit different business needs. Whether you need warehouse space, manufacturing facilities, or office space, we have options available.</p>
       <div class="grid gap-6 md:grid-cols-2">
@@ -30,9 +30,9 @@ import Breadcrumb from "../components/Breadcrumb.astro";
             <h3 class="mb-2 text-xl font-bold text-primary-500">Warehouse Space</h3>
             <p class="mb-4 text-sm text-gray-500">Modern warehouse facilities with loading docks, high ceilings, and ample storage capacity.</p>
             <ul class="mb-6 space-y-2 text-sm text-gray-500">
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Sizes from 500 sqm to 5,000 sqm</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> 24/7 security and monitoring</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Easy truck access and loading bays</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Sizes from 500 sqm to 5,000 sqm</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> 24/7 security and monitoring</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Easy truck access and loading bays</li>
             </ul>
             <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
           </div>
@@ -50,9 +50,9 @@ import Breadcrumb from "../components/Breadcrumb.astro";
             <h3 class="mb-2 text-xl font-bold text-primary-500">Manufacturing Facilities</h3>
             <p class="mb-4 text-sm text-gray-500">Ready-built manufacturing units with essential infrastructure connections.</p>
             <ul class="mb-6 space-y-2 text-sm text-gray-500">
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Customizable layouts to fit your needs</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> High power capacity available</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Loading/unloading areas included</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Customizable layouts to fit your needs</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> High power capacity available</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Loading/unloading areas included</li>
             </ul>
             <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
           </div>
@@ -70,9 +70,9 @@ import Breadcrumb from "../components/Breadcrumb.astro";
             <h3 class="mb-2 text-xl font-bold text-primary-500">Office Spaces</h3>
             <p class="mb-4 text-sm text-gray-500">Fully serviced office spaces for BPO, administrative, and commercial use.</p>
             <ul class="mb-6 space-y-2 text-sm text-gray-500">
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Fiber optic internet ready</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Ample parking available</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Flexible lease terms</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Fiber optic internet ready</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Ample parking available</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Flexible lease terms</li>
             </ul>
             <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
           </div>
@@ -90,9 +90,9 @@ import Breadcrumb from "../components/Breadcrumb.astro";
             <h3 class="mb-2 text-xl font-bold text-primary-500">Land Leases</h3>
             <p class="mb-4 text-sm text-gray-500">Lease land within the park for build-to-suit facilities.</p>
             <ul class="mb-6 space-y-2 text-sm text-gray-500">
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Long-term lease options available</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Prime locations within the park</li>
-              <li class="flex items-center gap-2"><svg class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Infrastructure ready for development</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Long-term lease options available</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Prime locations within the park</li>
+              <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Infrastructure ready for development</li>
             </ul>
             <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">Inquire Now &rarr;</a>
           </div>
@@ -101,7 +101,7 @@ import Breadcrumb from "../components/Breadcrumb.astro";
     </div>
   </section>
 
-  <section class="bg-primary-500 py-20">
+  <section aria-label="How to lease" class="bg-primary-500 py-20">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
       <div class="mx-auto max-w-xl" data-aos="fade-up">
         <h2 class="mb-4 text-3xl font-bold text-white">How to Lease</h2>

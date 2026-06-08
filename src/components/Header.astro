@@ -36,9 +36,9 @@ function linkClass(href: string, base = false): string {
             <div class="group relative">
               <button class="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-all hover:text-primary-500">
                 {item.label}
-                <svg class="h-3.5 w-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                <svg aria-hidden="true" class="h-3.5 w-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
               </button>
-              <div class="invisible absolute left-0 top-full z-50 w-56 origin-top-right translate-y-2 rounded-lg border border-gray-100 bg-white p-1 shadow-lg opacity-0 transition-all group-hover:visible group-hover:translate-y-1 group-hover:opacity-100">
+              <div class="invisible absolute left-0 top-full z-50 w-56 origin-top-right translate-y-2 rounded-lg border border-gray-100 bg-white p-1 shadow-lg opacity-0 transition-all group-hover:visible group-hover:translate-y-1 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-1 group-focus-within:opacity-100">
                 {item.children.map((child) => (
                   <a href={child.href} class={linkClass(child.href)}>
                     {child.label}
@@ -57,10 +57,10 @@ function linkClass(href: string, base = false): string {
 
     <div class="flex items-center gap-1">
       <button id="search-toggle" class="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 transition-all hover:bg-gray-100" aria-label="Search">
-        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        <svg aria-hidden="true" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
       </button>
-      <button id="menu-toggle" class="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 lg:hidden" aria-label="Toggle menu">
-        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      <button id="menu-toggle" class="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg aria-hidden="true" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </button>
     </div>
   </nav>
@@ -95,12 +95,21 @@ function linkClass(href: string, base = false): string {
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   menuToggle?.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+    const isOpen = !mobileMenu.classList.toggle("hidden");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
   mobileMenu?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       mobileMenu.classList.add("hidden");
+      menuToggle?.setAttribute("aria-expanded", "false");
     });
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu && !mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.add("hidden");
+      menuToggle?.setAttribute("aria-expanded", "false");
+      menuToggle?.focus();
+    }
   });
   document.getElementById("search-toggle")?.addEventListener("click", () => {
     window.openSearch?.();

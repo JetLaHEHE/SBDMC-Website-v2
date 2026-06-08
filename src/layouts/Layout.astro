@@ -91,8 +91,11 @@ const defaultOgImage = ogImage || "/images/og-default.svg";
     </script>
   </head>
   <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:bg-white focus:text-primary-500 focus:px-4 focus:py-3 focus:rounded-lg focus:shadow-xl focus:text-sm focus:font-semibold focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+      Skip to main content
+    </a>
     <Header currentPath={canonical} />
-    <main data-pagefind-body>
+    <main id="main-content" data-pagefind-body>
       <slot />
     </main>
     <Footer />

@@ -5,7 +5,7 @@ import jobs from "../data/jobs.json";
 ---
 
 <Layout title="Job Opportunities" description="Find career opportunities with locator companies at Subic Bay Gateway Park in the Subic Bay Freeport Zone.">
-  <section class="bg-primary-500 py-24">
+  <section aria-label="Job opportunities hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Careers</div>
       <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Job Opportunities</h1>
@@ -15,7 +15,7 @@ import jobs from "../data/jobs.json";
 
   <Breadcrumb pages={[{ label: "Careers", href: "/job-opportunities" }, { label: "Job Opportunities" }]} />
 
-  <section class="py-24">
+  <section aria-label="Job listings" class="py-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <p class="mb-12 text-center text-lg text-gray-600" data-aos="fade-up">{jobs.intro}</p>
 
@@ -24,7 +24,7 @@ import jobs from "../data/jobs.json";
           <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div class="flex items-start gap-4">
               <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-primary-500 text-white">
-                <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                <svg aria-hidden="true" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               </div>
               <div>
                 <div class={`mb-1 inline-block px-3 py-0.5 text-xs font-semibold ${job.status === "open" ? "bg-accent-500 text-white" : "bg-gray-200 text-gray-500"}`}>{job.status === "open" ? "Open" : "Closed"}</div>

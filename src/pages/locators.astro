@@ -5,7 +5,7 @@ import data from "../data/locators.json";
 ---
 
 <Layout title="Locators" description="Leading companies that have chosen Subic Bay Gateway Park as their preferred business location in the Subic Bay Freeport Zone.">
-  <section class="bg-primary-500 py-24">
+  <section aria-label="Locators hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{data.badge}</div>
       <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{data.title}</h1>
@@ -15,7 +15,7 @@ import data from "../data/locators.json";
 
   <Breadcrumb pages={[{ label: "About Us", href: "/about-sbdmc" }, { label: "Locators" }]} />
 
-  <section class="bg-surface py-24">
+  <section aria-label="Current locators" class="bg-surface py-24">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {data.locators.map((locator, i) => (
@@ -30,7 +30,7 @@ import data from "../data/locators.json";
     </div>
   </section>
 
-  <section class="bg-primary-500 py-24">
+  <section aria-label="Become a locator" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <h2 class="mb-4 text-3xl font-bold text-white">{data.cta.title}</h2>
       <p class="mb-8 text-lg text-white/80">{data.cta.description}</p>

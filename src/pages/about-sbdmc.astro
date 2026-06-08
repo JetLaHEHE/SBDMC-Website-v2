@@ -5,7 +5,7 @@ import data from "../data/about-sbdmc.json";
 ---
 
 <Layout title="About SBDMC, Inc." description="Learn about SBDMC, Inc., the developer and manager of Subic Bay Gateway Park in the Subic Bay Freeport Zone.">
-  <section class="bg-primary-500 py-24">
+  <section aria-label="About SBDMC hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
       <div data-aos="fade-up">
         <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{data.badge}</div>
@@ -17,7 +17,7 @@ import data from "../data/about-sbdmc.json";
 
   <Breadcrumb pages={[{ label: "About Us", href: "/about-sbdmc" }, { label: "About SBDMC, Inc." }]} />
 
-  <section class="bg-surface py-24">
+  <section aria-label="Introduction" class="bg-surface py-24">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
         <p class="text-lg leading-relaxed text-gray-600">{data.intro}</p>
@@ -25,7 +25,7 @@ import data from "../data/about-sbdmc.json";
     </div>
   </section>
 
-  <section class="bg-surface border-t border-gray-100 py-16">
+  <section aria-label="History" class="bg-surface border-t border-gray-100 py-16">
     <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
       <blockquote class="text-xl font-light italic text-gray-600" data-aos="fade-up">
         &ldquo;{data.historyQuote}&rdquo;
@@ -33,19 +33,19 @@ import data from "../data/about-sbdmc.json";
     </div>
   </section>
 
-  <section class="py-24">
+  <section aria-label="Mission and vision" class="py-24">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="grid gap-8 md:grid-cols-2">
         <div class="card border-l-4 border-primary-500" data-aos="fade-up">
           <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
-            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            <svg aria-hidden="true" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
           </div>
           <h3 class="mb-3 text-2xl font-bold text-primary-500">{data.mission.title}</h3>
           <p class="leading-relaxed text-gray-600">{data.mission.description}</p>
         </div>
         <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay="100">
           <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
-            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+            <svg aria-hidden="true" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
           </div>
           <h3 class="mb-3 text-2xl font-bold text-primary-500">{data.vision.title}</h3>
           <p class="leading-relaxed text-gray-600">{data.vision.description}</p>
@@ -54,7 +54,7 @@ import data from "../data/about-sbdmc.json";
     </div>
   </section>
 
-  <section class="bg-surface py-24">
+  <section aria-label="Certification" class="bg-surface py-24">
     <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
       <div class="border border-primary-500/30 bg-white p-10" data-aos="fade-up">
         <div class="mb-4 inline-block bg-primary-500 px-4 py-1.5 text-xs font-semibold text-white">{data.certification.badge}</div>

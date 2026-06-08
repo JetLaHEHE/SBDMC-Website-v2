@@ -14,7 +14,7 @@ const iconMap = {
 ---
 
 <Layout title="More Advantages" description="Additional reasons why Subic Bay Gateway Park is the right choice for your business in the Freeport Zone.">
-  <section class="bg-primary-500 py-24">
+  <section aria-label="More advantages hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{data.badge}</div>
       <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{data.title}</h1>
@@ -24,13 +24,13 @@ const iconMap = {
 
   <Breadcrumb pages={[{ label: "Why Us", href: "/other-reasons" }, { label: "More Advantages" }]} />
 
-  <section class="bg-surface py-24">
+  <section aria-label="Advantages listing" class="bg-surface py-24">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {data.advantages.map((adv, i) => (
           <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay={i * 100}>
             <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-white">
-              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg aria-hidden="true" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={iconMap[adv.icon] || iconMap.location} />
               </svg>
             </div>

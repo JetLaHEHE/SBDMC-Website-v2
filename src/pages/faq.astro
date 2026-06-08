@@ -6,7 +6,7 @@ const faqCategories = faqData.categories;
 ---
 
 <Layout title="FAQ" description="Frequently asked questions about Subic Bay Gateway Park, leasing, business setup, and the Subic Bay Freeport Zone.">
-  <section class="bg-primary-500 py-24">
+  <section aria-label="FAQ hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">FAQ</div>
       <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Frequently Asked Questions</h1>
@@ -16,7 +16,7 @@ const faqCategories = faqData.categories;
 
   <Breadcrumb pages={[{ label: "Why Us", href: "/faq" }, { label: "FAQ" }]} />
 
-<script is:inline type="application/ld+json">
+  <script is:inline type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -73,7 +73,7 @@ const faqCategories = faqData.categories;
 }
 </script>
 
-  <section class="py-24">
+  <section aria-label="Frequently asked questions" class="py-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <div class="mb-10 flex flex-wrap gap-2" data-aos="fade-up">
         {faqCategories.map((cat, ci) => (
@@ -88,11 +88,11 @@ const faqCategories = faqData.categories;
           <div class="space-y-4">
             {cat.items.map((item, ii) => (
               <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay={ii * 50}>
-                <button class="faq-toggle flex w-full items-center justify-between text-left">
+                <button class="faq-toggle flex w-full items-center justify-between text-left" id="faq-toggle-{ci}-{ii}" aria-expanded="false" aria-controls="faq-answer-{ci}-{ii}">
                   <span class="pr-4 font-semibold text-primary-500">{item.q}</span>
-                  <svg class="faq-icon h-5 w-5 shrink-0 text-primary-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                  <svg aria-hidden="true" class="faq-icon h-5 w-5 shrink-0 text-primary-500 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                 </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300" id="faq-answer-{ci}-{ii}" role="region" aria-labelledby="faq-toggle-{ci}-{ii}">
                   <div class="border-t border-gray-100 pt-4">
                     <p class="leading-relaxed text-gray-600">{item.a}</p>
                   </div>
@@ -112,6 +112,7 @@ const faqCategories = faqData.categories;
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector(".faq-icon");
       const isOpen = answer.classList.contains("max-h-96");
+      document.querySelectorAll(".faq-toggle").forEach((b) => b.setAttribute("aria-expanded", "false"));
       document.querySelectorAll(".faq-answer").forEach((el) => {
         el.classList.remove("max-h-96");
         el.classList.add("max-h-0");
@@ -121,6 +122,7 @@ const faqCategories = faqData.categories;
         answer.classList.remove("max-h-0");
         answer.classList.add("max-h-96");
         icon?.classList.add("rotate-45");
+        btn.setAttribute("aria-expanded", "true");
       }
     });
   });
