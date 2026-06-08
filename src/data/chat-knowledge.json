@@ -13,7 +13,9 @@
     { "q": "What are the tax incentives available?", "a": "Income tax holidays (up to 6 years), reduced 5% tax on gross income after holiday, duty-free importation, exemption from local government taxes, up to 100% foreign ownership." },
     { "q": "Can foreign companies locate in SBGP?", "a": "Yes, foreign companies may enjoy up to 100% foreign ownership under Subic Bay Freeport Zone incentives." },
     { "q": "How do I apply for a lease?", "a": "Contact through the website contact page or visit the office at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park. Call (047) 252-3456." },
-    { "q": "What infrastructure is available?", "a": "Reliable power, adequate water, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage, and waste management." }
+    { "q": "What infrastructure is available?", "a": "Reliable power, adequate water, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage, and waste management." },
+    { "q": "What utilities are available in SBGP?", "a": "Reliable 24/7 power supply with an on-site substation, adequate water from Subic Water, high-speed fiber optic internet, and modern drainage and waste management systems." },
+    { "q": "How long does the business registration process take?", "a": "Typically 2 to 4 weeks from lease application to full operation, depending on the complexity of the business." }
   ],
   "incentives": [
     "Income tax holiday (up to 6 years)",
@@ -46,5 +48,11 @@
     "forms": "/forms",
     "contact": "/contact"
   },
+  "leasing": "Minimum lease term is 1 year. Unit sizes range from 200 sqm to 5,000 sqm for warehouses and 50 sqm to 1,000 sqm for offices. Rates vary by location and unit type — contact inquiry@sbdmc.com for current rates.",
+  "registration": "1) Submit lease application with business profile. 2) Sign lease contract. 3) Register with SBMA (Subic Bay Metropolitan Authority). 4) Obtain business permit and tax identification. 5) Set up utilities. Typical processing time is 2 to 4 weeks.",
+  "gateHours": "Main gate operates 24/7. Visitor passes require a valid ID at the guardhouse. Truck entry is allowed during business hours (6 AM to 6 PM) with prior coordination.",
+  "locators": "Home to over 50 locators including light manufacturing, logistics, and BPO companies.",
+  "workforce": "Sourced from Olongapo City and nearby towns with a labor force of approximately 500,000. Technical skills are available through local vocational schools.",
+  "mapRoute": "Located in the Subic Bay Freeport Zone. 15 minutes from Olongapo City, 45 minutes from Clark International Airport, and approximately 2 hours from Metro Manila via NLEX-SCTEX.",
   "lastUpdated": "2026-06-08"
 }
