@@ -119,8 +119,9 @@
       const greetingTime = getTimestamp();
       const initialMsg = { role: "bot", text: "Hi! I'm the SBDMC assistant. I can answer questions about leasing, incentives, services, and more. How can I help you today?", time: greetingTime, feedback: null };
       messages.push(initialMsg);
-      msgCounter = 1;
+      msgCounter = 0;
       messagesEl.innerHTML = buildBotBubble(initialMsg.text, initialMsg.time, null);
+      msgCounter = 1;
     }
     messagesEl.scrollTop = messagesEl.scrollHeight;
     clearBtn.classList.toggle("hidden", messages.length <= 1);
