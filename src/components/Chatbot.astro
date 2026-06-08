@@ -52,9 +52,10 @@ import translations from "../data/chat-translations.json";
   </div>
 </div>
 
+<div id="chat-translations" hidden set:html={JSON.stringify(translations)}></div>
 <script is:inline>
 (function () {
-  const TRANSLATIONS = JSON.parse(`{JSON.stringify(translations)}`);
+  const TRANSLATIONS = JSON.parse(document.getElementById("chat-translations").textContent);
   const SUPPORTED_LANGUAGES = ["en", "tl", "zh", "ko", "ja"];
   const LANG_NAMES = { en: "English", tl: "Tagalog", zh: "中文", ko: "한국어", ja: "日本語" };
   const LANG_STORAGE_KEY = "sbdmc-chat-lang";
