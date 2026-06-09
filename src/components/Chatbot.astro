@@ -121,8 +121,9 @@ const ct = t(chatbotTranslations, lang);
   const contactTitle = document.getElementById("chatbot-contact-title");
   const subtitle = document.querySelector("#chatbot-panel .text-xs");
   const panelClose = document.getElementById("chatbot-panel-close");
+  const inputArea = document.getElementById("chatbot-input-area");
 
-  if (!toggle || !panel || !messagesEl || !input || !sendBtn || !icon || !closeIcon || !clearBtn || !langToggle || !langDropdown || !contactForm || !contactBack || !contactName || !contactEmail || !contactMessage || !contactSubmit || !contactStatus || !contactTitle || !subtitle || !panelClose) return;
+  if (!toggle || !panel || !messagesEl || !input || !sendBtn || !icon || !closeIcon || !clearBtn || !langToggle || !langDropdown || !contactForm || !contactBack || !contactName || !contactEmail || !contactMessage || !contactSubmit || !contactStatus || !contactTitle || !subtitle || !panelClose || !inputArea) return;
 
   let isOpen = false;
   let msgCounter = 0;
@@ -242,6 +243,7 @@ const ct = t(chatbotTranslations, lang);
   function showContactForm() {
     showContact = true;
     messagesEl.classList.add("hidden");
+    inputArea.classList.add("hidden");
     contactForm.classList.remove("hidden");
     contactForm.classList.add("flex");
     contactName.value = "";
@@ -260,6 +262,7 @@ const ct = t(chatbotTranslations, lang);
   function hideContactForm() {
     showContact = false;
     messagesEl.classList.remove("hidden");
+    inputArea.classList.remove("hidden");
     contactForm.classList.add("hidden");
     contactForm.classList.remove("flex");
   }
