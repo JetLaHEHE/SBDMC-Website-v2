@@ -31,19 +31,19 @@ const ct = t(contactTranslations, lang);
             <input type="hidden" name="form-name" value="contact" />
             <div>
               <label for="name" class="mb-1.5 block text-sm font-medium text-gray-700">{ct.nameLabel}</label>
-              <input type="text" id="name" name="name" required class="w-full rounded-lg border border-gray-300 px-5 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="John Doe" />
+              <input type="text" id="name" name="name" required class="w-full rounded-lg border border-gray-300 px-5 py-3 max-md:text-base md:text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="John Doe" />
             </div>
             <div>
               <label for="email" class="mb-1.5 block text-sm font-medium text-gray-700">{ct.emailLabel}</label>
-              <input type="email" id="email" name="email" required class="w-full rounded-lg border border-gray-300 px-5 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="john@company.com" />
+              <input type="email" id="email" name="email" required class="w-full rounded-lg border border-gray-300 px-5 py-3 max-md:text-base md:text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="john@company.com" />
             </div>
             <div>
               <label for="company" class="mb-1.5 block text-sm font-medium text-gray-700">{ct.companyLabel}</label>
-              <input type="text" id="company" name="company" class="w-full rounded-lg border border-gray-300 px-5 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="Company Name" />
+              <input type="text" id="company" name="company" class="w-full rounded-lg border border-gray-300 px-5 py-3 max-md:text-base md:text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="Company Name" />
             </div>
             <div>
               <label for="message" class="mb-1.5 block text-sm font-medium text-gray-700">{ct.messageLabel}</label>
-              <textarea id="message" name="message" rows="5" required class="w-full rounded-lg border border-gray-300 px-5 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="Tell us about your inquiry..."></textarea>
+              <textarea id="message" name="message" rows="5" required class="w-full rounded-lg border border-gray-300 px-5 py-3 max-md:text-base md:text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="Tell us about your inquiry..."></textarea>
             </div>
             <button type="submit" class="btn-primary w-full justify-center text-base">{ct.sendLabel}</button>
           </form>

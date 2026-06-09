@@ -88,7 +88,7 @@ const tx = t(rfidTranslations, lang);
       <div class="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
         <h2 class="mb-2 text-2xl font-bold text-primary-500">{tx.requirementsTitle}</h2>
         <p class="mb-6 text-sm font-semibold text-red-500">{tx.requirementsNotice}</p>
-        <div class="overflow-hidden rounded-lg border border-gray-200">
+<div class="overflow-x-auto rounded-lg border border-gray-200">
           <table class="w-full text-left">
             <thead class="bg-gray-50">
               <tr>
@@ -260,15 +260,15 @@ const tx = t(rfidTranslations, lang);
     btn.addEventListener("click", () => {
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector(".faq-icon");
-      const isOpen = answer.classList.contains("max-h-96");
+      const isOpen = answer.classList.contains("max-h-[2000px]");
       document.querySelectorAll(".faq-answer").forEach((el) => {
-        el.classList.remove("max-h-96");
+el.classList.remove("max-h-96", "max-h-[2000px]");
         el.classList.add("max-h-0");
         el.previousElementSibling.querySelector(".faq-icon")?.classList.remove("rotate-45");
       });
       if (!isOpen) {
-        answer.classList.remove("max-h-0");
-        answer.classList.add("max-h-96");
+answer.classList.remove("max-h-0");
+        answer.classList.add("max-h-[2000px]");
         icon?.classList.add("rotate-45");
       }
     });

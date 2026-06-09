@@ -31,7 +31,7 @@ return active
 }
 ---
 
-<header id="site-header" class="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md transition-all">
+<header id="site-header" class="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md transition-all pt-[env(safe-area-inset-top)]">
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
     <a href={linkHref("/")} class="flex items-center gap-3">
       <img src="/images/logo.png" alt={ht.logoAlt} class="h-9 w-auto" />
@@ -78,7 +78,7 @@ return active
     </div>
   </nav>
 
-  <div id="mobile-menu" class="hidden border-t border-gray-100 bg-white lg:hidden">
+  <div id="mobile-menu" class="hidden border-t border-gray-100 bg-white lg:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto">
     <div class="space-y-1 px-4 py-4">
       {
         navItems.map((item) => {
@@ -106,23 +106,38 @@ return active
 <script>
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
+  const backdrop = document.createElement("div");
+  backdrop.id = "mobile-backdrop";
+  backdrop.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:49;display:none;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)";
+  document.body.appendChild(backdrop);
+
+  function closeMobileMenu() {
+    mobileMenu?.classList.add("hidden");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    backdrop.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
   menuToggle?.addEventListener("click", () => {
     const isOpen = !mobileMenu.classList.toggle("hidden");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    backdrop.style.display = isOpen ? "block" : "none";
+    document.body.style.overflow = isOpen ? "hidden" : "";
   });
+
+  backdrop.addEventListener("click", closeMobileMenu);
+
   mobileMenu?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-      menuToggle?.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeMobileMenu);
   });
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mobileMenu && !mobileMenu.classList.contains("hidden")) {
-      mobileMenu.classList.add("hidden");
-      menuToggle?.setAttribute("aria-expanded", "false");
+      closeMobileMenu();
       menuToggle?.focus();
     }
   });
+
   document.getElementById("search-toggle")?.addEventListener("click", () => {
     window.openSearch?.();
   });

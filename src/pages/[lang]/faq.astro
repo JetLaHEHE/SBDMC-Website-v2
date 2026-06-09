@@ -117,16 +117,16 @@ const faqCategories = ft.categories;
     btn.addEventListener("click", () => {
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector(".faq-icon");
-      const isOpen = answer.classList.contains("max-h-96");
+      const isOpen = answer.classList.contains("max-h-[2000px]");
       document.querySelectorAll(".faq-toggle").forEach((b) => b.setAttribute("aria-expanded", "false"));
       document.querySelectorAll(".faq-answer").forEach((el) => {
-        el.classList.remove("max-h-96");
+        el.classList.remove("max-h-96", "max-h-[2000px]");
         el.classList.add("max-h-0");
         el.previousElementSibling.querySelector(".faq-icon")?.classList.remove("rotate-45");
       });
       if (!isOpen) {
         answer.classList.remove("max-h-0");
-        answer.classList.add("max-h-96");
+        answer.classList.add("max-h-[2000px]");
         icon?.classList.add("rotate-45");
         btn.setAttribute("aria-expanded", "true");
       }

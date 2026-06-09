@@ -21,14 +21,14 @@ const ct = t(chatbotTranslations, lang);
         <div class="text-xs text-white/70">{ct.greeting}</div>
       </div>
     <div class="ml-auto flex items-center gap-1">
-      <button id="chatbot-panel-close" class="hidden max-md:flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Close chat" title="Close chat">
+      <button id="chatbot-panel-close" class="hidden max-md:flex max-md:h-10 max-md:w-10 md:h-8 md:w-8 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Close chat" title="Close chat">
         <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
       </button>
       <div class="relative">
-        <button id="chatbot-lang-toggle" class="flex max-md:h-9 max-md:w-9 md:h-7 md:w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Switch language" title="Language">🌐</button>
+        <button id="chatbot-lang-toggle" class="flex max-md:h-10 max-md:w-10 md:h-7 md:w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Switch language" title="Language">🌐</button>
         <div id="chatbot-lang-dropdown" class="hidden absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50 min-w-[130px]"></div>
       </div>
-      <button id="chatbot-clear" class="flex max-md:h-9 max-md:w-9 md:h-7 md:w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20 hidden" aria-label="Clear chat" title="Clear chat">🗑️</button>
+      <button id="chatbot-clear" class="flex max-md:h-10 max-md:w-10 md:h-7 md:w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20 hidden" aria-label="Clear chat" title="Clear chat">🗑️</button>
     </div>
     </div>
 
