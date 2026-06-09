@@ -13,10 +13,11 @@ const cleanPath = currentPath.replace(/^\/(en|zh|tl|ja|ko)\/?/, "/") || "/";
 <div class="relative group">
   <button
     class="flex items-center gap-1.5 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 max-md:text-sm md:text-xs font-medium text-gray-600 transition-all hover:border-gray-300 hover:text-gray-800"
+    aria-haspopup="true"
     aria-label="Switch language"
   >
     <span class="text-sm" aria-hidden="true">🌐</span>
-    <span class="hidden sm:inline uppercase font-semibold">{currentLang}</span>
+    <span class="hidden md:inline uppercase font-semibold">{currentLang}</span>
     <svg aria-hidden="true" class="h-3 w-3 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
   </button>
   <div class="invisible absolute right-0 top-full z-50 mt-1 w-44 origin-top-right translate-y-1 rounded-lg border border-gray-100 bg-white py-1 shadow-lg opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
