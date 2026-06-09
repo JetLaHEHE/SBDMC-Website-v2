@@ -3,7 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
 
 [[redirects]]
   from = "/admin"
@@ -18,6 +18,11 @@
 [[redirects]]
   from = "/api/contact"
   to = "/.netlify/functions/contact"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/:splat"
   status = 200
 
 [[redirects]]
