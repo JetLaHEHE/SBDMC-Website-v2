@@ -23,7 +23,7 @@
     },
     { "label": "For Lease", "href": "/for-lease" },
     {
-      "label": "Products & Services",
+      "label": "Services",
       "href": "#",
       "children": [
         { "label": "Rental Information", "href": "/rental-information" },
@@ -66,7 +66,7 @@
     },
     { "label": "出租", "href": "/for-lease" },
     {
-      "label": "產品與服務",
+      "label": "服務",
       "href": "#",
       "children": [
         { "label": "租賃資訊", "href": "/rental-information" },
@@ -109,7 +109,7 @@
     },
     { "label": "For Lease", "href": "/for-lease" },
     {
-      "label": "Mga Produkto at Serbisyo",
+      "label": "Mga Serbisyo",
       "href": "#",
       "children": [
         { "label": "Impormasyon sa Pag-upa", "href": "/rental-information" },
@@ -152,7 +152,7 @@
     },
     { "label": "賃貸物件", "href": "/for-lease" },
     {
-      "label": "製品とサービス",
+      "label": "サービス",
       "href": "#",
       "children": [
         { "label": "賃貸情報", "href": "/rental-information" },
@@ -195,7 +195,7 @@
     },
     { "label": "임대", "href": "/for-lease" },
     {
-      "label": "제품 및 서비스",
+      "label": "서비스",
       "href": "#",
       "children": [
         { "label": "임대 정보", "href": "/rental-information" },

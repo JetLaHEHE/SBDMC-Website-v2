@@ -21,9 +21,9 @@ function isActive(href: string): boolean {
 function linkClass(href: string, base = false): string {
   const active = isActive(href);
   if (base) {
-    return active
-      ? "relative whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium text-primary-500 transition-all"
-      : "relative whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-all hover:text-primary-500";
+return active
+    ? "relative whitespace-nowrap rounded-lg px-2 py-2 text-sm font-medium text-primary-500 transition-all"
+    : "relative whitespace-nowrap rounded-lg px-2 py-2 text-sm font-medium text-gray-600 transition-all hover:text-primary-500";
   }
   return active
     ? "block whitespace-nowrap rounded-lg px-3 py-2 text-sm text-primary-600 bg-accent-50 transition-all"
@@ -41,7 +41,7 @@ function linkClass(href: string, base = false): string {
       </div>
     </a>
 
-    <div class="hidden items-center gap-1 overflow-x-auto max-w-full lg:flex">
+    <div class="hidden items-center gap-0.5 lg:flex">
       {
         navItems.map((item) =>
           item.children ? (
