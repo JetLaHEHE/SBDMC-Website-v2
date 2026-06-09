@@ -16,12 +16,12 @@ function linkClass(href: string, base = false): string {
   const active = isActive(href);
   if (base) {
     return active
-      ? "relative rounded-lg px-3 py-2 text-sm font-medium text-primary-500 transition-all"
-      : "relative rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-all hover:text-primary-500";
+      ? "relative whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium text-primary-500 transition-all"
+      : "relative whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-all hover:text-primary-500";
   }
   return active
-    ? "block rounded-lg px-3 py-2 text-sm text-primary-600 bg-accent-50 transition-all"
-    : "block rounded-lg px-3 py-2 text-sm text-gray-600 transition-all hover:bg-accent-50 hover:text-accent-600";
+    ? "block whitespace-nowrap rounded-lg px-3 py-2 text-sm text-primary-600 bg-accent-50 transition-all"
+    : "block whitespace-nowrap rounded-lg px-3 py-2 text-sm text-gray-600 transition-all hover:bg-accent-50 hover:text-accent-600";
 }
 ---
 
@@ -35,12 +35,12 @@ function linkClass(href: string, base = false): string {
       </div>
     </a>
 
-    <div class="hidden items-center gap-1 lg:flex">
+    <div class="hidden items-center gap-1 overflow-x-auto max-w-full lg:flex">
       {
         navItems.map((item) =>
           item.children ? (
             <div class="group relative">
-              <button class="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-all hover:text-primary-500">
+              <button class="flex whitespace-nowrap items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-all hover:text-primary-500">
                 {item.label}
                 <svg aria-hidden="true" class="h-3.5 w-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
               </button>

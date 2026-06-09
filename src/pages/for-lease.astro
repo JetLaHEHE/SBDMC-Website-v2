@@ -9,7 +9,7 @@ const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
 const tx = t(forLeaseTranslations, lang);
 ---
 
-<Layout title={tx.title} description="View available warehouse and office spaces for lease at Subic Bay Gateway Park in the Freeport Zone." lang={lang}>
+<Layout title={tx.title} description={tx.description} lang={lang}>
   <section aria-label="For lease hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{tx.badge}</div>
