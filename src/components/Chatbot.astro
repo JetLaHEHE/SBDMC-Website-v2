@@ -310,6 +310,7 @@ const ct = t(chatbotTranslations, lang);
     isOpen = !isOpen;
     panel.classList.toggle("visible", isOpen);
     panel.classList.toggle("invisible", !isOpen);
+    panel.classList.toggle("opacity-0", !isOpen);
     panel.classList.toggle("pointer-events-none", !isOpen);
     icon.classList.toggle("hidden", isOpen);
     closeIcon.classList.toggle("hidden", !isOpen);
