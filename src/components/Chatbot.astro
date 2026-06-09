@@ -34,12 +34,12 @@ const ct = t(chatbotTranslations, lang);
 
     <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4 max-md:min-h-0 md:min-h-[300px]" aria-live="polite" aria-relevant="additions"></div>
 
-    <div id="chatbot-contact-form" class="hidden flex-1 flex-col overflow-y-auto px-4 py-4" style="min-height: 300px;">
+    <div id="chatbot-contact-form" class="hidden flex-1 flex-col overflow-y-auto px-4 py-4 max-md:min-h-0 md:min-h-[300px]">
       <button id="chatbot-contact-back" class="self-start text-sm text-primary-500 hover:text-primary-600 mb-3">← {ct.contactLink.replace("📧 ", "")}</button>
       <div id="chatbot-contact-title" class="text-base font-semibold text-gray-800 mb-4">{ct.contactTitle}</div>
-      <input id="chatbot-contact-name" type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder={ct.namePlaceholder} aria-label={ct.namePlaceholder} />
-      <input id="chatbot-contact-email" type="email" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder={ct.emailPlaceholder} aria-label={ct.emailPlaceholder} />
-      <textarea id="chatbot-contact-message" class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 resize-none" placeholder={ct.messagePlaceholder} aria-label="Message" rows="4"></textarea>
+      <input id="chatbot-contact-name" type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2 max-md:text-base md:text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder={ct.namePlaceholder} aria-label={ct.namePlaceholder} />
+      <input id="chatbot-contact-email" type="email" class="w-full rounded-lg border border-gray-300 px-3 py-2 max-md:text-base md:text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder={ct.emailPlaceholder} aria-label={ct.emailPlaceholder} />
+      <textarea id="chatbot-contact-message" class="w-full rounded-lg border border-gray-300 px-3 py-2 max-md:text-base md:text-sm mb-3 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 resize-none" placeholder={ct.messagePlaceholder} aria-label="Message" rows="4"></textarea>
       <button id="chatbot-contact-submit" class="w-full rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed">{ct.submitLabel}</button>
       <div id="chatbot-contact-status" class="hidden text-sm mt-3 text-center" aria-live="polite"></div>
     </div>
@@ -187,7 +187,7 @@ const ct = t(chatbotTranslations, lang);
   function renderSuggestedQuestions() {
     const questions = t("suggested");
     const chipsHtml = questions.map((q, i) =>
-      `<button class="suggested-chip bg-blue-50 text-primary-600 border border-blue-200 rounded-full px-3 py-1.5 text-xs cursor-pointer hover:bg-blue-100 transition-colors" data-index="${i}">${escapeHtml(q)}</button>`
+      `<button class="suggested-chip bg-blue-50 text-primary-600 border border-blue-200 rounded-full px-3 py-1.5 max-md:text-sm md:text-xs cursor-pointer hover:bg-blue-100 transition-colors" data-index="${i}">${escapeHtml(q)}</button>`
     ).join("");
     return `<div id="suggested-questions" class="flex flex-wrap gap-2 ml-9 mb-2">${chipsHtml}</div>`;
   }
@@ -200,14 +200,14 @@ const ct = t(chatbotTranslations, lang);
     let html = `<div class="flex items-start gap-2">`;
     html += `<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">S</div>`;
     html += `<div class="min-w-0">`;
-    html += `<div class="max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${renderMarkdown(text)}</div>`;
+    html += `<div class="max-w-[85%] md:max-w-[80%] rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700">${renderMarkdown(text)}</div>`;
     html += renderTimestamp(time);
     html += `</div></div>`;
     return html;
   }
 
   function buildUserBubble(text, time) {
-    return `<div class="flex justify-end"><div class="text-right min-w-0 max-w-[80%]"><div class="rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div>${renderTimestamp(time)}</div></div>`;
+    return `<div class="flex justify-end"><div class="text-right min-w-0 max-w-[85%] md:max-w-[80%]"><div class="rounded-lg bg-primary-500 px-3 py-2 text-sm text-white">${escapeHtml(text)}</div>${renderTimestamp(time)}</div></div>`;
   }
 
   function renderMessages() {
