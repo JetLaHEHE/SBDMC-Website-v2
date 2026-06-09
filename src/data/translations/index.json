@@ -1,0 +1,28 @@
+{
+  "en": {
+    "serviceRentalTitle": "Rental Information",
+    "serviceRentalDesc": "Explore available spaces for lease within the park.",
+    "serviceBusinessTitle": "Business Services",
+    "serviceBusinessDesc": "Comprehensive support for your business operations.",
+    "serviceJobsTitle": "Job Opportunities",
+    "serviceJobsDesc": "Find career opportunities within the park.",
+    "serviceFormsTitle": "Forms & Downloads",
+    "serviceFormsDesc": "Download forms, brochures, and handy guides.",
+    "serviceRfidTitle": "RFID Access",
+    "serviceRfidDesc": "Guidelines, requirements, and forms for RFID access passes.",
+    "serviceIncentivesTitle": "Business Incentives",
+    "serviceIncentivesDesc": "Learn about tax breaks and incentives for locators.",
+    "serviceLeaseTitle": "For Lease",
+    "serviceLeaseDesc": "View available properties for lease in the park.",
+    "featureLocationTitle": "Strategic Location",
+    "featureLocationDesc": "Situated in the Subic Bay Freeport Zone with direct access to international shipping routes, airport, and expressways.",
+    "featureLocationLink": "View Location",
+    "featureInfraTitle": "World-Class Infrastructure",
+    "featureInfraDesc": "Reliable power, water, high-speed fiber optic internet, and modern facilities with 24/7 security.",
+    "featureInfraLink": "Learn More",
+    "featureIncentivesTitle": "Business Incentives",
+    "featureIncentivesDesc": "Tax holidays, duty-free imports, 100% foreign ownership allowed, and streamlined registration processes.",
+    "featureIncentivesLink": "View Incentives",
+    "ctaIncentivesLink": "View Incentives"
+  }
+}

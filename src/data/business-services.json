@@ -4,32 +4,38 @@
   "subtitle": "Comprehensive support for your business operations",
   "services": [
     {
+      "id": "registration-assistance",
       "icon": "clipboard",
       "title": "Registration Assistance",
       "description": "Help with business registration, permits, and licensing requirements with SBMA and other agencies."
     },
     {
+      "id": "utility-connection",
       "icon": "zap",
       "title": "Utility Connection",
       "description": "Assistance with connection to power, water, and telecommunications services within the park."
     },
     {
+      "id": "security-services",
       "icon": "shield",
       "title": "Security Services",
       "description": "24/7 security monitoring, access control, and patrol services for the safety of your business."
     },
     {
+      "id": "maintenance-support",
       "icon": "tool",
       "title": "Maintenance Support",
       "description": "Regular maintenance of common areas, roads, and park facilities for a pleasant working environment."
     },
     {
+      "id": "e-billing",
       "icon": "billing",
       "title": "E-Billing",
       "description": "Convenient online billing and payment system for your monthly statements.",
       "link": { "text": "Access Portal", "url": "https://eipp.unionbankph.com/EIPPHUB" }
     },
     {
+      "id": "helpdesk-support",
       "icon": "helpdesk",
       "title": "Helpdesk Support",
       "description": "Dedicated helpdesk for locator concerns, inquiries, and support requests.",

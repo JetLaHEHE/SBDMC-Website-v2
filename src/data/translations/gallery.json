@@ -1,0 +1,14 @@
+{
+  "en": {
+    "badge": "Gallery",
+    "title": "Photo Gallery",
+    "subtitle": "Explore Subic Bay Gateway Park through our photos",
+    "breadcrumb": "Gallery",
+    "flickrText": "Visit our Flickr album for the full collection of photos.",
+    "flickrLink": "View on Flickr",
+    "lightboxLabel": "Photo gallery lightbox",
+    "lightboxClose": "Close",
+    "lightboxPrev": "Previous",
+    "lightboxNext": "Next"
+  }
+}

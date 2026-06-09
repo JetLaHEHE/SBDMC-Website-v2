@@ -1,0 +1,27 @@
+{
+  "en": {
+    "badge": "Careers",
+    "title": "Job Opportunities",
+    "subtitle": "Career opportunities within SBDMC, Inc. and SBGP locators",
+    "intro": "SBDMC, Inc. and its locator companies offer a variety of career opportunities. We encourage qualified individuals to apply and become part of the growing Subic Bay Gateway Park community.",
+    "breadcrumb1": "Careers",
+    "breadcrumb2": "Job Opportunities",
+    "metaTitle": "Job Opportunities",
+    "metaDescription": "Find career opportunities with locator companies at Subic Bay Gateway Park in the Subic Bay Freeport Zone.",
+    "listings": [
+      {
+        "title": "IT Staff",
+        "type": "Full-time",
+        "location": "On-site",
+        "description": "We are looking for qualified IT professionals to join our team and help manage the park's technology infrastructure."
+      }
+    ],
+    "ctaTitle": "Submit Your Resume",
+    "ctaText": "Send your resume and application to our HR department. We'll keep you on file for future opportunities.",
+    "ctaEmail": "inquiry@sbdmc.com",
+    "statusOpen": "Open",
+    "statusClosed": "Closed",
+    "applyNow": "Apply Now",
+    "emailResume": "Email Your Resume"
+  }
+}

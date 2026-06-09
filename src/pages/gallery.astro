@@ -1,29 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
+
+import galleryTranslations from "../data/translations/gallery.json";
 
 const galleryImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/gallery/*.{jpg,jpeg,png}', { eager: true });
 const images = Object.values(galleryImages).map(m => m.default);
+export { getStaticPaths };
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const tx = t(galleryTranslations, lang);
 ---
 
-<Layout title="Gallery" description="View photos and images of Subic Bay Gateway Park facilities, infrastructure, and locator spaces.">
+<Layout title={tx.title} description={tx.subtitle} lang={lang}>
   <section aria-label="Gallery hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
-      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Gallery</div>
-      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Photo Gallery</h1>
-      <p class="text-lg text-white/70">Explore Subic Bay Gateway Park through our photos</p>
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{tx.badge}</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{tx.title}</h1>
+      <p class="text-lg text-white/70">{tx.subtitle}</p>
     </div>
   </section>
 
-  <Breadcrumb pages={[{ label: "Gallery" }]} />
+  <Breadcrumb pages={[{ label: tx.breadcrumb }]} lang={lang} />
 
   <section aria-label="Photo gallery" class="py-24">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="mb-10 text-center" data-aos="fade-up">
-        <p class="mb-6 text-gray-600">Visit our Flickr album for the full collection of photos.</p>
+        <p class="mb-6 text-gray-600">{tx.flickrText}</p>
         <a href="https://www.flickr.com/photos/138132292@N06/albums" target="_blank" rel="noopener noreferrer" class="btn-primary">
           <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10zM8.5 14.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm7 0a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
-          View on Flickr
+          {tx.flickrLink}
         </a>
       </div>
 
@@ -37,10 +43,10 @@ const images = Object.values(galleryImages).map(m => m.default);
     </div>
   </section>
 
-  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90" role="dialog" aria-modal="true" aria-label="Photo gallery lightbox">
-    <button id="lightbox-close" class="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label="Close">&times;</button>
-    <button id="lightbox-prev" class="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label="Previous">&#8249;</button>
-    <button id="lightbox-next" class="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label="Next">&#8250;</button>
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90" role="dialog" aria-modal="true" aria-label={tx.lightboxLabel}>
+    <button id="lightbox-close" class="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label={tx.lightboxClose}>&times;</button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label={tx.lightboxPrev}>&#8249;</button>
+    <button id="lightbox-next" class="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-all hover:bg-white/20" aria-label={tx.lightboxNext}>&#8250;</button>
     <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] rounded-lg object-contain" src="" alt="" />
   </div>
 </Layout>
@@ -121,3 +127,5 @@ const images = Object.values(galleryImages).map(m => m.default);
     if (e.key === "ArrowRight") next();
   });
 </script>
+
+

@@ -4,20 +4,24 @@
   "subtitle": "Unlock exceptional benefits for your business in the Subic Bay Freeport Zone",
   "sections": [
     {
+      "id": "tax-incentives",
       "badge": "Tax Benefits",
       "title": "Tax Incentives",
       "items": [
         {
+          "id": "income-tax-holiday",
           "number": "4-6",
           "title": "Income Tax Holiday",
           "description": "Up to 6 years of exemption from corporate income tax for qualified enterprises."
         },
         {
+          "id": "preferential-tax-rate",
           "number": "5%",
           "title": "Preferential Tax Rate",
           "description": "After the holiday period, a preferential 5% tax rate on gross income earned."
         },
         {
+          "id": "tax-exemption",
           "number": "100%",
           "title": "Tax Exemption",
           "description": "Exemption from local government taxes and fees for registered enterprises."
@@ -25,15 +29,18 @@
       ]
     },
     {
+      "id": "customs-trade-incentives",
       "badge": "Trade Benefits",
       "title": "Customs & Trade Incentives",
       "items": [
         {
+          "id": "duty-free-importation",
           "number": null,
           "title": "Duty-Free Importation",
           "description": "Tax and duty-free importation of capital equipment, raw materials, and supplies for registered enterprises."
         },
         {
+          "id": "simplified-customs",
           "number": null,
           "title": "Simplified Customs",
           "description": "Streamlined import and export procedures with minimal paperwork and faster processing times."
@@ -41,20 +48,24 @@
       ]
     },
     {
+      "id": "investment-incentives",
       "badge": "Investment Benefits",
       "title": "Investment Incentives",
       "items": [
         {
+          "id": "foreign-ownership",
           "number": "100%",
           "title": "Foreign Ownership",
           "description": "Up to 100% foreign ownership allowed in most business activities."
         },
         {
+          "id": "currency-controls",
           "number": "Free",
           "title": "Currency Controls",
           "description": "Free repatriation of profits and investments without currency restrictions."
         },
         {
+          "id": "foreign-nationals",
           "number": "Flex",
           "title": "Foreign Nationals",
           "description": "Flexible rules for employing foreign nationals in supervisory and technical roles."

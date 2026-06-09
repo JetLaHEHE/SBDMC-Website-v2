@@ -1,0 +1,78 @@
+{
+  "en": {
+    "badge": "Why Locate Here",
+    "title": "Business Incentives",
+    "subtitle": "Unlock exceptional benefits for your business in the Subic Bay Freeport Zone",
+    "breadcrumb1": "Why Us",
+    "breadcrumb2": "Business Incentives",
+    "metaTitle": "Business Incentives",
+    "metaDescription": "Explore tax holidays, duty-free imports, 100% foreign ownership, and other business incentives at Subic Bay Gateway Park.",
+    "sections": [
+      {
+        "id": "tax-incentives",
+        "badge": "Tax Benefits",
+        "title": "Tax Incentives",
+        "items": [
+          {
+            "id": "income-tax-holiday",
+            "title": "Income Tax Holiday",
+            "description": "Up to 6 years of exemption from corporate income tax for qualified enterprises."
+          },
+          {
+            "id": "preferential-tax-rate",
+            "title": "Preferential Tax Rate",
+            "description": "After the holiday period, a preferential 5% tax rate on gross income earned."
+          },
+          {
+            "id": "tax-exemption",
+            "title": "Tax Exemption",
+            "description": "Exemption from local government taxes and fees for registered enterprises."
+          }
+        ]
+      },
+      {
+        "id": "customs-trade-incentives",
+        "badge": "Trade Benefits",
+        "title": "Customs & Trade Incentives",
+        "items": [
+          {
+            "id": "duty-free-importation",
+            "title": "Duty-Free Importation",
+            "description": "Tax and duty-free importation of capital equipment, raw materials, and supplies for registered enterprises."
+          },
+          {
+            "id": "simplified-customs",
+            "title": "Simplified Customs",
+            "description": "Streamlined import and export procedures with minimal paperwork and faster processing times."
+          }
+        ]
+      },
+      {
+        "id": "investment-incentives",
+        "badge": "Investment Benefits",
+        "title": "Investment Incentives",
+        "items": [
+          {
+            "id": "foreign-ownership",
+            "title": "Foreign Ownership",
+            "description": "Up to 100% foreign ownership allowed in most business activities."
+          },
+          {
+            "id": "currency-controls",
+            "title": "Currency Controls",
+            "description": "Free repatriation of profits and investments without currency restrictions."
+          },
+          {
+            "id": "foreign-nationals",
+            "title": "Foreign Nationals",
+            "description": "Flexible rules for employing foreign nationals in supervisory and technical roles."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "For a complete and detailed list of incentives, please contact our team.",
+      "buttonText": "Contact Our Team"
+    }
+  }
+}

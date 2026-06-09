@@ -2,28 +2,34 @@
 import Layout from "../layouts/Layout.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import data from "../data/locators.json";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
+import locatorsTranslations from "../data/translations/locators.json";
+
+export { getStaticPaths };
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const tx = t(locatorsTranslations, lang);
 ---
 
-<Layout title="Locators" description="Leading companies that have chosen Subic Bay Gateway Park as their preferred business location in the Subic Bay Freeport Zone.">
+<Layout title={tx.metaTitle} description={tx.metaDescription} lang={lang}>
   <section aria-label="Locators hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
-      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{data.badge}</div>
-      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{data.title}</h1>
-      <p class="text-lg text-white/70">{data.subtitle}</p>
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{tx.badge}</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{tx.title}</h1>
+      <p class="text-lg text-white/70">{tx.subtitle}</p>
     </div>
   </section>
 
-  <Breadcrumb pages={[{ label: "About Us", href: "/about-sbdmc" }, { label: "Locators" }]} />
+  <Breadcrumb pages={[{ label: tx.breadcrumb1, href: "/about-sbdmc" }, { label: tx.breadcrumb2 }]} lang={lang} />
 
   <section aria-label="Current locators" class="bg-surface py-24">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {data.locators.map((locator, i) => (
           <div class="card border-l-4 border-primary-500" data-aos="fade-up" data-aos-delay={i * 100}>
-            <div class="mb-3 inline-block bg-primary-500 px-3 py-1 text-xs font-semibold text-white">{locator.country}</div>
+            <div class="mb-3 inline-block bg-primary-500 px-3 py-1 text-xs font-semibold text-white">{tx.locators[i].country}</div>
             <h3 class="mb-1 text-lg font-bold text-primary-500">{locator.name}</h3>
-            <p class="mb-3 text-sm font-medium text-gray-400">{locator.industry}</p>
-            <p class="text-sm leading-relaxed text-gray-500">{locator.description}</p>
+            <p class="mb-3 text-sm font-medium text-gray-400">{tx.locators[i].industry}</p>
+            <p class="text-sm leading-relaxed text-gray-500">{tx.locators[i].description}</p>
           </div>
         ))}
       </div>
@@ -32,9 +38,11 @@ import data from "../data/locators.json";
 
   <section aria-label="Become a locator" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
-      <h2 class="mb-4 text-3xl font-bold text-white">{data.cta.title}</h2>
-      <p class="mb-8 text-lg text-white/80">{data.cta.description}</p>
-      <a href={data.cta.buttonLink} class="btn-white">{data.cta.buttonText}</a>
+      <h2 class="mb-4 text-3xl font-bold text-white">{tx.cta.title}</h2>
+      <p class="mb-8 text-lg text-white/80">{tx.cta.description}</p>
+      <a href={data.cta.buttonLink} class="btn-white">{tx.cta.buttonText}</a>
     </div>
   </section>
 </Layout>
+
+

@@ -1,0 +1,64 @@
+{
+  "en": {
+    "badge": "Leasing",
+    "title": "For Lease",
+    "subtitle": "Available spaces in Subic Bay Gateway Park",
+    "description": "Subic Bay Gateway Park offers a variety of lease options to suit different business needs. Whether you need warehouse space, manufacturing facilities, or office space, we have options available.",
+    "availableBadge": "Available",
+    "leaseTypes": [
+      {
+        "title": "Warehouse Space",
+        "description": "Modern warehouse facilities with loading docks, high ceilings, and ample storage capacity.",
+        "size": "500-5,000",
+        "sizeLabel": "sqm",
+        "features": [
+          "Sizes from 500 sqm to 5,000 sqm",
+          "24/7 security and monitoring",
+          "Easy truck access and loading bays"
+        ]
+      },
+      {
+        "title": "Manufacturing Facilities",
+        "description": "Ready-built manufacturing units with essential infrastructure connections.",
+        "size": "Custom",
+        "sizeLabel": "sizes available",
+        "features": [
+          "Customizable layouts to fit your needs",
+          "High power capacity available",
+          "Loading/unloading areas included"
+        ]
+      },
+      {
+        "title": "Office Spaces",
+        "description": "Fully serviced office spaces for BPO, administrative, and commercial use.",
+        "size": "Flex",
+        "sizeLabel": "lease terms",
+        "features": [
+          "Fiber optic internet ready",
+          "Ample parking available",
+          "Flexible lease terms"
+        ]
+      },
+      {
+        "title": "Land Leases",
+        "description": "Lease land within the park for build-to-suit facilities.",
+        "size": "Land",
+        "sizeLabel": "lease options",
+        "features": [
+          "Long-term lease options available",
+          "Prime locations within the park",
+          "Infrastructure ready for development"
+        ]
+      }
+    ],
+    "inquireNow": "Inquire Now",
+    "howToLeaseTitle": "How to Lease",
+    "howToLeaseSubtitle": "Simple process to get started",
+    "steps": [
+      { "title": "Inquire", "text": "Contact our team" },
+      { "title": "Visit", "text": "Tour the park" },
+      { "title": "Apply", "text": "Submit requirements" },
+      { "title": "Move In", "text": "Start operations" }
+    ]
+  }
+}

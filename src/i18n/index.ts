@@ -1,3 +1,9 @@
+export function getStaticPaths(): { params: { lang?: string } }[] {
+  return LANGUAGES.map((l) => ({
+    params: { lang: l.code === "en" ? undefined : l.code },
+  }));
+}
+
 export const LANGUAGES = [
   { code: "en", label: "English", native: "English", locale: "en_PH", dir: "ltr" },
   { code: "zh", label: "Chinese", native: "中文", locale: "zh_TW", dir: "ltr" },
@@ -11,13 +17,6 @@ export type LangCode = (typeof LANGUAGES)[number]["code"];
 export function getLangFromParams(params: { lang?: string }): LangCode {
   const lang = params.lang || "en";
   return (LANGUAGES.some((l) => l.code === lang) ? lang : "en") as LangCode;
-}
-
-export function getStaticPaths(): { params: { lang?: string } }[] {
-  const nonDefault = LANGUAGES.filter((l) => l.code !== "en").map((l) => ({
-    params: { lang: l.code },
-  }));
-  return [{ params: { lang: undefined } }, ...nonDefault];
 }
 
 export function t<T extends Record<string, any>>(

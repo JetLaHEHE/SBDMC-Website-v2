@@ -1,0 +1,38 @@
+{
+  "en": {
+    "badge": "Reference",
+    "title": "Handy Guide",
+    "subtitle": "Quick reference for locators and visitors",
+    "breadcrumb": "Handy Guide",
+    "emergencyBadge": "Emergency",
+    "emergencyTitle": "Emergency Contacts",
+    "emergencyItems": [
+      { "number": "911", "label": "Emergency Hotline" },
+      { "number": "(047) 252-3456", "label": "SBDMC, Inc. Office" },
+      { "number": "(047) 252-4000", "label": "SBMA Main" },
+      { "number": "117", "label": "Police" }
+    ],
+    "importantNumbersTitle": "Important Numbers",
+    "importantNumbers": [
+      { "label": "Police", "number": "117" },
+      { "label": "Fire", "number": "160" },
+      { "label": "Medical", "number": "143" },
+      { "label": "SBDMC, Inc. Office", "number": "(047) 252-3456" }
+    ],
+    "officeHoursTitle": "Office Hours",
+    "officeHoursText": "SBDMC, Inc. office is open:",
+    "officeHoursDays": "Monday - Friday",
+    "officeHoursTime": "8:00 AM - 5:00 PM",
+    "officeHoursClosed": "Closed on weekends and public holidays.",
+    "parkRulesTitle": "Park Rules",
+    "rules": [
+      "All vehicles must register at the entrance",
+      "Speed limit: 30 km/h within the park",
+      "Proper waste disposal is required",
+      "No hazardous materials without prior approval"
+    ],
+    "usefulLinksTitle": "Useful Links",
+    "helpdeskLink": "SBDMC, Inc. Helpdesk",
+    "ebillingLink": "E-Billing Portal"
+  }
+}

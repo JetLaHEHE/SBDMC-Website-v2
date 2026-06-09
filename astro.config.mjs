@@ -13,6 +13,7 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false,
       redirectToDefaultLocale: false,
+      strategy: "prefix-other-locales",
     },
   },
   integrations: [

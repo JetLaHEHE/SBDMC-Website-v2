@@ -1,0 +1,60 @@
+{
+  "en": {
+    "badge": "Legal",
+    "title": "Privacy Policy",
+    "subtitle": "How we collect, use, and protect your information",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Information We Collect",
+        "paragraphs": [
+          "We collect information you provide directly to us, such as when you fill out a contact form, submit an inquiry, or communicate with us via email or phone. This may include your name, email address, phone number, company name, and any other information you choose to share.",
+          "We also automatically collect certain technical information when you visit our website, including your IP address, browser type, operating system, referring URLs, and pages visited."
+        ]
+      },
+      {
+        "heading": "2. How We Use Your Information",
+        "paragraphs": [
+          "We use the information we collect to:"
+        ],
+        "list": [
+          "Respond to your inquiries and provide information about our services",
+          "Improve our website and services",
+          "Analyze website usage and trends",
+          "Comply with legal obligations"
+        ]
+      },
+      {
+        "heading": "3. Data Protection",
+        "paragraphs": [
+          "We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure."
+        ]
+      },
+      {
+        "heading": "4. Third-Party Services",
+        "paragraphs": [
+          "We may use third-party services such as Google Analytics to analyze website traffic. These services may collect information sent by your browser as part of a web page request, including cookies and your IP address. We do not sell your personal information to third parties."
+        ]
+      },
+      {
+        "heading": "5. Cookies",
+        "paragraphs": [
+          "Our website uses cookies to enhance your browsing experience. You can control cookie settings through your browser preferences. For more details, please refer to our Cookie Consent settings."
+        ]
+      },
+      {
+        "heading": "6. Contact Us",
+        "paragraphs": [
+          "If you have any questions about this Privacy Policy, please contact us at:"
+        ],
+        "contact": {
+          "name": "SBDMC, Inc. Admin Office",
+          "address": "Argonaut Highway cor. Rizal Highway",
+          "address2": "Subic Bay Gateway Park, Subic Bay Freeport Zone 2222",
+          "email": "Email: inquiry@sbdmc.com",
+          "phone": "Phone: (047) 252-3456"
+        }
+      }
+    ]
+  }
+}

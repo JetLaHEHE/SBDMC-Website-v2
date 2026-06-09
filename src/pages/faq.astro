@@ -2,19 +2,25 @@
 import Layout from "../layouts/Layout.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import faqData from "../data/faq.json";
-const faqCategories = faqData.categories;
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
+import faqTranslations from "../data/translations/faq.json";
+
+export { getStaticPaths };
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const ft = t(faqTranslations, lang);
+const faqCategories = ft.categories;
 ---
 
-<Layout title="FAQ" description="Frequently asked questions about Subic Bay Gateway Park, leasing, business setup, and the Subic Bay Freeport Zone.">
+<Layout title={ft.metaTitle} description={ft.metaDescription} lang={lang}>
   <section aria-label="FAQ hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
-      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">FAQ</div>
-      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Frequently Asked Questions</h1>
-      <p class="text-lg text-white/70">Find answers to common questions about SBDMC, Inc. and SBGP</p>
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{ft.badge}</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{ft.title}</h1>
+      <p class="text-lg text-white/70">{ft.subtitle}</p>
     </div>
   </section>
 
-  <Breadcrumb pages={[{ label: "Why Us", href: "/faq" }, { label: "FAQ" }]} />
+  <Breadcrumb pages={[{ label: ft.breadcrumb1, href: "/faq" }, { label: ft.breadcrumb2 }]} lang={lang} />
 
   <script is:inline type="application/ld+json">
 {
@@ -141,3 +147,5 @@ const faqCategories = faqData.categories;
     });
   });
 </script>
+
+

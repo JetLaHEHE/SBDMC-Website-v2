@@ -1,0 +1,30 @@
+{
+  "en": {
+    "badge": "Location",
+    "title": "Location Map",
+    "subtitle": "Find us at the Subic Bay Freeport Zone",
+    "breadcrumb": "Location Map",
+    "ourLocation": "Our Location",
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "mapTitle": "SBGP Location Map",
+    "gettingHere": "Getting Here",
+    "directions": [
+      {
+        "title": "By Air",
+        "description": "Subic Bay International Airport is located nearby, with connecting flights from Manila and other major cities."
+      },
+      {
+        "title": "By Land",
+        "description": "Accessible via SCTEX and NLEX. Approximately 2-3 hours from Manila."
+      },
+      {
+        "title": "By Sea",
+        "description": "Subic Bay Freeport Zone has a major seaport with regular shipping services to international destinations."
+      },
+      {
+        "title": "Public Transport",
+        "description": "Buses and jeepneys operate regularly from Olongapo City and nearby areas to the Freeport Zone."
+      }
+    ]
+  }
+}

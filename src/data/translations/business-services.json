@@ -1,0 +1,45 @@
+{
+  "en": {
+    "badge": "Services",
+    "title": "Business Services",
+    "subtitle": "Comprehensive support for your business operations",
+    "breadcrumb1": "Products & Services",
+    "breadcrumb2": "Business Services",
+    "metaTitle": "Business Services",
+    "metaDescription": "Comprehensive business support services available at Subic Bay Gateway Park for locators and investors.",
+    "services": [
+      {
+        "id": "registration-assistance",
+        "title": "Registration Assistance",
+        "description": "Help with business registration, permits, and licensing requirements with SBMA and other agencies."
+      },
+      {
+        "id": "utility-connection",
+        "title": "Utility Connection",
+        "description": "Assistance with connection to power, water, and telecommunications services within the park."
+      },
+      {
+        "id": "security-services",
+        "title": "Security Services",
+        "description": "24/7 security monitoring, access control, and patrol services for the safety of your business."
+      },
+      {
+        "id": "maintenance-support",
+        "title": "Maintenance Support",
+        "description": "Regular maintenance of common areas, roads, and park facilities for a pleasant working environment."
+      },
+      {
+        "id": "e-billing",
+        "title": "E-Billing",
+        "description": "Convenient online billing and payment system for your monthly statements.",
+        "link": { "text": "Access Portal" }
+      },
+      {
+        "id": "helpdesk-support",
+        "title": "Helpdesk Support",
+        "description": "Dedicated helpdesk for locator concerns, inquiries, and support requests.",
+        "link": { "text": "Visit Helpdesk" }
+      }
+    ]
+  }
+}

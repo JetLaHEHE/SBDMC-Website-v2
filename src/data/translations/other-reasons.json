@@ -1,0 +1,37 @@
+{
+  "en": {
+    "badge": "Why Choose Us",
+    "title": "More Advantages",
+    "subtitle": "Additional benefits of choosing SBDMC, Inc. for your business",
+    "breadcrumb1": "Why Us",
+    "breadcrumb2": "More Advantages",
+    "metaTitle": "More Advantages",
+    "metaDescription": "Additional reasons why Subic Bay Gateway Park is the right choice for your business in the Freeport Zone.",
+    "advantages": [
+      {
+        "title": "Strategic Location",
+        "description": "Located in the heart of Asia's most dynamic region, with easy access to major markets and transportation hubs."
+      },
+      {
+        "title": "Skilled Workforce",
+        "description": "Access to a large pool of skilled, educated, and cost-competitive workers from Central Luzon."
+      },
+      {
+        "title": "World-Class Facilities",
+        "description": "Modern infrastructure including reliable power, water, fiber optic telecom, and 24/7 security systems."
+      },
+      {
+        "title": "Growth Potential",
+        "description": "No need for relocation when your company grows — there's no better deal elsewhere in Asia but right here in Subic."
+      },
+      {
+        "title": "Company Image & Customer Confidence",
+        "description": "Join leading companies like Wistron, Taian, Taiwan Hitachi, TECO, and Tong Lung — all first-rate companies listed in the Taiwan Stock Exchange."
+      },
+      {
+        "title": "Security & Safety",
+        "description": "24/7 security monitoring, emergency response systems, and comprehensive safety protocols ensure your business operates securely."
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "en": {
+    "badge": "About Us",
+    "title": "SBDMC, Inc.",
+    "subtitle": "Your trusted partner in the Subic Bay Freeport Zone",
+    "breadcrumb1": "About Us",
+    "breadcrumb2": "About SBDMC, Inc.",
+    "metaTitle": "About SBDMC, Inc.",
+    "metaDescription": "Learn about SBDMC, Inc., the developer and manager of Subic Bay Gateway Park in the Subic Bay Freeport Zone.",
+    "intro": "SBDMC, Inc. was established in 1994 to develop, manage and market the Subic Bay Gateway Park (SBGP), a premier 45-hectare industrial park located within the Subic Bay Freeport Zone (SBFZ) in Zambales, Philippines. It is a joint venture between the Subic Bay Metropolitan Authority (SBMA) and United Development Corporation (UDC) of Taiwan. The company is committed to providing world-class infrastructure and services to business locators in the park.",
+    "historyQuote": "A Journey of Gratitude and Growth reminds us to greet each morning with thankfulness and a readiness to evolve, knowing that the best is yet to come.",
+    "mission": {
+      "title": "Mission",
+      "description": "To develop and maintain a world-class industrial park that provides a competitive, sustainable, and business-friendly environment for locators, while contributing to the economic growth of the Subic Bay Freeport Zone and the Philippines."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "To be the preferred industrial park of choice in the Asia-Pacific region, known for excellence in infrastructure, service, and environmental stewardship."
+    },
+    "certification": {
+      "badge": "Certification",
+      "title": "ISO Certified",
+      "id": "PH15/1221",
+      "caption": "Demonstrating our commitment to quality management systems and continuous improvement"
+    }
+  }
+}

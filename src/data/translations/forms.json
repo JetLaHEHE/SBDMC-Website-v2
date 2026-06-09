@@ -1,0 +1,83 @@
+{
+  "en": {
+    "badge": "Downloads",
+    "title": "Forms & Downloads",
+    "subtitle": "Download forms, brochures, and handy guides",
+    "breadcrumbProducts": "Products & Services",
+    "breadcrumbForms": "Forms & Downloads",
+    "generalDownloadsTitle": "General Downloads",
+    "generalDownloads": [
+      {
+        "title": "Infrastructure Brochure",
+        "description": "Detailed information about SBGP facilities and infrastructure.",
+        "link": "Download PDF"
+      },
+      {
+        "title": "Handy Guide",
+        "description": "Quick reference guide for locators and visitors.",
+        "link": "View Guide"
+      },
+      {
+        "title": "Customer Survey Form",
+        "description": "Help us improve our services by filling out our online survey.",
+        "link": "Fill Out Form"
+      },
+      {
+        "title": "Customer Survey Form (PDF)",
+        "description": "Download a printable version of the customer survey form.",
+        "link": "Download PDF"
+      }
+    ],
+    "fsbfzTitle": "FSBFZ Forms",
+    "fsbfzDownloads": [
+      {
+        "title": "SBF Application Checklist",
+        "description": "Checklist for SBF Application — updated 16 June 2015.",
+        "link": "Download .doc"
+      },
+      {
+        "title": "Renewal Form CR/CRTE",
+        "description": "Renewal form for Certificate of Registration — 16 June 2015.",
+        "link": "Download .doc"
+      },
+      {
+        "title": "SBF Application for Registration",
+        "description": "Application form for SBF registration — January 2013.",
+        "link": "Download .doc"
+      }
+    ],
+    "sbdmcTitle": "SBDMC, Inc. Documents",
+    "sbdmcDownloads": [
+      {
+        "title": "SBGP Deed of Restrictions 2018",
+        "description": "Deed of restrictions governing Subic Bay Gateway Park.",
+        "link": "Download PDF"
+      },
+      {
+        "title": "SOP: Illegal Parking",
+        "description": "Standard operating procedure for illegal parking in SBGP.",
+        "link": "Download PDF"
+      },
+      {
+        "title": "SOP: RFID Issuance",
+        "description": "Standard operating procedure for RFID issuance.",
+        "link": "Download PDF"
+      },
+      {
+        "title": "SOP: Consent to Sublease",
+        "description": "Guidelines for issuance of consent to sublease and monitoring of sub-lessees.",
+        "link": "Download PDF"
+      },
+      {
+        "title": "SOP: Monitoring of Sublessees",
+        "description": "Procedure for monitoring sublessees without SBDMC, Inc.'s consent.",
+        "link": "Download PDF"
+      },
+      {
+        "title": "SOP: Customer Service Assistance",
+        "description": "Procedure for customer service assistance requests.",
+        "link": "Download PDF"
+      }
+    ]
+  }
+}

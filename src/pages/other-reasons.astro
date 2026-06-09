@@ -2,6 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import data from "../data/other-reasons.json";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
+import reasonsTranslations from "../data/translations/other-reasons.json";
+
+export { getStaticPaths };
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const tx = t(reasonsTranslations, lang);
 
 const iconMap = {
   location: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z",
@@ -13,16 +19,16 @@ const iconMap = {
 };
 ---
 
-<Layout title="More Advantages" description="Additional reasons why Subic Bay Gateway Park is the right choice for your business in the Freeport Zone.">
+<Layout title={tx.metaTitle} description={tx.metaDescription} lang={lang}>
   <section aria-label="More advantages hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
-      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{data.badge}</div>
-      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{data.title}</h1>
-      <p class="text-lg text-white/70">{data.subtitle}</p>
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{tx.badge}</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{tx.title}</h1>
+      <p class="text-lg text-white/70">{tx.subtitle}</p>
     </div>
   </section>
 
-  <Breadcrumb pages={[{ label: "Why Us", href: "/other-reasons" }, { label: "More Advantages" }]} />
+  <Breadcrumb pages={[{ label: tx.breadcrumb1, href: "/other-reasons" }, { label: tx.breadcrumb2 }]} lang={lang} />
 
   <section aria-label="Advantages listing" class="bg-surface py-24">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -34,11 +40,13 @@ const iconMap = {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={iconMap[adv.icon] || iconMap.location} />
               </svg>
             </div>
-            <h3 class="mb-2 text-lg font-bold text-primary-500">{adv.title}</h3>
-            <p class="text-sm leading-relaxed text-gray-500">{adv.description}</p>
+            <h3 class="mb-2 text-lg font-bold text-primary-500">{tx.advantages[i].title}</h3>
+            <p class="text-sm leading-relaxed text-gray-500">{tx.advantages[i].description}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 </Layout>
+
+

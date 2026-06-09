@@ -1,0 +1,30 @@
+{
+  "en": {
+    "badge": "Rental Info",
+    "title": "Rental Information",
+    "subtitle": "Everything you need to know about leasing at SBGP",
+    "breadcrumbProducts": "Products & Services",
+    "breadcrumbRental": "Rental Information",
+    "leaseTermsTitle": "Lease Terms",
+    "leaseTermsText": "We offer flexible lease terms from 1 to 5 years, with options for renewal. Custom terms available for build-to-suit arrangements.",
+    "rentalRatesTitle": "Rental Rates",
+    "rentalRatesText": "Rental rates vary depending on the type of space, location within the park, and lease duration. Contact our team for current rates.",
+    "inclusionsTitle": "Inclusions",
+    "inclusions": [
+      "Common area maintenance",
+      "24/7 security services",
+      "Road and landscaping upkeep",
+      "Drainage and flood control"
+    ],
+    "requirementsTitle": "Requirements",
+    "requirements": [
+      "Business registration documents",
+      "SEC or DTI registration",
+      "Mayor's permit or equivalent",
+      "Authorized representative proof"
+    ],
+    "ctaTitle": "Ready to Lease?",
+    "ctaText": "Contact our leasing team for current availability and rates.",
+    "ctaButton": "Contact Us Today"
+  }
+}

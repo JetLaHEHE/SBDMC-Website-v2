@@ -1,0 +1,125 @@
+{
+  "en": {
+    "badge": "RFID Access",
+    "title": "RFID Guidelines",
+    "subtitle": "RFID access and guidelines for vehicles entering Subic Bay Gateway Park",
+    "breadcrumb1": "Products & Services",
+    "metaTitle": "RFID Guidelines",
+    "metaDescription": "RFID access pass guidelines, application process, and downloadable forms for vehicles entering Subic Bay Gateway Park.",
+    "sectionInfoTitle": "RFID Information",
+    "faqItems": [
+      {
+        "q": "Where to install the RFID?",
+        "a": "RFID must be installed by the authorized SBDMC, Inc. personnel on the non-metal part of the vehicle (headlight, fairings, visor)."
+      },
+      {
+        "q": "How long is the validity of the RFID?",
+        "a": "SBGP RFID is valid only for one (1) year from the date of issuance/registration."
+      },
+      {
+        "q": "How do I keep my RFID in great condition?",
+        "a": null,
+        "list": [
+          "Do not put excessive force on the black chip at the middle part of the RFID.",
+          "Do not peel it off and transfer in other location or vehicle.",
+          "Do not spray directly with pressure washer during car wash.",
+          "Do not wipe abrasive substance on the sticker."
+        ]
+      },
+      {
+        "q": "Is there a replacement fee for the RFID?",
+        "a": "The warranty will be void if the RFID is unmounted, lost, transferred, or damaged due to mishandling or removal. There is a replacement fee of PhP 300.00 for lost or damaged RFID."
+      },
+      {
+        "q": "What vehicles are required to have RFID?",
+        "a": "All vehicles entering and exiting SBGP are required to have a valid RFID sticker, including cars, motorcycles, trucks, and other motor vehicles. This applies to locators, employees, tenants, and visitors."
+      },
+      {
+        "q": "What happens if my RFID doesn't scan at the gate?",
+        "a": "If your RFID fails to scan, proceed to the guard house for manual verification. Security personnel will assist you. If the RFID is damaged or defective, you may need to apply for a replacement at the SBDMC, Inc. office."
+      }
+    ],
+    "feesTitle": "RFID Fees",
+    "feesCategoryHeader": "Category",
+    "feesFeeHeader": "Fee",
+    "feesRows": [
+      { "category": "Gatepassers", "fee": "PHP 1,000.00" },
+      { "category": "SBGP Employees", "fee": "PHP 300.00" }
+    ],
+    "gateLocationsTitle": "RFID Gate Locations",
+    "gateLocationsText": "RFID checkpoints are installed at all entry and exit gates of Subic Bay Gateway Park.",
+    "requirementsTitle": "Requirements for RFID Stickers",
+    "requirementsNotice": "PLEASE BRING PHOTOCOPY",
+    "requirementsCategoryHeader": "Category",
+    "requirementsReqHeader": "Requirements",
+    "requirementsRows": [
+      { "category": "Direct Locators", "req": "Photocopy of OR/CR, Driver's License" },
+      { "category": "Subleasees (SBGP Phase I and II)", "req": "Photocopy of OR/CR, Driver's License" },
+      { "category": "SBGP Employees", "req": "Photocopy of OR/CR, Driver's License, SBMA ID" },
+      { "category": "Gate passers", "req": "Photocopy of OR/CR, Driver's License" },
+      { "category": "Agency Employees", "req": "Photocopy of OR/CR, Driver's License, COE (Certificate of Employment)" }
+    ],
+    "requirementsNotes": [
+      "For employee/companies whose OR/CR does not match with the applicant's name, kindly attach the photocopy of Deed of Sale. Open Deed of Sale is not allowed.",
+      "For employees whose OR/CR belongs to other persons related to them, kindly indicate your relationship with the owner on the photocopy of your OR/CR.",
+      "For employees working inside SBGP under an agency, a Certificate of Employment (COE) is required."
+    ],
+    "guidelinesTitle": "RFID Usage Guidelines",
+    "guidelines": [
+      {
+        "title": "Avoid Tailgating",
+        "text": "Maintain distance. Keep one (1) car length between your vehicle and the next one."
+      },
+      {
+        "title": "Wait Your Turn",
+        "text": "Barrier closes after each vehicle. Wait until the vehicle ahead has fully passed the barrier gate and the boom arm has lowered down before you proceed."
+      },
+      {
+        "title": "RFID Blocking",
+        "text": "SBDMC, Inc. has the right to block/confiscate RFID access of vehicles of companies/SBGP Locators found to have violations under their lease agreements with SBDMC, Inc., and other users who violated proper usage of RFID sticker or any SBGP rules and regulations."
+      },
+      {
+        "title": "Non-Transferable",
+        "text": "RFID are non-transferrable and non-refundable. Do not peel it off and transfer in other location or vehicle."
+      }
+    ],
+    "dosDontsTitle": "Do's and Don'ts",
+    "dosTitle": "Do's",
+    "dosItems": [
+      "Maintain one (1) car length distance from the vehicle ahead",
+      "Wait for the boom arm to fully lower before proceeding",
+      "Keep your RFID sticker clean and intact",
+      "Report any RFID issues to the guard house or SBDMC, Inc. office",
+      "Renew your RFID before the 1-year validity expires"
+    ],
+    "dontsTitle": "Don'ts",
+    "dontsItems": [
+      "Tailgate or follow closely behind another vehicle",
+      "Peel off or transfer the RFID sticker to another vehicle",
+      "Spray the RFID directly with a pressure washer",
+      "Use abrasive substances on the RFID sticker",
+      "Apply excessive force on the black chip at the middle of the RFID"
+    ],
+    "damageTitle": "Damages to Boom Arm",
+    "damagePenalty": "Will incur a PHP 15,000.00 penalty",
+    "downloadsTitle": "RFID Downloads",
+    "downloads": [
+      {
+        "title": "RFID Application Form",
+        "text": "Application form for RFID access passes — September 2022.",
+        "linkText": "Download PDF"
+      },
+      {
+        "title": "SOP: RFID Issuance",
+        "text": "Standard operating procedure for RFID issuance.",
+        "linkText": "Download PDF"
+      }
+    ],
+    "contactTitle": "Contact Information",
+    "contactText": "For RFID applications, renewals, and inquiries, visit the SBDMC, Inc. Admin Office during office hours.",
+    "relatedLinksTitle": "Related Links",
+    "relatedLinkBusiness": "Business Services",
+    "relatedLinkContact": "Contact Us",
+    "relatedLinkFaq": "FAQ"
+  }
+}

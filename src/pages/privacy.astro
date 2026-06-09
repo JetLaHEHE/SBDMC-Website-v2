@@ -1,56 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
+import privacyTranslations from "../data/translations/privacy.json";
+
+export { getStaticPaths };
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const tx = t(privacyTranslations, lang);
 ---
 
-<Layout title="Privacy Policy" description="Privacy Policy of Subic Bay Gateway Park (SBDMC, Inc.).">
+<Layout title={tx.title} description="Privacy Policy of Subic Bay Gateway Park (SBDMC, Inc.)." lang={lang}>
   <section aria-label="Privacy policy hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
-      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">Legal</div>
-      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">Privacy Policy</h1>
-      <p class="text-lg text-white/70">How we collect, use, and protect your information</p>
+      <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{tx.badge}</div>
+      <h1 class="mb-4 text-5xl font-extrabold text-white md:text-6xl">{tx.title}</h1>
+      <p class="text-lg text-white/70">{tx.subtitle}</p>
     </div>
   </section>
 
-  <Breadcrumb pages={[{ label: "Privacy Policy" }]} />
+  <Breadcrumb pages={[{ label: tx.title }]} lang={lang} />
 
   <section aria-label="Privacy policy content" class="py-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <div class="prose prose-gray max-w-none space-y-6 text-gray-600 leading-relaxed">
-        <p>Last updated: June 2026</p>
+        <p>{tx.lastUpdated}</p>
 
-        <h2 class="text-xl font-bold text-primary-500">1. Information We Collect</h2>
-        <p>We collect information you provide directly to us, such as when you fill out a contact form, submit an inquiry, or communicate with us via email or phone. This may include your name, email address, phone number, company name, and any other information you choose to share.</p>
-        <p>We also automatically collect certain technical information when you visit our website, including your IP address, browser type, operating system, referring URLs, and pages visited.</p>
+        <h2 class="text-xl font-bold text-primary-500">{tx.sections[0].heading}</h2>
+        <p>{tx.sections[0].paragraphs[0]}</p>
+        <p>{tx.sections[0].paragraphs[1]}</p>
 
-        <h2 class="text-xl font-bold text-primary-500">2. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
+        <h2 class="text-xl font-bold text-primary-500">{tx.sections[1].heading}</h2>
+        <p>{tx.sections[1].paragraphs[0]}</p>
         <ul class="list-disc pl-6 space-y-1">
-          <li>Respond to your inquiries and provide information about our services</li>
-          <li>Improve our website and services</li>
-          <li>Analyze website usage and trends</li>
-          <li>Comply with legal obligations</li>
+          <li>{tx.sections[1].list[0]}</li>
+          <li>{tx.sections[1].list[1]}</li>
+          <li>{tx.sections[1].list[2]}</li>
+          <li>{tx.sections[1].list[3]}</li>
         </ul>
 
-        <h2 class="text-xl font-bold text-primary-500">3. Data Protection</h2>
-        <p>We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+        <h2 class="text-xl font-bold text-primary-500">{tx.sections[2].heading}</h2>
+        <p>{tx.sections[2].paragraphs[0]}</p>
 
-        <h2 class="text-xl font-bold text-primary-500">4. Third-Party Services</h2>
-        <p>We may use third-party services such as Google Analytics to analyze website traffic. These services may collect information sent by your browser as part of a web page request, including cookies and your IP address. We do not sell your personal information to third parties.</p>
+        <h2 class="text-xl font-bold text-primary-500">{tx.sections[3].heading}</h2>
+        <p>{tx.sections[3].paragraphs[0]}</p>
 
-        <h2 class="text-xl font-bold text-primary-500">5. Cookies</h2>
-        <p>Our website uses cookies to enhance your browsing experience. You can control cookie settings through your browser preferences. For more details, please refer to our Cookie Consent settings.</p>
+        <h2 class="text-xl font-bold text-primary-500">{tx.sections[4].heading}</h2>
+        <p>{tx.sections[4].paragraphs[0]}</p>
 
-        <h2 class="text-xl font-bold text-primary-500">6. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <h2 class="text-xl font-bold text-primary-500">{tx.sections[5].heading}</h2>
+        <p>{tx.sections[5].paragraphs[0]}</p>
         <p>
-          <strong>SBDMC, Inc. Admin Office</strong><br />
-          Argonaut Highway cor. Rizal Highway<br />
-          Subic Bay Gateway Park, Subic Bay Freeport Zone 2222<br />
-          Email: inquiry@sbdmc.com<br />
-          Phone: (047) 252-3456
+          <strong>{tx.sections[5].contact.name}</strong><br />
+          {tx.sections[5].contact.address}<br />
+          {tx.sections[5].contact.address2}<br />
+          {tx.sections[5].contact.email}<br />
+          {tx.sections[5].contact.phone}
         </p>
       </div>
     </div>
   </section>
 </Layout>
+
+

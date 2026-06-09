@@ -4,30 +4,35 @@
   "subtitle": "Leading companies that have chosen Subic Bay Gateway Park as their preferred business location",
   "locators": [
     {
+      "id": "wistron-corporation",
       "name": "Wistron Corporation",
       "industry": "Electronics Manufacturing",
       "description": "One of the world's leading OEM/ODM manufacturers of computers, laptops, and electronic components. Listed on the Taiwan Stock Exchange.",
       "country": "Taiwan"
     },
     {
+      "id": "taian-technologies",
       "name": "Taian Technologies",
       "industry": "Technology Manufacturing",
       "description": "A leading manufacturer of precision components and technology products for global markets.",
       "country": "Taiwan"
     },
     {
+      "id": "taiwan-hitachi",
       "name": "Taiwan Hitachi",
       "industry": "Electronics / Manufacturing",
       "description": "A joint venture between Hitachi and Taiwanese partners, manufacturing electronic components and home appliances.",
       "country": "Taiwan"
     },
     {
+      "id": "teco-electric",
       "name": "TECO Electric & Machinery",
       "industry": "Industrial Equipment",
       "description": "A global leader in electric motors, power generation, and home appliances. Listed on the Taiwan Stock Exchange.",
       "country": "Taiwan"
     },
     {
+      "id": "tong-lung-metal",
       "name": "Tong Lung Metal Industry",
       "industry": "Metal Fabrication",
       "description": "A premier manufacturer of metal components, hardware, and industrial parts for global construction and manufacturing sectors.",

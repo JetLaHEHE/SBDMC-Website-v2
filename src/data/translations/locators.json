@@ -1,0 +1,48 @@
+{
+  "en": {
+    "badge": "Our Locators",
+    "title": "Locator Companies",
+    "subtitle": "Leading companies that have chosen Subic Bay Gateway Park as their preferred business location",
+    "breadcrumb1": "About Us",
+    "breadcrumb2": "Locators",
+    "metaTitle": "Locators",
+    "metaDescription": "Leading companies that have chosen Subic Bay Gateway Park as their preferred business location in the Subic Bay Freeport Zone.",
+    "locators": [
+      {
+        "id": "wistron-corporation",
+        "industry": "Electronics Manufacturing",
+        "description": "One of the world's leading OEM/ODM manufacturers of computers, laptops, and electronic components. Listed on the Taiwan Stock Exchange.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "taian-technologies",
+        "industry": "Technology Manufacturing",
+        "description": "A leading manufacturer of precision components and technology products for global markets.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "taiwan-hitachi",
+        "industry": "Electronics / Manufacturing",
+        "description": "A joint venture between Hitachi and Taiwanese partners, manufacturing electronic components and home appliances.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "teco-electric",
+        "industry": "Industrial Equipment",
+        "description": "A global leader in electric motors, power generation, and home appliances. Listed on the Taiwan Stock Exchange.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "tong-lung-metal",
+        "industry": "Metal Fabrication",
+        "description": "A premier manufacturer of metal components, hardware, and industrial parts for global construction and manufacturing sectors.",
+        "country": "Taiwan"
+      }
+    ],
+    "cta": {
+      "title": "Want to join these industry leaders?",
+      "description": "Contact us today to learn about available spaces and how your business can benefit from locating at Subic Bay Gateway Park.",
+      "buttonText": "Inquire Now"
+    }
+  }
+}
