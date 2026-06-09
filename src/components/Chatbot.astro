@@ -8,12 +8,12 @@ const ct = t(chatbotTranslations, lang);
 ---
 
 <div id="chatbot">
-  <button id="chatbot-toggle" class="fixed bottom-6 right-20 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all hover:bg-primary-600 hover:scale-105 active:scale-95" aria-label={ct.greeting} aria-expanded="false">
+  <button id="chatbot-toggle" class="fixed bottom-6 max-md:right-6 md:right-20 z-50 flex max-md:h-12 max-md:w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg transition-all hover:bg-primary-600 hover:scale-105 active:scale-95" aria-label={ct.greeting} aria-expanded="false">
     <svg aria-hidden="true" id="chatbot-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
     <svg aria-hidden="true" id="chatbot-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
   </button>
 
-  <div id="chatbot-panel" class="fixed bottom-24 right-20 z-50 hidden w-[360px] max-w-[calc(100vw-2rem)] rounded-xl border border-gray-200 bg-white shadow-2xl flex-col overflow-hidden" style="max-height: 520px;" role="dialog" aria-modal="true" aria-label={ct.greeting}>
+  <div id="chatbot-panel" class="fixed z-50 hidden flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl max-md:inset-0 max-md:w-full max-md:max-w-full max-md:h-dvh max-md:max-h-dvh max-md:rounded-none md:bottom-24 md:right-20 md:w-[360px] md:max-w-[calc(100vw-2rem)] md:max-h-[520px] md:rounded-xl" role="dialog" aria-modal="true" aria-label={ct.greeting}>
     <div class="flex items-center gap-3 bg-primary-500 px-4 py-3 text-white">
       <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-sm font-bold">S</div>
       <div>
@@ -21,15 +21,18 @@ const ct = t(chatbotTranslations, lang);
         <div class="text-xs text-white/70">{ct.greeting}</div>
       </div>
     <div class="ml-auto flex items-center gap-1">
+      <button id="chatbot-panel-close" class="hidden max-md:flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Close chat" title="Close chat">
+        <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
       <div class="relative">
-        <button id="chatbot-lang-toggle" class="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Switch language" title="Language">🌐</button>
+        <button id="chatbot-lang-toggle" class="flex max-md:h-9 max-md:w-9 md:h-7 md:w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20" aria-label="Switch language" title="Language">🌐</button>
         <div id="chatbot-lang-dropdown" class="hidden absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50 min-w-[130px]"></div>
       </div>
-      <button id="chatbot-clear" class="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20 hidden" aria-label="Clear chat" title="Clear chat">🗑️</button>
+      <button id="chatbot-clear" class="flex max-md:h-9 max-md:w-9 md:h-7 md:w-7 items-center justify-center rounded-full bg-white/10 text-sm transition-all hover:bg-white/20 hidden" aria-label="Clear chat" title="Clear chat">🗑️</button>
     </div>
     </div>
 
-    <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4" style="min-height: 300px;" aria-live="polite" aria-relevant="additions"></div>
+    <div id="chatbot-messages" class="flex-1 space-y-3 overflow-y-auto px-4 py-4 max-md:min-h-0 md:min-h-[300px]" aria-live="polite" aria-relevant="additions"></div>
 
     <div id="chatbot-contact-form" class="hidden flex-1 flex-col overflow-y-auto px-4 py-4" style="min-height: 300px;">
       <button id="chatbot-contact-back" class="self-start text-sm text-primary-500 hover:text-primary-600 mb-3">← {ct.contactLink.replace("📧 ", "")}</button>
@@ -41,15 +44,15 @@ const ct = t(chatbotTranslations, lang);
       <div id="chatbot-contact-status" class="hidden text-sm mt-3 text-center" aria-live="polite"></div>
     </div>
 
-    <div class="border-t border-gray-200 px-4 py-3">
+    <div id="chatbot-input-area" class="border-t border-gray-200 px-4 py-3 max-md:pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))]">
       <div class="flex items-center gap-2">
         <input
           id="chatbot-input"
           type="text"
           placeholder={ct.placeholder}
-          class="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+          class="flex-1 rounded-lg border border-gray-300 px-3 py-2 max-md:text-base md:text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
         />
-        <button id="chatbot-send" class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500 text-white transition-all hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed" aria-label={ct.submitLabel}>
+        <button id="chatbot-send" class="flex max-md:h-11 max-md:w-11 md:h-9 md:w-9 items-center justify-center rounded-lg bg-primary-500 text-white transition-all hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed" aria-label={ct.submitLabel}>
           <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
         </button>
       </div>
@@ -58,6 +61,16 @@ const ct = t(chatbotTranslations, lang);
 </div>
 
 <div id="chat-translations" hidden set:html={JSON.stringify(oldTranslations)}></div>
+<style>
+  #chatbot-panel {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  @media (max-width: 767px) {
+    #chatbot-panel {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+  }
+</style>
 <script is:inline>
 (function () {
   const TRANSLATIONS = JSON.parse(document.getElementById("chat-translations").textContent);
@@ -109,8 +122,9 @@ const ct = t(chatbotTranslations, lang);
   const contactStatus = document.getElementById("chatbot-contact-status");
   const contactTitle = document.getElementById("chatbot-contact-title");
   const subtitle = document.querySelector("#chatbot-panel .text-xs");
+  const panelClose = document.getElementById("chatbot-panel-close");
 
-  if (!toggle || !panel || !messagesEl || !input || !sendBtn || !icon || !closeIcon || !clearBtn || !langToggle || !langDropdown || !contactForm || !contactBack || !contactName || !contactEmail || !contactMessage || !contactSubmit || !contactStatus || !contactTitle || !subtitle) return;
+  if (!toggle || !panel || !messagesEl || !input || !sendBtn || !icon || !closeIcon || !clearBtn || !langToggle || !langDropdown || !contactForm || !contactBack || !contactName || !contactEmail || !contactMessage || !contactSubmit || !contactStatus || !contactTitle || !subtitle || !panelClose) return;
 
   let isOpen = false;
   let msgCounter = 0;
@@ -295,18 +309,32 @@ const ct = t(chatbotTranslations, lang);
     toggle.setAttribute("aria-expanded", String(isOpen));
     toggle.setAttribute("aria-label", isOpen ? "Close chat" : "Open chat");
     if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.dataset.scrollY = scrollY;
       document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      document.body.style.touchAction = "none";
       if (showContact) contactName?.focus();
       else setTimeout(() => input?.focus(), 100);
       document.addEventListener("keydown", trapFocus);
     } else {
+      const scrollY = parseInt(document.body.dataset.scrollY || "0");
       document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.touchAction = "";
+      window.scrollTo(0, scrollY);
+      delete document.body.dataset.scrollY;
       toggle.focus();
       document.removeEventListener("keydown", trapFocus);
     }
   }
 
   toggle.addEventListener("click", togglePanel);
+  panelClose.addEventListener("click", togglePanel);
 
   async function sendMessage(overrideText) {
     if (sendBtn.disabled) return;
