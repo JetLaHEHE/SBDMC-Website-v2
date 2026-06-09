@@ -6,6 +6,11 @@
   NODE_VERSION = "22"
 
 [[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/index.html"
   status = 200
