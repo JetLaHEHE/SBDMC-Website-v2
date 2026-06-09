@@ -1,5 +1,11 @@
 {
-  "en": { "title": "Page Not Found", "code": "404", "message": "The page you're looking for doesn't exist or has been moved.", "backHome": "Back to Home", "suggestedHeading": "Suggested Pages" },
+  "en": { "title": "Page Not Found", "code": "404", "message": "The page you're looking for doesn't exist or has been moved.", "backHome": "Back to Home", "suggestedHeading": "Suggested Pages", "suggestedLinks": [
+    { "label": "RFID Access", "href": "/rfid" },
+    { "label": "Business Services", "href": "/business-services" },
+    { "label": "FAQ", "href": "/faq" },
+    { "label": "Downloads", "href": "/forms" },
+    { "label": "Contact Us", "href": "/contact" }
+  ] },
   "zh": { "title": "找不到頁面", "code": "404", "message": "您要找的頁面不存在或已移動。", "backHome": "返回首頁", "suggestedHeading": "建議頁面" },
   "tl": { "title": "Hindi Natagpuan ang Pahina", "code": "404", "message": "Ang pahinang hinahanap mo ay wala o nailipat na.", "backHome": "Bumalik sa Tahanan", "suggestedHeading": "Mga Mungkahing Pahina" },
   "ja": { "title": "ページが見つかりません", "code": "404", "message": "お探しのページは存在しないか、移動されました。", "backHome": "ホームに戻る", "suggestedHeading": "おすすめページ" },

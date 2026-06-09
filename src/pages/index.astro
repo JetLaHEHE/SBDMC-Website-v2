@@ -120,8 +120,8 @@ const newsItems = news.items;
   <section aria-label="Latest news" class="py-24">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="mb-16" data-aos="fade-up">
-        <h2 class="section-title text-center">{news.title}</h2>
-        <p class="section-subtitle text-center">{news.subtitle}</p>
+        <h2 class="section-title text-center">{itx.newsTitle}</h2>
+        <p class="section-subtitle text-center">{itx.newsSubtitle}</p>
       </div>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {newsItems.map((item, i) => (
