@@ -2,11 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import data from "../../data/business-incentives.json";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../../i18n";
+import { getStaticPaths, getLangFromParams, getLangPrefix, type LangCode, t } from "../../i18n";
 import incentivesTranslations from "../../data/translations/business-incentives.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
 const tx = t(incentivesTranslations, lang);
 
 function findById(arr, id) { return arr.find(item => item.id === id); }
@@ -56,7 +57,7 @@ function findById(arr, id) { return arr.find(item => item.id === id); }
   <section aria-label="Contact for incentives" class="py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <p class="mb-6 text-gray-600">{tx.cta.text}</p>
-      <a href={data.cta.buttonLink} class="btn-primary">{tx.cta.buttonText}</a>
+      <a href={langPrefix + data.cta.buttonLink} class="btn-primary">{tx.cta.buttonText}</a>
     </div>
   </section>
 </Layout>

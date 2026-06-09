@@ -39,8 +39,8 @@ const newsItems = news.items;
         {ht.subtitle}
       </p>
       <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap justify-center gap-4">
-        <a href={ht.ctaPrimary.link} class="btn-primary">{ht.ctaPrimary.text}</a>
-        <a href={ht.ctaSecondary.link} class="inline-flex items-center gap-2 rounded-lg border-2 border-white px-7 py-3 font-semibold text-white transition-all hover:bg-white hover:text-primary-500">{ht.ctaSecondary.text}</a>
+        <a href={langPrefix + ht.ctaPrimary.link} class="btn-primary">{ht.ctaPrimary.text}</a>
+        <a href={langPrefix + ht.ctaSecondary.link} class="inline-flex items-center gap-2 rounded-lg border-2 border-white px-7 py-3 font-semibold text-white transition-all hover:bg-white hover:text-primary-500">{ht.ctaSecondary.text}</a>
       </div>
     </div>
   </section>
@@ -167,7 +167,7 @@ const newsItems = news.items;
           </div>
           <h3 class="mb-3 text-xl font-bold text-primary-500">{itx.featureIncentivesTitle}</h3>
           <p class="leading-relaxed text-gray-500">{itx.featureIncentivesDesc}</p>
-          <a href="/business-incentives" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600 hover:gap-2">{itx.featureIncentivesLink} <span>&rarr;</span></a>
+          <a href={langPrefix + "/business-incentives"} class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-500 transition-all hover:text-primary-600 hover:gap-2">{itx.featureIncentivesLink} <span>&rarr;</span></a>
         </div>
       </div>
     </div>

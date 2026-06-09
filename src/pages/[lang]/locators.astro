@@ -2,11 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import data from "../../data/locators.json";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../../i18n";
+import { getStaticPaths, getLangFromParams, getLangPrefix, type LangCode, t } from "../../i18n";
 import locatorsTranslations from "../../data/translations/locators.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
 const tx = t(locatorsTranslations, lang);
 ---
 
@@ -40,7 +41,7 @@ const tx = t(locatorsTranslations, lang);
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <h2 class="mb-4 text-3xl font-bold text-white">{tx.cta.title}</h2>
       <p class="mb-8 text-lg text-white/80">{tx.cta.description}</p>
-      <a href={data.cta.buttonLink} class="btn-white">{tx.cta.buttonText}</a>
+      <a href={langPrefix + data.cta.buttonLink} class="btn-white">{tx.cta.buttonText}</a>
     </div>
   </section>
 </Layout>
