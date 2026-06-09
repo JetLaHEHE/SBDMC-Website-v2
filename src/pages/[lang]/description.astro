@@ -1,11 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import { getStaticPaths, getLangFromParams, t, type LangCode } from "../i18n";
-import descriptionTranslations from "../data/translations/description.json";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, getLangPrefix, t, type LangCode } from "../../i18n";
+import descriptionTranslations from "../../data/translations/description.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
 const dx = t(descriptionTranslations, lang);
 ---
 
@@ -102,7 +103,7 @@ const dx = t(descriptionTranslations, lang);
       <div class="bg-primary-500 p-8 text-white text-center" data-aos="fade-up">
         <h3 class="mb-3 text-xl font-bold">{dx.videoTitle}</h3>
         <p class="mb-4 text-white/80">{dx.videoDesc}</p>
-        <a href="/contact" class="btn-white">{dx.videoCta}</a>
+        <a href={langPrefix + "/contact"} class="btn-white">{dx.videoCta}</a>
       </div>
     </div>
   </section>

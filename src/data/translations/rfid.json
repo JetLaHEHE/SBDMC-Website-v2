@@ -8,36 +8,12 @@
     "metaDescription": "RFID access pass guidelines, application process, and downloadable forms for vehicles entering Subic Bay Gateway Park.",
     "sectionInfoTitle": "RFID Information",
     "faqItems": [
-      {
-        "q": "Where to install the RFID?",
-        "a": "RFID must be installed by the authorized SBDMC, Inc. personnel on the non-metal part of the vehicle (headlight, fairings, visor)."
-      },
-      {
-        "q": "How long is the validity of the RFID?",
-        "a": "SBGP RFID is valid only for one (1) year from the date of issuance/registration."
-      },
-      {
-        "q": "How do I keep my RFID in great condition?",
-        "a": null,
-        "list": [
-          "Do not put excessive force on the black chip at the middle part of the RFID.",
-          "Do not peel it off and transfer in other location or vehicle.",
-          "Do not spray directly with pressure washer during car wash.",
-          "Do not wipe abrasive substance on the sticker."
-        ]
-      },
-      {
-        "q": "Is there a replacement fee for the RFID?",
-        "a": "The warranty will be void if the RFID is unmounted, lost, transferred, or damaged due to mishandling or removal. There is a replacement fee of PhP 300.00 for lost or damaged RFID."
-      },
-      {
-        "q": "What vehicles are required to have RFID?",
-        "a": "All vehicles entering and exiting SBGP are required to have a valid RFID sticker, including cars, motorcycles, trucks, and other motor vehicles. This applies to locators, employees, tenants, and visitors."
-      },
-      {
-        "q": "What happens if my RFID doesn't scan at the gate?",
-        "a": "If your RFID fails to scan, proceed to the guard house for manual verification. Security personnel will assist you. If the RFID is damaged or defective, you may need to apply for a replacement at the SBDMC, Inc. office."
-      }
+      { "q": "Where to install the RFID?", "a": "RFID must be installed by the authorized SBDMC, Inc. personnel on the non-metal part of the vehicle (headlight, fairings, visor)." },
+      { "q": "How long is the validity of the RFID?", "a": "SBGP RFID is valid only for one (1) year from the date of issuance/registration." },
+      { "q": "How do I keep my RFID in great condition?", "a": null, "list": [ "Do not put excessive force on the black chip at the middle part of the RFID.", "Do not peel it off and transfer in other location or vehicle.", "Do not spray directly with pressure washer during car wash.", "Do not wipe abrasive substance on the sticker." ] },
+      { "q": "Is there a replacement fee for the RFID?", "a": "The warranty will be void if the RFID is unmounted, lost, transferred, or damaged due to mishandling or removal. There is a replacement fee of PhP 300.00 for lost or damaged RFID." },
+      { "q": "What vehicles are required to have RFID?", "a": "All vehicles entering and exiting SBGP are required to have a valid RFID sticker, including cars, motorcycles, trucks, and other motor vehicles. This applies to locators, employees, tenants, and visitors." },
+      { "q": "What happens if my RFID doesn't scan at the gate?", "a": "If your RFID fails to scan, proceed to the guard house for manual verification. Security personnel will assist you. If the RFID is damaged or defective, you may need to apply for a replacement at the SBDMC, Inc. office." }
     ],
     "feesTitle": "RFID Fees",
     "feesCategoryHeader": "Category",
@@ -66,60 +42,296 @@
     ],
     "guidelinesTitle": "RFID Usage Guidelines",
     "guidelines": [
-      {
-        "title": "Avoid Tailgating",
-        "text": "Maintain distance. Keep one (1) car length between your vehicle and the next one."
-      },
-      {
-        "title": "Wait Your Turn",
-        "text": "Barrier closes after each vehicle. Wait until the vehicle ahead has fully passed the barrier gate and the boom arm has lowered down before you proceed."
-      },
-      {
-        "title": "RFID Blocking",
-        "text": "SBDMC, Inc. has the right to block/confiscate RFID access of vehicles of companies/SBGP Locators found to have violations under their lease agreements with SBDMC, Inc., and other users who violated proper usage of RFID sticker or any SBGP rules and regulations."
-      },
-      {
-        "title": "Non-Transferable",
-        "text": "RFID are non-transferrable and non-refundable. Do not peel it off and transfer in other location or vehicle."
-      }
+      { "title": "Avoid Tailgating", "text": "Maintain distance. Keep one (1) car length between your vehicle and the next one." },
+      { "title": "Wait Your Turn", "text": "Barrier closes after each vehicle. Wait until the vehicle ahead has fully passed the barrier gate and the boom arm has lowered down before you proceed." },
+      { "title": "RFID Blocking", "text": "SBDMC, Inc. has the right to block/confiscate RFID access of vehicles of companies/SBGP Locators found to have violations under their lease agreements with SBDMC, Inc., and other users who violated proper usage of RFID sticker or any SBGP rules and regulations." },
+      { "title": "Non-Transferable", "text": "RFID are non-transferrable and non-refundable. Do not peel it off and transfer in other location or vehicle." }
     ],
     "dosDontsTitle": "Do's and Don'ts",
     "dosTitle": "Do's",
-    "dosItems": [
-      "Maintain one (1) car length distance from the vehicle ahead",
-      "Wait for the boom arm to fully lower before proceeding",
-      "Keep your RFID sticker clean and intact",
-      "Report any RFID issues to the guard house or SBDMC, Inc. office",
-      "Renew your RFID before the 1-year validity expires"
-    ],
+    "dosItems": [ "Maintain one (1) car length distance from the vehicle ahead", "Wait for the boom arm to fully lower before proceeding", "Keep your RFID sticker clean and intact", "Report any RFID issues to the guard house or SBDMC, Inc. office", "Renew your RFID before the 1-year validity expires" ],
     "dontsTitle": "Don'ts",
-    "dontsItems": [
-      "Tailgate or follow closely behind another vehicle",
-      "Peel off or transfer the RFID sticker to another vehicle",
-      "Spray the RFID directly with a pressure washer",
-      "Use abrasive substances on the RFID sticker",
-      "Apply excessive force on the black chip at the middle of the RFID"
-    ],
+    "dontsItems": [ "Tailgate or follow closely behind another vehicle", "Peel off or transfer the RFID sticker to another vehicle", "Spray the RFID directly with a pressure washer", "Use abrasive substances on the RFID sticker", "Apply excessive force on the black chip at the middle of the RFID" ],
     "damageTitle": "Damages to Boom Arm",
     "damagePenalty": "Will incur a PHP 15,000.00 penalty",
     "downloadsTitle": "RFID Downloads",
     "downloads": [
-      {
-        "title": "RFID Application Form",
-        "text": "Application form for RFID access passes — September 2022.",
-        "linkText": "Download PDF"
-      },
-      {
-        "title": "SOP: RFID Issuance",
-        "text": "Standard operating procedure for RFID issuance.",
-        "linkText": "Download PDF"
-      }
+      { "title": "RFID Application Form", "text": "Application form for RFID access passes — September 2022.", "linkText": "Download PDF" },
+      { "title": "SOP: RFID Issuance", "text": "Standard operating procedure for RFID issuance.", "linkText": "Download PDF" }
     ],
     "contactTitle": "Contact Information",
     "contactText": "For RFID applications, renewals, and inquiries, visit the SBDMC, Inc. Admin Office during office hours.",
     "relatedLinksTitle": "Related Links",
     "relatedLinkBusiness": "Business Services",
     "relatedLinkContact": "Contact Us",
+    "relatedLinkFaq": "FAQ"
+  },
+  "zh": {
+    "badge": "門禁管理",
+    "title": "RFID 指南",
+    "subtitle": "進入蘇比克灣門戶工業園區車輛的 RFID 門禁與指南",
+    "breadcrumb1": "產品與服務",
+    "metaTitle": "RFID 指南",
+    "metaDescription": "進入蘇比克灣門戶工業園區車輛的 RFID 門禁證指南、申請流程及可下載表格。",
+    "sectionInfoTitle": "RFID 資訊",
+    "faqItems": [
+      { "q": "RFID 應安裝在哪裡？", "a": "RFID 必須由 SBDMC, Inc. 授權人員安裝在車輛的非金屬部位（頭燈、整流罩、遮陽板）。" },
+      { "q": "RFID 的有效期是多久？", "a": "SBGP RFID 自簽發/登記之日起有效期僅為一（1）年。" },
+      { "q": "如何保持 RFID 的良好狀態？", "a": null, "list": [ "請勿對 RFID 中間部分的黑色晶片施加過度壓力。", "請勿將其撕下並轉移到其他位置或車輛。", "洗車時請勿直接使用高壓水槍噴射。", "請勿用研磨性物質擦拭貼紙。" ] },
+      { "q": "RFID 是否需要更換費用？", "a": "如果 RFID 因不當處理或拆卸而被拆下、遺失、轉移或損壞，保固將失效。遺失或損壞的 RFID 需支付 PhP 300.00 的更換費用。" },
+      { "q": "哪些車輛需要安裝 RFID？", "a": "所有進出 SBGP 的車輛（包括汽車、摩托車、卡車及其他機動車輛）均須持有有效的 RFID 貼紙。此規定適用於入駐企業、員工、租戶和訪客。" },
+      { "q": "如果我的 RFID 在閘口無法掃描怎麼辦？", "a": "如果您的 RFID 無法掃描，請前往警衛室進行人工驗證。保全人員將協助您。如果 RFID 損壞或有缺陷，您可能需要到 SBDMC, Inc. 辦公室申請更換。" }
+    ],
+    "feesTitle": "RFID 費用",
+    "feesCategoryHeader": "類別",
+    "feesFeeHeader": "費用",
+    "feesRows": [
+      { "category": "訪客通行者", "fee": "PHP 1,000.00" },
+      { "category": "SBGP 員工", "fee": "PHP 300.00" }
+    ],
+    "gateLocationsTitle": "RFID 閘口位置",
+    "gateLocationsText": "RFID 檢查站位於蘇比克灣門戶工業園區的所有入口和出口閘門。",
+    "requirementsTitle": "RFID 貼紙申請要求",
+    "requirementsNotice": "請攜帶影印本",
+    "requirementsCategoryHeader": "類別",
+    "requirementsReqHeader": "要求",
+    "requirementsRows": [
+      { "category": "直接入駐企業", "req": "OR/CR 影本、駕駛執照" },
+      { "category": "轉租戶（SBGP 第一、二期）", "req": "OR/CR 影本、駕駛執照" },
+      { "category": "SBGP 員工", "req": "OR/CR 影本、駕駛執照、SBMA 身分證" },
+      { "category": "訪客通行者", "req": "OR/CR 影本、駕駛執照" },
+      { "category": "機構員工", "req": "OR/CR 影本、駕駛執照、在職證明" }
+    ],
+    "requirementsNotes": [
+      "對於 OR/CR 與申請人姓名不符的員工/公司，請附上買賣契約影本。不接受開放式買賣契約。",
+      "對於 OR/CR 屬於其親屬的員工，請在 OR/CR 影本上註明您與車主的關係。",
+      "在 SBGP 內透過機構工作的員工，須提供在職證明。"
+    ],
+    "guidelinesTitle": "RFID 使用指南",
+    "guidelines": [
+      { "title": "避免緊跟", "text": "保持距離。在您的車輛與前車之間保持一（1）個車身的距離。" },
+      { "title": "等候通行", "text": "柵欄會在每輛車通過後關閉。請等待前車完全通過柵欄門且欄杆放下後再前進。" },
+      { "title": "RFID 封鎖", "text": "SBDMC, Inc. 有權封鎖/沒收被發現違反其與 SBDMC, Inc. 租賃協議的公司/SBGP 入駐企業車輛以及違反 RFID 貼紙正確使用或任何 SBGP 規則規定的其他使用者的 RFID 門禁權限。" },
+      { "title": "不可轉讓", "text": "RFID 不可轉讓且不可退款。請勿將其撕下並轉移到其他位置或車輛。" }
+    ],
+    "dosDontsTitle": "注意事項",
+    "dosTitle": "注意事項",
+    "dosItems": [ "與前車保持一（1）個車身的距離", "等待欄杆完全放下後再前進", "保持 RFID 貼紙清潔完好", "向警衛室或 SBDMC, Inc. 辦公室報告任何 RFID 問題", "在 1 年有效期屆滿前續期您的 RFID" ],
+    "dontsTitle": "禁止事項",
+    "dontsItems": [ "緊跟或近距離跟隨另一輛車", "將 RFID 貼紙撕下或轉移到另一輛車", "直接使用高壓水槍噴射 RFID", "在 RFID 貼紙上使用研磨性物質", "對 RFID 中間的黑色晶片施加過度壓力" ],
+    "damageTitle": "柵欄桿損壞",
+    "damagePenalty": "將處以 PHP 15,000.00 罰款",
+    "downloadsTitle": "RFID 文件下載",
+    "downloads": [
+      { "title": "RFID 申請表", "text": "RFID 門禁證申請表 — 2022 年 9 月。", "linkText": "下載 PDF" },
+      { "title": "標準作業流程：RFID 簽發", "text": "RFID 簽發的標準作業流程。", "linkText": "下載 PDF" }
+    ],
+    "contactTitle": "聯絡資訊",
+    "contactText": "有關 RFID 申請、續期和諮詢，請於辦公時間前往 SBDMC, Inc. 行政辦公室。",
+    "relatedLinksTitle": "相關連結",
+    "relatedLinkBusiness": "相關服務",
+    "relatedLinkContact": "聯絡我們",
+    "relatedLinkFaq": "常見問題"
+  },
+  "tl": {
+    "badge": "RFID Access",
+    "title": "Mga Alituntunin sa RFID",
+    "subtitle": "RFID access at mga alituntunin para sa mga sasakyang pumapasok sa Subic Bay Gateway Park",
+    "breadcrumb1": "Mga Produkto at Serbisyo",
+    "metaTitle": "Mga Alituntunin sa RFID",
+    "metaDescription": "Mga alituntunin sa RFID access pass, proseso ng aplikasyon, at mga nada-download na form para sa mga sasakyang pumapasok sa Subic Bay Gateway Park.",
+    "sectionInfoTitle": "Impormasyon tungkol sa RFID",
+    "faqItems": [
+      { "q": "Saan dapat i-install ang RFID?", "a": "Ang RFID ay dapat i-install ng awtorisadong tauhan ng SBDMC, Inc. sa hindi metal na bahagi ng sasakyan (headlight, fairings, visor)." },
+      { "q": "Gaano katagal ang bisa ng RFID?", "a": "Ang SBGP RFID ay may bisa lamang para sa isang (1) taon mula sa petsa ng pag-isyu/pagrehistro." },
+      { "q": "Paano ko mapapanatili ang magandang kondisyon ng aking RFID?", "a": null, "list": [ "Huwag lagyan ng labis na puwersa ang itim na chip sa gitnang bahagi ng RFID.", "Huwag itong balatan at ilipat sa ibang lokasyon o sasakyan.", "Huwag direktang sprayan ng pressure washer habang naghuhugas ng sasakyan.", "Huwag punasan ng nakasasakit na substance ang sticker." ] },
+      { "q": "May kapalit bang bayad para sa RFID?", "a": "Mawawalan ng bisa ang warranty kung ang RFID ay natanggal, nawala, nailipat, o nasira dahil sa maling paghawak o pag-alis. May kapalit na bayad na PhP 300.00 para sa nawala o nasirang RFID." },
+      { "q": "Anong mga sasakyan ang kinakailangang magkaroon ng RFID?", "a": "Ang lahat ng sasakyang pumapasok at lumalabas ng SBGP ay kinakailangang magkaroon ng wastong RFID sticker, kabilang ang mga kotse, motorsiklo, trak, at iba pang sasakyang de-motor. Nalalapat ito sa mga locator, empleyado, nangungupahan, at bisita." },
+      { "q": "Ano ang mangyayari kung hindi mag-scan ang aking RFID sa gate?", "a": "Kung ang iyong RFID ay hindi mag-scan, pumunta sa guard house para sa manu-manong beripikasyon. Tutulungan ka ng mga tauhan ng seguridad. Kung ang RFID ay nasira o may depekto, maaaring kailanganin mong mag-aplay para sa kapalit sa opisina ng SBDMC, Inc." }
+    ],
+    "feesTitle": "Mga Bayad sa RFID",
+    "feesCategoryHeader": "Kategorya",
+    "feesFeeHeader": "Bayad",
+    "feesRows": [
+      { "category": "Mga Gatepasser", "fee": "PHP 1,000.00" },
+      { "category": "Mga Empleyado ng SBGP", "fee": "PHP 300.00" }
+    ],
+    "gateLocationsTitle": "Mga Lokasyon ng RFID Gate",
+    "gateLocationsText": "Ang mga RFID checkpoint ay naka-install sa lahat ng entry at exit gate ng Subic Bay Gateway Park.",
+    "requirementsTitle": "Mga Kinakailangan para sa RFID Stickers",
+    "requirementsNotice": "MANGYARING MAGDALA NG PHOTOCOPY",
+    "requirementsCategoryHeader": "Kategorya",
+    "requirementsReqHeader": "Mga Kinakailangan",
+    "requirementsRows": [
+      { "category": "Direct Locators", "req": "Photocopy ng OR/CR, Lisensya sa Pagmamaneho" },
+      { "category": "Subleasees (SBGP Phase I and II)", "req": "Photocopy ng OR/CR, Lisensya sa Pagmamaneho" },
+      { "category": "SBGP Empleyado", "req": "Photocopy ng OR/CR, Lisensya sa Pagmamaneho, SBMA ID" },
+      { "category": "Gate passers", "req": "Photocopy ng OR/CR, Lisensya sa Pagmamaneho" },
+      { "category": "Agency Empleyado", "req": "Photocopy ng OR/CR, Lisensya sa Pagmamaneho, COE (Certificate of Employment)" }
+    ],
+    "requirementsNotes": [
+      "Para sa empleyado/kumpanya na ang OR/CR ay hindi tumutugma sa pangalan ng aplikante, mangyaring ilakip ang photocopy ng Deed of Sale. Hindi pinapayagan ang Open Deed of Sale.",
+      "Para sa mga empleyado na ang OR/CR ay pag-aari ng ibang tao na may kaugnayan sa kanila, mangyaring ipahiwatig ang iyong relasyon sa may-ari sa photocopy ng iyong OR/CR.",
+      "Para sa mga empleyadong nagtatrabaho sa loob ng SBGP sa ilalim ng isang ahensya, kinakailangan ang Certificate of Employment (COE)."
+    ],
+    "guidelinesTitle": "Mga Alituntunin sa Paggamit ng RFID",
+    "guidelines": [
+      { "title": "Iwasan ang Tailgating", "text": "Panatilihin ang distansya. Mag-iwan ng isang (1) haba ng kotse sa pagitan ng iyong sasakyan at ng susunod." },
+      { "title": "Maghintay ng Iyong Turno", "text": "Nagsasara ang barrier pagkatapos ng bawat sasakyan. Maghintay hanggang ang sasakyan sa unahan ay ganap nang nakadaan sa barrier gate at ang boom arm ay bumaba bago ka magpatuloy." },
+      { "title": "Pag-block ng RFID", "text": "Ang SBDMC, Inc. ay may karapatang i-block/kumpiskahin ang RFID access ng mga sasakyan ng mga kumpanya/SBGP Locators na napatunayang may paglabag sa kanilang mga kasunduan sa pag-upa sa SBDMC, Inc., at iba pang mga gumagamit na lumabag sa tamang paggamit ng RFID sticker o anumang mga alituntunin ng SBGP." },
+      { "title": "Hindi Maililipat", "text": "Ang RFID ay hindi maililipat at hindi maibabalik ang bayad. Huwag itong balatan at ilipat sa ibang lokasyon o sasakyan." }
+    ],
+    "dosDontsTitle": "Mga Dapat at Hindi Dapat Gawin",
+    "dosTitle": "Mga Dapat Gawin",
+    "dosItems": [ "Panatilihin ang isang (1) haba ng kotse na distansya mula sa sasakyan sa unahan", "Maghintay na ganap na bumaba ang boom arm bago magpatuloy", "Panatilihing malinis at buo ang iyong RFID sticker", "Iulat ang anumang isyu sa RFID sa guard house o opisina ng SBDMC, Inc.", "I-renew ang iyong RFID bago mag-expire ang 1-taong bisa" ],
+    "dontsTitle": "Mga Hindi Dapat Gawin",
+    "dontsItems": [ "Sumunod nang napakalapit sa likod ng ibang sasakyan", "Balatan o ilipat ang RFID sticker sa ibang sasakyan", "Direktang i-spray ng pressure washer ang RFID", "Gumamit ng nakasasakit na substance sa RFID sticker", "Lagyan ng labis na puwersa ang itim na chip sa gitna ng RFID" ],
+    "damageTitle": "Mga Pinsala sa Boom Arm",
+    "damagePenalty": "Magkakaroon ng PHP 15,000.00 na multa",
+    "downloadsTitle": "Mga RFID Download",
+    "downloads": [
+      { "title": "RFID Application Form", "text": "Application form para sa RFID access passes — Setyembre 2022.", "linkText": "I-download ang PDF" },
+      { "title": "SOP: Pag-isyu ng RFID", "text": "Standard operating procedure para sa pag-isyu ng RFID.", "linkText": "I-download ang PDF" }
+    ],
+    "contactTitle": "Impormasyon ng Contact",
+    "contactText": "Para sa mga aplikasyon ng RFID, renewal, at mga katanungan, bisitahin ang SBDMC, Inc. Admin Office sa oras ng opisina.",
+    "relatedLinksTitle": "Mga Kaugnay na Link",
+    "relatedLinkBusiness": "Mga Serbisyo sa Negosyo",
+    "relatedLinkContact": "Makipag-ugnayan",
+    "relatedLinkFaq": "FAQ"
+  },
+  "ja": {
+    "badge": "RFIDアクセス",
+    "title": "RFIDガイドライン",
+    "subtitle": "Subic Bay Gateway Parkに入構する車両のRFIDアクセスとガイドライン",
+    "breadcrumb1": "製品とサービス",
+    "metaTitle": "RFIDガイドライン",
+    "metaDescription": "Subic Bay Gateway Parkに入構する車両のRFIDアクセスパスガイドライン、申請手続き、ダウンロード可能なフォーム。",
+    "sectionInfoTitle": "RFID情報",
+    "faqItems": [
+      { "q": "RFIDはどこに取り付けますか？", "a": "RFIDは、SBDMC, Inc.の認定担当者が車両の非金属部分（ヘッドライト、フェアリング、バイザー）に取り付ける必要があります。" },
+      { "q": "RFIDの有効期間はどのくらいですか？", "a": "SBGP RFIDの発行・登録日から1年間有効です。" },
+      { "q": "RFIDを良好な状態に保つにはどうすればよいですか？", "a": null, "list": [ "RFID中央部の黒いチップに過度な力を加えないでください。", "剥がして他の場所や車両に移さないでください。", "洗車時に高圧洗浄機を直接吹き付けないでください。", "研磨剤を含む物質でステッカーを拭かないでください。" ] },
+      { "q": "RFIDの交換手数料はありますか？", "a": "RFIDを取り外し、紛失、転用、または誤った取り扱いや取り外しにより損傷した場合、保証は無効になります。紛失または損傷したRFIDの交換手数料はPhP 300.00です。" },
+      { "q": "どのような車両にRFIDが必要ですか？", "a": "SBGPに出入りするすべての車両（乗用車、オートバイ、トラック、その他の自動車を含む）には、有効なRFIDステッカーが必要です。これは、入居企業、従業員、テナント、訪問者に適用されます。" },
+      { "q": "ゲートでRFIDが読み取れない場合はどうなりますか？", "a": "RFIDが読み取れない場合は、警備員所に行って手動確認を受けてください。警備員が対応します。RFIDが破損または不良の場合は、SBDMC, Inc.オフィスで交換を申請する必要があります。" }
+    ],
+    "feesTitle": "RFID手数料",
+    "feesCategoryHeader": "カテゴリー",
+    "feesFeeHeader": "手数料",
+    "feesRows": [
+      { "category": "ゲート通過者", "fee": "PHP 1,000.00" },
+      { "category": "SBGP従業員", "fee": "PHP 300.00" }
+    ],
+    "gateLocationsTitle": "RFIDゲート設置場所",
+    "gateLocationsText": "RFIDチェックポイントは、Subic Bay Gateway Parkのすべての入退場ゲートに設置されています。",
+    "requirementsTitle": "RFIDステッカーの必要書類",
+    "requirementsNotice": "コピーをご持参ください",
+    "requirementsCategoryHeader": "カテゴリー",
+    "requirementsReqHeader": "必要書類",
+    "requirementsRows": [
+      { "category": "直接入居企業", "req": "OR/CRのコピー、運転免許証" },
+      { "category": "転借人（SBGP第1期・第2期）", "req": "OR/CRのコピー、運転免許証" },
+      { "category": "SBGP従業員", "req": "OR/CRのコピー、運転免許証、SBMA ID" },
+      { "category": "ゲート通過者", "req": "OR/CRのコピー、運転免許証" },
+      { "category": "派遣社員", "req": "OR/CRのコピー、運転免許証、在職証明書" }
+    ],
+    "requirementsNotes": [
+      "OR/CRが申請者の氏名と一致しない従業員・会社の方は、売買契約書のコピーを添付してください。白地の売買契約書は認められません。",
+      "OR/CRが申請者と関係のある他の人物に属する従業員の方は、OR/CRのコピーに所有者との関係を明記してください。",
+      "SBGP内で派遣会社を通じて働く従業員の方は、在職証明書が必要です。"
+    ],
+    "guidelinesTitle": "RFID使用ガイドライン",
+    "guidelines": [
+      { "title": "テールゲートを避ける", "text": "車間距離を保ってください。前の車両との間に車1台分の距離を保ってください。" },
+      { "title": "順番をお待ちください", "text": "各車両通過後にバリアが閉まります。前の車両が完全にバリアゲートを通過し、ブームアームが下がるまでお待ちください。" },
+      { "title": "RFIDの利用停止", "text": "SBDMC, Inc.とのリース契約に違反していることが判明した企業・SBGP入居企業の車両、およびRFIDステッカーの適切な使用またはSBGPの規則・規制に違反したその他の利用者について、SBDMC, Inc.はRFIDアクセスを停止・没収する権利を有します。" },
+      { "title": "譲渡不可", "text": "RFIDは譲渡不可かつ返金不可です。剥がして他の場所や車両に移さないでください。" }
+    ],
+    "dosDontsTitle": "遵守事項と禁止事項",
+    "dosTitle": "遵守事項",
+    "dosItems": [ "前の車両との間に車1台分の距離を保つ", "ブームアームが完全に下がるまで待つ", "RFIDステッカーを清潔で損傷のない状態に保つ", "RFIDの問題を警備員所またはSBDMC, Inc.オフィスに報告する", "1年の有効期限が切れる前にRFIDを更新する" ],
+    "dontsTitle": "禁止事項",
+    "dontsItems": [ "他の車両にテールゲートしたり近づきすぎる", "RFIDステッカーを剥がしたり他の車両に移す", "高圧洗浄機でRFIDに直接吹き付ける", "RFIDステッカーに研磨剤を使用する", "RFID中央の黒いチップに過度な力を加える" ],
+    "damageTitle": "ブームアームの損傷",
+    "damagePenalty": "PHP 15,000.00の罰金が科せられます",
+    "downloadsTitle": "RFIDダウンロード",
+    "downloads": [
+      { "title": "RFID申請書", "text": "RFIDアクセスパスの申請書 — 2022年9月版。", "linkText": "PDFをダウンロード" },
+      { "title": "標準業務手順書：RFID発行", "text": "RFID発行の標準業務手順書。", "linkText": "PDFをダウンロード" }
+    ],
+    "contactTitle": "連絡先情報",
+    "contactText": "RFIDの申請、更新、お問い合わせは、営業時間内にSBDMC, Inc.管理事務所までお越しください。",
+    "relatedLinksTitle": "関連リンク",
+    "relatedLinkBusiness": "ビジネスサービス",
+    "relatedLinkContact": "お問い合わせ",
+    "relatedLinkFaq": "よくある質問"
+  },
+  "ko": {
+    "badge": "RFID 출입",
+    "title": "RFID 가이드라인",
+    "subtitle": "Subic Bay Gateway Park에 진입하는 차량을 위한 RFID 출입 및 가이드라인",
+    "breadcrumb1": "제품 및 서비스",
+    "metaTitle": "RFID 가이드라인",
+    "metaDescription": "Subic Bay Gateway Park에 진입하는 차량을 위한 RFID 출입증 가이드라인, 신청 절차 및 다운로드 가능한 양식입니다.",
+    "sectionInfoTitle": "RFID 정보",
+    "faqItems": [
+      { "q": "RFID는 어디에 설치해야 하나요?", "a": "RFID는 SBDMC, Inc.의 공인 담당자가 차량의 비금속 부위(헤드라이트, 페어링, 바이저)에 설치해야 합니다." },
+      { "q": "RFID의 유효 기간은 얼마나 되나요?", "a": "SBGP RFID는 발급/등록일로부터 1년 동안만 유효합니다." },
+      { "q": "RFID를 좋은 상태로 유지하려면 어떻게 해야 하나요?", "a": null, "list": [ "RFID 중간 부분의 검은색 칩에 과도한 힘을 가하지 마십시오.", "스티커를 떼어내어 다른 위치나 차량으로 옮기지 마십시오.", "세차 시 고압 세척기를 직접 분사하지 마십시오.", "스티커에 연마성 물질을 문지르지 마십시오." ] },
+      { "q": "RFID 교체 비용이 있나요?", "a": "RFID를 분리, 분실, 양도하거나 잘못 취급 또는 제거로 인해 손상된 경우 보증이 무효화됩니다. 분실 또는 손상된 RFID의 교체 비용은 PhP 300.00입니다." },
+      { "q": "어떤 차량에 RFID가 필요한가요?", "a": "SBGP에 출입하는 모든 차량(승용차, 오토바이, 트럭 및 기타 자동차 포함)은 유효한 RFID 스티커를 부착해야 합니다. 이는 입주 기업, 직원, 임차인 및 방문객에게 적용됩니다." },
+      { "q": "게이트에서 RFID가 스캔되지 않으면 어떻게 되나요?", "a": "RFID가 스캔되지 않으면 경비실로 가서 수동 확인을 받으십시오. 보안 담당자가 도와드릴 것입니다. RFID가 손상되었거나 결함이 있는 경우 SBDMC, Inc. 사무실에서 교체를 신청해야 할 수 있습니다." }
+    ],
+    "feesTitle": "RFID 수수료",
+    "feesCategoryHeader": "카테고리",
+    "feesFeeHeader": "수수료",
+    "feesRows": [
+      { "category": "게이트 통행자", "fee": "PHP 1,000.00" },
+      { "category": "SBGP 직원", "fee": "PHP 300.00" }
+    ],
+    "gateLocationsTitle": "RFID 게이트 위치",
+    "gateLocationsText": "RFID 검문소는 Subic Bay Gateway Park의 모든 출입 게이트에 설치되어 있습니다.",
+    "requirementsTitle": "RFID 스티커 필요 서류",
+    "requirementsNotice": "사본을 지참해 주십시오",
+    "requirementsCategoryHeader": "카테고리",
+    "requirementsReqHeader": "필요 서류",
+    "requirementsRows": [
+      { "category": "직접 입주 기업", "req": "OR/CR 사본, 운전면허증" },
+      { "category": "전대차 입주 기업(SBGP 1, 2기)", "req": "OR/CR 사본, 운전면허증" },
+      { "category": "SBGP 직원", "req": "OR/CR 사본, 운전면허증, SBMA 신분증" },
+      { "category": "게이트 통행자", "req": "OR/CR 사본, 운전면허증" },
+      { "category": "에이전시 직원", "req": "OR/CR 사본, 운전면허증, 재직증명서" }
+    ],
+    "requirementsNotes": [
+      "OR/CR이 신청자 이름과 일치하지 않는 직원/회사는 매매 계약서 사본을 첨부해 주십시오. 백지 매매 계약서는 허용되지 않습니다.",
+      "OR/CR이 본인과 관련된 다른 사람의 소유인 직원은 OR/CR 사본에 소유자와의 관계를 기재해 주십시오.",
+      "SBGP 내에서 에이전시를 통해 근무하는 직원의 경우 재직증명서가 필요합니다."
+    ],
+    "guidelinesTitle": "RFID 사용 가이드라인",
+    "guidelines": [
+      { "title": "테일게이팅 금지", "text": "차간 거리를 유지하십시오. 귀하의 차량과 앞 차량 사이에 차량 한 대 길이의 간격을 유지하십시오." },
+      { "title": "순서 기다리기", "text": "각 차량 통과 후 차단기가 닫힙니다. 앞 차량이 차단기를 완전히 통과하고 붐 암이 내려갈 때까지 기다렸다가 진행하십시오." },
+      { "title": "RFID 차단", "text": "SBDMC, Inc.는 SBDMC, Inc.와의 임대 계약 위반이 적발된 회사/SBGP 입주 기업의 차량, 그리고 RFID 스티커의 적절한 사용 또는 SBGP 규칙 및 규정을 위반한 기타 사용자의 RFID 출입을 차단/압수할 권리가 있습니다." },
+      { "title": "양도 불가", "text": "RFID는 양도 및 환불이 불가능합니다. 스티커를 떼어내어 다른 위치나 차량으로 옮기지 마십시오." }
+    ],
+    "dosDontsTitle": "준수 사항 및 금지 사항",
+    "dosTitle": "준수 사항",
+    "dosItems": [ "앞 차량과 차량 한 대 길이의 간격 유지", "붐 암이 완전히 내려갈 때까지 기다리기", "RFID 스티커를 깨끗하고 손상되지 않게 유지", "RFID 문제를 경비실 또는 SBDMC, Inc. 사무실에 신고", "1년 유효 기간 만료 전에 RFID 갱신" ],
+    "dontsTitle": "금지 사항",
+    "dontsItems": [ "다른 차량에 테일게이트하거나 가까이 따라가기", "RFID 스티커를 떼어내거나 다른 차량으로 옮기기", "고압 세척기로 RFID에 직접 분사하기", "RFID 스티커에 연마성 물질 사용하기", "RFID 중간의 검은색 칩에 과도한 힘 가하기" ],
+    "damageTitle": "붐 암 손상",
+    "damagePenalty": "PHP 15,000.00의 벌금이 부과됩니다",
+    "downloadsTitle": "RFID 다운로드",
+    "downloads": [
+      { "title": "RFID 신청서", "text": "RFID 출입증 신청서 — 2022년 9월.", "linkText": "PDF 다운로드" },
+      { "title": "SOP: RFID 발급", "text": "RFID 발급 표준 운영 절차.", "linkText": "PDF 다운로드" }
+    ],
+    "contactTitle": "연락처 정보",
+    "contactText": "RFID 신청, 갱신 및 문의는 근무 시간 중에 SBDMC, Inc. 관리 사무소를 방문해 주십시오.",
+    "relatedLinksTitle": "관련 링크",
+    "relatedLinkBusiness": "비즈니스 서비스",
+    "relatedLinkContact": "문의하기",
     "relatedLinkFaq": "FAQ"
   }
 }

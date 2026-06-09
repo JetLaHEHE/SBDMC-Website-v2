@@ -26,5 +26,117 @@
         "description": "Buses and jeepneys operate regularly from Olongapo City and nearby areas to the Freeport Zone."
       }
     ]
+  },
+  "zh": {
+    "badge": "位置",
+    "title": "位置地圖",
+    "subtitle": "在蘇比克灣自由港區找到我們",
+    "breadcrumb": "位置地圖",
+    "ourLocation": "我們的位置",
+    "address": "Argonaut Highway 與 Rizal Highway 交叉口，蘇比克灣門戶工業園區，蘇比克灣自由港區，2222",
+    "mapTitle": "SBGP 位置地圖",
+    "gettingHere": "如何抵達",
+    "directions": [
+      {
+        "title": "航空",
+        "description": "蘇比克灣國際機場位於附近，可從馬尼拉及其他主要城市轉機抵達。"
+      },
+      {
+        "title": "陸路",
+        "description": "可經由 SCTEX 和 NLEX 高速公路抵達。距馬尼拉約 2-3 小時車程。"
+      },
+      {
+        "title": "海運",
+        "description": "蘇比克灣自由港區擁有一個主要海港，提供前往國際目的地的定期航運服務。"
+      },
+      {
+        "title": "公共交通",
+        "description": "從奧隆阿波市及附近地區有定期巴士和吉普尼前往自由港區。"
+      }
+    ]
+  },
+  "tl": {
+    "badge": "Lokasyon",
+    "title": "Mapa ng Lokasyon",
+    "subtitle": "Hanapin kami sa Subic Bay Freeport Zone",
+    "breadcrumb": "Mapa ng Lokasyon",
+    "ourLocation": "Aming Lokasyon",
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "mapTitle": "Mapa ng Lokasyon ng SBGP",
+    "gettingHere": "Paano Pumunta",
+    "directions": [
+      {
+        "title": "Sa pamamagitan ng Air",
+        "description": "Ang Subic Bay International Airport ay matatagpuan malapit, na may connecting flights mula sa Maynila at iba pang pangunahing lungsod."
+      },
+      {
+        "title": "Sa pamamagitan ng Lupa",
+        "description": "Na-access sa pamamagitan ng SCTEX at NLEX. Tinatayang 2-3 oras mula sa Maynila."
+      },
+      {
+        "title": "Sa pamamagitan ng Dagat",
+        "description": "Ang Subic Bay Freeport Zone ay may malaking daungan na may regular na serbisyo sa pagpapadala sa mga internasyonal na destinasyon."
+      },
+      {
+        "title": "Pampublikong Transportasyon",
+        "description": "Ang mga bus at jeepney ay regular na pumapasada mula sa Olongapo City at mga kalapit na lugar patungo sa Freeport Zone."
+      }
+    ]
+  },
+  "ja": {
+    "badge": "所在地",
+    "title": "ロケーションマップ",
+    "subtitle": "スービックベイ自由港区でお会いしましょう",
+    "breadcrumb": "ロケーションマップ",
+    "ourLocation": "所在地",
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "mapTitle": "SBGP ロケーションマップ",
+    "gettingHere": "アクセス",
+    "directions": [
+      {
+        "title": "空路",
+        "description": "スービックベイ国際空港が近くにあり、マニラやその他主要都市からの接続便があります。"
+      },
+      {
+        "title": "陸路",
+        "description": "SCTEXおよびNLEX経由でアクセス可能。マニラから約2〜3時間。"
+      },
+      {
+        "title": "海路",
+        "description": "スービックベイ自由港区には主要な港があり、国際的な目的地への定期航路があります。"
+      },
+      {
+        "title": "公共交通機関",
+        "description": "オロンガポ市および近隣地域から自由港区へのバスとジプニーが定期的に運行しています。"
+      }
+    ]
+  },
+  "ko": {
+    "badge": "위치",
+    "title": "위치 지도",
+    "subtitle": "수빅 베이 자유무역지대에서 저희를 찾아보세요",
+    "breadcrumb": "위치 지도",
+    "ourLocation": "저희 위치",
+    "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
+    "mapTitle": "SBGP 위치 지도",
+    "gettingHere": "오시는 길",
+    "directions": [
+      {
+        "title": "항공",
+        "description": "수빅 베이 국제공항이 인근에 있으며, 마닐라 및 기타 주요 도시에서 연결 항편이 있습니다."
+      },
+      {
+        "title": "육로",
+        "description": "SCTEX 및 NLEX를 통해 접근 가능. 마닐라에서 약 2-3시간 소요."
+      },
+      {
+        "title": "해로",
+        "description": "수빅 베이 자유무역지대에는 국제 목적지로 정기 해운 서비스를 제공하는 주요 항구가 있습니다."
+      },
+      {
+        "title": "대중교통",
+        "description": "올롱가포 시 및 인근 지역에서 자유무역지대까지 버스와 지프니가 정기적으로 운행됩니다."
+      }
+    ]
   }
 }

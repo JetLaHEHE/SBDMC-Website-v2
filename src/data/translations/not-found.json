@@ -6,8 +6,32 @@
     { "label": "Downloads", "href": "/forms" },
     { "label": "Contact Us", "href": "/contact" }
   ] },
-  "zh": { "title": "找不到頁面", "code": "404", "message": "您要找的頁面不存在或已移動。", "backHome": "返回首頁", "suggestedHeading": "建議頁面" },
-  "tl": { "title": "Hindi Natagpuan ang Pahina", "code": "404", "message": "Ang pahinang hinahanap mo ay wala o nailipat na.", "backHome": "Bumalik sa Tahanan", "suggestedHeading": "Mga Mungkahing Pahina" },
-  "ja": { "title": "ページが見つかりません", "code": "404", "message": "お探しのページは存在しないか、移動されました。", "backHome": "ホームに戻る", "suggestedHeading": "おすすめページ" },
-  "ko": { "title": "페이지를 찾을 수 없음", "code": "404", "message": "찾고 계신 페이지가 존재하지 않거나 이동되었습니다.", "backHome": "홈으로 돌아가기", "suggestedHeading": "추천 페이지" }
+  "zh": { "title": "找不到頁面", "code": "404", "message": "您要找的頁面不存在或已移動。", "backHome": "返回首頁", "suggestedHeading": "建議頁面", "suggestedLinks": [
+    { "label": "門禁管理", "href": "/rfid" },
+    { "label": "相關服務", "href": "/business-services" },
+    { "label": "常見問題", "href": "/faq" },
+    { "label": "文件下載", "href": "/forms" },
+    { "label": "聯絡我們", "href": "/contact" }
+  ] },
+  "tl": { "title": "Hindi Natagpuan ang Pahina", "code": "404", "message": "Ang pahinang hinahanap mo ay wala o nailipat na.", "backHome": "Bumalik sa Tahanan", "suggestedHeading": "Mga Mungkahing Pahina", "suggestedLinks": [
+    { "label": "RFID Access", "href": "/rfid" },
+    { "label": "Mga Serbisyo sa Negosyo", "href": "/business-services" },
+    { "label": "FAQ", "href": "/faq" },
+    { "label": "Mga Download", "href": "/forms" },
+    { "label": "Makipag-ugnayan", "href": "/contact" }
+  ] },
+  "ja": { "title": "ページが見つかりません", "code": "404", "message": "お探しのページは存在しないか、移動されました。", "backHome": "ホームに戻る", "suggestedHeading": "おすすめページ", "suggestedLinks": [
+    { "label": "RFIDアクセス", "href": "/rfid" },
+    { "label": "ビジネスサービス", "href": "/business-services" },
+    { "label": "よくある質問", "href": "/faq" },
+    { "label": "ダウンロード", "href": "/forms" },
+    { "label": "お問い合わせ", "href": "/contact" }
+  ] },
+  "ko": { "title": "페이지를 찾을 수 없음", "code": "404", "message": "찾고 계신 페이지가 존재하지 않거나 이동되었습니다.", "backHome": "홈으로 돌아가기", "suggestedHeading": "추천 페이지", "suggestedLinks": [
+    { "label": "RFID 출입", "href": "/rfid" },
+    { "label": "비즈니스 서비스", "href": "/business-services" },
+    { "label": "FAQ", "href": "/faq" },
+    { "label": "다운로드", "href": "/forms" },
+    { "label": "문의하기", "href": "/contact" }
+  ] }
 }

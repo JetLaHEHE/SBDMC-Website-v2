@@ -1,15 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
-import forLeaseTranslations from "../data/translations/for-lease.json";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, getLangPrefix, type LangCode, t } from "../../i18n";
+import forLeaseTranslations from "../../data/translations/for-lease.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
 const tx = t(forLeaseTranslations, lang);
 ---
 
-<Layout title={tx.title} description={tx.description} lang={lang}>
+<Layout title={tx.title} description="View available warehouse and office spaces for lease at Subic Bay Gateway Park in the Freeport Zone." lang={lang}>
   <section aria-label="For lease hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{tx.badge}</div>
@@ -41,7 +42,7 @@ const tx = t(forLeaseTranslations, lang);
                   <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> {feature}</li>
                 ))}
               </ul>
-              <a href="/contact" class="text-sm font-semibold text-primary-500 hover:text-primary-600">{tx.inquireNow} &rarr;</a>
+              <a href={langPrefix + "/contact"} class="text-sm font-semibold text-primary-500 hover:text-primary-600">{tx.inquireNow} &rarr;</a>
             </div>
           </div>
         ))}

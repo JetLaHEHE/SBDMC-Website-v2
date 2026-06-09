@@ -1,15 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
-import privacyTranslations from "../data/translations/privacy.json";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../../i18n";
+import privacyTranslations from "../../data/translations/privacy.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
 const tx = t(privacyTranslations, lang);
 ---
 
-<Layout title={tx.title} description={tx.subtitle} lang={lang}>
+<Layout title={tx.title} description="Privacy Policy of Subic Bay Gateway Park (SBDMC, Inc.)." lang={lang}>
   <section aria-label="Privacy policy hero" class="bg-primary-500 py-24">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-aos="fade-up">
       <div class="mb-4 inline-block border border-white/20 px-4 py-1.5 text-xs font-medium text-white/70">{tx.badge}</div>

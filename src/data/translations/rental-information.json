@@ -26,5 +26,117 @@
     "ctaTitle": "Ready to Lease?",
     "ctaText": "Contact our leasing team for current availability and rates.",
     "ctaButton": "Contact Us Today"
+  },
+  "zh": {
+    "badge": "租賃資訊",
+    "title": "租賃資訊",
+    "subtitle": "關於在 SBGP 租賃的一切須知",
+    "breadcrumbProducts": "產品與服務",
+    "breadcrumbRental": "租賃資訊",
+    "leaseTermsTitle": "租賃條款",
+    "leaseTermsText": "我們提供 1 至 5 年的彈性租期，可續約。可針對量身打造的設施提供客製化條款。",
+    "rentalRatesTitle": "租金費率",
+    "rentalRatesText": "租金費率因空間類型、園區內位置和租賃期限而異。請聯繫我們的團隊了解當前費率。",
+    "inclusionsTitle": "包含項目",
+    "inclusions": [
+      "公共區域維護",
+      "24/7 安保服務",
+      "道路和景觀維護",
+      "排水和防洪系統"
+    ],
+    "requirementsTitle": "要求文件",
+    "requirements": [
+      "商業登記文件",
+      "SEC 或 DTI 登記",
+      "市長許可證或同等文件",
+      "授權代表證明"
+    ],
+    "ctaTitle": "準備好租賃了嗎？",
+    "ctaText": "聯繫我們的租賃團隊了解當前可用空間和費率。",
+    "ctaButton": "立即聯繫我們"
+  },
+  "tl": {
+    "badge": "Impormasyon sa Pag-upa",
+    "title": "Impormasyon sa Pag-upa",
+    "subtitle": "Lahat ng kailangan mong malaman tungkol sa pag-upa sa SBGP",
+    "breadcrumbProducts": "Mga Produkto at Serbisyo",
+    "breadcrumbRental": "Impormasyon sa Pag-upa",
+    "leaseTermsTitle": "Mga Tuntunin sa Pag-upa",
+    "leaseTermsText": "Nag-aalok kami ng flexible na lease terms mula 1 hanggang 5 taon, may opsyon para sa renewal. Available ang custom terms para sa build-to-suit arrangements.",
+    "rentalRatesTitle": "Mga Rate sa Pag-upa",
+    "rentalRatesText": "Ang mga rate sa pag-upa ay nag-iiba depende sa uri ng espasyo, lokasyon sa loob ng parke, at tagal ng lease. Kontakin ang aming team para sa kasalukuyang mga rate.",
+    "inclusionsTitle": "Mga Kasama",
+    "inclusions": [
+      "Pagpapanatili ng common area",
+      "24/7 security services",
+      "Pagpapanatili ng kalsada at landscaping",
+      "Drainage at flood control"
+    ],
+    "requirementsTitle": "Mga Kinakailangan",
+    "requirements": [
+      "Mga dokumento sa rehistrasyon ng negosyo",
+      "Rehistrasyon sa SEC o DTI",
+      "Permit ng Mayor o katumbas",
+      "Patunay ng awtorisadong kinatawan"
+    ],
+    "ctaTitle": "Handa nang Mag-upa?",
+    "ctaText": "Kontakin ang aming leasing team para sa kasalukuyang availability at mga rate.",
+    "ctaButton": "Makipag-ugnayan Ngayon"
+  },
+  "ja": {
+    "badge": "賃貸情報",
+    "title": "賃貸情報",
+    "subtitle": "SBGPでの賃貸に関するすべての情報",
+    "breadcrumbProducts": "製品とサービス",
+    "breadcrumbRental": "賃貸情報",
+    "leaseTermsTitle": "賃貸条件",
+    "leaseTermsText": "1年から5年の柔軟な賃貸契約を提供し、更新オプションもあります。建物建築条件に合わせたカスタム条件も可能です。",
+    "rentalRatesTitle": "賃貸料金",
+    "rentalRatesText": "賃貸料金は、スペースの種類、パーク内の場所、賃貸期間によって異なります。最新の料金については、担当チームにお問い合わせください。",
+    "inclusionsTitle": "含まれるもの",
+    "inclusions": [
+      "共用エリアのメンテナンス",
+      "24時間体制のセキュリティサービス",
+      "道路と造園の維持管理",
+      "排水と洪水対策"
+    ],
+    "requirementsTitle": "必要書類",
+    "requirements": [
+      "事業登録書類",
+      "SECまたはDTI登録",
+      "市長許可証または同等のもの",
+      "権限のある代表者の証明"
+    ],
+    "ctaTitle": "賃貸をお考えですか？",
+    "ctaText": "現在の空き状況と料金については、賃貸チームにお問い合わせください。",
+    "ctaButton": "今すぐお問い合わせ"
+  },
+  "ko": {
+    "badge": "임대 정보",
+    "title": "임대 정보",
+    "subtitle": "SBGP 임대에 대해 알아야 할 모든 것",
+    "breadcrumbProducts": "제품 및 서비스",
+    "breadcrumbRental": "임대 정보",
+    "leaseTermsTitle": "임대 조건",
+    "leaseTermsText": "갱신 옵션이 포함된 1~5년의 유연한 임대 조건을 제공합니다. 맞춤형 시설에 대한 맞춤 조건도 가능합니다.",
+    "rentalRatesTitle": "임대료",
+    "rentalRatesText": "임대료는 공간 유형, 파크 내 위치, 임대 기간에 따라 다릅니다. 현재 요금은 당사 팀에 문의하세요.",
+    "inclusionsTitle": "포함 사항",
+    "inclusions": [
+      "공용 구역 유지 관리",
+      "24/7 보안 서비스",
+      "도로 및 조경 유지 관리",
+      "배수 및 홍수 방지"
+    ],
+    "requirementsTitle": "필요 서류",
+    "requirements": [
+      "사업자 등록 서류",
+      "SEC 또는 DTI 등록",
+      "시장 허가증 또는 이에 준하는 서류",
+      "권한 있는 대리인 증명"
+    ],
+    "ctaTitle": "임대할 준비가 되셨나요?",
+    "ctaText": "현재 이용 가능 여부와 요금에 대해 임대 팀에 문의하세요.",
+    "ctaButton": "지금 문의하기"
   }
 }

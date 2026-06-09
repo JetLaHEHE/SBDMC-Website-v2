@@ -79,5 +79,329 @@
         "link": "Download PDF"
       }
     ]
+  },
+  "zh": {
+    "badge": "下載",
+    "title": "表格與下載",
+    "subtitle": "下載表格、手冊和實用指南",
+    "breadcrumbProducts": "產品與服務",
+    "breadcrumbForms": "表格與下載",
+    "generalDownloadsTitle": "一般下載",
+    "generalDownloads": [
+      {
+        "title": "基礎設施手冊",
+        "description": "SBGP 設施和基礎設施的詳細資訊。",
+        "link": "下載 PDF"
+      },
+      {
+        "title": "實用指南",
+        "description": "為進駐企業和訪客提供的快速參考指南。",
+        "link": "查看指南"
+      },
+      {
+        "title": "客戶調查表",
+        "description": "填寫我們的線上調查，幫助我們改善服務。",
+        "link": "填寫表格"
+      },
+      {
+        "title": "客戶調查表 (PDF)",
+        "description": "下載可列印版本的客戶調查表。",
+        "link": "下載 PDF"
+      }
+    ],
+    "fsbfzTitle": "FSBFZ 表格",
+    "fsbfzDownloads": [
+      {
+        "title": "SBF 申請核對清單",
+        "description": "SBF 申請核對清單 — 2015年6月16日更新。",
+        "link": "下載 .doc"
+      },
+      {
+        "title": "續期表格 CR/CRTE",
+        "description": "註冊證書續期表格 — 2015年6月16日。",
+        "link": "下載 .doc"
+      },
+      {
+        "title": "SBF 註冊申請表",
+        "description": "SBF 註冊申請表 — 2013年1月。",
+        "link": "下載 .doc"
+      }
+    ],
+    "sbdmcTitle": "SBDMC, Inc. 文件",
+    "sbdmcDownloads": [
+      {
+        "title": "SBGP 限制契約 2018",
+        "description": "管理蘇比克灣門戶工業園區的限制契約。",
+        "link": "下載 PDF"
+      },
+      {
+        "title": "SOP：違規停車",
+        "description": "SBGP 內違規停車的標準作業程序。",
+        "link": "下載 PDF"
+      },
+      {
+        "title": "SOP：RFID 發放",
+        "description": "RFID 發放的標準作業程序。",
+        "link": "下載 PDF"
+      },
+      {
+        "title": "SOP：轉租同意書",
+        "description": "轉租同意書發放及轉承租人監督指南。",
+        "link": "下載 PDF"
+      },
+      {
+        "title": "SOP：轉承租人監督",
+        "description": "未經 SBDMC, Inc. 同意的轉承租人監督程序。",
+        "link": "下載 PDF"
+      },
+      {
+        "title": "SOP：客戶服務協助",
+        "description": "客戶服務協助請求的程序。",
+        "link": "下載 PDF"
+      }
+    ]
+  },
+  "tl": {
+    "badge": "Mga Download",
+    "title": "Mga Form at Download",
+    "subtitle": "I-download ang mga form, brochure, at handy guide",
+    "breadcrumbProducts": "Mga Produkto at Serbisyo",
+    "breadcrumbForms": "Mga Form at Download",
+    "generalDownloadsTitle": "Mga Pangkalahatang Download",
+    "generalDownloads": [
+      {
+        "title": "Infrastructure Brochure",
+        "description": "Detalyadong impormasyon tungkol sa mga pasilidad at imprastraktura ng SBGP.",
+        "link": "I-download ang PDF"
+      },
+      {
+        "title": "Handy Guide",
+        "description": "Quick reference guide para sa mga lokator at bisita.",
+        "link": "Tingnan ang Gabay"
+      },
+      {
+        "title": "Customer Survey Form",
+        "description": "Tulungan kaming mapabuti ang aming mga serbisyo sa pamamagitan ng pagsagot sa aming online survey.",
+        "link": "Punan ang Form"
+      },
+      {
+        "title": "Customer Survey Form (PDF)",
+        "description": "I-download ang isang printable version ng customer survey form.",
+        "link": "I-download ang PDF"
+      }
+    ],
+    "fsbfzTitle": "Mga Form ng FSBFZ",
+    "fsbfzDownloads": [
+      {
+        "title": "SBF Application Checklist",
+        "description": "Checklist para sa SBF Application — na-update 16 June 2015.",
+        "link": "I-download ang .doc"
+      },
+      {
+        "title": "Renewal Form CR/CRTE",
+        "description": "Renewal form para sa Certificate of Registration — 16 June 2015.",
+        "link": "I-download ang .doc"
+      },
+      {
+        "title": "SBF Application for Registration",
+        "description": "Application form para sa SBF registration — January 2013.",
+        "link": "I-download ang .doc"
+      }
+    ],
+    "sbdmcTitle": "Mga Dokumento ng SBDMC, Inc.",
+    "sbdmcDownloads": [
+      {
+        "title": "SBGP Deed of Restrictions 2018",
+        "description": "Deed of restrictions na namamahala sa Subic Bay Gateway Park.",
+        "link": "I-download ang PDF"
+      },
+      {
+        "title": "SOP: Illegal Parking",
+        "description": "Standard operating procedure para sa illegal parking sa SBGP.",
+        "link": "I-download ang PDF"
+      },
+      {
+        "title": "SOP: RFID Issuance",
+        "description": "Standard operating procedure para sa RFID issuance.",
+        "link": "I-download ang PDF"
+      },
+      {
+        "title": "SOP: Consent to Sublease",
+        "description": "Mga alituntunin para sa issuance ng consent to sublease at monitoring ng sub-lessees.",
+        "link": "I-download ang PDF"
+      },
+      {
+        "title": "SOP: Monitoring of Sublessees",
+        "description": "Pamamaraan para sa pagmonitor ng sublessees nang walang pahintulot ng SBDMC, Inc.",
+        "link": "I-download ang PDF"
+      },
+      {
+        "title": "SOP: Customer Service Assistance",
+        "description": "Pamamaraan para sa customer service assistance requests.",
+        "link": "I-download ang PDF"
+      }
+    ]
+  },
+  "ja": {
+    "badge": "ダウンロード",
+    "title": "フォームとダウンロード",
+    "subtitle": "フォーム、パンフレット、便利なガイドをダウンロード",
+    "breadcrumbProducts": "製品とサービス",
+    "breadcrumbForms": "フォームとダウンロード",
+    "generalDownloadsTitle": "一般ダウンロード",
+    "generalDownloads": [
+      {
+        "title": "インフラ案内パンフレット",
+        "description": "SBGP施設とインフラに関する詳細情報。",
+        "link": "PDFをダウンロード"
+      },
+      {
+        "title": "便利ガイド",
+        "description": "入居企業と訪問者向けクイックリファレンスガイド。",
+        "link": "ガイドを表示"
+      },
+      {
+        "title": "顧客アンケートフォーム",
+        "description": "オンラインアンケートにご協力いただき、サービスの向上にご協力ください。",
+        "link": "フォームに記入"
+      },
+      {
+        "title": "顧客アンケートフォーム (PDF)",
+        "description": "印刷可能な顧客アンケートフォームをダウンロード。",
+        "link": "PDFをダウンロード"
+      }
+    ],
+    "fsbfzTitle": "FSBFZフォーム",
+    "fsbfzDownloads": [
+      {
+        "title": "SBF申請チェックリスト",
+        "description": "SBF申請のチェックリスト — 2015年6月16日更新。",
+        "link": ".docをダウンロード"
+      },
+      {
+        "title": "更新フォーム CR/CRTE",
+        "description": "登録証明書の更新フォーム — 2015年6月16日。",
+        "link": ".docをダウンロード"
+      },
+      {
+        "title": "SBF登録申請書",
+        "description": "SBF登録の申請書 — 2013年1月。",
+        "link": ".docをダウンロード"
+      }
+    ],
+    "sbdmcTitle": "SBDMC株式会社 書類",
+    "sbdmcDownloads": [
+      {
+        "title": "SBGP制限証書 2018",
+        "description": "スービックベイゲートウェイパークを管理する制限証書。",
+        "link": "PDFをダウンロード"
+      },
+      {
+        "title": "SOP：違法駐車",
+        "description": "SBGP内の違法駐車に関する標準業務手順書。",
+        "link": "PDFをダウンロード"
+      },
+      {
+        "title": "SOP：RFID発行",
+        "description": "RFID発行の標準業務手順書。",
+        "link": "PDFをダウンロード"
+      },
+      {
+        "title": "SOP：転貸同意",
+        "description": "転貸同意書の発行と転借人の監視に関するガイドライン。",
+        "link": "PDFをダウンロード"
+      },
+      {
+        "title": "SOP：転借人の監視",
+        "description": "SBDMC株式会社の同意なしの転借人監視手順。",
+        "link": "PDFをダウンロード"
+      },
+      {
+        "title": "SOP：カスタマーサービス支援",
+        "description": "カスタマーサービス支援依頼の手順。",
+        "link": "PDFをダウンロード"
+      }
+    ]
+  },
+  "ko": {
+    "badge": "다운로드",
+    "title": "양식 및 다운로드",
+    "subtitle": "양식, 브로셔 및 편의 가이드 다운로드",
+    "breadcrumbProducts": "제품 및 서비스",
+    "breadcrumbForms": "양식 및 다운로드",
+    "generalDownloadsTitle": "일반 다운로드",
+    "generalDownloads": [
+      {
+        "title": "인프라 브로셔",
+        "description": "SBGP 시설 및 인프라에 대한 상세 정보.",
+        "link": "PDF 다운로드"
+      },
+      {
+        "title": "편의 가이드",
+        "description": "입주 기업 및 방문자를 위한 빠른 참조 가이드.",
+        "link": "가이드 보기"
+      },
+      {
+        "title": "고객 설문조사 양식",
+        "description": "온라인 설문조사를 작성하여 서비스 개선에 도움을 주세요.",
+        "link": "양식 작성"
+      },
+      {
+        "title": "고객 설문조사 양식 (PDF)",
+        "description": "인쇄 가능한 고객 설문조사 양식을 다운로드하세요.",
+        "link": "PDF 다운로드"
+      }
+    ],
+    "fsbfzTitle": "FSBFZ 양식",
+    "fsbfzDownloads": [
+      {
+        "title": "SBF 신청 체크리스트",
+        "description": "SBF 신청 체크리스트 — 2015년 6월 16일 업데이트.",
+        "link": ".doc 다운로드"
+      },
+      {
+        "title": "갱신 양식 CR/CRTE",
+        "description": "등록 증명서 갱신 양식 — 2015년 6월 16일.",
+        "link": ".doc 다운로드"
+      },
+      {
+        "title": "SBF 등록 신청서",
+        "description": "SBF 등록 신청서 — 2013년 1월.",
+        "link": ".doc 다운로드"
+      }
+    ],
+    "sbdmcTitle": "SBDMC, Inc. 문서",
+    "sbdmcDownloads": [
+      {
+        "title": "SBGP 제한 증서 2018",
+        "description": "수빅 베이 게이트웨이 파크를 규율하는 제한 증서.",
+        "link": "PDF 다운로드"
+      },
+      {
+        "title": "SOP: 불법 주차",
+        "description": "SBGP 내 불법 주차에 대한 표준 운영 절차.",
+        "link": "PDF 다운로드"
+      },
+      {
+        "title": "SOP: RFID 발급",
+        "description": "RFID 발급에 대한 표준 운영 절차.",
+        "link": "PDF 다운로드"
+      },
+      {
+        "title": "SOP: 전대 동의",
+        "description": "전대 동의서 발급 및 전차인 모니터링 지침.",
+        "link": "PDF 다운로드"
+      },
+      {
+        "title": "SOP: 전차인 모니터링",
+        "description": "SBDMC, Inc.의 동의 없는 전차인 모니터링 절차.",
+        "link": "PDF 다운로드"
+      },
+      {
+        "title": "SOP: 고객 서비스 지원",
+        "description": "고객 서비스 지원 요청 절차.",
+        "link": "PDF 다운로드"
+      }
+    ]
   }
 }

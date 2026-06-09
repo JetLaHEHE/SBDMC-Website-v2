@@ -44,5 +44,189 @@
       "description": "Contact us today to learn about available spaces and how your business can benefit from locating at Subic Bay Gateway Park.",
       "buttonText": "Inquire Now"
     }
+  },
+  "zh": {
+    "badge": "我們的進駐企業",
+    "title": "進駐企業",
+    "subtitle": "選擇蘇比克灣門戶工業園區作為其首選商業地點的領先企業",
+    "breadcrumb1": "關於我們",
+    "breadcrumb2": "進駐企業",
+    "metaTitle": "進駐企業",
+    "metaDescription": "選擇蘇比克灣門戶工業園區作為其在蘇比克灣自由港區首選商業地點的領先企業。",
+    "locators": [
+      {
+        "id": "wistron-corporation",
+        "industry": "電子製造",
+        "description": "全球領先的電腦、筆記型電腦和電子元件OEM/ODM製造商之一，在台灣證券交易所上市。",
+        "country": "台灣"
+      },
+      {
+        "id": "taian-technologies",
+        "industry": "科技製造",
+        "description": "為全球市場提供精密元件和科技產品的領先製造商。",
+        "country": "台灣"
+      },
+      {
+        "id": "taiwan-hitachi",
+        "industry": "電子/製造",
+        "description": "日立與台灣合作夥伴的合資企業，生產電子元件和家用電器。",
+        "country": "台灣"
+      },
+      {
+        "id": "teco-electric",
+        "industry": "工業設備",
+        "description": "電動機、發電和家用電器領域的全球領導者，在台灣證券交易所上市。",
+        "country": "台灣"
+      },
+      {
+        "id": "tong-lung-metal",
+        "industry": "金屬加工",
+        "description": "為全球建築和製造業提供金屬元件、五金和工業零件的頂級製造商。",
+        "country": "台灣"
+      }
+    ],
+    "cta": {
+      "title": "想加入這些行業領導者嗎？",
+      "description": "立即聯繫我們，了解可用空間以及您的企業如何從進駐蘇比克灣門戶工業園區中受益。",
+      "buttonText": "立即諮詢"
+    }
+  },
+  "tl": {
+    "badge": "Aming mga Lokator",
+    "title": "Mga Kumpanyang Lokator",
+    "subtitle": "Mga nangungunang kumpanya na pumili ng Subic Bay Gateway Park bilang kanilang ginustong lokasyon ng negosyo",
+    "breadcrumb1": "Tungkol sa Amin",
+    "breadcrumb2": "Mga Lokator",
+    "metaTitle": "Mga Lokator",
+    "metaDescription": "Mga nangungunang kumpanya na pumili ng Subic Bay Gateway Park bilang kanilang ginustong lokasyon ng negosyo sa Subic Bay Freeport Zone.",
+    "locators": [
+      {
+        "id": "wistron-corporation",
+        "industry": "Electronics Manufacturing",
+        "description": "Isa sa mga nangungunang OEM/ODM manufacturer sa mundo ng mga computer, laptop, at electronic components. Nakalista sa Taiwan Stock Exchange.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "taian-technologies",
+        "industry": "Technology Manufacturing",
+        "description": "Isang nangungunang manufacturer ng precision components at technology products para sa global markets.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "taiwan-hitachi",
+        "industry": "Electronics / Manufacturing",
+        "description": "Isang joint venture sa pagitan ng Hitachi at Taiwanese partners, na gumagawa ng electronic components at home appliances.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "teco-electric",
+        "industry": "Industrial Equipment",
+        "description": "Isang global leader sa electric motors, power generation, at home appliances. Nakalista sa Taiwan Stock Exchange.",
+        "country": "Taiwan"
+      },
+      {
+        "id": "tong-lung-metal",
+        "industry": "Metal Fabrication",
+        "description": "Isang premier manufacturer ng metal components, hardware, at industrial parts para sa global construction at manufacturing sectors.",
+        "country": "Taiwan"
+      }
+    ],
+    "cta": {
+      "title": "Gusto mong sumali sa mga industry leaders na ito?",
+      "description": "Kontakin kami ngayon upang malaman ang tungkol sa mga available na espasyo at kung paano makikinabang ang iyong negosyo sa pag-locate sa Subic Bay Gateway Park.",
+      "buttonText": "Magtanong Ngayon"
+    }
+  },
+  "ja": {
+    "badge": "入居企業",
+    "title": "入居企業",
+    "subtitle": "スービックベイゲートウェイパークをビジネス拠点として選んだリーディングカンパニー",
+    "breadcrumb1": "概要",
+    "breadcrumb2": "入居企業",
+    "metaTitle": "入居企業",
+    "metaDescription": "スービックベイ自由港区のスービックベイゲートウェイパークをビジネス拠点として選んだリーディングカンパニー。",
+    "locators": [
+      {
+        "id": "wistron-corporation",
+        "industry": "電子機器製造",
+        "description": "コンピューター、ノートパソコン、電子部品の世界有数のOEM/ODMメーカー。台湾証券取引所に上場。",
+        "country": "台湾"
+      },
+      {
+        "id": "taian-technologies",
+        "industry": "テクノロジー製造",
+        "description": "世界市場向け精密部品およびテクノロジー製品の大手メーカー。",
+        "country": "台湾"
+      },
+      {
+        "id": "taiwan-hitachi",
+        "industry": "電子/製造",
+        "description": "日立と台湾パートナーとの合弁企業。電子部品および家庭用電化製品を製造。",
+        "country": "台湾"
+      },
+      {
+        "id": "teco-electric",
+        "industry": "産業機器",
+        "description": "電動機、発電、家庭用電化製品の世界的リーダー。台湾証券取引所に上場。",
+        "country": "台湾"
+      },
+      {
+        "id": "tong-lung-metal",
+        "industry": "金属加工",
+        "description": "世界の建設・製造セクター向け金属部品、ハードウェア、産業部品のトップメーカー。",
+        "country": "台湾"
+      }
+    ],
+    "cta": {
+      "title": "これらの業界リーダーに加わりませんか？",
+      "description": "利用可能なスペースと、スービックベイゲートウェイパークに立地することでお客様のビジネスがどのように利益を得られるかについて、今すぐお問い合わせください。",
+      "buttonText": "今すぐ問い合わせ"
+    }
+  },
+  "ko": {
+    "badge": "입주 기업",
+    "title": "입주 기업",
+    "subtitle": "수빅 베이 게이트웨이 파크를 선호 비즈니스 입지로 선택한 선도 기업",
+    "breadcrumb1": "회사 소개",
+    "breadcrumb2": "입주 기업",
+    "metaTitle": "입주 기업",
+    "metaDescription": "수빅 베이 자유무역지대에 위치한 수빅 베이 게이트웨이 파크를 선호 비즈니스 입지로 선택한 선도 기업.",
+    "locators": [
+      {
+        "id": "wistron-corporation",
+        "industry": "전자 제조",
+        "description": "컴퓨터, 노트북 및 전자 부품의 세계적 선도 OEM/ODM 제조업체 중 하나. 대만 증권 거래소 상장.",
+        "country": "대만"
+      },
+      {
+        "id": "taian-technologies",
+        "industry": "기술 제조",
+        "description": "글로벌 시장을 위한 정밀 부품 및 기술 제품의 선도적 제조업체.",
+        "country": "대만"
+      },
+      {
+        "id": "taiwan-hitachi",
+        "industry": "전자/제조",
+        "description": "히타치와 대만 파트너 간의 합작 투자 회사로, 전자 부품 및 가전 제품을 제조.",
+        "country": "대만"
+      },
+      {
+        "id": "teco-electric",
+        "industry": "산업 장비",
+        "description": "전기 모터, 발전 및 가전 분야의 글로벌 리더. 대만 증권 거래소 상장.",
+        "country": "대만"
+      },
+      {
+        "id": "tong-lung-metal",
+        "industry": "금속 가공",
+        "description": "글로벌 건설 및 제조 분야를 위한 금속 부품, 하드웨어 및 산업 부품의 프리미어 제조업체.",
+        "country": "대만"
+      }
+    ],
+    "cta": {
+      "title": "이 업계 리더들과 함께하고 싶으신가요?",
+      "description": "이용 가능한 공간과 귀사의 비즈니스가 수빅 베이 게이트웨이 파크에 입지함으로써 얻을 수 있는 혜택에 대해 지금 문의하십시오.",
+      "buttonText": "지금 문의"
+    }
   }
 }

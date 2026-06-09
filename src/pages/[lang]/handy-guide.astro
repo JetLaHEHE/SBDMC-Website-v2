@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
-import handyGuideTranslations from "../data/translations/handy-guide.json";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../../i18n";
+import handyGuideTranslations from "../../data/translations/handy-guide.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;

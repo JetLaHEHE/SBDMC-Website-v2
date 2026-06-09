@@ -1,9 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../../i18n";
 
-import galleryTranslations from "../data/translations/gallery.json";
+import galleryTranslations from "../../data/translations/gallery.json";
 
 const galleryImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/gallery/*.{jpg,jpeg,png}', { eager: true });
 const images = Object.values(galleryImages).map(m => m.default);

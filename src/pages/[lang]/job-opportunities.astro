@@ -1,12 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import jobs from "../data/jobs.json";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
-import jobsTranslations from "../data/translations/jobs.json";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import jobs from "../../data/jobs.json";
+import { getStaticPaths, getLangFromParams, getLangPrefix, type LangCode, t } from "../../i18n";
+import jobsTranslations from "../../data/translations/jobs.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
 const jt = t(jobsTranslations, lang);
 ---
 
@@ -40,7 +41,7 @@ const jt = t(jobsTranslations, lang);
               </div>
             </div>
             {job.status === "open" && (
-              <a href="/contact" class="btn-primary shrink-0 text-center text-sm">{jt.applyNow}</a>
+              <a href={langPrefix + "/contact"} class="btn-primary shrink-0 text-center text-sm">{jt.applyNow}</a>
             )}
           </div>
         </div>

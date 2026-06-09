@@ -1,10 +1,11 @@
 ---
 import contact from "../data/contact.json";
-import { t, type LangCode } from "../i18n";
+import { getLangPrefix, t, type LangCode } from "../i18n";
 import footerTranslations from "../data/translations/footer.json";
 
 const { lang = "en" } = Astro.props as { lang?: LangCode };
 const ft = t(footerTranslations, lang);
+const langPrefix = getLangPrefix(lang);
 ---
 
 <footer class="bg-primary-800 text-gray-400">
@@ -23,7 +24,7 @@ const ft = t(footerTranslations, lang);
         <ul class="space-y-2">
           {ft.quickLinks.map((link) => (
             <li>
-              <a href={link.href} class="text-sm transition-all hover:text-white">{link.label}</a>
+              <a href={langPrefix + link.href} class="text-sm transition-all hover:text-white">{link.label}</a>
             </li>
           ))}
         </ul>
@@ -34,7 +35,7 @@ const ft = t(footerTranslations, lang);
         <ul class="space-y-2">
           {ft.services.map((link) => (
             <li>
-              <a href={link.href} class="text-sm transition-all hover:text-white">{link.label}</a>
+              <a href={langPrefix + link.href} class="text-sm transition-all hover:text-white">{link.label}</a>
             </li>
           ))}
         </ul>
@@ -69,7 +70,7 @@ const ft = t(footerTranslations, lang);
       <p class="text-sm text-gray-500">&copy; {new Date().getFullYear()} SBDMC, Inc. {ft.copyright}</p>
       <div class="flex items-center gap-4">
         {ft.legal?.map((link) => (
-          <a href={link.href} class="text-sm text-gray-500 transition-all hover:text-white">{link.label}</a>
+          <a href={langPrefix + link.href} class="text-sm text-gray-500 transition-all hover:text-white">{link.label}</a>
         ))}
       </div>
       <a href="https://www.facebook.com/sbdmc/" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-gray-500 transition-all hover:bg-accent-600 hover:text-white" aria-label={ft.facebookLabel}>

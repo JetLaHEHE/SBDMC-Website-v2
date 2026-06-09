@@ -41,5 +41,177 @@
         "link": { "text": "Visit Helpdesk" }
       }
     ]
+  },
+  "zh": {
+    "badge": "服務",
+    "title": "商業服務",
+    "subtitle": "為您的業務運營提供全面支援",
+    "breadcrumb1": "產品與服務",
+    "breadcrumb2": "商業服務",
+    "metaTitle": "商業服務",
+    "metaDescription": "蘇比克灣門戶工業園區為進駐企業和投資者提供的全面業務支援服務。",
+    "services": [
+      {
+        "id": "registration-assistance",
+        "title": "註冊協助",
+        "description": "協助處理向SBMA及其他機構的商業註冊、許可證和牌照申請。"
+      },
+      {
+        "id": "utility-connection",
+        "title": "公共設施連接",
+        "description": "協助連接園區內的電力、供水和電信服務。"
+      },
+      {
+        "id": "security-services",
+        "title": "安保服務",
+        "description": "24/7安全監控、門禁管制和巡邏服務，保障您的業務安全。"
+      },
+      {
+        "id": "maintenance-support",
+        "title": "維護支援",
+        "description": "公共區域、道路和園區設施的定期維護，營造舒適的工作環境。"
+      },
+      {
+        "id": "e-billing",
+        "title": "電子帳單",
+        "description": "便捷的月度帳單線上支付系統。",
+        "link": { "text": "進入入口網站" }
+      },
+      {
+        "id": "helpdesk-support",
+        "title": "服務台支援",
+        "description": "專為進駐企業設立的服務台，處理問題、諮詢和支援請求。",
+        "link": { "text": "前往服務台" }
+      }
+    ]
+  },
+  "tl": {
+    "badge": "Mga Serbisyo",
+    "title": "Mga Serbisyo sa Negosyo",
+    "subtitle": "Komprehensibong suporta para sa iyong mga operasyon sa negosyo",
+    "breadcrumb1": "Mga Produkto at Serbisyo",
+    "breadcrumb2": "Mga Serbisyo sa Negosyo",
+    "metaTitle": "Mga Serbisyo sa Negosyo",
+    "metaDescription": "Komprehensibong business support services na available sa Subic Bay Gateway Park para sa mga lokator at investor.",
+    "services": [
+      {
+        "id": "registration-assistance",
+        "title": "Tulong sa Pagpaparehistro",
+        "description": "Tulong sa business registration, permits, at licensing requirements sa SBMA at iba pang ahensya."
+      },
+      {
+        "id": "utility-connection",
+        "title": "Koneksyon ng Utility",
+        "description": "Tulong sa koneksyon sa kuryente, tubig, at telecommunications services sa loob ng parke."
+      },
+      {
+        "id": "security-services",
+        "title": "Mga Serbisyo sa Seguridad",
+        "description": "24/7 security monitoring, access control, at patrol services para sa kaligtasan ng iyong negosyo."
+      },
+      {
+        "id": "maintenance-support",
+        "title": "Suporta sa Pagpapanatili",
+        "description": "Regular na pagpapanatili ng common areas, kalsada, at park facilities para sa kaaya-ayang working environment."
+      },
+      {
+        "id": "e-billing",
+        "title": "E-Billing",
+        "description": "Maginhawang online billing at payment system para sa iyong monthly statements.",
+        "link": { "text": "I-access ang Portal" }
+      },
+      {
+        "id": "helpdesk-support",
+        "title": "Suporta sa Helpdesk",
+        "description": "Dedikadong helpdesk para sa mga concerns, inquiries, at support requests ng mga lokator.",
+        "link": { "text": "Bisitahin ang Helpdesk" }
+      }
+    ]
+  },
+  "ja": {
+    "badge": "サービス",
+    "title": "ビジネスサービス",
+    "subtitle": "お客様のビジネス運営を包括的にサポート",
+    "breadcrumb1": "製品とサービス",
+    "breadcrumb2": "ビジネスサービス",
+    "metaTitle": "ビジネスサービス",
+    "metaDescription": "スービックベイゲートウェイパークで入居企業と投資家に提供する包括的なビジネスサポートサービス。",
+    "services": [
+      {
+        "id": "registration-assistance",
+        "title": "登録支援",
+        "description": "SBMAおよびその他の機関への事業登録、許可、ライセンス取得を支援。"
+      },
+      {
+        "id": "utility-connection",
+        "title": "ユーティリティ接続",
+        "description": "パーク内の電力、水道、通信サービスへの接続を支援。"
+      },
+      {
+        "id": "security-services",
+        "title": "セキュリティサービス",
+        "description": "お客様のビジネスの安全のための24時間体制のセキュリティ監視、入退室管理、パトロールサービス。"
+      },
+      {
+        "id": "maintenance-support",
+        "title": "メンテナンスサポート",
+        "description": "快適な作業環境のための共有エリア、道路、パーク施設の定期的なメンテナンス。"
+      },
+      {
+        "id": "e-billing",
+        "title": "電子請求",
+        "description": "月次明細書の便利なオンライン請求・支払いシステム。",
+        "link": { "text": "ポータルにアクセス" }
+      },
+      {
+        "id": "helpdesk-support",
+        "title": "ヘルプデスクサポート",
+        "description": "入居企業の懸念事項、問い合わせ、サポートリクエスト専用のヘルプデスク。",
+        "link": { "text": "ヘルプデスクへ" }
+      }
+    ]
+  },
+  "ko": {
+    "badge": "서비스",
+    "title": "비즈니스 서비스",
+    "subtitle": "비즈니스 운영을 위한 포괄적인 지원",
+    "breadcrumb1": "제품 및 서비스",
+    "breadcrumb2": "비즈니스 서비스",
+    "metaTitle": "비즈니스 서비스",
+    "metaDescription": "수빅 베이 게이트웨이 파크에서 입주 기업과 투자자를 위해 제공하는 포괄적인 비즈니스 지원 서비스.",
+    "services": [
+      {
+        "id": "registration-assistance",
+        "title": "등록 지원",
+        "description": "SBMA 및 기타 기관에 대한 사업자 등록, 허가 및 라이선스 취득 지원."
+      },
+      {
+        "id": "utility-connection",
+        "title": "유틸리티 연결",
+        "description": "파크 내 전력, 수도 및 통신 서비스 연결 지원."
+      },
+      {
+        "id": "security-services",
+        "title": "보안 서비스",
+        "description": "비즈니스 안전을 위한 24/7 보안 모니터링, 출입 통제 및 순찰 서비스."
+      },
+      {
+        "id": "maintenance-support",
+        "title": "유지 보수 지원",
+        "description": "쾌적한 작업 환경을 위한 공용 구역, 도로 및 파크 시설의 정기 유지 보수."
+      },
+      {
+        "id": "e-billing",
+        "title": "전자 청구",
+        "description": "월별 명세서를 위한 편리한 온라인 청구 및 결제 시스템.",
+        "link": { "text": "포털 접속" }
+      },
+      {
+        "id": "helpdesk-support",
+        "title": "헬프데스크 지원",
+        "description": "입주 기업의 문의 사항, 질문 및 지원 요청을 위한 전담 헬프데스크.",
+        "link": { "text": "헬프데스크 방문" }
+      }
+    ]
   }
 }

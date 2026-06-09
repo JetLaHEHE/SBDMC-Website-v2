@@ -7,7 +7,7 @@ export interface Props {
 }
 
 const { currentLang, currentPath } = Astro.props;
-const cleanPath = currentPath.replace(/^\/(zh|tl|ja|ko)\/?/, "/") || "/";
+const cleanPath = currentPath.replace(/^\/(en|zh|tl|ja|ko)\/?/, "/") || "/";
 ---
 
 <div class="relative group">

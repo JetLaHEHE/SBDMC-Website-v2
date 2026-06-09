@@ -1,5 +1,5 @@
 ---
-import { t, type LangCode } from "../i18n";
+import { getLangPrefix, t, type LangCode } from "../i18n";
 import breadcrumbTranslations from "../data/translations/breadcrumb.json";
 
 export interface Props {
@@ -8,19 +8,20 @@ export interface Props {
 }
 const { pages, lang = "en" } = Astro.props;
 const bt = t(breadcrumbTranslations, lang);
+const langPrefix = getLangPrefix(lang);
 ---
 
 <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-100">
   <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
     <ol class="flex items-center gap-2 text-sm">
       <li>
-        <a href="/" class="text-gray-500 transition-all hover:text-primary-500">{bt.home}</a>
+        <a href={langPrefix + "/"} class="text-gray-500 transition-all hover:text-primary-500">{bt.home}</a>
       </li>
       {pages.map((page, i) => (
         <li class="flex items-center gap-2">
           <svg aria-hidden="true" class="h-3.5 w-3.5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
           {page.href ? (
-            <a href={page.href} class="text-gray-500 transition-all hover:text-primary-500">{page.label}</a>
+            <a href={langPrefix + page.href} class="text-gray-500 transition-all hover:text-primary-500">{page.label}</a>
           ) : (
             <span class="text-primary-500 font-medium">{page.label}</span>
           )}

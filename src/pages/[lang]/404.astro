@@ -1,7 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { getStaticPaths, getLangFromParams, getLangPrefix, t, type LangCode } from "../i18n";
-import notFoundTranslations from "../data/translations/not-found.json";
+import Layout from "../../layouts/Layout.astro";
+import { getStaticPaths, getLangFromParams, getLangPrefix, t, type LangCode } from "../../i18n";
+import notFoundTranslations from "../../data/translations/not-found.json";
 export { getStaticPaths };
 
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
@@ -14,14 +14,12 @@ const nf = t(notFoundTranslations, lang);
       <div class="mb-6 text-8xl font-black text-primary-500">{nf.code}</div>
       <h1 class="mb-4 text-3xl font-bold text-primary-500">{nf.title}</h1>
       <p class="mb-8 text-gray-500">{nf.message}</p>
-      <a href="/" class="btn-primary">{nf.backHome}</a>
+      <a href={getLangPrefix(lang) + "/"} class="btn-primary">{nf.backHome}</a>
       <div class="mt-10">
         <p class="mb-4 text-sm font-medium text-gray-400">{nf.suggestedHeading}</p>
         <div class="flex flex-wrap justify-center gap-3">
           {nf.suggestedLinks.map((link) => (
-            <a href={getLangPrefix(lang) + link.href} class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">
-              {link.label}
-            </a>
+            <a href={getLangPrefix(lang) + link.href} class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-primary-500 hover:text-primary-500">{link.label}</a>
           ))}
         </div>
       </div>

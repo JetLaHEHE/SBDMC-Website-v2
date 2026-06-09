@@ -56,5 +56,237 @@
         }
       }
     ]
+  },
+  "zh": {
+    "badge": "法律條款",
+    "title": "隱私權政策",
+    "subtitle": "我們如何收集、使用和保護您的資訊",
+    "lastUpdated": "最後更新：2026年6月",
+    "sections": [
+      {
+        "heading": "1. 我們收集的資訊",
+        "paragraphs": [
+          "我們收集您直接提供給我們的資訊，例如當您填寫聯絡表單、提交詢問或通過電子郵件或電話與我們溝通時。這些資訊可能包括您的姓名、電子郵件地址、電話號碼、公司名稱以及您選擇分享的任何其他資訊。",
+          "當您訪問我們的網站時，我們也會自動收集某些技術資訊，包括您的IP地址、瀏覽器類型、操作系統、來源URL和訪問的頁面。"
+        ]
+      },
+      {
+        "heading": "2. 我們如何使用您的資訊",
+        "paragraphs": [
+          "我們將收集的資訊用於："
+        ],
+        "list": [
+          "回覆您的詢問並提供有關我們服務的資訊",
+          "改進我們的網站和服務",
+          "分析網站使用情況和趨勢",
+          "遵守法律義務"
+        ]
+      },
+      {
+        "heading": "3. 資料保護",
+        "paragraphs": [
+          "我們實施合理的安全措施來保護您的個人資訊，防止未經授權的訪問、更改、揭露或破壞。然而，網際網路上的傳輸或電子儲存方法並非100%安全。"
+        ]
+      },
+      {
+        "heading": "4. 第三方服務",
+        "paragraphs": [
+          "我們可能使用第三方服務（例如Google Analytics）來分析網站流量。這些服務可能會收集您的瀏覽器作為網頁請求一部分而發送的資訊，包括Cookie和您的IP地址。我們不會將您的個人資訊出售給第三方。"
+        ]
+      },
+      {
+        "heading": "5. Cookie",
+        "paragraphs": [
+          "我們的網站使用Cookie來增強您的瀏覽體驗。您可以通過瀏覽器偏好設定來控制Cookie設置。有關更多詳細資訊，請參閱我們的Cookie同意設定。"
+        ]
+      },
+      {
+        "heading": "6. 聯絡我們",
+        "paragraphs": [
+          "如果您對本隱私權政策有任何疑問，請通過以下方式與我們聯絡："
+        ],
+        "contact": {
+          "name": "SBDMC, Inc. 行政辦公室",
+          "address": "Argonaut Highway 與 Rizal Highway 交叉口",
+          "address2": "蘇比克灣門戶工業園區，蘇比克灣自由港區 2222",
+          "email": "電子郵件：inquiry@sbdmc.com",
+          "phone": "電話：(047) 252-3456"
+        }
+      }
+    ]
+  },
+  "tl": {
+    "badge": "Legal",
+    "title": "Patakaran sa Privacy",
+    "subtitle": "Paano namin kinokolekta, ginagamit, at pinoprotektahan ang iyong impormasyon",
+    "lastUpdated": "Huling na-update: Hunyo 2026",
+    "sections": [
+      {
+        "heading": "1. Impormasyong Aming Kinokolekta",
+        "paragraphs": [
+          "Kinokolekta namin ang impormasyong direkta mong ibinibigay sa amin, tulad ng kapag pinunan mo ang isang contact form, nagsumite ng inquiry, o nakipag-ugnayan sa amin sa pamamagitan ng email o telepono. Maaaring kabilang dito ang iyong pangalan, email address, numero ng telepono, pangalan ng kumpanya, at anumang iba pang impormasyon na nais mong ibahagi.",
+          "Awtomatiko rin kaming kumokolekta ng ilang teknikal na impormasyon kapag binisita mo ang aming website, kabilang ang iyong IP address, uri ng browser, operating system, referring URL, at mga pahinang binisita."
+        ]
+      },
+      {
+        "heading": "2. Paano Namin Ginagamit ang Iyong Impormasyon",
+        "paragraphs": [
+          "Ginagamit namin ang impormasyong aming kinokolekta upang:"
+        ],
+        "list": [
+          "Tumugon sa iyong mga inquiry at magbigay ng impormasyon tungkol sa aming mga serbisyo",
+          "Pagbutihin ang aming website at serbisyo",
+          "Suriin ang paggamit at trend ng website",
+          "Sumunod sa mga legal na obligasyon"
+        ]
+      },
+      {
+        "heading": "3. Proteksyon ng Data",
+        "paragraphs": [
+          "Nagpapatupad kami ng makatwirang mga hakbang sa seguridad upang protektahan ang iyong personal na impormasyon mula sa hindi awtorisadong pag-access, pagbabago, pagsisiwalat, o pagkasira. Gayunpaman, walang paraan ng pagpapadala sa Internet o electronic storage ang 100% na ligtas."
+        ]
+      },
+      {
+        "heading": "4. Mga Serbisyo ng Third-Party",
+        "paragraphs": [
+          "Maaari kaming gumamit ng mga third-party na serbisyo tulad ng Google Analytics upang suriin ang trapiko sa website. Ang mga serbisyong ito ay maaaring mangolekta ng impormasyong ipinadala ng iyong browser bilang bahagi ng isang web page request, kabilang ang cookies at iyong IP address. Hindi namin ibinebenta ang iyong personal na impormasyon sa mga third-party."
+        ]
+      },
+      {
+        "heading": "5. Cookies",
+        "paragraphs": [
+          "Ang aming website ay gumagamit ng cookies upang mapahusay ang iyong karanasan sa pag-browse. Maaari mong kontrolin ang mga setting ng cookie sa pamamagitan ng iyong browser preferences. Para sa karagdagang detalye, mangyaring sumangguni sa aming mga setting ng Cookie Consent."
+        ]
+      },
+      {
+        "heading": "6. Makipag-ugnayan sa Amin",
+        "paragraphs": [
+          "Kung mayroon kang anumang mga katanungan tungkol sa Patakarang ito sa Privacy, mangyaring makipag-ugnayan sa amin sa:"
+        ],
+        "contact": {
+          "name": "SBDMC, Inc. Admin Office",
+          "address": "Argonaut Highway cor. Rizal Highway",
+          "address2": "Subic Bay Gateway Park, Subic Bay Freeport Zone 2222",
+          "email": "Email: inquiry@sbdmc.com",
+          "phone": "Telepono: (047) 252-3456"
+        }
+      }
+    ]
+  },
+  "ja": {
+    "badge": "法的規約",
+    "title": "プライバシーポリシー",
+    "subtitle": "お客様の情報の収集、使用、保護について",
+    "lastUpdated": "最終更新日：2026年6月",
+    "sections": [
+      {
+        "heading": "1. 収集する情報",
+        "paragraphs": [
+          "当社は、お問い合わせフォームへの記入、お問い合わせの送信、電子メールや電話での連絡など、お客様が直接当社に提供する情報を収集します。これには、お客様の氏名、電子メールアドレス、電話番号、会社名、およびお客様が共有することを選択したその他の情報が含まれる場合があります。",
+          "また、お客様が当社のウェブサイトにアクセスする際に、IPアドレス、ブラウザの種類、オペレーティングシステム、参照元URL、訪問したページなどの特定の技術情報を自動的に収集します。"
+        ]
+      },
+      {
+        "heading": "2. 情報の使用目的",
+        "paragraphs": [
+          "当社は収集した情報を以下の目的で使用します："
+        ],
+        "list": [
+          "お問い合わせへの回答およびサービスの情報提供",
+          "ウェブサイトとサービスの改善",
+          "ウェブサイトの利用状況と傾向の分析",
+          "法的義務の遵守"
+        ]
+      },
+      {
+        "heading": "3. データ保護",
+        "paragraphs": [
+          "当社は、お客様の個人情報を不正アクセス、改ざん、開示、または破壊から保護するために合理的なセキュリティ対策を実施しています。ただし、インターネット上の送信方法や電子保存方法は100%安全ではありません。"
+        ]
+      },
+      {
+        "heading": "4. 第三者サービス",
+        "paragraphs": [
+          "当社は、ウェブサイトのトラフィックを分析するためにGoogle Analyticsなどの第三者サービスを利用する場合があります。これらのサービスは、CookieやIPアドレスなど、ブラウザがウェブページリクエストの一部として送信する情報を収集する場合があります。当社はお客様の個人情報を第三者に販売することはありません。"
+        ]
+      },
+      {
+        "heading": "5. Cookie",
+        "paragraphs": [
+          "当社のウェブサイトでは、ブラウジング体験を向上させるためにCookieを使用しています。ブラウザの設定でCookieを制御できます。詳細については、Cookie同意設定をご参照ください。"
+        ]
+      },
+      {
+        "heading": "6. お問い合わせ",
+        "paragraphs": [
+          "本プライバシーポリシーについてご質問がある場合は、以下までお問い合わせください："
+        ],
+        "contact": {
+          "name": "SBDMC, Inc. 管理事務所",
+          "address": "Argonaut Highway cor. Rizal Highway",
+          "address2": "Subic Bay Gateway Park, Subic Bay Freeport Zone 2222",
+          "email": "メール：inquiry@sbdmc.com",
+          "phone": "電話：(047) 252-3456"
+        }
+      }
+    ]
+  },
+  "ko": {
+    "badge": "법적 고지",
+    "title": "개인정보 처리방침",
+    "subtitle": "정보 수집, 이용 및 보호 방법",
+    "lastUpdated": "최종 업데이트: 2026년 6월",
+    "sections": [
+      {
+        "heading": "1. 수집하는 정보",
+        "paragraphs": [
+          "당사는 문의 양식을 작성하거나, 이메일 또는 전화로 당사에 연락할 때 귀하가 직접 제공하는 정보를 수집합니다. 여기에는 귀하의 이름, 이메일 주소, 전화번호, 회사명 및 귀하가 공유하기로 선택한 기타 정보가 포함될 수 있습니다.",
+          "또한 귀하가 당사 웹사이트를 방문할 때 IP 주소, 브라우저 유형, 운영 체제, 참조 URL 및 방문한 페이지를 포함한 특정 기술 정보를 자동으로 수집합니다."
+        ]
+      },
+      {
+        "heading": "2. 정보 이용 방법",
+        "paragraphs": [
+          "당사는 수집한 정보를 다음과 같은 목적으로 사용합니다:"
+        ],
+        "list": [
+          "문의에 응답하고 서비스에 대한 정보 제공",
+          "웹사이트 및 서비스 개선",
+          "웹사이트 사용 및 트렌드 분석",
+          "법적 의무 준수"
+        ]
+      },
+      {
+        "heading": "3. 데이터 보호",
+        "paragraphs": [
+          "당사는 귀하의 개인정보를 무단 접근, 변경, 공개 또는 파기로부터 보호하기 위해 합리적인 보안 조치를 시행합니다. 그러나 인터넷을 통한 전송이나 전자 저장 방식은 100% 안전하지 않습니다."
+        ]
+      },
+      {
+        "heading": "4. 제3자 서비스",
+        "paragraphs": [
+          "당사는 웹사이트 트래픽을 분석하기 위해 Google Analytics와 같은 제3자 서비스를 사용할 수 있습니다. 이러한 서비스는 웹페이지 요청의 일부로 브라우저가 전송하는 정보(쿠키 및 IP 주소 포함)를 수집할 수 있습니다. 당사는 귀하의 개인정보를 제3자에게 판매하지 않습니다."
+        ]
+      },
+      {
+        "heading": "5. 쿠키",
+        "paragraphs": [
+          "당사 웹사이트는 브라우징 경험을 향상시키기 위해 쿠키를 사용합니다. 브라우저 설정을 통해 쿠키 설정을 제어할 수 있습니다. 자세한 내용은 당사의 쿠키 동의 설정을 참조하시기 바랍니다."
+        ]
+      },
+      {
+        "heading": "6. 문의하기",
+        "paragraphs": [
+          "본 개인정보 처리방침에 관한 문의사항이 있으시면 다음 연락처로 문의해 주십시오:"
+        ],
+        "contact": {
+          "name": "SBDMC, Inc. 관리 사무소",
+          "address": "Argonaut Highway cor. Rizal Highway",
+          "address2": "Subic Bay Gateway Park, Subic Bay Freeport Zone 2222",
+          "email": "이메일: inquiry@sbdmc.com",
+          "phone": "전화: (047) 252-3456"
+        }
+      }
+    ]
   }
 }

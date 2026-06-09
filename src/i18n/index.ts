@@ -1,6 +1,6 @@
-export function getStaticPaths(): { params: { lang?: string } }[] {
+export function getStaticPaths(): { params: { lang: string } }[] {
   return LANGUAGES.map((l) => ({
-    params: { lang: l.code === "en" ? undefined : l.code },
+    params: { lang: l.code },
   }));
 }
 
@@ -26,13 +26,13 @@ export function t<T extends Record<string, any>>(
   return translations[lang] ?? translations["en"];
 }
 
-const nonDefaultCodes = LANGUAGES.filter((l) => l.code !== "en").map((l) => l.code).join("|");
+const allCodes = LANGUAGES.map((l) => l.code).join("|");
 
 export function getHreflangs(
   currentPath: string,
   baseUrl: string,
 ): { lang: string; href: string }[] {
-  const re = new RegExp(`^/(${nonDefaultCodes})\\/?`);
+  const re = new RegExp(`^/(${allCodes})\\/?`);
   const path = currentPath.replace(re, "/");
   return [
     ...LANGUAGES.map((l) => ({
@@ -44,5 +44,5 @@ export function getHreflangs(
 }
 
 export function getLangPrefix(lang: LangCode): string {
-  return lang === "en" ? "" : `/${lang}`;
+  return `/${lang}`;
 }

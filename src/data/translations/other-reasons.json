@@ -33,5 +33,145 @@
         "description": "24/7 security monitoring, emergency response systems, and comprehensive safety protocols ensure your business operates securely."
       }
     ]
+  },
+  "zh": {
+    "badge": "為何選擇我們",
+    "title": "更多優勢",
+    "subtitle": "選擇世正開發股份有限公司為您企業服務的額外優勢",
+    "breadcrumb1": "關於我們",
+    "breadcrumb2": "更多優勢",
+    "metaTitle": "更多優勢",
+    "metaDescription": "在自由港區選擇蘇比克灣門戶工業園區作為您業務地點的更多理由。",
+    "advantages": [
+      {
+        "title": "戰略位置",
+        "description": "位於亞洲最具活力區域的中心，可輕鬆前往主要市場和交通樞紐。"
+      },
+      {
+        "title": "熟練的勞動力",
+        "description": "可從中呂宋地區獲得大量熟練、受過教育且具有成本競爭力的工人。"
+      },
+      {
+        "title": "世界級設施",
+        "description": "現代化基礎設施，包括可靠的電力、供水、光纖電信和24/7安保系統。"
+      },
+      {
+        "title": "成長潛力",
+        "description": "公司成長時無需搬遷 — 亞洲其他地方沒有比蘇比克這裡更好的選擇。"
+      },
+      {
+        "title": "公司形象與客戶信心",
+        "description": "加入緯創、泰安、台灣日立、東元電機和東隆金屬等領先企業 — 均為台灣證券交易所上市的一流公司。"
+      },
+      {
+        "title": "安全與保障",
+        "description": "24/7安全監控、應急響應系統和全面的安全協議確保您的業務安全運營。"
+      }
+    ]
+  },
+  "tl": {
+    "badge": "Bakit Kami Piliin",
+    "title": "Higit Pang Mga Bentahe",
+    "subtitle": "Mga karagdagang benepisyo ng pagpili ng SBDMC, Inc. para sa iyong negosyo",
+    "breadcrumb1": "Bakit Kami",
+    "breadcrumb2": "Higit Pang Mga Bentahe",
+    "metaTitle": "Higit Pang Mga Bentahe",
+    "metaDescription": "Mga karagdagang dahilan kung bakit ang Subic Bay Gateway Park ang tamang pagpipilian para sa iyong negosyo sa Freeport Zone.",
+    "advantages": [
+      {
+        "title": "Estratehikong Lokasyon",
+        "description": "Matatagpuan sa puso ng pinaka-dynamic na rehiyon ng Asya, na may madaling access sa mga pangunahing pamilihan at transportation hubs."
+      },
+      {
+        "title": "Sanay na Manggagawa",
+        "description": "Access sa malaking pool ng skilled, educated, at cost-competitive na manggagawa mula sa Central Luzon."
+      },
+      {
+        "title": "World-Class na Pasilidad",
+        "description": "Modernong imprastraktura kabilang ang maaasahang kuryente, tubig, fiber optic telecom, at 24/7 security system."
+      },
+      {
+        "title": "Potensyal sa Paglago",
+        "description": "Hindi na kailangan ng relocation kapag lumago ang iyong kumpanya — walang mas magandang deal sa ibang lugar sa Asya kundi dito mismo sa Subic."
+      },
+      {
+        "title": "Image ng Kumpanya at Kumpiyansa ng Customer",
+        "description": "Sumali sa mga nangungunang kumpanya tulad ng Wistron, Taian, Taiwan Hitachi, TECO, at Tong Lung — lahat ay first-rate na kumpanya na nakalista sa Taiwan Stock Exchange."
+      },
+      {
+        "title": "Seguridad at Kaligtasan",
+        "description": "24/7 security monitoring, emergency response system, at comprehensive safety protocols ay tinitiyak na ang iyong negosyo ay operates nang ligtas."
+      }
+    ]
+  },
+  "ja": {
+    "badge": "選ばれる理由",
+    "title": "さらなるメリット",
+    "subtitle": "SBDMC株式会社をビジネスパートナーに選ぶ追加のメリット",
+    "breadcrumb1": "選ばれる理由",
+    "breadcrumb2": "さらなるメリット",
+    "metaTitle": "さらなるメリット",
+    "metaDescription": "スービックベイゲートウェイパークが自由港区でのビジネスに最適な選択である追加の理由。",
+    "advantages": [
+      {
+        "title": "戦略的な立地",
+        "description": "アジアで最もダイナミックな地域の中心に位置し、主要市場と交通拠点への容易なアクセスを提供。"
+      },
+      {
+        "title": "熟練した労働力",
+        "description": "中部ルソン地域からの熟練した教育水準の高い、コスト競争力のある労働者の大規模なプールへのアクセス。"
+      },
+      {
+        "title": "世界クラスの施設",
+        "description": "安定した電力、水道、光ファイバー通信、24時間体制のセキュリティシステムを含む近代的なインフラ。"
+      },
+      {
+        "title": "成長の可能性",
+        "description": "会社が成長しても移転の必要なし — アジアの他のどこよりも、ここスービックに勝る条件はありません。"
+      },
+      {
+        "title": "企業イメージと顧客の信頼",
+        "description": "ウィストロン、タイアン、台湾日立、TECO、トンルンなどのリーディングカンパニーに仲間入り — すべて台湾証券取引所に上場する一流企業です。"
+      },
+      {
+        "title": "セキュリティと安全性",
+        "description": "24時間体制のセキュリティ監視、緊急対応システム、包括的な安全プロトコルにより、ビジネスの安全な運営を確保。"
+      }
+    ]
+  },
+  "ko": {
+    "badge": "선택 이유",
+    "title": "추가 이점",
+    "subtitle": "SBDMC, Inc.를 비즈니스 파트너로 선택함으로써 얻는 추가적인 혜택",
+    "breadcrumb1": "선택 이유",
+    "breadcrumb2": "추가 이점",
+    "metaTitle": "추가 이점",
+    "metaDescription": "수빅 베이 게이트웨이 파크가 자유무역지대에서 귀사의 비즈니스에 가장 적합한 선택인 추가 이유.",
+    "advantages": [
+      {
+        "title": "전략적 입지",
+        "description": "아시아에서 가장 역동적인 지역의 중심부에 위치하며 주요 시장과 교통 허브에 쉽게 접근할 수 있습니다."
+      },
+      {
+        "title": "숙련된 인력",
+        "description": "중부 루손 지역의 숙련되고 교육받은 비용 경쟁력 있는 대규모 인력 풀에 접근 가능."
+      },
+      {
+        "title": "세계적 수준의 시설",
+        "description": "안정적인 전력, 수도, 광케이블 통신 및 24/7 보안 시스템을 포함한 현대적인 인프라."
+      },
+      {
+        "title": "성장 잠재력",
+        "description": "회사 성장 시 이전 불필요 — 아시아 어디에도 수빅보다 더 나은 조건은 없습니다."
+      },
+      {
+        "title": "기업 이미지 및 고객 신뢰",
+        "description": "Wistron, Taian, Taiwan Hitachi, TECO, Tong Lung과 같은 선도 기업에 합류하세요 — 모두 대만 증권 거래소에 상장된 일류 기업입니다."
+      },
+      {
+        "title": "보안 및 안전",
+        "description": "24/7 보안 모니터링, 비상 대응 시스템 및 포괄적인 안전 프로토콜이 귀사의 비즈니스 안전한 운영을 보장합니다."
+      }
+    ]
   }
 }

@@ -1,28 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import faqData from "../data/faq.json";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
-import faqTranslations from "../data/translations/faq.json";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import faqData from "../../data/faq.json";
+import { getStaticPaths, getLangFromParams, type LangCode, t } from "../../i18n";
+import faqTranslations from "../../data/translations/faq.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
 const ft = t(faqTranslations, lang);
 const faqCategories = ft.categories;
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqCategories.flatMap((cat) =>
-    cat.items.map((item) => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a,
-      },
-    })),
-  ),
-};
 ---
 
 <Layout title={ft.metaTitle} description={ft.metaDescription} lang={lang}>
@@ -36,7 +22,62 @@ const faqSchema = {
 
   <Breadcrumb pages={[{ label: ft.breadcrumb1, href: "/faq" }, { label: ft.breadcrumb2 }]} lang={lang} />
 
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  <script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Subic Bay Gateway Park?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subic Bay Gateway Park (SBGP) is a 45-hectare industrial park located within the Subic Bay Freeport Zone, developed and operated by SBDMC, Inc. It is designed for light manufacturing, logistics, warehousing, and BPO operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of businesses can locate in SBGP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SBGP welcomes a wide range of industries including light manufacturing, logistics and warehousing, business process outsourcing (BPO), commercial establishments, and service-oriented businesses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the tax incentives available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Locators can enjoy income tax holidays (up to 6 years), reduced tax rates (5% on gross income after holiday), duty-free importation of capital equipment and raw materials, and exemption from local government taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can foreign companies locate in SBGP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, foreign companies can locate in SBGP and may enjoy up to 100% foreign ownership under the Subic Bay Freeport Zone incentives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I apply for a lease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You may contact our team through the Contact Us page or visit our office at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What infrastructure is available in the park?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The park offers reliable power supply, adequate water system, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage systems, and waste management services."
+      }
+    }
+  ]
+}
+</script>
 
   <section aria-label="Frequently asked questions" class="py-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

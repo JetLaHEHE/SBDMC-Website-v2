@@ -58,5 +58,245 @@
         "category": "Regulatory"
       }
     ]
+  },
+  "zh": {
+    "badge": "政府連結",
+    "title": "政府連結",
+    "subtitle": "瀏覽與蘇比克灣自由港區相關的重要政府機構和資源",
+    "breadcrumb1": "關於我們",
+    "breadcrumb2": "政府連結",
+    "metaTitle": "政府連結",
+    "metaDescription": "瀏覽與蘇比克灣自由港區進駐企業相關的重要政府機構和資源。",
+    "visitText": "訪問網站",
+    "links": [
+      {
+        "id": "sbma",
+        "name": "蘇比克灣管理局",
+        "description": "蘇比克灣自由港區的管理機構，負責自由港的開發、規範和管理。",
+        "category": "監管"
+      },
+      {
+        "id": "dti",
+        "name": "貿易與工業部",
+        "description": "菲律賓政府的行政部門，負責拓展、推廣和發展國家的貿易和工業。",
+        "category": "貿易與工業"
+      },
+      {
+        "id": "peza",
+        "name": "菲律賓經濟特區管理局",
+        "description": "在菲律賓各地推廣和管理經濟特區，為投資者提供財政和非財政優惠。",
+        "category": "投資"
+      },
+      {
+        "id": "boc",
+        "name": "海關局",
+        "description": "負責關務操作、貿易便利化和進口關稅徵收的菲律賓政府機構。",
+        "category": "貿易與工業"
+      },
+      {
+        "id": "bi",
+        "name": "移民局",
+        "description": "負責規範和管理外國人出入境及在菲律賓居留的政府機構。",
+        "category": "監管"
+      },
+      {
+        "id": "sec",
+        "name": "證券交易委員會",
+        "description": "負責公司及資本市場參與者註冊和監管的國家政府機構。",
+        "category": "監管"
+      },
+      {
+        "id": "dof",
+        "name": "財政部",
+        "description": "菲律賓政府主要的經濟和金融管理機構。",
+        "category": "投資"
+      },
+      {
+        "id": "dole",
+        "name": "勞工與就業部",
+        "description": "負責菲律賓就業政策、勞動標準和勞工福利的政府機構。",
+        "category": "監管"
+      }
+    ]
+  },
+  "tl": {
+    "badge": "Mga Link ng Pamahalaan",
+    "title": "Mga Link ng Pamahalaan",
+    "subtitle": "I-access ang mga pangunahing ahensya ng pamahalaan at resources na may kaugnayan sa Subic Bay Freeport Zone",
+    "breadcrumb1": "Bakit Kami",
+    "breadcrumb2": "Mga Link ng Pamahalaan",
+    "metaTitle": "Mga Link ng Pamahalaan",
+    "metaDescription": "I-access ang mga pangunahing ahensya ng pamahalaan at resources na may kaugnayan sa mga lokator sa Subic Bay Freeport Zone.",
+    "visitText": "Bisitahin ang Website",
+    "links": [
+      {
+        "id": "sbma",
+        "name": "Subic Bay Metropolitan Authority",
+        "description": "Ang namamahalang katawan ng Subic Bay Freeport Zone. Responsable para sa development, regulation, at management ng freeport.",
+        "category": "Regulatory"
+      },
+      {
+        "id": "dti",
+        "name": "Department of Trade and Industry",
+        "description": "Ang executive department ng pamahalaan ng Pilipinas na may tungkulin na palawakin, i-promote, at paunlarin ang kalakalan at industriya ng bansa.",
+        "category": "Trade at Industriya"
+      },
+      {
+        "id": "peza",
+        "name": "Philippine Economic Zone Authority",
+        "description": "Nagpo-promote at namamahala ng economic zones sa buong Pilipinas, nag-aalok ng fiscal at non-fiscal incentives sa mga investor.",
+        "category": "Investment"
+      },
+      {
+        "id": "boc",
+        "name": "Bureau of Customs",
+        "description": "Ang ahensya ng pamahalaan ng Pilipinas na responsable para sa customs operations, trade facilitation, at collection ng import duties.",
+        "category": "Trade at Industriya"
+      },
+      {
+        "id": "bi",
+        "name": "Bureau of Immigration",
+        "description": "Ang ahensya ng pamahalaan na nagre-regulate at kumokontrol sa entry, stay, at departure ng foreign nationals sa Pilipinas.",
+        "category": "Regulatory"
+      },
+      {
+        "id": "sec",
+        "name": "Securities and Exchange Commission",
+        "description": "Ang national government agency na responsable para sa pagrerehistro at pagre-regulate ng corporations at capital market participants.",
+        "category": "Regulatory"
+      },
+      {
+        "id": "dof",
+        "name": "Department of Finance",
+        "description": "Ang pangunahing economic at financial management institution ng pamahalaan ng Pilipinas.",
+        "category": "Investment"
+      },
+      {
+        "id": "dole",
+        "name": "Department of Labor and Employment",
+        "description": "Ang ahensya ng pamahalaan na responsable para sa employment policies, labor standards, at worker welfare sa Pilipinas.",
+        "category": "Regulatory"
+      }
+    ]
+  },
+  "ja": {
+    "badge": "政府リンク",
+    "title": "政府リンク",
+    "subtitle": "スービックベイ自由港区に関連する主要な政府機関とリソースへのアクセス",
+    "breadcrumb1": "選ばれる理由",
+    "breadcrumb2": "政府リンク",
+    "metaTitle": "政府リンク",
+    "metaDescription": "スービックベイ自由港区の入居企業に関連する主要な政府機関とリソースへのアクセス。",
+    "visitText": "ウェブサイトを見る",
+    "links": [
+      {
+        "id": "sbma",
+        "name": "スービックベイ都市圏機構",
+        "description": "スービックベイ自由港区の運営機関。自由港の開発、規制、管理を担当。",
+        "category": "規制"
+      },
+      {
+        "id": "dti",
+        "name": "貿易産業省",
+        "description": "国の貿易と産業を拡大、促進、発展させることを任務とするフィリピン政府の行政部門。",
+        "category": "貿易と産業"
+      },
+      {
+        "id": "peza",
+        "name": "フィリピン経済区庁",
+        "description": "フィリピン全土の経済区を促進・管理し、投資家に財政的・非財政的インセンティブを提供。",
+        "category": "投資"
+      },
+      {
+        "id": "boc",
+        "name": "税関局",
+        "description": "税関業務、貿易円滑化、輸入関税の徴収を担当するフィリピン政府機関。",
+        "category": "貿易と産業"
+      },
+      {
+        "id": "bi",
+        "name": "移民局",
+        "description": "フィリピンにおける外国人の入国、滞在、出国を規制・管理する政府機関。",
+        "category": "規制"
+      },
+      {
+        "id": "sec",
+        "name": "証券取引委員会",
+        "description": "企業および資本市場参加者の登録と規制を担当する国家政府機関。",
+        "category": "規制"
+      },
+      {
+        "id": "dof",
+        "name": "財務省",
+        "description": "フィリピン政府の主要な経済・財務管理機関。",
+        "category": "投資"
+      },
+      {
+        "id": "dole",
+        "name": "労働雇用省",
+        "description": "フィリピンの雇用政策、労働基準、労働者福祉を担当する政府機関。",
+        "category": "規制"
+      }
+    ]
+  },
+  "ko": {
+    "badge": "정부 링크",
+    "title": "정부 링크",
+    "subtitle": "수빅 베이 자유무역지대와 관련된 주요 정부 기관 및 리소스에 액세스",
+    "breadcrumb1": "선택 이유",
+    "breadcrumb2": "정부 링크",
+    "metaTitle": "정부 링크",
+    "metaDescription": "수빅 베이 자유무역지대의 입주 기업과 관련된 주요 정부 기관 및 리소스에 액세스.",
+    "visitText": "웹사이트 방문",
+    "links": [
+      {
+        "id": "sbma",
+        "name": "수빅 베이 메트로폴리탄 청",
+        "description": "수빅 베이 자유무역지대의 관리 기관. 자유무역지대의 개발, 규제 및 관리를 담당.",
+        "category": "규제"
+      },
+      {
+        "id": "dti",
+        "name": "무역산업부",
+        "description": "국가의 무역과 산업을 확장, 촉진 및 발전시키는 임무를 맡은 필리핀 정부의 행정 부서.",
+        "category": "무역 및 산업"
+      },
+      {
+        "id": "peza",
+        "name": "필리핀 경제자유구역청",
+        "description": "필리핀 전역의 경제 자유 구역을 홍보하고 관리하며, 투자자에게 재정적 및 비재정적 인센티브를 제공.",
+        "category": "투자"
+      },
+      {
+        "id": "boc",
+        "name": "관세청",
+        "description": "세관 운영, 무역 촉진 및 수입 관세 징수를 담당하는 필리핀 정부 기관.",
+        "category": "무역 및 산업"
+      },
+      {
+        "id": "bi",
+        "name": "출입국 관리국",
+        "description": "필리핀 내 외국인의 입국, 체류 및 출국을 규제하고 통제하는 정부 기관.",
+        "category": "규제"
+      },
+      {
+        "id": "sec",
+        "name": "증권거래위원회",
+        "description": "기업 및 자본 시장 참가자의 등록 및 규제를 담당하는 국가 정부 기관.",
+        "category": "규제"
+      },
+      {
+        "id": "dof",
+        "name": "재무부",
+        "description": "필리핀 정부의 주요 경제 및 재정 관리 기관.",
+        "category": "투자"
+      },
+      {
+        "id": "dole",
+        "name": "고용노동부",
+        "description": "필리핀의 고용 정책, 노동 기준 및 근로자 복지를 담당하는 정부 기관.",
+        "category": "규제"
+      }
+    ]
   }
 }

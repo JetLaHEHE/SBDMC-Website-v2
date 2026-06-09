@@ -23,5 +23,105 @@
     "statusClosed": "Closed",
     "applyNow": "Apply Now",
     "emailResume": "Email Your Resume"
+  },
+  "zh": {
+    "badge": "職業生涯",
+    "title": "就業機會",
+    "subtitle": "世正開發股份有限公司及 SBGP 進駐企業內的職業機會",
+    "intro": "世正開發股份有限公司及其進駐企業提供多種就業機會。我們鼓勵符合資格的人士應徵，成為不斷成長的蘇比克灣門戶工業園區社區的一份子。",
+    "breadcrumb1": "職業生涯",
+    "breadcrumb2": "就業機會",
+    "metaTitle": "就業機會",
+    "metaDescription": "在蘇比克灣自由港區的蘇比克灣門戶工業園區內尋找進駐企業的就業機會。",
+    "listings": [
+      {
+        "title": "資訊科技人員",
+        "type": "全職",
+        "location": "現場",
+        "description": "我們正在尋找合格的資訊科技專業人才加入我們的團隊，協助管理園區的科技基礎設施。"
+      }
+    ],
+    "ctaTitle": "提交您的簡歷",
+    "ctaText": "將您的簡歷和申請發送至我們的人力資源部門。我們會保存您的資料，以供未來機會參考。",
+    "ctaEmail": "inquiry@sbdmc.com",
+    "statusOpen": "開放",
+    "statusClosed": "關閉",
+    "applyNow": "立即申請",
+    "emailResume": "電郵簡歷"
+  },
+  "tl": {
+    "badge": "Mga Karera",
+    "title": "Mga Oportunidad sa Trabaho",
+    "subtitle": "Mga oportunidad sa karera sa loob ng SBDMC, Inc. at mga lokator ng SBGP",
+    "intro": "Ang SBDMC, Inc. at ang mga lokator company nito ay nag-aalok ng iba't ibang oportunidad sa karera. Hinihikayat namin ang mga kwalipikadong indibidwal na mag-apply at maging bahagi ng lumalaking komunidad ng Subic Bay Gateway Park.",
+    "breadcrumb1": "Mga Karera",
+    "breadcrumb2": "Mga Oportunidad sa Trabaho",
+    "metaTitle": "Mga Oportunidad sa Trabaho",
+    "metaDescription": "Maghanap ng mga oportunidad sa karera sa mga lokator company sa Subic Bay Gateway Park sa Subic Bay Freeport Zone.",
+    "listings": [
+      {
+        "title": "IT Staff",
+        "type": "Full-time",
+        "location": "On-site",
+        "description": "Naghahanap kami ng mga kwalipikadong IT professional upang sumali sa aming team at tumulong sa pamamahala ng technology infrastructure ng parke."
+      }
+    ],
+    "ctaTitle": "I-submit ang Iyong Resume",
+    "ctaText": "Ipadala ang iyong resume at application sa aming HR department. Itatago namin ito para sa mga oportunidad sa hinaharap.",
+    "ctaEmail": "inquiry@sbdmc.com",
+    "statusOpen": "Bukas",
+    "statusClosed": "Sarado",
+    "applyNow": "Mag-apply Ngayon",
+    "emailResume": "I-email ang Iyong Resume"
+  },
+  "ja": {
+    "badge": "採用情報",
+    "title": "求人情報",
+    "subtitle": "SBDMC株式会社およびSBGP入居企業内のキャリア機会",
+    "intro": "SBDMC株式会社とその入居企業はさまざまなキャリア機会を提供しています。資格のある方のご応募と、成長を続けるスービックベイゲートウェイパークコミュニティへの参加を歓迎します。",
+    "breadcrumb1": "採用情報",
+    "breadcrumb2": "求人情報",
+    "metaTitle": "求人情報",
+    "metaDescription": "スービックベイ自由港区のスービックベイゲートウェイパークで入居企業の求人情報を探す。",
+    "listings": [
+      {
+        "title": "ITスタッフ",
+        "type": "正社員",
+        "location": "現場勤務",
+        "description": "パークの技術インフラ管理を支援する、資格のあるIT専門家を募集しています。"
+      }
+    ],
+    "ctaTitle": "履歴書を提出",
+    "ctaText": "履歴書と応募書類を人事部までお送りください。今後の機会のために保管いたします。",
+    "ctaEmail": "inquiry@sbdmc.com",
+    "statusOpen": "募集中",
+    "statusClosed": "募集終了",
+    "applyNow": "今すぐ応募",
+    "emailResume": "履歴書をメール送信"
+  },
+  "ko": {
+    "badge": "채용 정보",
+    "title": "채용 정보",
+    "subtitle": "SBDMC, Inc. 및 SBGP 입주 기업 내 경력 기회",
+    "intro": "SBDMC, Inc.와 그 입주 기업들은 다양한 경력 기회를 제공합니다. 자격을 갖춘 개인들의 지원과 성장하는 수빅 베이 게이트웨이 파크 커뮤니티의 일원이 되기를 환영합니다.",
+    "breadcrumb1": "채용 정보",
+    "breadcrumb2": "채용 정보",
+    "metaTitle": "채용 정보",
+    "metaDescription": "수빅 베이 자유무역지대에 위치한 수빅 베이 게이트웨이 파크의 입주 기업에서 경력 기회를 찾아보세요.",
+    "listings": [
+      {
+        "title": "IT 직원",
+        "type": "정규직",
+        "location": "현장 근무",
+        "description": "파크의 기술 인프라 관리에 도움을 줄 자격을 갖춘 IT 전문가를 찾고 있습니다."
+      }
+    ],
+    "ctaTitle": "이력서 제출",
+    "ctaText": "이력서와 지원서를 인사부로 보내주세요. 향후 기회를 위해 보관해 드립니다.",
+    "ctaEmail": "inquiry@sbdmc.com",
+    "statusOpen": "모집 중",
+    "statusClosed": "마감",
+    "applyNow": "지금 지원",
+    "emailResume": "이력서 이메일 제출"
   }
 }

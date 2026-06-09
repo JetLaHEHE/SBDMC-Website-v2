@@ -48,5 +48,205 @@
         ]
       }
     ]
+  },
+  "zh": {
+    "badge": "常見問題",
+    "title": "常見問題",
+    "subtitle": "尋找關於世正開發股份有限公司與蘇比克灣門戶工業園區的常見問題解答",
+    "breadcrumb1": "關於我們",
+    "breadcrumb2": "常見問題",
+    "metaTitle": "常見問題",
+    "metaDescription": "關於蘇比克灣門戶工業園區、租賃、商業設立及蘇比克灣自由港區的常見問題。",
+    "categories": [
+      {
+        "category": "一般",
+        "items": [
+          {
+            "q": "什麼是蘇比克灣門戶工業園區？",
+            "a": "蘇比克灣門戶工業園區 (SBGP) 是由世正開發股份有限公司開發和運營、位於蘇比克灣自由港區內的一座佔地45公頃的工業園區，專為輕型製造、物流、倉儲和業務流程外包 (BPO) 而設計。"
+          },
+          {
+            "q": "哪些類型的企業可以進駐 SBGP？",
+            "a": "SBGP 歡迎各種行業進駐，包括輕型製造、物流和倉儲、業務流程外包 (BPO)、商業機構和服務型企業。"
+          }
+        ]
+      },
+      {
+        "category": "優惠措施",
+        "items": [
+          {
+            "q": "有哪些稅務優惠措施？",
+            "a": "進駐企業可享有所得稅假期（最長6年）、優惠稅率（假期後總所得的5%）、資本設備和原材料的免稅進口，以及地方政府稅費的豁免。外國投資者可享有高達100%的所有權。"
+          },
+          {
+            "q": "外國公司可以進駐 SBGP 嗎？",
+            "a": "可以，外國公司可以進駐 SBGP，並可根據蘇比克灣自由港區的優惠措施享有高達100%的外資所有權。"
+          }
+        ]
+      },
+      {
+        "category": "租賃",
+        "items": [
+          {
+            "q": "如何申請租賃？",
+            "a": "您可以通過「聯絡我們」頁面聯繫我們的團隊，或親臨我們的辦公室：Argonaut Highway 與 Rizal Highway 交叉口，蘇比克灣門戶工業園區，蘇比克灣自由港區。您也可以致電 (047) 252-3456。"
+          },
+          {
+            "q": "園區內有哪些基礎設施？",
+            "a": "園區提供可靠的電力供應、充足的供水系統、高速光纖網路、維護良好的道路、24/7安保、排水系統和廢棄物管理服務。"
+          }
+        ]
+      }
+    ]
+  },
+  "tl": {
+    "badge": "FAQ",
+    "title": "Mga Madalas Itanong",
+    "subtitle": "Maghanap ng mga sagot sa mga karaniwang tanong tungkol sa SBDMC, Inc. at SBGP",
+    "breadcrumb1": "Bakit Kami",
+    "breadcrumb2": "FAQ",
+    "metaTitle": "FAQ",
+    "metaDescription": "Mga madalas itanong tungkol sa Subic Bay Gateway Park, pag-upa, pag-setup ng negosyo, at Subic Bay Freeport Zone.",
+    "categories": [
+      {
+        "category": "Pangkalahatan",
+        "items": [
+          {
+            "q": "Ano ang Subic Bay Gateway Park?",
+            "a": "Ang Subic Bay Gateway Park (SBGP) ay isang 45-ektaryang industrial park na matatagpuan sa loob ng Subic Bay Freeport Zone, binuo at pinamamahalaan ng SBDMC, Inc. Ito ay dinisenyo para sa light manufacturing, logistics, warehousing, at BPO operations."
+          },
+          {
+            "q": "Anong mga uri ng negosyo ang maaaring matatagpuan sa SBGP?",
+            "a": "Tinatanggap ng SBGP ang malawak na hanay ng mga industriya kabilang ang light manufacturing, logistics at warehousing, business process outsourcing (BPO), commercial establishments, at service-oriented businesses."
+          }
+        ]
+      },
+      {
+        "category": "Mga Insentibo",
+        "items": [
+          {
+            "q": "Ano ang mga tax incentives na available?",
+            "a": "Ang mga lokator ay maaaring mag-enjoy ng income tax holidays (hanggang 6 na taon), reduced tax rates (5% sa gross income pagkatapos ng holiday), duty-free importation ng capital equipment at raw materials, at exemption mula sa local government taxes. Ang mga foreign investor ay maaaring mag-enjoy ng hanggang 100% ownership."
+          },
+          {
+            "q": "Maaari bang pumunta ang mga foreign company sa SBGP?",
+            "a": "Oo, ang mga foreign company ay maaaring pumunta sa SBGP at maaaring mag-enjoy ng hanggang 100% foreign ownership sa ilalim ng Subic Bay Freeport Zone incentives."
+          }
+        ]
+      },
+      {
+        "category": "Pag-upa",
+        "items": [
+          {
+            "q": "Paano ako mag-a-apply para sa lease?",
+            "a": "Maaari mong kontakin ang aming team sa pamamagitan ng Contact Us page o bisitahin ang aming opisina sa Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone. Maaari mo rin kaming tawagan sa (047) 252-3456."
+          },
+          {
+            "q": "Anong imprastraktura ang available sa parke?",
+            "a": "Ang parke ay nag-aalok ng maaasahang supply ng kuryente, sapat na water system, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage systems, at waste management services."
+          }
+        ]
+      }
+    ]
+  },
+  "ja": {
+    "badge": "FAQ",
+    "title": "よくある質問",
+    "subtitle": "SBDMC株式会社とSBGPに関するよくある質問への回答",
+    "breadcrumb1": "選ばれる理由",
+    "breadcrumb2": "FAQ",
+    "metaTitle": "FAQ",
+    "metaDescription": "スービックベイゲートウェイパーク、賃貸、ビジネス設立、スービックベイ自由港区に関するよくある質問。",
+    "categories": [
+      {
+        "category": "一般",
+        "items": [
+          {
+            "q": "スービックベイゲートウェイパークとは何ですか？",
+            "a": "スービックベイゲートウェイパーク (SBGP) は、スービックベイ自由港区内に位置する45ヘクタールの工業団地で、SBDMC株式会社が開発・運営しています。軽工業、物流、倉庫、BPO業務向けに設計されています。"
+          },
+          {
+            "q": "どのような種類の企業がSBGPに入居できますか？",
+            "a": "SBGPは、軽工業、物流・倉庫、ビジネスプロセスアウトソーシング (BPO)、商業施設、サービス指向企業など、幅広い産業を歓迎します。"
+          }
+        ]
+      },
+      {
+        "category": "インセンティブ",
+        "items": [
+          {
+            "q": "利用可能な税制優遇措置はありますか？",
+            "a": "入居企業は、法人税免除期間（最長6年）、軽減税率（免税期間後の総所得の5%）、資本設備と原材料の免税輸入、地方税の免除を享受できます。外国人投資家は最大100%の所有権を享受できます。"
+          },
+          {
+            "q": "外国企業はSBGPに入居できますか？",
+            "a": "はい、外国企業はSBGPに入居でき、スービックベイ自由港区の優遇措置に基づき、最大100%の外資所有権を享受できます。"
+          }
+        ]
+      },
+      {
+        "category": "賃貸",
+        "items": [
+          {
+            "q": "賃貸契約を申し込むにはどうすればよいですか？",
+            "a": "お問い合わせページから当社チームに連絡するか、Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone にある当社オフィスにご来訪ください。電話 (047) 252-3456 でもお問い合わせいただけます。"
+          },
+          {
+            "q": "パークではどのようなインフラが利用できますか？",
+            "a": "パークでは、安定した電力供給、十分な水道システム、高速光ファイバーインターネット、よく整備された道路、24時間体制のセキュリティ、排水システム、廃棄物管理サービスを提供しています。"
+          }
+        ]
+      }
+    ]
+  },
+  "ko": {
+    "badge": "FAQ",
+    "title": "자주 묻는 질문",
+    "subtitle": "SBDMC, Inc. 및 SBGP에 대한 일반적인 질문에 대한 답변",
+    "breadcrumb1": "선택 이유",
+    "breadcrumb2": "FAQ",
+    "metaTitle": "FAQ",
+    "metaDescription": "수빅 베이 게이트웨이 파크, 임대, 비즈니스 설정 및 수빅 베이 자유무역지대에 대한 자주 묻는 질문.",
+    "categories": [
+      {
+        "category": "일반",
+        "items": [
+          {
+            "q": "수빅 베이 게이트웨이 파크란 무엇인가요?",
+            "a": "수빅 베이 게이트웨이 파크(SBGP)는 수빅 베이 자유무역지대 내에 위치한 45헥타르 규모의 산업 단지로, SBDMC, Inc.가 개발 및 운영합니다. 경공업, 물류, 창고 및 BPO 운영을 위해 설계되었습니다."
+          },
+          {
+            "q": "어떤 유형의 비즈니스가 SBGP에 입주할 수 있나요?",
+            "a": "SBGP는 경공업, 물류 및 창고, 비즈니스 프로세스 아웃소싱(BPO), 상업 시설 및 서비스 지향 비즈니스를 포함한 다양한 산업을 환영합니다."
+          }
+        ]
+      },
+      {
+        "category": "인센티브",
+        "items": [
+          {
+            "q": "이용 가능한 세금 인센티브는 무엇인가요?",
+            "a": "입주 기업은 법인세 면제 기간(최대 6년), 면제 기간 후 총 소득의 5% 경감 세율, 자본 장비 및 원자재의 관세 면제 수입, 지방 정부 세금 면제 혜택을 누릴 수 있습니다. 외국인 투자자는 최대 100% 소유권을 누릴 수 있습니다."
+          },
+          {
+            "q": "외국 기업도 SBGP에 입주할 수 있나요?",
+            "a": "네, 외국 기업은 SBGP에 입주할 수 있으며 수빅 베이 자유무역지대 인센티브에 따라 최대 100% 외국인 소유권을 누릴 수 있습니다."
+          }
+        ]
+      },
+      {
+        "category": "임대",
+        "items": [
+          {
+            "q": "임대를 신청하려면 어떻게 해야 하나요?",
+            "a": "문의하기 페이지를 통해 당사 팀에 연락하거나 Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone에 있는 사무실을 방문해 주십시오. (047) 252-3456으로 전화하실 수도 있습니다."
+          },
+          {
+            "q": "파크에서 어떤 인프라를 이용할 수 있나요?",
+            "a": "파크는 안정적인 전력 공급, 적절한 수도 시스템, 고속 광케이블 인터넷, 잘 정비된 도로, 24/7 보안, 배수 시스템 및 폐기물 관리 서비스를 제공합니다."
+          }
+        ]
+      }
+    ]
   }
 }

@@ -34,5 +34,149 @@
     "usefulLinksTitle": "Useful Links",
     "helpdeskLink": "SBDMC, Inc. Helpdesk",
     "ebillingLink": "E-Billing Portal"
+  },
+  "zh": {
+    "badge": "參考資料",
+    "title": "實用指南",
+    "subtitle": "為進駐企業和訪客提供的快速參考",
+    "breadcrumb": "實用指南",
+    "emergencyBadge": "緊急情況",
+    "emergencyTitle": "緊急聯絡方式",
+    "emergencyItems": [
+      { "number": "911", "label": "緊急熱線" },
+      { "number": "(047) 252-3456", "label": "SBDMC, Inc. 辦公室" },
+      { "number": "(047) 252-4000", "label": "SBMA 總機" },
+      { "number": "117", "label": "警察" }
+    ],
+    "importantNumbersTitle": "重要號碼",
+    "importantNumbers": [
+      { "label": "警察", "number": "117" },
+      { "label": "火警", "number": "160" },
+      { "label": "醫療", "number": "143" },
+      { "label": "SBDMC, Inc. 辦公室", "number": "(047) 252-3456" }
+    ],
+    "officeHoursTitle": "辦公時間",
+    "officeHoursText": "SBDMC, Inc. 辦公時間：",
+    "officeHoursDays": "週一至週五",
+    "officeHoursTime": "上午 8:00 - 下午 5:00",
+    "officeHoursClosed": "週末和公眾假日休息。",
+    "parkRulesTitle": "園區規定",
+    "rules": [
+      "所有車輛必須在入口處登記",
+      "園區內速限：30 公里/小時",
+      "須妥善處理廢棄物",
+      "未經事先批准不得攜帶危險物品"
+    ],
+    "usefulLinksTitle": "實用連結",
+    "helpdeskLink": "SBDMC, Inc. 服務台",
+    "ebillingLink": "電子帳單入口"
+  },
+  "tl": {
+    "badge": "Sanggunian",
+    "title": "Handy Guide",
+    "subtitle": "Mabilis na sanggunian para sa mga lokator at bisita",
+    "breadcrumb": "Handy Guide",
+    "emergencyBadge": "Emerhensiya",
+    "emergencyTitle": "Mga Kontak sa Emerhensiya",
+    "emergencyItems": [
+      { "number": "911", "label": "Emergency Hotline" },
+      { "number": "(047) 252-3456", "label": "Opisina ng SBDMC, Inc." },
+      { "number": "(047) 252-4000", "label": "SBMA Main" },
+      { "number": "117", "label": "Pulisya" }
+    ],
+    "importantNumbersTitle": "Mga Mahalagang Numero",
+    "importantNumbers": [
+      { "label": "Pulisya", "number": "117" },
+      { "label": "Bumbero", "number": "160" },
+      { "label": "Medikal", "number": "143" },
+      { "label": "Opisina ng SBDMC, Inc.", "number": "(047) 252-3456" }
+    ],
+    "officeHoursTitle": "Oras ng Opisina",
+    "officeHoursText": "Ang opisina ng SBDMC, Inc. ay bukas:",
+    "officeHoursDays": "Lunes - Biyernes",
+    "officeHoursTime": "8:00 AM - 5:00 PM",
+    "officeHoursClosed": "Sarado tuwing weekend at pampublikong holiday.",
+    "parkRulesTitle": "Mga Patakaran ng Parke",
+    "rules": [
+      "Ang lahat ng sasakyan ay dapat magrehistro sa entrance",
+      "Speed limit: 30 km/h sa loob ng parke",
+      "Kinakailangan ang tamang pagtatapon ng basura",
+      "Walang mapanganib na materyales nang walang paunang pag-apruba"
+    ],
+    "usefulLinksTitle": "Mga Kapaki-pakinabang na Link",
+    "helpdeskLink": "Helpdesk ng SBDMC, Inc.",
+    "ebillingLink": "E-Billing Portal"
+  },
+  "ja": {
+    "badge": "参考情報",
+    "title": "便利ガイド",
+    "subtitle": "入居企業と訪問者向けクイックリファレンス",
+    "breadcrumb": "便利ガイド",
+    "emergencyBadge": "緊急時",
+    "emergencyTitle": "緊急連絡先",
+    "emergencyItems": [
+      { "number": "911", "label": "緊急ホットライン" },
+      { "number": "(047) 252-3456", "label": "SBDMC, Inc. 事務所" },
+      { "number": "(047) 252-4000", "label": "SBMA 代表" },
+      { "number": "117", "label": "警察" }
+    ],
+    "importantNumbersTitle": "重要な番号",
+    "importantNumbers": [
+      { "label": "警察", "number": "117" },
+      { "label": "消防", "number": "160" },
+      { "label": "救急", "number": "143" },
+      { "label": "SBDMC, Inc. 事務所", "number": "(047) 252-3456" }
+    ],
+    "officeHoursTitle": "営業時間",
+    "officeHoursText": "SBDMC, Inc. 事務所の営業時間：",
+    "officeHoursDays": "月曜日〜金曜日",
+    "officeHoursTime": "午前8:00〜午後5:00",
+    "officeHoursClosed": "週末および祝日は休業。",
+    "parkRulesTitle": "パークルール",
+    "rules": [
+      "すべての車両は入口で登録が必要",
+      "パーク内の制限速度：時速30km",
+      "適切な廃棄物処理が必要",
+      "事前承認なしの危険物持ち込み禁止"
+    ],
+    "usefulLinksTitle": "便利なリンク",
+    "helpdeskLink": "SBDMC, Inc. ヘルプデスク",
+    "ebillingLink": "電子請求ポータル"
+  },
+  "ko": {
+    "badge": "참고 자료",
+    "title": "편의 가이드",
+    "subtitle": "입주 기업 및 방문자를 위한 빠른 참고 자료",
+    "breadcrumb": "편의 가이드",
+    "emergencyBadge": "비상 상황",
+    "emergencyTitle": "비상 연락처",
+    "emergencyItems": [
+      { "number": "911", "label": "비상 핫라인" },
+      { "number": "(047) 252-3456", "label": "SBDMC, Inc. 사무실" },
+      { "number": "(047) 252-4000", "label": "SBMA 본관" },
+      { "number": "117", "label": "경찰" }
+    ],
+    "importantNumbersTitle": "중요 번호",
+    "importantNumbers": [
+      { "label": "경찰", "number": "117" },
+      { "label": "화재", "number": "160" },
+      { "label": "의료", "number": "143" },
+      { "label": "SBDMC, Inc. 사무실", "number": "(047) 252-3456" }
+    ],
+    "officeHoursTitle": "업무 시간",
+    "officeHoursText": "SBDMC, Inc. 사무실 운영 시간:",
+    "officeHoursDays": "월요일 - 금요일",
+    "officeHoursTime": "오전 8:00 - 오후 5:00",
+    "officeHoursClosed": "주말 및 공휴일 휴무.",
+    "parkRulesTitle": "파크 규정",
+    "rules": [
+      "모든 차량은 출입구에서 등록해야 합니다",
+      "파크 내 속도 제한: 30km/h",
+      "적절한 폐기물 처리가 필요합니다",
+      "사전 승인 없이 위험 물질 반입 금지"
+    ],
+    "usefulLinksTitle": "유용한 링크",
+    "helpdeskLink": "SBDMC, Inc. 헬프데스크",
+    "ebillingLink": "전자 청구 포털"
   }
 }

@@ -60,5 +60,253 @@
       { "title": "Apply", "text": "Submit requirements" },
       { "title": "Move In", "text": "Start operations" }
     ]
+  },
+  "zh": {
+    "badge": "租賃",
+    "title": "出租資訊",
+    "subtitle": "蘇比克灣門戶工業園區的可租賃空間",
+    "description": "蘇比克灣門戶工業園區提供多種租賃選擇，以滿足不同的業務需求。無論您需要倉儲空間、製造設施還是辦公空間，我們都有適合的選擇。",
+    "availableBadge": "可租用",
+    "leaseTypes": [
+      {
+        "title": "倉儲空間",
+        "description": "現代化倉儲設施，配備裝卸碼頭、高天花板和充足的存儲容量。",
+        "size": "500-5,000",
+        "sizeLabel": "平方公尺",
+        "features": [
+          "面積從 500 平方公尺至 5,000 平方公尺",
+          "24/7 安全監控",
+          "便利的卡車通道和裝卸區"
+        ]
+      },
+      {
+        "title": "製造設施",
+        "description": "即用型製造單元，配備必要的基礎設施連接。",
+        "size": "客製",
+        "sizeLabel": "可選尺寸",
+        "features": [
+          "可依需求調整的佈局",
+          "可用高電容量",
+          "包含裝卸區域"
+        ]
+      },
+      {
+        "title": "辦公空間",
+        "description": "適用於 BPO、行政和商業用途的全裝修辦公空間。",
+        "size": "彈性",
+        "sizeLabel": "租期選項",
+        "features": [
+          "光纖網路就緒",
+          "充足的停車位",
+          "彈性的租賃條款"
+        ]
+      },
+      {
+        "title": "土地租賃",
+        "description": "在園區內租賃土地，用於建造量身打造的設施。",
+        "size": "土地",
+        "sizeLabel": "租賃選項",
+        "features": [
+          "可選擇長期租賃",
+          "園區內的黃金地段",
+          "基礎設施已就緒，可供開發"
+        ]
+      }
+    ],
+    "inquireNow": "立即諮詢",
+    "howToLeaseTitle": "如何租賃",
+    "howToLeaseSubtitle": "簡單的開始流程",
+    "steps": [
+      { "title": "諮詢", "text": "聯繫我們的團隊" },
+      { "title": "參觀", "text": "實地考察園區" },
+      { "title": "申請", "text": "提交所需文件" },
+      { "title": "進駐", "text": "開始運營" }
+    ]
+  },
+  "tl": {
+    "badge": "Pag-upa",
+    "title": "Para sa Pag-upa",
+    "subtitle": "Mga available na espasyo sa Subic Bay Gateway Park",
+    "description": "Ang Subic Bay Gateway Park ay nag-aalok ng iba't ibang lease options upang umangkop sa iba't ibang pangangailangan ng negosyo. Kung kailangan mo ng warehouse space, manufacturing facilities, o office space, mayroon kaming available na options.",
+    "availableBadge": "Available",
+    "leaseTypes": [
+      {
+        "title": "Warehouse Space",
+        "description": "Modernong warehouse facilities na may loading docks, matataas na kisame, at sapat na storage capacity.",
+        "size": "500-5,000",
+        "sizeLabel": "sqm",
+        "features": [
+          "Sukat mula 500 sqm hanggang 5,000 sqm",
+          "24/7 seguridad at monitoring",
+          "Madaling truck access at loading bays"
+        ]
+      },
+      {
+        "title": "Manufacturing Facilities",
+        "description": "Ready-built manufacturing units na may essential infrastructure connections.",
+        "size": "Custom",
+        "sizeLabel": "mga sukat na available",
+        "features": [
+          "Customizable layouts upang umangkop sa iyong pangangailangan",
+          "Mataas na power capacity na available",
+          "Kasama ang loading/unloading areas"
+        ]
+      },
+      {
+        "title": "Office Spaces",
+        "description": "Fully serviced office spaces para sa BPO, administrative, at commercial use.",
+        "size": "Flex",
+        "sizeLabel": "mga tuntunin sa pag-upa",
+        "features": [
+          "Fiber optic internet ready",
+          "Sapat na parking na available",
+          "Flexible lease terms"
+        ]
+      },
+      {
+        "title": "Land Leases",
+        "description": "Mag-arkila ng lupa sa loob ng parke para sa build-to-suit facilities.",
+        "size": "Lupa",
+        "sizeLabel": "mga opsyon sa pag-upa",
+        "features": [
+          "Available ang long-term lease options",
+          "Mga pangunahing lokasyon sa loob ng parke",
+          "Infrastructure ready para sa development"
+        ]
+      }
+    ],
+    "inquireNow": "Magtanong Ngayon",
+    "howToLeaseTitle": "Paano Mag-arkila",
+    "howToLeaseSubtitle": "Simpleng proseso para makapagsimula",
+    "steps": [
+      { "title": "Magtanong", "text": "Kontakin ang aming team" },
+      { "title": "Bisitahin", "text": "I-tour ang parke" },
+      { "title": "Mag-apply", "text": "Isumite ang mga kinakailangan" },
+      { "title": "Lumipat", "text": "Simulan ang operasyon" }
+    ]
+  },
+  "ja": {
+    "badge": "賃貸",
+    "title": "賃貸物件",
+    "subtitle": "スービックベイゲートウェイパークの利用可能スペース",
+    "description": "スービックベイゲートウェイパークでは、さまざまなビジネスニーズに対応する多様な賃貸オプションを提供しています。倉庫スペース、製造施設、オフィスのいずれが必要な場合でも、ご利用いただけるオプションがあります。",
+    "availableBadge": "空きあり",
+    "leaseTypes": [
+      {
+        "title": "倉庫スペース",
+        "description": "近代的な倉庫施設。ドック、高天井、十分な保管容量を完備。",
+        "size": "500-5,000",
+        "sizeLabel": "平方メートル",
+        "features": [
+          "500平方メートルから5,000平方メートル",
+          "24時間体制のセキュリティと監視",
+          "トラックアクセスと積み込みエリア"
+        ]
+      },
+      {
+        "title": "製造施設",
+        "description": "必要なインフラ接続を備えた既製の製造ユニット。",
+        "size": "カスタム",
+        "sizeLabel": "サイズあり",
+        "features": [
+          "ニーズに合わせてカスタマイズ可能なレイアウト",
+          "大容量電力利用可能",
+          "積み込みエリア完備"
+        ]
+      },
+      {
+        "title": "オフィススペース",
+        "description": "BPO、管理、商業目的に対応したフルサービスのオフィススペース。",
+        "size": "フレックス",
+        "sizeLabel": "賃貸条件",
+        "features": [
+          "光ファイバーインターネット対応",
+          "十分な駐車場",
+          "柔軟な賃貸条件"
+        ]
+      },
+      {
+        "title": "土地賃貸",
+        "description": "パーク内の土地を建設目的で賃貸。",
+        "size": "土地",
+        "sizeLabel": "賃貸オプション",
+        "features": [
+          "長期賃貸オプションあり",
+          "パーク内の一等地",
+          "開発可能なインフラ"
+        ]
+      }
+    ],
+    "inquireNow": "今すぐ問い合わせ",
+    "howToLeaseTitle": "賃貸の流れ",
+    "howToLeaseSubtitle": "簡単なスタート手順",
+    "steps": [
+      { "title": "問い合わせ", "text": "チームに連絡" },
+      { "title": "見学", "text": "パークを見学" },
+      { "title": "申し込み", "text": "必要書類を提出" },
+      { "title": "入居", "text": "業務開始" }
+    ]
+  },
+  "ko": {
+    "badge": "임대",
+    "title": "임대 안내",
+    "subtitle": "수빅 베이 게이트웨이 파크의 이용 가능 공간",
+    "description": "수빅 베이 게이트웨이 파크는 다양한 비즈니스 요구에 맞는 다양한 임대 옵션을 제공합니다. 창고 공간, 제조 시설 또는 사무실 공간이 필요하든, 이용 가능한 옵션이 있습니다.",
+    "availableBadge": "이용 가능",
+    "leaseTypes": [
+      {
+        "title": "창고 공간",
+        "description": "현대적인 창고 시설, 적재 도크, 높은 천장 및 충분한 보관 용량.",
+        "size": "500-5,000",
+        "sizeLabel": "제곱미터",
+        "features": [
+          "500제곱미터 ~ 5,000제곱미터",
+          "24/7 보안 및 모니터링",
+          "트럭 접근 및 적재 구역 용이"
+        ]
+      },
+      {
+        "title": "제조 시설",
+        "description": "필수 인프라 연결을 갖춘 기성 제조 유닛.",
+        "size": "맞춤형",
+        "sizeLabel": "다양한 크기",
+        "features": [
+          "요구에 맞게 조정 가능한 레이아웃",
+          "높은 전력 용량 가능",
+          "상하차 구역 포함"
+        ]
+      },
+      {
+        "title": "사무실 공간",
+        "description": "BPO, 관리 및 상업용 풀 서비스 사무실 공간.",
+        "size": "유연",
+        "sizeLabel": "임대 조건",
+        "features": [
+          "광케이블 인터넷 준비",
+          "충분한 주차 공간",
+          "유연한 임대 조건"
+        ]
+      },
+      {
+        "title": "토지 임대",
+        "description": "파크 내 토지를 맞춤형 시설 건축을 위해 임대.",
+        "size": "토지",
+        "sizeLabel": "임대 옵션",
+        "features": [
+          "장기 임대 옵션 가능",
+          "파크 내 프라임 위치",
+          "개발 가능한 인프라"
+        ]
+      }
+    ],
+    "inquireNow": "지금 문의",
+    "howToLeaseTitle": "임대 방법",
+    "howToLeaseSubtitle": "간단한 시작 절차",
+    "steps": [
+      { "title": "문의", "text": "팀에 연락" },
+      { "title": "방문", "text": "파크 투어" },
+      { "title": "신청", "text": "서류 제출" },
+      { "title": "입주", "text": "운영 시작" }
+    ]
   }
 }

@@ -10,5 +10,53 @@
     "lightboxClose": "Close",
     "lightboxPrev": "Previous",
     "lightboxNext": "Next"
+  },
+  "zh": {
+    "badge": "相簿",
+    "title": "照片集",
+    "subtitle": "透過照片探索蘇比克灣門戶工業園區",
+    "breadcrumb": "相簿",
+    "flickrText": "請訪問我們的 Flickr 相簿查看完整照片集。",
+    "flickrLink": "在 Flickr 上查看",
+    "lightboxLabel": "照片庫燈箱",
+    "lightboxClose": "關閉",
+    "lightboxPrev": "上一張",
+    "lightboxNext": "下一張"
+  },
+  "tl": {
+    "badge": "Gallery",
+    "title": "Photo Gallery",
+    "subtitle": "Tuklasin ang Subic Bay Gateway Park sa pamamagitan ng aming mga larawan",
+    "breadcrumb": "Gallery",
+    "flickrText": "Bisitahin ang aming Flickr album para sa buong koleksyon ng mga larawan.",
+    "flickrLink": "Tingnan sa Flickr",
+    "lightboxLabel": "Photo gallery lightbox",
+    "lightboxClose": "Isara",
+    "lightboxPrev": "Nakaraan",
+    "lightboxNext": "Susunod"
+  },
+  "ja": {
+    "badge": "ギャラリー",
+    "title": "フォトギャラリー",
+    "subtitle": "写真でスービックベイゲートウェイパークをご紹介",
+    "breadcrumb": "ギャラリー",
+    "flickrText": "全写真コレクションはFlickrアルバムをご覧ください。",
+    "flickrLink": "Flickrで見る",
+    "lightboxLabel": "フォトギャラリーライトボックス",
+    "lightboxClose": "閉じる",
+    "lightboxPrev": "前へ",
+    "lightboxNext": "次へ"
+  },
+  "ko": {
+    "badge": "갤러리",
+    "title": "포토 갤러리",
+    "subtitle": "사진으로 수빅 베이 게이트웨이 파크 살펴보기",
+    "breadcrumb": "갤러리",
+    "flickrText": "전체 사진 컬렉션을 보려면 Flickr 앨범을 방문하세요.",
+    "flickrLink": "Flickr에서 보기",
+    "lightboxLabel": "포토 갤러리 라이트박스",
+    "lightboxClose": "닫기",
+    "lightboxPrev": "이전",
+    "lightboxNext": "다음"
   }
 }

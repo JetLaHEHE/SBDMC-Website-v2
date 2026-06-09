@@ -1,11 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import { getStaticPaths, getLangFromParams, type LangCode, t } from "../i18n";
-import rentalInformationTranslations from "../data/translations/rental-information.json";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { getStaticPaths, getLangFromParams, getLangPrefix, type LangCode, t } from "../../i18n";
+import rentalInformationTranslations from "../../data/translations/rental-information.json";
 
 export { getStaticPaths };
 const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
 const tx = t(rentalInformationTranslations, lang);
 ---
 
@@ -64,7 +65,7 @@ const tx = t(rentalInformationTranslations, lang);
       <div class="mt-12 bg-primary-500 p-8 text-center text-white" data-aos="fade-up">
         <h3 class="mb-3 text-2xl font-bold">{tx.ctaTitle}</h3>
         <p class="mb-6 text-white/80">{tx.ctaText}</p>
-        <a href="/contact" class="btn-white">{tx.ctaButton}</a>
+        <a href={langPrefix + "/contact"} class="btn-white">{tx.ctaButton}</a>
       </div>
     </div>
   </section>

@@ -74,5 +74,309 @@
       "text": "For a complete and detailed list of incentives, please contact our team.",
       "buttonText": "Contact Our Team"
     }
+  },
+  "zh": {
+    "badge": "為何選擇此地",
+    "title": "商業優惠",
+    "subtitle": "為您的企業在蘇比克灣自由港區開啟非凡優惠",
+    "breadcrumb1": "關於我們",
+    "breadcrumb2": "商業優惠",
+    "metaTitle": "商業優惠",
+    "metaDescription": "探索蘇比克灣門戶工業園區的稅務假期、免稅進口、100%外資所有權及其他商業優惠。",
+    "sections": [
+      {
+        "id": "tax-incentives",
+        "badge": "稅務優惠",
+        "title": "稅務優惠措施",
+        "items": [
+          {
+            "id": "income-tax-holiday",
+            "title": "所得稅假期",
+            "description": "符合條件的企業可享有長達6年的企業所得稅豁免。"
+          },
+          {
+            "id": "preferential-tax-rate",
+            "title": "優惠稅率",
+            "description": "假期期滿後，可就所賺取的總收入享有5%的優惠稅率。"
+          },
+          {
+            "id": "tax-exemption",
+            "title": "稅務豁免",
+            "description": "已註冊企業免繳地方政府稅費。"
+          }
+        ]
+      },
+      {
+        "id": "customs-trade-incentives",
+        "badge": "貿易優惠",
+        "title": "關稅與貿易優惠",
+        "items": [
+          {
+            "id": "duty-free-importation",
+            "title": "免稅進口",
+            "description": "已註冊企業的資本設備、原材料和供應品可免稅進口。"
+          },
+          {
+            "id": "simplified-customs",
+            "title": "簡化通關",
+            "description": "簡化的進出口程序，文件需求最少，處理時間更短。"
+          }
+        ]
+      },
+      {
+        "id": "investment-incentives",
+        "badge": "投資優惠",
+        "title": "投資優惠措施",
+        "items": [
+          {
+            "id": "foreign-ownership",
+            "title": "外資所有權",
+            "description": "大多數商業活動允許100%外資所有權。"
+          },
+          {
+            "id": "currency-controls",
+            "title": "貨幣管制",
+            "description": "利潤和投資可自由匯出，無貨幣限制。"
+          },
+          {
+            "id": "foreign-nationals",
+            "title": "外籍員工",
+            "description": "在管理和技術職位僱用外籍員工的靈活規定。"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "如需完整詳細的優惠措施清單，請聯繫我們的團隊。",
+      "buttonText": "聯繫我們的團隊"
+    }
+  },
+  "tl": {
+    "badge": "Bakit Dito",
+    "title": "Mga Insentibo sa Negosyo",
+    "subtitle": "I-unlock ang pambihirang benepisyo para sa iyong negosyo sa Subic Bay Freeport Zone",
+    "breadcrumb1": "Bakit Kami",
+    "breadcrumb2": "Mga Insentibo sa Negosyo",
+    "metaTitle": "Mga Insentibo sa Negosyo",
+    "metaDescription": "Tuklasin ang tax holidays, duty-free imports, 100% foreign ownership, at iba pang business incentives sa Subic Bay Gateway Park.",
+    "sections": [
+      {
+        "id": "tax-incentives",
+        "badge": "Mga Benepisyo sa Buwis",
+        "title": "Mga Insentibo sa Buwis",
+        "items": [
+          {
+            "id": "income-tax-holiday",
+            "title": "Income Tax Holiday",
+            "description": "Hanggang 6 na taon ng exemption mula sa corporate income tax para sa mga kwalipikadong negosyo."
+          },
+          {
+            "id": "preferential-tax-rate",
+            "title": "Preferential Tax Rate",
+            "description": "Pagkatapos ng holiday period, isang preferential 5% tax rate sa gross income na kinita."
+          },
+          {
+            "id": "tax-exemption",
+            "title": "Tax Exemption",
+            "description": "Exemption mula sa local government taxes at fees para sa mga registered enterprises."
+          }
+        ]
+      },
+      {
+        "id": "customs-trade-incentives",
+        "badge": "Mga Benepisyo sa Kalakalan",
+        "title": "Customs at Trade Incentives",
+        "items": [
+          {
+            "id": "duty-free-importation",
+            "title": "Duty-Free Importation",
+            "description": "Tax at duty-free importation ng capital equipment, raw materials, at supplies para sa mga registered enterprises."
+          },
+          {
+            "id": "simplified-customs",
+            "title": "Simplified Customs",
+            "description": "Streamlined import at export procedures na may minimal paperwork at mas mabilis na processing times."
+          }
+        ]
+      },
+      {
+        "id": "investment-incentives",
+        "badge": "Mga Benepisyo sa Pamumuhunan",
+        "title": "Investment Incentives",
+        "items": [
+          {
+            "id": "foreign-ownership",
+            "title": "Foreign Ownership",
+            "description": "Hanggang 100% foreign ownership na pinapayagan sa karamihan ng mga business activities."
+          },
+          {
+            "id": "currency-controls",
+            "title": "Currency Controls",
+            "description": "Malayang pag-repatriate ng profits at investments nang walang currency restrictions."
+          },
+          {
+            "id": "foreign-nationals",
+            "title": "Foreign Nationals",
+            "description": "Flexible rules para sa paggamit ng foreign nationals sa supervisory at technical roles."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "Para sa kumpleto at detalyadong listahan ng mga insentibo, mangyaring kontakin ang aming team.",
+      "buttonText": "Kontakin ang Aming Team"
+    }
+  },
+  "ja": {
+    "badge": "立地する理由",
+    "title": "ビジネス優遇措置",
+    "subtitle": "スービックベイ自由港区で比類のないメリットを獲得",
+    "breadcrumb1": "選ばれる理由",
+    "breadcrumb2": "ビジネス優遇措置",
+    "metaTitle": "ビジネス優遇措置",
+    "metaDescription": "スービックベイゲートウェイパークの税制優遇、免税輸入、100%外資所有権などのビジネスインセンティブをご覧ください。",
+    "sections": [
+      {
+        "id": "tax-incentives",
+        "badge": "税制優遇",
+        "title": "税制インセンティブ",
+        "items": [
+          {
+            "id": "income-tax-holiday",
+            "title": "所得税免税期間",
+            "description": "適格企業は最長6年間の法人所得税免除。"
+          },
+          {
+            "id": "preferential-tax-rate",
+            "title": "優遇税率",
+            "description": "免税期間後、総所得に対して5%の優遇税率。"
+          },
+          {
+            "id": "tax-exemption",
+            "title": "免税",
+            "description": "登録企業の地方政府税および手数料の免除。"
+          }
+        ]
+      },
+      {
+        "id": "customs-trade-incentives",
+        "badge": "貿易優遇",
+        "title": "通関・貿易インセンティブ",
+        "items": [
+          {
+            "id": "duty-free-importation",
+            "title": "免税輸入",
+            "description": "登録企業の資本設備、原材料、備品の無税・免税輸入。"
+          },
+          {
+            "id": "simplified-customs",
+            "title": "簡易通関",
+            "description": "最小限の書類と迅速な処理による合理化された輸出入手続き。"
+          }
+        ]
+      },
+      {
+        "id": "investment-incentives",
+        "badge": "投資優遇",
+        "title": "投資インセンティブ",
+        "items": [
+          {
+            "id": "foreign-ownership",
+            "title": "外資所有権",
+            "description": "ほとんどの事業活動で100%外資所有権を許可。"
+          },
+          {
+            "id": "currency-controls",
+            "title": "為替管理",
+            "description": "為替制限なしの利益と投資の自由な本国送金。"
+          },
+          {
+            "id": "foreign-nationals",
+            "title": "外国人従業員",
+            "description": "監督職および技術職における外国人雇用の柔軟なルール。"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "完全かつ詳細なインセンティブのリストについては、当社チームまでお問い合わせください。",
+      "buttonText": "チームに問い合わせ"
+    }
+  },
+  "ko": {
+    "badge": "입지 선정 이유",
+    "title": "비즈니스 인센티브",
+    "subtitle": "수빅 베이 자유무역지대에서 귀사 비즈니스를 위한 탁월한 혜택을 누리세요",
+    "breadcrumb1": "선택 이유",
+    "breadcrumb2": "비즈니스 인센티브",
+    "metaTitle": "비즈니스 인센티브",
+    "metaDescription": "수빅 베이 게이트웨이 파크의 세금 면제, 관세 면제 수입, 100% 외국인 소유 및 기타 비즈니스 인센티브를 알아보세요.",
+    "sections": [
+      {
+        "id": "tax-incentives",
+        "badge": "세금 혜택",
+        "title": "세금 인센티브",
+        "items": [
+          {
+            "id": "income-tax-holiday",
+            "title": "법인세 면제 기간",
+            "description": "적격 기업은 최대 6년간 법인세 면제."
+          },
+          {
+            "id": "preferential-tax-rate",
+            "title": "우대 세율",
+            "description": "면제 기간 후, 총 소득에 대해 5%의 우대 세율 적용."
+          },
+          {
+            "id": "tax-exemption",
+            "title": "세금 면제",
+            "description": "등록 기업에 대한 지방 정부 세금 및 수수료 면제."
+          }
+        ]
+      },
+      {
+        "id": "customs-trade-incentives",
+        "badge": "무역 혜택",
+        "title": "관세 및 무역 인센티브",
+        "items": [
+          {
+            "id": "duty-free-importation",
+            "title": "관세 면제 수입",
+            "description": "등록 기업의 자본 장비, 원자재 및 소모품에 대한 무세 및 관세 면제 수입."
+          },
+          {
+            "id": "simplified-customs",
+            "title": "간소화된 통관",
+            "description": "최소한의 서류 작업과 신속한 처리 시간으로 간소화된 수출입 절차."
+          }
+        ]
+      },
+      {
+        "id": "investment-incentives",
+        "badge": "투자 혜택",
+        "title": "투자 인센티브",
+        "items": [
+          {
+            "id": "foreign-ownership",
+            "title": "외국인 소유",
+            "description": "대부분의 비즈니스 활동에서 최대 100% 외국인 소유 허용."
+          },
+          {
+            "id": "currency-controls",
+            "title": "환율 규제",
+            "description": "환율 제한 없이 이익과 투자의 자유로운 본국 송금."
+          },
+          {
+            "id": "foreign-nationals",
+            "title": "외국인 고용",
+            "description": "감독 및 기술 직무에 외국인 고용을 위한 유연한 규정."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "완전하고 상세한 인센티브 목록을 보려면 당사 팀에 문의하십시오.",
+      "buttonText": "팀에 문의하기"
+    }
   }
 }
