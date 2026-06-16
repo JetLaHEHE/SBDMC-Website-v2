@@ -6,7 +6,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "https://sbdmc.netlify.app",
+  site: "https://sbdmc.com",
   i18n: {
     defaultLocale: "en",
     locales: ["en", "zh", "tl", "ja", "ko"],

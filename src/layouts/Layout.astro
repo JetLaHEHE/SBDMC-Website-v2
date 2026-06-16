@@ -35,7 +35,6 @@ const baseUrl = "https://sbdmc.netlify.app";
 
     <link rel="canonical" href={`${baseUrl}${canonical}`} />
     <link rel="icon" type="image/png" href="/images/logo.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     {getHreflangs(Astro.url.pathname, baseUrl).map(({ lang: hl, href }) => (
       <link rel="alternate" hreflang={hl} href={href} />
     ))}
