@@ -272,7 +272,7 @@ const ct = t(chatbotTranslations, lang);
     langCode = code;
     try { localStorage.setItem(LANG_STORAGE_KEY, code); } catch {}
     input.placeholder = t("placeholder");
-    subtitle.textContent = t("greeting").split(".")[0] + "?";
+    subtitle.textContent = t("greeting").split(".")[0] + ".";
     renderLangDropdown();
     if (showContact) {
       contactTitle.textContent = t("contactTitle");
@@ -541,7 +541,7 @@ const ct = t(chatbotTranslations, lang);
   });
 
   input.placeholder = t("placeholder");
-  subtitle.textContent = t("greeting").split(".")[0] + "?";
+  subtitle.textContent = t("greeting").split(".")[0] + ".";
   renderLangDropdown();
 
   const saved = loadFromStorage();
