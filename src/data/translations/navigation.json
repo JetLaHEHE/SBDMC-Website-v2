@@ -39,6 +39,7 @@
       ]
     },
     { "label": "Gallery", "href": "/gallery" },
+    { "label": "News", "href": "/news" },
     { "label": "Downloads", "href": "/forms" },
     { "label": "Contact Us", "href": "/contact" }
   ],
@@ -82,6 +83,7 @@
       ]
     },
     { "label": "相簿", "href": "/gallery" },
+    { "label": "新聞", "href": "/news" },
     { "label": "文件下載", "href": "/forms" },
     { "label": "聯繫我們", "href": "/contact" }
   ],
@@ -125,6 +127,7 @@
       ]
     },
     { "label": "Galeriya", "href": "/gallery" },
+    { "label": "Balita", "href": "/news" },
     { "label": "Mga Download", "href": "/forms" },
     { "label": "Makipag-ugnayan", "href": "/contact" }
   ],
@@ -168,6 +171,7 @@
       ]
     },
     { "label": "ギャラリー", "href": "/gallery" },
+    { "label": "ニュース", "href": "/news" },
     { "label": "ダウンロード", "href": "/forms" },
     { "label": "お問い合わせ", "href": "/contact" }
   ],
@@ -211,6 +215,7 @@
       ]
     },
     { "label": "갤러리", "href": "/gallery" },
+    { "label": "뉴스", "href": "/news" },
     { "label": "자료실", "href": "/forms" },
     { "label": "문의하기", "href": "/contact" }
   ]

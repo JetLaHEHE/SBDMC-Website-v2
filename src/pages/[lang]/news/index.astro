@@ -1,0 +1,42 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getStaticPaths, getLangFromParams, getLangPrefix, type LangCode } from "../../../i18n";
+import { getCollection } from "astro:content";
+
+export { getStaticPaths };
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
+
+const posts = await getCollection("news");
+posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const pageTitle = lang === "en" ? "News & Updates" : lang === "zh" ? "新聞與更新" : lang === "tl" ? "Balita at Update" : lang === "ja" ? "ニュースとお知らせ" : "뉴스 및 공지사항";
+---
+
+<Layout title={pageTitle} description="Latest news and announcements from SBDMC, Inc." lang={lang} currentPath={langPrefix + "/news"}>
+  <main class="min-h-screen pt-24">
+    <div class="mx-auto max-w-4xl px-4 pb-24 sm:px-6 lg:px-8">
+      <h1 class="section-title mb-4 text-center">{pageTitle}</h1>
+      <div class="space-y-8">
+        {posts.map((post) => (
+          <a href={langPrefix + "/news/" + post.id.replace(/\.\w+$/, "")} class="card block transition-all hover:shadow-md">
+            <article class="p-6">
+              <div class="mb-2 flex items-center gap-3 text-sm text-gray-400">
+                <time datetime={post.data.date.toISOString()}>
+                  {post.data.date.toLocaleDateString(lang === "en" ? "en-US" : lang === "zh" ? "zh-TW" : lang === "tl" ? "tl-PH" : lang === "ja" ? "ja-JP" : "ko-KR", { year: "numeric", month: "long", day: "numeric" })}
+                </time>
+                {post.data.tags && post.data.tags.length > 0 && (
+                  <span class="rounded-full bg-accent-100 px-2.5 py-0.5 text-xs font-medium text-accent-700">
+                    {post.data.tags[0]}
+                  </span>
+                )}
+              </div>
+              <h2 class="text-xl font-bold text-primary-500">{post.data.title}</h2>
+              <p class="mt-2 text-gray-500">{post.data.excerpt}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

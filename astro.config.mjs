@@ -3,6 +3,9 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
+  legacy: {
+    collectionsBackwardsCompat: true,
+  },
   vite: {
     plugins: [tailwindcss()]
   },

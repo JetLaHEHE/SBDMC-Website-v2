@@ -1,0 +1,60 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCollection, getEntry, render } from "astro:content";
+import { getLangFromParams, getLangPrefix, type LangCode } from "../../../i18n";
+
+export interface Props {
+  lang?: LangCode;
+  currentPath?: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("news");
+  const langs = ["en", "zh", "tl", "ja", "ko"];
+  return posts.flatMap((post) => {
+    const slug = post.id.replace(/\.\w+$/, "");
+    return langs.map((lang) => ({
+      params: { lang, slug },
+      props: { lang: lang as LangCode, postId: post.id },
+    }));
+  });
+}
+
+const { postId } = Astro.props as { postId: string };
+const lang = (Astro.props.lang || getLangFromParams(Astro.params)) as LangCode;
+const langPrefix = getLangPrefix(lang);
+
+const post = await getEntry("news", postId);
+
+if (!post) {
+  return Astro.redirect("/" + (lang === "en" ? "" : lang) + "/404");
+}
+
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title + " — SBDMC, Inc."} description={post.data.excerpt} lang={lang} currentPath={langPrefix + "/news/" + postId.replace(/\.\w+$/, "")}>
+  <main class="min-h-screen pt-24">
+    <article class="mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
+      <nav class="mb-8 text-sm text-gray-400">
+        <a href={langPrefix + "/news"} class="text-primary-500 hover:text-primary-600">&larr; {lang === "en" ? "Back to News" : lang === "zh" ? "返回新聞" : lang === "tl" ? "Bumalik sa Balita" : lang === "ja" ? "ニュースに戻る" : "뉴스로 돌아가기"}</a>
+      </nav>
+      <header class="mb-8">
+        <div class="mb-3 flex items-center gap-3 text-sm text-gray-400">
+          <time datetime={post.data.date.toISOString()}>
+            {post.data.date.toLocaleDateString(lang === "en" ? "en-US" : lang === "zh" ? "zh-TW" : lang === "tl" ? "tl-PH" : lang === "ja" ? "ja-JP" : "ko-KR", { year: "numeric", month: "long", day: "numeric" })}
+          </time>
+          {post.data.tags && post.data.tags.length > 0 && (
+            <span class="rounded-full bg-accent-100 px-2.5 py-0.5 text-xs font-medium text-accent-700">
+              {post.data.tags[0]}
+            </span>
+          )}
+        </div>
+        <h1 class="text-3xl font-bold text-primary-500">{post.data.title}</h1>
+      </header>
+      <div class="prose prose-gray max-w-none">
+        <Content />
+      </div>
+    </article>
+  </main>
+</Layout>
