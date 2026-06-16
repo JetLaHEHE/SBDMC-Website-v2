@@ -14,9 +14,7 @@ function linkHref(href: string): string {
 }
 function isActive(href: string): boolean {
   const prefixed = langPrefix + href;
-  if (prefixed === "/en/") return true;
-  if (prefixed === "/en") return currentPath === "/en" || currentPath === "/en/";
-  return currentPath === prefixed || currentPath.startsWith(prefixed + "/") || currentPath.startsWith(prefixed + "#");
+  return currentPath === prefixed || currentPath === prefixed + "/" || currentPath.startsWith(prefixed + "#") || currentPath.startsWith(prefixed + "/");
 }
 function linkClass(href: string, base = false): string {
   const active = isActive(href);
