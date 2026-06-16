@@ -1,6 +1,20 @@
 {
   "siteName": "SBDMC, Inc. - Subic Bay Gateway Park",
   "about": "Subic Bay Gateway Park (SBGP) is a 45-hectare industrial park in the Subic Bay Freeport Zone, Philippines. Developed and operated by SBDMC, Inc. Designed for light manufacturing, logistics, warehousing, and BPO operations.",
+  "aboutDetails": {
+    "history": "SBDMC, Inc. was established in 1994 to develop, manage and market the Subic Bay Gateway Park (SBGP). It is a joint venture between the Subic Bay Metropolitan Authority (SBMA) and United Development Corporation (UDC) of Taiwan.",
+    "mission": "To develop and maintain a world-class industrial park that provides a competitive, sustainable, and business-friendly environment for locators, while contributing to the economic growth of the Subic Bay Freeport Zone and the Philippines.",
+    "vision": "To be the preferred industrial park of choice in the Asia-Pacific region, known for excellence in infrastructure, service, and environmental stewardship."
+  },
+  "sbma": {
+    "about": "The Subic Bay Metropolitan Authority (SBMA) is the government agency responsible for the development and management of the Subic Bay Freeport Zone (SBFZ). Established in 1992 after the departure of the US military from Subic Bay Naval Base, the SBMA has transformed the area into one of the Philippines' most successful economic zones.",
+    "mandate": "Administration, operation, and development of the Subic Bay Freeport Zone as a self-sustaining industrial, commercial, financial, and investment center.",
+    "functions": [
+      "Investment Promotion — attracting and facilitating investments within the freeport zone",
+      "Infrastructure — developing and maintaining world-class infrastructure and facilities",
+      "Environmental Management — environmental protection and sustainable development programs"
+    ]
+  },
   "contact": {
     "address": "Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park, Subic Bay Freeport Zone, 2222",
     "phone": "(047) 252-3456",
@@ -46,6 +60,30 @@
     "Up to 100% foreign ownership allowed for registered enterprises",
     "Simplified customs procedures through the Subic Bay Freeport zone customs office"
   ],
+  "incentivesDetailed": {
+    "tax": {
+      "incomeTaxHoliday": "Qualified enterprises enjoy up to 4-6 years of exemption from corporate income tax.",
+      "preferentialTaxRate": "After the holiday period, a preferential 5% tax rate on gross income earned instead of all national and local taxes.",
+      "taxExemption": "Exemption from local government taxes and fees for registered enterprises."
+    },
+    "customsTrade": {
+      "dutyFreeImportation": "Tax and duty-free importation of capital equipment, raw materials, and supplies for registered enterprises.",
+      "simplifiedCustoms": "Streamlined import and export procedures with minimal paperwork and faster processing times."
+    },
+    "investment": {
+      "foreignOwnership": "Up to 100% foreign ownership allowed in most business activities.",
+      "currencyControls": "Free repatriation of profits and investments without currency restrictions.",
+      "foreignNationals": "Flexible rules for employing foreign nationals in supervisory and technical roles."
+    }
+  },
+  "advantages": [
+    { "title": "Strategic Location", "description": "Located in the heart of Asia's most dynamic region, with easy access to major markets and transportation hubs. 15 minutes from Olongapo City, 45 minutes from Clark International Airport, 2 hours from Metro Manila via NLEX-SCTEX." },
+    { "title": "Skilled Workforce", "description": "Access to a large pool of skilled, educated, and cost-competitive workers from Central Luzon. Sourced from Olongapo City and nearby towns with a labor force of approximately 500,000. Technical skills available through TESDA-accredited institutions." },
+    { "title": "World-Class Facilities", "description": "Modern infrastructure including reliable 24/7 power, adequate water supply, fiber optic telecom, well-maintained roads, and 24/7 security systems." },
+    { "title": "Growth Potential", "description": "No need for relocation when your company grows — there's no better deal elsewhere in Asia but right here in Subic. Space for expansion within the park." },
+    { "title": "Company Image & Customer Confidence", "description": "Join leading companies like Wistron, Taian, Taiwan Hitachi, TECO, and Tong Lung — all first-rate companies listed in the Taiwan Stock Exchange." },
+    { "title": "Security & Safety", "description": "24/7 security monitoring, emergency response systems, and comprehensive safety protocols ensure your business operates securely." }
+  ],
   "infrastructure": {
     "power": "Reliable 24/7 power supply with an on-site substation. Provider: Subic EnerZone. Backup generators available for critical operations. Rates are competitive with the national grid.",
     "water": "Adequate water supply from Subic Water. Water treatment facility on-site. Capacity sufficient for industrial and commercial use.",
@@ -58,6 +96,28 @@
     "commonFees": "Common area maintenance (CAM) fees apply. Utility deposits required. SBMA registration and permit fees are separate.",
     "note": "Contact inquiry@sbdmc.com for a customized quotation based on your requirements."
   },
+  "leaseOptions": {
+    "types": [
+      { "title": "Warehouse Space", "description": "Modern warehouse facilities with loading docks, high ceilings, and ample storage capacity. Sizes from 500 sqm to 5,000 sqm. Features include 24/7 security and easy truck access with loading bays." },
+      { "title": "Manufacturing Facilities", "description": "Ready-built manufacturing units with essential infrastructure connections. Customizable layouts to fit your needs. High power capacity available. Loading/unloading areas included." },
+      { "title": "Office Spaces", "description": "Fully serviced office spaces for BPO, administrative, and commercial use. Fiber optic internet ready. Ample parking available. Flexible lease terms available." },
+      { "title": "Land Leases", "description": "Lease land within the park for build-to-suit facilities. Long-term lease options available. Prime locations within the park with infrastructure ready for development." }
+    ],
+    "howToLease": [
+      { "step": "1", "title": "Inquire", "text": "Contact our team via the website contact page, call (047) 252-3456, or email inquiry@sbdmc.com." },
+      { "step": "2", "title": "Visit", "text": "Tour the park at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park." },
+      { "step": "3", "title": "Apply", "text": "Submit lease application with business profile and requirements." },
+      { "step": "4", "title": "Move In", "text": "Sign lease contract and start operations." }
+    ]
+  },
+  "businessServices": [
+    { "name": "Registration Assistance", "description": "Help with business registration, permits, and licensing requirements with SBMA and other agencies." },
+    { "name": "Utility Connection", "description": "Assistance with connection to power, water, and telecommunications services within the park." },
+    { "name": "Security Services", "description": "24/7 security monitoring, access control, and patrol services for the safety of your business." },
+    { "name": "Maintenance Support", "description": "Regular maintenance of common areas, roads, and park facilities for a pleasant working environment." },
+    { "name": "E-Billing", "description": "Convenient online billing and payment system via UnionBank EIP portal at https://eipp.unionbankph.com/EIPPHUB." },
+    { "name": "Helpdesk Support", "description": "Dedicated helpdesk for locator concerns, inquiries, and support requests at https://sbdmcinc.freshdesk.com/support/home." }
+  ],
   "services": [
     "Rental Information — available spaces for lease within the park",
     "Business Services — comprehensive support for business operations including registration assistance",
@@ -70,6 +130,51 @@
     "rfidApplication": "1) Obtain RFID application form from the guardhouse or website. 2) Complete the form with employee/vehicle details. 3) Submit with valid ID and vehicle registration (OR/CR). 4) Pay processing fee. 5) Attend brief RFID orientation. 6) Receive RFID sticker (1-3 business days).",
     "businessRegistration": "1) Submit lease application and business profile to SBDMC. 2) Sign lease contract with SBDMC. 3) Register with SBMA — submit incorporating documents, business plan, and financial statements. 4) Obtain SBMA Certificate of Registration and Tax Exemption. 5) Secure business permit from SBMA. 6) Register with BIR for tax identification. 7) Set up utility connections (power, water, internet). Total: 2-4 weeks.",
     "constructionPermit": "1) Submit building plans and specifications to SBDMC for review. 2) Obtain SBDMC construction clearance. 3) Apply for building permit with SBMA. 4) Secure necessary clearances (fire, sanitation, environmental). 5) Post construction bond. 6) Begin construction with regular inspections."
+  },
+  "rfid": {
+    "overview": "All vehicles entering and exiting SBGP are required to have a valid RFID sticker, including cars, motorcycles, trucks, and other motor vehicles. This applies to locators, employees, tenants, and visitors.",
+    "validity": "SBGP RFID is valid for one (1) year from the date of issuance/registration.",
+    "installation": "RFID must be installed by authorized SBDMC, Inc. personnel on the non-metal part of the vehicle (headlight, fairings, visor).",
+    "fees": {
+      "gatepassers": "PHP 1,000.00",
+      "employees": "PHP 300.00",
+      "replacement": "PHP 300.00 for lost or damaged RFID"
+    },
+    "requirements": [
+      "For Direct Locators: Photocopy of OR/CR and Driver's License.",
+      "For Subleasees (SBGP Phase I and II): Photocopy of OR/CR and Driver's License.",
+      "For SBGP Employees: Photocopy of OR/CR, Driver's License, and SBMA ID.",
+      "For Gate Passers: Photocopy of OR/CR and Driver's License.",
+      "For Agency Employees: Photocopy of OR/CR, Driver's License, and Certificate of Employment (COE)."
+    ],
+    "requirementNotes": [
+      "If OR/CR does not match applicant's name, attach photocopy of Deed of Sale. Open Deed of Sale is not allowed.",
+      "If OR/CR belongs to a relative, indicate relationship on the photocopy.",
+      "Agency employees working inside SBGP need a Certificate of Employment (COE)."
+    ],
+    "guidelines": [
+      "Avoid tailgating — maintain one (1) car length distance between your vehicle and the next one.",
+      "Wait your turn — barrier closes after each vehicle. Wait until the boom arm fully lowers before proceeding.",
+      "SBDMC, Inc. has the right to block/confiscate RFID access of vehicles found with violations.",
+      "RFID stickers are non-transferable and non-refundable. Do not peel off and transfer to another vehicle."
+    ],
+    "dos": [
+      "Maintain one (1) car length distance from the vehicle ahead",
+      "Wait for the boom arm to fully lower before proceeding",
+      "Keep your RFID sticker clean and intact",
+      "Report any RFID issues to the guard house or SBDMC, Inc. office",
+      "Renew your RFID before the 1-year validity expires"
+    ],
+    "donts": [
+      "Tailgate or follow closely behind another vehicle",
+      "Peel off or transfer the RFID sticker to another vehicle",
+      "Spray the RFID directly with a pressure washer",
+      "Use abrasive substances on the RFID sticker",
+      "Apply excessive force on the black chip at the middle of the RFID"
+    ],
+    "damagePenalty": "Damages to the boom arm will incur a PHP 15,000.00 penalty.",
+    "gateLocations": "RFID checkpoints are installed at all entry and exit gates of Subic Bay Gateway Park.",
+    "applicationForm": "RFID application forms are available at the guardhouse or via the SBDMC website."
   },
   "locators": [
     { "company": "Wistron Infocomm (Philippines) Corp.", "industry": "Electronics / IT Manufacturing", "nationality": "Taiwan", "description": "Major electronics manufacturer, one of the largest locators in the park." },
