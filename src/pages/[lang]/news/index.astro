@@ -11,31 +11,60 @@ const posts = await getCollection("news");
 posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const pageTitle = lang === "en" ? "News & Updates" : lang === "zh" ? "新聞與更新" : lang === "tl" ? "Balita at Update" : lang === "ja" ? "ニュースとお知らせ" : "뉴스 및 공지사항";
+
+function tagLabel(tag: string): { icon: string; color: string; border: string } {
+  const map: Record<string, { icon: string; color: string; border: string }> = {
+    announcement: { icon: "📢", color: "bg-red-50 text-red-700 ring-red-300", border: "border-l-red-400" },
+    guide: { icon: "📖", color: "bg-blue-50 text-blue-700 ring-blue-300", border: "border-l-blue-400" },
+    "case study": { icon: "📊", color: "bg-green-50 text-green-700 ring-green-300", border: "border-l-green-400" },
+    event: { icon: "📅", color: "bg-purple-50 text-purple-700 ring-purple-300", border: "border-l-purple-400" },
+  };
+  return map[tag.toLowerCase()] || { icon: "📰", color: "bg-gray-50 text-gray-700 ring-gray-300", border: "border-l-gray-400" };
+}
+
+function formatDate(date: Date, lang: string): string {
+  try {
+    const locale = lang === "en" ? "en-US" : lang === "zh" ? "zh-TW" : lang === "tl" ? "tl-PH" : lang === "ja" ? "ja-JP" : "ko-KR";
+    return date.toLocaleDateString(locale, { year: "numeric", month: "short", day: "numeric" });
+  } catch {
+    return date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+  }
+}
 ---
 
 <Layout title={pageTitle} description="Latest news and announcements from SBDMC, Inc." lang={lang} currentPath={langPrefix + "/news"}>
   <main class="min-h-screen pt-24">
     <div class="mx-auto max-w-4xl px-4 pb-24 sm:px-6 lg:px-8">
-      <h1 class="section-title mb-4 text-center">{pageTitle}</h1>
-      <div class="space-y-8">
-        {posts.map((post) => (
-          <a href={langPrefix + "/news/" + post.id.replace(/\.\w+$/, "")} class="card block transition-all hover:shadow-md">
-            <article class="p-6">
-              <div class="mb-2 flex items-center gap-3 text-sm text-gray-400">
-                <time datetime={post.data.date.toISOString()}>
-                  {post.data.date.toLocaleDateString(lang === "en" ? "en-US" : lang === "zh" ? "zh-TW" : lang === "tl" ? "tl-PH" : lang === "ja" ? "ja-JP" : "ko-KR", { year: "numeric", month: "long", day: "numeric" })}
-                </time>
-                {post.data.tags && post.data.tags.length > 0 && (
-                  <span class="rounded-full bg-accent-100 px-2.5 py-0.5 text-xs font-medium text-accent-700">
-                    {post.data.tags[0]}
-                  </span>
-                )}
+      <h1 class="section-title mb-2 text-center">{pageTitle}</h1>
+      <p class="mb-12 text-center text-gray-500">{lang === "en" ? "Latest news and announcements from SBDMC, Inc." : lang === "zh" ? "SBDMC, Inc. 的最新消息和公告" : lang === "tl" ? "Pinakabagong balita at anunsyo mula sa SBDMC, Inc." : lang === "ja" ? "SBDMC, Inc.からの最新ニュースとお知らせ" : "SBDMC, Inc.의 최신 뉴스 및 공지사항"}</p>
+      <div class="space-y-6">
+        {posts.map((post) => {
+          const tag = (post.data.tags && post.data.tags.length > 0) ? post.data.tags[0] : "";
+          const meta = tag ? tagLabel(tag) : { icon: "📰", color: "bg-gray-50 text-gray-700 ring-gray-300", border: "border-l-gray-400" };
+          return (
+          <a href={langPrefix + "/news/" + post.id.replace(/\.\w+$/, "")} class={"card block border-l-4 transition-all hover:shadow-lg hover:-translate-y-0.5 " + meta.border}>
+            <article class="flex flex-col gap-4 sm:flex-row sm:items-start">
+              <div class="hidden sm:flex h-20 w-20 shrink-0 items-center justify-center rounded-lg bg-gray-50 text-3xl ring-1 ring-gray-200">
+                {meta.icon}
               </div>
-              <h2 class="text-xl font-bold text-primary-500">{post.data.title}</h2>
-              <p class="mt-2 text-gray-500">{post.data.excerpt}</p>
+              <div class="min-w-0 flex-1">
+                <div class="mb-2 flex flex-wrap items-center gap-2 text-xs text-gray-400">
+                  <time datetime={post.data.date.toISOString()} class="whitespace-nowrap">
+                    {formatDate(post.data.date, lang)}
+                  </time>
+                  {tag && (
+                    <span class={"inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset " + meta.color}>
+                      {meta.icon} {tag.charAt(0).toUpperCase() + tag.slice(1)}
+                    </span>
+                  )}
+                </div>
+                <h2 class="text-lg font-bold text-primary-500 leading-snug">{post.data.title}</h2>
+                <p class="mt-1.5 text-sm leading-relaxed text-gray-500 line-clamp-2">{post.data.excerpt}</p>
+              </div>
             </article>
           </a>
-        ))}
+          );
+        })}
       </div>
     </div>
   </main>

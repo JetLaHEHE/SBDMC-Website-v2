@@ -31,30 +31,52 @@ if (!post) {
 }
 
 const { Content } = await render(post);
+
+const tag = (post.data.tags && post.data.tags.length > 0) ? post.data.tags[0] : "";
+const tagMeta: Record<string, { icon: string; bg: string }> = {
+  announcement: { icon: "📢", bg: "from-red-700 to-red-900" },
+  guide: { icon: "📖", bg: "from-primary-600 to-primary-900" },
+  "case study": { icon: "📊", bg: "from-green-700 to-green-900" },
+  event: { icon: "📅", bg: "from-purple-700 to-purple-900" },
+};
+const meta = tagMeta[tag.toLowerCase()] || { icon: "📰", bg: "from-gray-600 to-gray-900" };
+
+function formatDate(date: Date, lang: string): string {
+  try {
+    const locale = lang === "en" ? "en-US" : lang === "zh" ? "zh-TW" : lang === "tl" ? "tl-PH" : lang === "ja" ? "ja-JP" : "ko-KR";
+    return date.toLocaleDateString(locale, { year: "numeric", month: "long", day: "numeric" });
+  } catch {
+    return date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  }
+}
 ---
 
 <Layout title={post.data.title + " — SBDMC, Inc."} description={post.data.excerpt} lang={lang} currentPath={langPrefix + "/news/" + postId.replace(/\.\w+$/, "")}>
-  <main class="min-h-screen pt-24">
-    <article class="mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
-      <nav class="mb-8 text-sm text-gray-400">
-        <a href={langPrefix + "/news"} class="text-primary-500 hover:text-primary-600">&larr; {lang === "en" ? "Back to News" : lang === "zh" ? "返回新聞" : lang === "tl" ? "Bumalik sa Balita" : lang === "ja" ? "ニュースに戻る" : "뉴스로 돌아가기"}</a>
-      </nav>
-      <header class="mb-8">
-        <div class="mb-3 flex items-center gap-3 text-sm text-gray-400">
+  <main class="min-h-screen">
+    <div class={"bg-gradient-to-br " + meta.bg + " pb-16 pt-28 text-white"}>
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <nav class="mb-8 text-sm text-white/70">
+          <a href={langPrefix + "/news"} class="text-white/80 hover:text-white transition-colors">&larr; {lang === "en" ? "Back to News" : lang === "zh" ? "返回新聞" : lang === "tl" ? "Bumalik sa Balita" : lang === "ja" ? "ニュースに戻る" : "뉴스로 돌아가기"}</a>
+        </nav>
+        <div class="mb-4 flex items-center gap-3 text-sm text-white/70">
           <time datetime={post.data.date.toISOString()}>
-            {post.data.date.toLocaleDateString(lang === "en" ? "en-US" : lang === "zh" ? "zh-TW" : lang === "tl" ? "tl-PH" : lang === "ja" ? "ja-JP" : "ko-KR", { year: "numeric", month: "long", day: "numeric" })}
+            {formatDate(post.data.date, lang)}
           </time>
-          {post.data.tags && post.data.tags.length > 0 && (
-            <span class="rounded-full bg-accent-100 px-2.5 py-0.5 text-xs font-medium text-accent-700">
-              {post.data.tags[0]}
+          {tag && (
+            <span class="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+              {meta.icon} {tag.charAt(0).toUpperCase() + tag.slice(1)}
             </span>
           )}
         </div>
-        <h1 class="text-3xl font-bold text-primary-500">{post.data.title}</h1>
-      </header>
-      <div class="prose prose-gray max-w-none">
-        <Content />
+        <h1 class="text-4xl font-bold leading-tight sm:text-4xl">{post.data.title}</h1>
       </div>
-    </article>
+    </div>
+    <div class="mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
+      <article class="-mt-8 rounded-xl bg-white p-8 shadow-lg sm:p-10">
+        <div class="prose prose-gray max-w-none">
+          <Content />
+        </div>
+      </article>
+    </div>
   </main>
 </Layout>
