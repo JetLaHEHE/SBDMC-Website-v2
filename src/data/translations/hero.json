@@ -9,7 +9,6 @@
     "stats": [
       { "value": "45+", "label": "Hectares of Prime Land" },
       { "value": "50+", "label": "Locator Companies" },
-      { "value": "ISO", "label": "Certified Quality" },
       { "value": "24/7", "label": "Security & Support" }
     ],
     "servicesTitle": "Everything Your Business Needs",
@@ -30,7 +29,6 @@
     "stats": [
       { "value": "45+", "label": "公頃黃金地段" },
       { "value": "50+", "label": "進駐企業" },
-      { "value": "ISO", "label": "品質認證" },
       { "value": "24/7", "label": "安全與支援" }
     ],
     "servicesTitle": "您業務所需的一切",
@@ -51,7 +49,6 @@
     "stats": [
       { "value": "45+", "label": "Ektarya ng Pangunahing Lupa" },
       { "value": "50+", "label": "Mga Kumpanyang Lokator" },
-      { "value": "ISO", "label": "Sertipikadong Kalidad" },
       { "value": "24/7", "label": "Seguridad at Suporta" }
     ],
     "servicesTitle": "Lahat ng Kailangan ng Iyong Negosyo",
@@ -72,7 +69,6 @@
     "stats": [
       { "value": "45+", "label": "ヘクタールの優良用地" },
       { "value": "50+", "label": "入居企業数" },
-      { "value": "ISO", "label": "認定品質" },
       { "value": "24/7", "label": "セキュリティとサポート" }
     ],
     "servicesTitle": "ビジネスに必要なすべて",
@@ -93,7 +89,6 @@
     "stats": [
       { "value": "45+", "label": "헥타르의 프라임 토지" },
       { "value": "50+", "label": "입주 기업" },
-      { "value": "ISO", "label": "인증된 품질" },
       { "value": "24/7", "label": "보안 및 지원" }
     ],
     "servicesTitle": "비즈니스에 필요한 모든 것",

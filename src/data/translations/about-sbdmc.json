@@ -16,12 +16,6 @@
     "vision": {
       "title": "Vision",
       "description": "To be the preferred industrial park of choice in the Asia-Pacific region, known for excellence in infrastructure, service, and environmental stewardship."
-    },
-    "certification": {
-      "badge": "Certification",
-      "title": "ISO Certified",
-      "id": "PH15/1221",
-      "caption": "Demonstrating our commitment to quality management systems and continuous improvement"
     }
   },
   "zh": {
@@ -41,12 +35,6 @@
     "vision": {
       "title": "願景",
       "description": "成為亞太地區首選的工業園區，以卓越的基礎設施、服務和環境管理著稱。"
-    },
-    "certification": {
-      "badge": "認證",
-      "title": "ISO 認證",
-      "id": "PH15/1221",
-      "caption": "展現我們對品質管理系統和持續改進的承諾"
     }
   },
   "tl": {
@@ -66,12 +54,6 @@
     "vision": {
       "title": "Bisyon",
       "description": "Upang maging ginustong industrial park sa rehiyon ng Asia-Pacific, na kilala sa kahusayan sa imprastraktura, serbisyo, at pangangalaga sa kapaligiran."
-    },
-    "certification": {
-      "badge": "Sertipikasyon",
-      "title": "ISO Certified",
-      "id": "PH15/1221",
-      "caption": "Ipinapakita ang aming pangako sa quality management systems at patuloy na pagpapabuti"
     }
   },
   "ja": {
@@ -91,12 +73,6 @@
     "vision": {
       "title": "ビジョン",
       "description": "インフラ、サービス、環境管理における卓越性で知られる、アジア太平洋地域で選ばれる工業団地になること。"
-    },
-    "certification": {
-      "badge": "認証",
-      "title": "ISO認証",
-      "id": "PH15/1221",
-      "caption": "品質管理体制と継続的改善への取り組みを示しています"
     }
   },
   "ko": {
@@ -116,12 +92,6 @@
     "vision": {
       "title": "비전",
       "description": "인프라, 서비스 및 환경 관리의 우수성으로 알려진 아시아 태평양 지역에서 선호되는 산업 단지가 되는 것입니다."
-    },
-    "certification": {
-      "badge": "인증",
-      "title": "ISO 인증",
-      "id": "PH15/1221",
-      "caption": "품질 관리 시스템과 지속적인 개선에 대한 당사의 의지를 보여줍니다"
     }
   }
 }
