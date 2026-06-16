@@ -8,51 +8,91 @@
     "hours": "Monday - Friday: 9:00 AM - 4:00 PM",
     "helpdesk": "https://sbdmcinc.freshdesk.com/support/home"
   },
-  "faqs": [
-    { "q": "What types of businesses can locate in SBGP?", "a": "Light manufacturing, logistics and warehousing, BPO, commercial establishments, and service-oriented businesses." },
-    { "q": "What are the tax incentives available?", "a": "Income tax holidays (up to 6 years), reduced 5% tax on gross income after holiday, duty-free importation, exemption from local government taxes, up to 100% foreign ownership." },
-    { "q": "Can foreign companies locate in SBGP?", "a": "Yes, foreign companies may enjoy up to 100% foreign ownership under Subic Bay Freeport Zone incentives." },
-    { "q": "How do I apply for a lease?", "a": "Contact through the website contact page or visit the office at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park. Call (047) 252-3456." },
-    { "q": "What infrastructure is available?", "a": "Reliable power, adequate water, high-speed fiber optic internet, well-maintained roads, 24/7 security, drainage, and waste management." },
-    { "q": "What utilities are available in SBGP?", "a": "Reliable 24/7 power supply with an on-site substation, adequate water from Subic Water, high-speed fiber optic internet, and modern drainage and waste management systems." },
-    { "q": "How long does the business registration process take?", "a": "Typically 2 to 4 weeks from lease application to full operation, depending on the complexity of the business." }
-  ],
-  "incentives": [
-    "Income tax holiday (up to 6 years)",
-    "5% tax on gross income after holiday",
-    "Duty-free importation of capital equipment and raw materials",
-    "Exemption from local government taxes",
-    "Up to 100% foreign ownership allowed",
-    "Streamlined registration processes"
-  ],
-  "services": [
-    "Rental Information - available spaces for lease within the park",
-    "Business Services - comprehensive support for business operations",
-    "RFID Access - guidelines, requirements, and forms for access passes"
-  ],
-  "pages": {
-    "aboutSbdmc": "/about-sbdmc",
-    "aboutSbma": "/about-sbma",
-    "description": "/description",
-    "locators": "/locators",
-    "businessIncentives": "/business-incentives",
-    "otherReasons": "/other-reasons",
-    "faq": "/faq",
-    "governmentLinks": "/government-links",
-    "forLease": "/for-lease",
-    "rentalInformation": "/rental-information",
-    "businessServices": "/business-services",
-    "rfid": "/rfid",
-    "jobOpportunities": "/job-opportunities",
-    "gallery": "/gallery",
-    "forms": "/forms",
-    "contact": "/contact"
+  "faqs": {
+    "leasing": [
+      { "q": "What types of businesses can locate in SBGP?", "a": "Light manufacturing, logistics and warehousing, BPO, commercial establishments, and service-oriented businesses." },
+      { "q": "What are the minimum and maximum lease terms?", "a": "Minimum lease term is 1 year. Longer terms are negotiable depending on the investment scale and building improvements." },
+      { "q": "What unit sizes are available?", "a": "Warehouse spaces range from 200 sqm to 5,000 sqm. Office spaces range from 50 sqm to 1,000 sqm. Custom configurations may be arranged." },
+      { "q": "What are the current lease rates?", "a": "Rates vary by location, unit type, and lease duration. Contact inquiry@sbdmc.com or call (047) 252-3456 for current rate sheet." },
+      { "q": "Can I sub-lease my space?", "a": "Sub-leasing requires prior written approval from SBDMC, Inc. The original lessee remains responsible for all lease obligations." },
+      { "q": "How do I apply for a lease?", "a": "Contact through the website contact page or visit the office at Argonaut Highway cor. Rizal Highway, Subic Bay Gateway Park. Call (047) 252-3456." }
+    ],
+    "registration": [
+      { "q": "How long does the business registration process take?", "a": "Typically 2 to 4 weeks from lease application to full operation, depending on the complexity of the business." },
+      { "q": "What are the steps to register a business in SBGP?", "a": "1) Submit lease application with business profile. 2) Sign lease contract. 3) Register with SBMA (Subic Bay Metropolitan Authority). 4) Obtain business permit and tax identification. 5) Set up utilities." },
+      { "q": "What documents are required for registration?", "a": "Business profile/company background, SEC or DTI registration, financial statements, business plan, list of directors/shareholders, and valid government IDs." },
+      { "q": "Are there registration fees?", "a": "Yes, there are SBMA registration fees and local permit fees. Amounts vary by business type and scale. Contact inquiry@sbdmc.com for a detailed breakdown." }
+    ],
+    "operations": [
+      { "q": "What are the gate hours?", "a": "Main gate operates 24/7. Visitor passes require a valid ID at the guardhouse. Truck entry is allowed during business hours (6 AM to 6 PM) with prior coordination." },
+      { "q": "How do I get an RFID access pass?", "a": "Submit an RFID application form (available at the guardhouse or via the website), provide valid ID and vehicle documents, pay the applicable fee, and attend a brief orientation. Processing takes 1-3 business days." },
+      { "q": "What is the visitor policy?", "a": "Visitors must present a valid government-issued ID at the main gate, register with the guardhouse, and be endorsed by the locator company they are visiting. Visitor passes are valid for the day of issue." },
+      { "q": "What are the truck entry rules?", "a": "Truck entry is allowed Monday to Saturday, 6 AM to 6 PM. Trucks must register in advance with the locator company. Oversized or hazardous cargo requires special permits." },
+      { "q": "Do I need a permit for construction or renovations?", "a": "Yes. Construction and renovation plans must be submitted to SBDMC for review and approval. A building permit from SBMA is also required. Allow 2-4 weeks for permit processing." }
+    ],
+    "living": [
+      { "q": "Is there housing near the park?", "a": "Yes. Nearby options include Subic Bay Town Center, Olongapo City (15 minutes away), and various subdivisions in Barrio Barretto and Baloy Beach area. Hotels and serviced apartments are also available for short-term stays." },
+      { "q": "What transportation options are available?", "a": "Public jeepneys and tricycles operate between the park and Olongapo City. Shuttle services can be arranged for employees. Taxis and ride-hailing services (Grab) are available in the area." },
+      { "q": "Are there banks and ATMs nearby?", "a": "Yes. Banks with ATMs are located within the Subic Bay Freeport Zone, including BDO, Metrobank, BPI, and Landbank. Some are within a 5-minute drive from the park." },
+      { "q": "Is there a clinic or medical facility?", "a": "A medical clinic is located within the Subic Bay Freeport Zone. Olongapo City has several hospitals and medical centers, including James L. Gordon Memorial Hospital and St. Joseph's Hospital, about 15 minutes away." },
+      { "q": "Are there canteens or food options in the park?", "a": "Yes, there are canteens and food stalls within the park serving breakfast and lunch. Several restaurants and fast-food chains are available in Subic Bay Freeport Zone, a short drive from the park." }
+    ]
   },
-  "leasing": "Minimum lease term is 1 year. Unit sizes range from 200 sqm to 5,000 sqm for warehouses and 50 sqm to 1,000 sqm for offices. Rates vary by location and unit type — contact inquiry@sbdmc.com for current rates.",
-  "registration": "1) Submit lease application with business profile. 2) Sign lease contract. 3) Register with SBMA (Subic Bay Metropolitan Authority). 4) Obtain business permit and tax identification. 5) Set up utilities. Typical processing time is 2 to 4 weeks.",
+  "incentives": [
+    "Income tax holiday — up to 6 years depending on investment level and location",
+    "5% tax on gross income in lieu of all national and local taxes (after holiday period)",
+    "Duty-free importation of capital equipment, machinery, and raw materials",
+    "Exemption from local government taxes and licenses",
+    "Up to 100% foreign ownership allowed for registered enterprises",
+    "Simplified customs procedures through the Subic Bay Freeport zone customs office"
+  ],
+  "infrastructure": {
+    "power": "Reliable 24/7 power supply with an on-site substation. Provider: Subic EnerZone. Backup generators available for critical operations. Rates are competitive with the national grid.",
+    "water": "Adequate water supply from Subic Water. Water treatment facility on-site. Capacity sufficient for industrial and commercial use.",
+    "internet": "High-speed fiber optic internet available through multiple providers including PLDT, Globe, and Converge. Speeds up to 1 Gbps can be arranged.",
+    "roads": "Well-maintained paved roads within the park. Direct access to Argonaut Highway and Rizal Highway. Connecting to the Subic Bay Freeport Zone expressway network.",
+    "drainage": "Modern drainage and flood control systems in place. Regular maintenance by the park management."
+  },
+  "rates": {
+    "leaseRanges": "Warehouse: approximately PHP 150-300 per sqm/month. Office: approximately PHP 300-500 per sqm/month. Rates vary by location, condition, and lease duration.",
+    "commonFees": "Common area maintenance (CAM) fees apply. Utility deposits required. SBMA registration and permit fees are separate.",
+    "note": "Contact inquiry@sbdmc.com for a customized quotation based on your requirements."
+  },
+  "services": [
+    "Rental Information — available spaces for lease within the park",
+    "Business Services — comprehensive support for business operations including registration assistance",
+    "RFID Access — guidelines, requirements, and forms for access passes",
+    "Security — 24/7 security patrols and monitored access points",
+    "Maintenance — regular maintenance of common areas and infrastructure",
+    "E-Billing — online payment and billing portal via UnionBank EIP"
+  ],
+  "procedures": {
+    "rfidApplication": "1) Obtain RFID application form from the guardhouse or website. 2) Complete the form with employee/vehicle details. 3) Submit with valid ID and vehicle registration (OR/CR). 4) Pay processing fee. 5) Attend brief RFID orientation. 6) Receive RFID sticker (1-3 business days).",
+    "businessRegistration": "1) Submit lease application and business profile to SBDMC. 2) Sign lease contract with SBDMC. 3) Register with SBMA — submit incorporating documents, business plan, and financial statements. 4) Obtain SBMA Certificate of Registration and Tax Exemption. 5) Secure business permit from SBMA. 6) Register with BIR for tax identification. 7) Set up utility connections (power, water, internet). Total: 2-4 weeks.",
+    "constructionPermit": "1) Submit building plans and specifications to SBDMC for review. 2) Obtain SBDMC construction clearance. 3) Apply for building permit with SBMA. 4) Secure necessary clearances (fire, sanitation, environmental). 5) Post construction bond. 6) Begin construction with regular inspections."
+  },
+  "locators": [
+    { "company": "Wistron Infocomm (Philippines) Corp.", "industry": "Electronics / IT Manufacturing", "nationality": "Taiwan", "description": "Major electronics manufacturer, one of the largest locators in the park." },
+    { "company": "Taian Philippines Inc.", "industry": "Manufacturing", "nationality": "Taiwan", "description": "Manufacturing company serving international markets." },
+    { "company": "Taiwan Hitachi, Ltd., Phils.", "industry": "Industrial Equipment", "nationality": "Taiwan / Japan", "description": "Industrial equipment and components manufacturing." },
+    { "company": "TECO Electric & Machinery Philippines Inc.", "industry": "Electric Motors / Machinery", "nationality": "Taiwan", "description": "Manufacturer of electric motors and industrial machinery." },
+    { "company": "Tong Lung Philippines Inc.", "industry": "Manufacturing", "nationality": "Taiwan", "description": "Manufacturing company operating in the freeport zone." }
+  ],
+  "parkLife": {
+    "housing": "Nearby residential options include Subic Bay Town Center residences, Olongapo City apartment complexes, Barrio Barretto subdivisions, and Baloy Beach area. Hotels: Subic Park Hotel, Subic Bay Yacht Club, and Court Meridian Hotel within 10-15 minutes.",
+    "transportation": "Public jeepneys and tricycles operate between SBGP and Olongapo City. Shuttle services available for locator employees. Grab ride-hailing operates in the area. Clark International Airport is 45 minutes away.",
+    "banking": "BDO, Metrobank, BPI, Landbank, and Asia United Bank have branches in Subic Bay Freeport Zone. ATMs available at each branch and select locations.",
+    "medical": "SBMA Medical Clinic within the freeport zone. James L. Gordon Memorial Hospital and St. Joseph's Hospital in Olongapo City (15 min). ACE Medical Center Subic in the freeport zone.",
+    "dining": "Canteens within the park. Numerous restaurants in Subic Bay Freeport Zone including SM Subic food court, Harbor Point dining options, and local eateries along Rizal Highway."
+  },
+  "regulations": {
+    "environmental": "Locators must comply with SBMA environmental regulations. Environmental Compliance Certificate (ECC) may be required depending on business type. Waste management and disposal must follow SBMA guidelines.",
+    "wasteManagement": "Segregation at source required. Hazardous waste disposal must be handled by accredited contractors. Regular waste collection by park management for non-hazardous waste.",
+    "safety": "Occupational safety and health standards must be observed. Regular fire safety inspections conducted. Emergency response protocols in place with park security.",
+    "visitorPolicy": "All visitors must register at the main gate, present valid ID, and be endorsed by the host locator company. Visitor passes valid for one day only."
+  },
   "gateHours": "Main gate operates 24/7. Visitor passes require a valid ID at the guardhouse. Truck entry is allowed during business hours (6 AM to 6 PM) with prior coordination.",
-  "locators": "Home to over 50 locators including light manufacturing, logistics, and BPO companies.",
-  "workforce": "Sourced from Olongapo City and nearby towns with a labor force of approximately 500,000. Technical skills are available through local vocational schools.",
+  "workforce": "Sourced from Olongapo City and nearby towns with a labor force of approximately 500,000. Technical skills are available through local vocational schools and training centers including TESDA-accredited institutions.",
   "mapRoute": "Located in the Subic Bay Freeport Zone. 15 minutes from Olongapo City, 45 minutes from Clark International Airport, and approximately 2 hours from Metro Manila via NLEX-SCTEX.",
-  "lastUpdated": "2026-06-08"
+  "lastUpdated": "2026-06-16"
 }

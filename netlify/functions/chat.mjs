@@ -58,37 +58,52 @@ export async function handler(event) {
 
     const SYSTEM_PROMPT = buildSystemPrompt(pageUrl, language);
 
-    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": SITE_URL,
-        "X-Title": "SBDMC Chatbot",
-      },
-      body: JSON.stringify({
-        model: "google/gemma-4-31b-it:free",
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: message },
-        ],
-        max_tokens: 1024,
-        temperature: 0.3,
-      }),
-    });
+    const controller = new AbortController();
+    const TIMEOUT_MS = 25000;
+    const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error("OpenRouter error:", response.status, errorText);
-      return { statusCode: 502, headers, body: JSON.stringify({ error: "I'm a bit busy, please try again later" }) };
+    try {
+      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": SITE_URL,
+          "X-Title": "SBDMC Chatbot",
+        },
+        body: JSON.stringify({
+          model: "google/gemma-4-31b-it:free",
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            { role: "user", content: message },
+          ],
+          max_tokens: 1024,
+          temperature: 0.3,
+        }),
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("OpenRouter error:", response.status, errorText);
+        return { statusCode: 502, headers, body: JSON.stringify({ error: "api_error", message: "The assistant is busy. Please try again in a moment." }) };
+      }
+
+      const data = await response.json();
+      const reply = data.choices?.[0]?.message?.content || "I couldn't process that, please rephrase.";
+
+      return { statusCode: 200, headers, body: JSON.stringify({ reply }) };
+    } catch (error) {
+      clearTimeout(timeoutId);
+      if (error.name === "AbortError") {
+        return { statusCode: 504, headers, body: JSON.stringify({ error: "timeout", message: "The assistant took too long. Please try again." }) };
+      }
+      throw error;
     }
-
-    const data = await response.json();
-    const reply = data.choices?.[0]?.message?.content || "I couldn't process that, please rephrase.";
-
-    return { statusCode: 200, headers, body: JSON.stringify({ reply }) };
   } catch (error) {
     console.error("Chat function error:", error);
-    return { statusCode: 500, headers, body: JSON.stringify({ error: "Something went wrong. Please try again." }) };
+    return { statusCode: 500, headers, body: JSON.stringify({ error: "network", message: "Something went wrong. Please try again." }) };
   }
 }
