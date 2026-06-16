@@ -52,6 +52,14 @@
       }
     ],
     "inquireNow": "Inquire Now",
+    "inquiryFormTitle": "Quick Inquiry",
+    "inquiryNameLabel": "Full Name",
+    "inquiryEmailLabel": "Email Address",
+    "inquiryPhoneLabel": "Phone (optional)",
+    "inquiryCompanyLabel": "Company (optional)",
+    "inquirySubmit": "Send Inquiry",
+    "inquirySuccess": "Your inquiry has been sent. We'll get back to you soon.",
+    "inquiryError": "Something went wrong. Please try again.",
     "howToLeaseTitle": "How to Lease",
     "howToLeaseSubtitle": "Simple process to get started",
     "steps": [
@@ -114,6 +122,14 @@
       }
     ],
     "inquireNow": "立即諮詢",
+    "inquiryFormTitle": "快速諮詢",
+    "inquiryNameLabel": "姓名",
+    "inquiryEmailLabel": "電子郵件地址",
+    "inquiryPhoneLabel": "電話（選填）",
+    "inquiryCompanyLabel": "公司名稱（選填）",
+    "inquirySubmit": "發送諮詢",
+    "inquirySuccess": "您的諮詢已發送，我們會盡快回覆您。",
+    "inquiryError": "發生錯誤，請重試。",
     "howToLeaseTitle": "如何租賃",
     "howToLeaseSubtitle": "簡單的開始流程",
     "steps": [
@@ -176,6 +192,14 @@
       }
     ],
     "inquireNow": "Magtanong Ngayon",
+    "inquiryFormTitle": "Mabilis na Pagtatanong",
+    "inquiryNameLabel": "Buong Pangalan",
+    "inquiryEmailLabel": "Email Address",
+    "inquiryPhoneLabel": "Telepono (opsyonal)",
+    "inquiryCompanyLabel": "Kumpanya (opsyonal)",
+    "inquirySubmit": "Ipadala ang Pagtatanong",
+    "inquirySuccess": "Ang iyong pagtatanong ay naipadala na. Makikipag-ugnayan kami sa iyo sa lalong madaling panahon.",
+    "inquiryError": "May naganap na error. Pakisubukan muli.",
     "howToLeaseTitle": "Paano Mag-arkila",
     "howToLeaseSubtitle": "Simpleng proseso para makapagsimula",
     "steps": [
@@ -238,6 +262,14 @@
       }
     ],
     "inquireNow": "今すぐ問い合わせ",
+    "inquiryFormTitle": "簡単なお問い合わせ",
+    "inquiryNameLabel": "氏名",
+    "inquiryEmailLabel": "メールアドレス",
+    "inquiryPhoneLabel": "電話番号（任意）",
+    "inquiryCompanyLabel": "会社名（任意）",
+    "inquirySubmit": "お問い合わせを送信",
+    "inquirySuccess": "お問い合わせは送信されました。すぐにご連絡いたします。",
+    "inquiryError": "エラーが発生しました。もう一度お試しください。",
     "howToLeaseTitle": "賃貸の流れ",
     "howToLeaseSubtitle": "簡単なスタート手順",
     "steps": [
@@ -300,6 +332,14 @@
       }
     ],
     "inquireNow": "지금 문의",
+    "inquiryFormTitle": "빠른 문의",
+    "inquiryNameLabel": "성함",
+    "inquiryEmailLabel": "이메일 주소",
+    "inquiryPhoneLabel": "전화번호 (선택사항)",
+    "inquiryCompanyLabel": "회사명 (선택사항)",
+    "inquirySubmit": "문의 보내기",
+    "inquirySuccess": "문의하신 내용이 전송되었습니다. 곧 연락드리겠습니다.",
+    "inquiryError": "문제가 발생했습니다. 다시 시도해 주세요.",
     "howToLeaseTitle": "임대 방법",
     "howToLeaseSubtitle": "간단한 시작 절차",
     "steps": [

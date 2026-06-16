@@ -41,7 +41,20 @@ const jt = t(jobsTranslations, lang);
               </div>
             </div>
             {job.status === "open" && (
-              <a href={langPrefix + "/contact"} class="btn-primary shrink-0 text-center text-sm">{jt.applyNow}</a>
+              <div>
+                <button class="btn-primary shrink-0 text-center text-sm cursor-pointer" data-apply-toggle>
+                  {jt.applyNow}
+                </button>
+                <div class="mt-4 hidden space-y-3 border-t border-gray-200 pt-4" data-apply-form>
+                  <p class="text-sm font-semibold text-primary-500">{jt.applicationFormTitle}</p>
+                  <input type="text" placeholder={jt.applicationNameLabel} required class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-apply-name />
+                  <input type="email" placeholder={jt.applicationEmailLabel} required class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-apply-email />
+                  <input type="tel" placeholder={jt.applicationPhoneLabel} class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-apply-phone />
+                  <textarea placeholder={jt.applicationCoverLabel} rows="4" required class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-apply-cover></textarea>
+                  <button class="btn-primary w-full justify-center text-sm" data-cta="job_application_submit" data-apply-submit>{jt.applicationSubmit}</button>
+                  <p class="hidden text-sm" data-apply-feedback></p>
+                </div>
+              </div>
             )}
           </div>
         </div>
@@ -55,5 +68,73 @@ const jt = t(jobsTranslations, lang);
     </div>
   </section>
 </Layout>
+
+<script define:vars={{ jt, lang }}>
+  document.addEventListener("click", (e) => {
+    const toggle = e.target.closest("[data-apply-toggle]");
+    if (toggle) {
+      const form = toggle.parentElement?.querySelector("[data-apply-form]");
+      form?.classList.toggle("hidden");
+    }
+  });
+
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-apply-submit]");
+    if (!btn) return;
+    const container = btn.closest("[data-apply-form]");
+    if (!container) return;
+    const feedback = container.querySelector("[data-apply-feedback]");
+    const name = container.querySelector("[data-apply-name]");
+    const email = container.querySelector("[data-apply-email]");
+    const phone = container.querySelector("[data-apply-phone]");
+    const cover = container.querySelector("[data-apply-cover]");
+    if (!name?.value || !email?.value || !cover?.value) return;
+    const origText = btn.textContent;
+    btn.textContent = jt.sending || "Sending...";
+    btn.disabled = true;
+    if (feedback) feedback.className = "hidden text-sm";
+
+    const position = container.closest("[class*=card]")?.querySelector("h3")?.textContent || "";
+
+    const payload = {
+      type: "job_application",
+      name: name.value,
+      email: email.value,
+      phone: phone?.value || "",
+      position,
+      coverLetter: cover.value,
+      pageUrl: window.location.href,
+      language: lang,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error);
+      if (feedback) {
+        feedback.textContent = jt.applicationSuccess;
+        feedback.className = "text-sm text-green-600";
+      }
+      name.value = "";
+      email.value = "";
+      if (phone) phone.value = "";
+      if (cover) cover.value = "";
+      container.classList.add("hidden");
+      setTimeout(() => { if (feedback) feedback.className = "hidden text-sm"; }, 3000);
+    } catch {
+      if (feedback) {
+        feedback.textContent = jt.applicationError;
+        feedback.className = "text-sm text-red-600";
+      }
+    } finally {
+      btn.textContent = origText;
+      btn.disabled = false;
+    }
+  });
+</script>
 
 

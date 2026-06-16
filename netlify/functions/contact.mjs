@@ -13,32 +13,46 @@ export async function handler(event) {
   }
 
   try {
-    const { name, email, message, pageUrl, language } = JSON.parse(event.body);
+    const body = JSON.parse(event.body);
+    const { type, name, email, message, company, phone, unit, position, coverLetter, pageUrl, language } = body;
 
-    if (!name || typeof name !== "string" || name.trim().length === 0) {
-      return { statusCode: 400, headers, body: JSON.stringify({ error: "Name is required" }) };
-    }
-    if (!email || typeof email !== "string" || !email.includes("@")) {
-      return { statusCode: 400, headers, body: JSON.stringify({ error: "Valid email is required" }) };
-    }
-    if (!message || typeof message !== "string" || message.trim().length === 0) {
-      return { statusCode: 400, headers, body: JSON.stringify({ error: "Message is required" }) };
+    const validTypes = ["general", "leasing_inquiry", "job_application", "newsletter"];
+    const submissionType = validTypes.includes(type) ? type : "general";
+
+    if (submissionType === "newsletter") {
+      if (!email || typeof email !== "string" || !email.includes("@")) {
+        return { statusCode: 400, headers, body: JSON.stringify({ error: "Valid email is required" }) };
+      }
+    } else {
+      if (!name || typeof name !== "string" || name.trim().length === 0) {
+        return { statusCode: 400, headers, body: JSON.stringify({ error: "Name is required" }) };
+      }
+      if (!email || typeof email !== "string" || !email.includes("@")) {
+        return { statusCode: 400, headers, body: JSON.stringify({ error: "Valid email is required" }) };
+      }
     }
 
     const webhookUrl = process.env.CONTACT_WEBHOOK_URL;
 
     if (webhookUrl) {
+      const payload = {
+        type: submissionType,
+        name: name?.trim() || "",
+        email: email?.trim() || "",
+        company: company?.trim() || "",
+        phone: phone?.trim() || "",
+        unit: unit?.trim() || "",
+        position: position?.trim() || "",
+        coverLetter: coverLetter?.trim() || "",
+        message: message?.trim() || "",
+        pageUrl: pageUrl || "",
+        language: language || "en",
+        timestamp: new Date().toISOString(),
+      };
       await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          message: message.trim(),
-          pageUrl: pageUrl || "",
-          language: language || "en",
-          timestamp: new Date().toISOString(),
-        }),
+        body: JSON.stringify(payload),
       });
     }
 

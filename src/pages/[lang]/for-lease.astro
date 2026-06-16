@@ -42,7 +42,20 @@ const tx = t(forLeaseTranslations, lang);
                   <li class="flex items-center gap-2"><svg aria-hidden="true" class="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> {feature}</li>
                 ))}
               </ul>
-              <a href={langPrefix + "/contact"} class="text-sm font-semibold text-primary-500 hover:text-primary-600">{tx.inquireNow} &rarr;</a>
+              <div>
+                <button class="text-sm font-semibold text-primary-500 hover:text-primary-600 cursor-pointer" data-inquiry-toggle={i}>
+                  {tx.inquireNow} &rarr;
+                </button>
+                <div id={`inquiry-form-${i}`} class="mt-4 hidden space-y-3 border-t border-gray-200 pt-4">
+                  <p class="text-sm font-semibold text-primary-500">{tx.inquiryFormTitle}</p>
+                  <input type="text" placeholder={tx.inquiryNameLabel} required class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-inquiry-name />
+                  <input type="email" placeholder={tx.inquiryEmailLabel} required class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-inquiry-email />
+                  <input type="tel" placeholder={tx.inquiryPhoneLabel} class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-inquiry-phone />
+                  <input type="text" placeholder={tx.inquiryCompanyLabel} class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" data-inquiry-company />
+                  <button class="btn-primary w-full justify-center text-sm" data-cta="leasing_inquiry_submit" data-inquiry-submit>{tx.inquirySubmit}</button>
+                  <p class="hidden text-sm" data-inquiry-feedback></p>
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -68,5 +81,72 @@ const tx = t(forLeaseTranslations, lang);
     </div>
   </section>
 </Layout>
+
+<script define:vars={{ tx, lang }}>
+  document.addEventListener("click", (e) => {
+    const toggle = e.target.closest("[data-inquiry-toggle]");
+    if (toggle) {
+      const idx = toggle.getAttribute("data-inquiry-toggle");
+      const form = document.getElementById(`inquiry-form-${idx}`);
+      form?.classList.toggle("hidden");
+    }
+  });
+
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-inquiry-submit]");
+    if (!btn) return;
+    const container = btn.closest("[id^=inquiry-form-]");
+    if (!container) return;
+    const feedback = container.querySelector("[data-inquiry-feedback]");
+    const name = container.querySelector("[data-inquiry-name]");
+    const email = container.querySelector("[data-inquiry-email]");
+    const phone = container.querySelector("[data-inquiry-phone]");
+    const company = container.querySelector("[data-inquiry-company]");
+    if (!name?.value || !email?.value) return;
+    const origText = btn.textContent;
+    btn.textContent = tx.sending || "Sending...";
+    btn.disabled = true;
+    if (feedback) feedback.className = "hidden text-sm";
+
+    const payload = {
+      type: "leasing_inquiry",
+      name: name.value,
+      email: email.value,
+      phone: phone?.value || "",
+      company: company?.value || "",
+      unit: container.closest("[class*=card]")?.querySelector("h3")?.textContent || "",
+      pageUrl: window.location.href,
+      language: lang,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error);
+      if (feedback) {
+        feedback.textContent = tx.inquirySuccess;
+        feedback.className = "text-sm text-green-600";
+      }
+      name.value = "";
+      email.value = "";
+      if (phone) phone.value = "";
+      if (company) company.value = "";
+      container.classList.add("hidden");
+      setTimeout(() => { if (feedback) feedback.className = "hidden text-sm"; }, 3000);
+    } catch {
+      if (feedback) {
+        feedback.textContent = tx.inquiryError;
+        feedback.className = "text-sm text-red-600";
+      }
+    } finally {
+      btn.textContent = origText;
+      btn.disabled = false;
+    }
+  });
+</script>
 
 

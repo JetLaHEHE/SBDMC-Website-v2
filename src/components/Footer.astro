@@ -66,6 +66,19 @@ const langPrefix = getLangPrefix(lang);
   </div>
 
   <div class="border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <span class="text-sm font-semibold text-gray-300">{ft.newsletterTitle}</span>
+        <div class="flex w-full max-w-sm gap-2">
+          <input type="email" placeholder={ft.newsletterPlaceholder} required class="min-w-0 flex-1 rounded-lg border border-white/20 bg-white/5 px-4 py-2 text-sm text-white placeholder-gray-500 focus:border-primary-400 focus:outline-none focus:ring-1 focus:ring-primary-400" data-newsletter-email />
+          <button class="btn-primary shrink-0 px-4 py-2 text-sm" data-cta="newsletter_subscribe" data-newsletter-submit>{ft.newsletterButton}</button>
+        </div>
+        <p class="hidden text-sm" data-newsletter-feedback></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
       <p class="text-sm text-gray-500">&copy; {new Date().getFullYear()} SBDMC, Inc. {ft.copyright}</p>
       <div class="flex items-center gap-4">
@@ -79,3 +92,48 @@ const langPrefix = getLangPrefix(lang);
     </div>
   </div>
 </footer>
+
+<script define:vars={{ ft }}>
+  const subscribeBtn = document.querySelector("[data-newsletter-submit]");
+  const emailInput = document.querySelector("[data-newsletter-email]");
+  const feedback = document.querySelector("[data-newsletter-feedback]");
+
+  subscribeBtn?.addEventListener("click", async () => {
+    const email = emailInput?.value.trim();
+    if (!email || !email.includes("@")) {
+      if (feedback) {
+        feedback.textContent = ft.newsletterError;
+        feedback.className = "text-sm text-red-400";
+      }
+      return;
+    }
+    const origText = subscribeBtn.textContent;
+    subscribeBtn.textContent = ft.sending || "Sending...";
+    subscribeBtn.disabled = true;
+    if (feedback) feedback.className = "hidden text-sm";
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "newsletter", email, pageUrl: window.location.href }),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error);
+      if (feedback) {
+        feedback.textContent = ft.newsletterSuccess;
+        feedback.className = "text-sm text-green-400";
+      }
+      if (emailInput) emailInput.value = "";
+      setTimeout(() => { if (feedback) feedback.className = "hidden text-sm"; }, 3000);
+    } catch {
+      if (feedback) {
+        feedback.textContent = ft.newsletterError;
+        feedback.className = "text-sm text-red-400";
+      }
+    } finally {
+      subscribeBtn.textContent = origText;
+      subscribeBtn.disabled = false;
+    }
+  });
+</script>

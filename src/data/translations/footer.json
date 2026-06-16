@@ -23,6 +23,11 @@
     ],
     "footerDescription": "Subic Bay Gateway Park — a premier business and industrial park in the Subic Bay Freeport Zone, Philippines.",
     "copyright": "All rights reserved.",
+    "newsletterTitle": "Stay Updated",
+    "newsletterPlaceholder": "Enter your email",
+    "newsletterButton": "Subscribe",
+    "newsletterSuccess": "Subscribed! Thank you.",
+    "newsletterError": "Please enter a valid email.",
     "facebookLabel": "Facebook"
   },
   "zh": {
@@ -49,6 +54,11 @@
     ],
     "footerDescription": "蘇比克灣門戶工業園區 — 位於菲律賓蘇比克灣自由港區的頂級商業與工業園區。",
     "copyright": "版權所有。",
+    "newsletterTitle": "掌握最新資訊",
+    "newsletterPlaceholder": "輸入您的電子郵件",
+    "newsletterButton": "訂閱",
+    "newsletterSuccess": "訂閱成功！謝謝您。",
+    "newsletterError": "請輸入有效的電子郵件。",
     "facebookLabel": "Facebook"
   },
   "tl": {
@@ -75,6 +85,11 @@
     ],
     "footerDescription": "Subic Bay Gateway Park — isang premier business at industrial park sa Subic Bay Freeport Zone, Pilipinas.",
     "copyright": "Lahat ng karapatan ay nakalaan.",
+    "newsletterTitle": "Manatiling Updated",
+    "newsletterPlaceholder": "Ilagay ang iyong email",
+    "newsletterButton": "Mag-subscribe",
+    "newsletterSuccess": "Naka-subscribe! Salamat.",
+    "newsletterError": "Mangyaring maglagay ng wastong email.",
     "facebookLabel": "Facebook"
   },
   "ja": {
@@ -101,6 +116,11 @@
     ],
     "footerDescription": "スービックベイゲートウェイパーク — フィリピン、スービックベイ自由港区にある一流の商業・工業団地。",
     "copyright": "全著作権所有。",
+    "newsletterTitle": "最新情報を受け取る",
+    "newsletterPlaceholder": "メールアドレスを入力",
+    "newsletterButton": "購読",
+    "newsletterSuccess": "購読完了！ありがとうございます。",
+    "newsletterError": "有効なメールアドレスを入力してください。",
     "facebookLabel": "Facebook"
   },
   "ko": {
@@ -127,6 +147,11 @@
     ],
     "footerDescription": "수빅 베이 게이트웨이 파크 — 필리핀 수빅 베이 자유무역지대의 프리미어 비즈니스 및 산업 단지.",
     "copyright": "모든 권리 보유.",
+    "newsletterTitle": "최신 소식 받기",
+    "newsletterPlaceholder": "이메일을 입력하세요",
+    "newsletterButton": "구독",
+    "newsletterSuccess": "구독 완료! 감사합니다.",
+    "newsletterError": "유효한 이메일을 입력해 주세요.",
     "facebookLabel": "Facebook"
   }
 }

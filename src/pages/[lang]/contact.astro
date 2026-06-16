@@ -27,8 +27,7 @@ const ct = t(contactTranslations, lang);
         <div>
           <h2 class="mb-2 text-3xl font-bold text-primary-500" data-aos="fade-up">{ct.formTitle}</h2>
           <p class="mb-8 text-gray-500" data-aos="fade-up" data-aos-delay="50">{ct.formSubtitle}</p>
-          <form class="space-y-5" netlify data-aos="fade-up" data-aos-delay="100">
-            <input type="hidden" name="form-name" value="contact" />
+          <form id="contact-form" class="space-y-5" data-aos="fade-up" data-aos-delay="100">
             <div>
               <label for="name" class="mb-1.5 block text-sm font-medium text-gray-700">{ct.nameLabel}</label>
               <input type="text" id="name" name="name" required class="w-full rounded-lg border border-gray-300 px-5 py-3 max-md:text-base md:text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="John Doe" />
@@ -45,7 +44,8 @@ const ct = t(contactTranslations, lang);
               <label for="message" class="mb-1.5 block text-sm font-medium text-gray-700">{ct.messageLabel}</label>
               <textarea id="message" name="message" rows="5" required class="w-full rounded-lg border border-gray-300 px-5 py-3 max-md:text-base md:text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="Tell us about your inquiry..."></textarea>
             </div>
-            <button type="submit" class="btn-primary w-full justify-center text-base">{ct.sendLabel}</button>
+            <button type="submit" class="btn-primary w-full justify-center text-base" data-cta="contact_form_submit">{ct.sendLabel}</button>
+            <div id="form-feedback" class="hidden text-sm"></div>
           </form>
         </div>
 
@@ -109,4 +109,54 @@ const ct = t(contactTranslations, lang);
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.17!2d120.2995!3d14.8246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339671a8708d4477%3A0xe112900ee7e2923f!2sSBDMC+%E4%B8%AD%E8%8F%AF%E9%96%8B%E7%99%BC%E4%B8%AD%E5%BF%83!5e0!3m2!1sen!2sph!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SBDMC, Inc. Location Map"></iframe>
   </section>
 </Layout>
+
+<script define:vars={{ ct, lang }}>
+  const form = document.getElementById("contact-form");
+  const feedback = document.getElementById("form-feedback");
+  const btn = form?.querySelector("button[type=submit]");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!btn) return;
+    const origText = btn.textContent;
+    btn.textContent = ct.sending;
+    btn.disabled = true;
+    feedback?.classList.add("hidden");
+
+    const data = new FormData(form);
+    const payload = {
+      type: "general",
+      name: data.get("name"),
+      email: data.get("email"),
+      company: data.get("company") || "",
+      message: data.get("message"),
+      pageUrl: window.location.href,
+      language: lang,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error);
+      if (feedback) {
+        feedback.textContent = ct.sendSuccess;
+        feedback.className = "text-sm text-green-600";
+      }
+      form?.reset();
+      setTimeout(() => feedback?.classList.add("hidden"), 3000);
+    } catch {
+      if (feedback) {
+        feedback.textContent = ct.sendError;
+        feedback.className = "text-sm text-red-600";
+      }
+    } finally {
+      btn.textContent = origText;
+      btn.disabled = false;
+    }
+  });
+</script>
 

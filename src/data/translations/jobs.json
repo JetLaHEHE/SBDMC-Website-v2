@@ -22,6 +22,14 @@
     "statusOpen": "Open",
     "statusClosed": "Closed",
     "applyNow": "Apply Now",
+    "applicationFormTitle": "Apply for this Position",
+    "applicationNameLabel": "Full Name",
+    "applicationEmailLabel": "Email Address",
+    "applicationPhoneLabel": "Phone (optional)",
+    "applicationCoverLabel": "Cover Letter",
+    "applicationSubmit": "Submit Application",
+    "applicationSuccess": "Your application has been submitted. We'll be in touch.",
+    "applicationError": "Something went wrong. Please try again or email your resume to inquiry@sbdmc.com.",
     "emailResume": "Email Your Resume"
   },
   "zh": {
@@ -47,6 +55,14 @@
     "statusOpen": "開放",
     "statusClosed": "關閉",
     "applyNow": "立即申請",
+    "applicationFormTitle": "申請此職位",
+    "applicationNameLabel": "姓名",
+    "applicationEmailLabel": "電子郵件地址",
+    "applicationPhoneLabel": "電話（選填）",
+    "applicationCoverLabel": "求職信",
+    "applicationSubmit": "提交申請",
+    "applicationSuccess": "您的申請已提交，我們會與您聯繫。",
+    "applicationError": "發生錯誤，請重試或將您的簡歷發送至 inquiry@sbdmc.com。",
     "emailResume": "電郵簡歷"
   },
   "tl": {
@@ -72,6 +88,14 @@
     "statusOpen": "Bukas",
     "statusClosed": "Sarado",
     "applyNow": "Mag-apply Ngayon",
+    "applicationFormTitle": "Mag-apply para sa Posisyong Ito",
+    "applicationNameLabel": "Buong Pangalan",
+    "applicationEmailLabel": "Email Address",
+    "applicationPhoneLabel": "Telepono (opsyonal)",
+    "applicationCoverLabel": "Cover Letter",
+    "applicationSubmit": "Isumite ang Aplikasyon",
+    "applicationSuccess": "Ang iyong aplikasyon ay naisumite na. Makikipag-ugnayan kami sa iyo.",
+    "applicationError": "May naganap na error. Pakisubukan muli o i-email ang iyong resume sa inquiry@sbdmc.com.",
     "emailResume": "I-email ang Iyong Resume"
   },
   "ja": {
@@ -97,6 +121,14 @@
     "statusOpen": "募集中",
     "statusClosed": "募集終了",
     "applyNow": "今すぐ応募",
+    "applicationFormTitle": "このポジションに応募",
+    "applicationNameLabel": "氏名",
+    "applicationEmailLabel": "メールアドレス",
+    "applicationPhoneLabel": "電話番号（任意）",
+    "applicationCoverLabel": "カバーレター",
+    "applicationSubmit": "応募を送信",
+    "applicationSuccess": "応募は送信されました。ご連絡をお待ちください。",
+    "applicationError": "エラーが発生しました。もう一度お試しいただくか、履歴書を inquiry@sbdmc.com までメールでお送りください。",
     "emailResume": "履歴書をメール送信"
   },
   "ko": {
@@ -122,6 +154,14 @@
     "statusOpen": "모집 중",
     "statusClosed": "마감",
     "applyNow": "지금 지원",
+    "applicationFormTitle": "이 포지션에 지원하기",
+    "applicationNameLabel": "성함",
+    "applicationEmailLabel": "이메일 주소",
+    "applicationPhoneLabel": "전화번호 (선택사항)",
+    "applicationCoverLabel": "자기소개서",
+    "applicationSubmit": "지원서 제출",
+    "applicationSuccess": "지원서가 제출되었습니다. 연락드리겠습니다.",
+    "applicationError": "문제가 발생했습니다. 다시 시도하거나 이력서를 inquiry@sbdmc.com으로 이메일로 보내주세요.",
     "emailResume": "이력서 이메일 제출"
   }
 }
